@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/blog</link>
   <description>Latest articles on technology, AI, and software development.</description>
   <language>en</language>
-  <lastBuildDate>Fri, 01 May 2026 19:03:58 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 01 May 2026 19:04:08 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[The Ultimate Guide: Checkmarx Confirms Lapsus$ Hack: What...]]></title>
+    <link>https://quillmatick.github.io/blog/checkmarx-confirms-lapsusdollar-hack-what-you-need-to-know</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/blog/checkmarx-confirms-lapsusdollar-hack-what-you-need-to-know</guid>
+    <description><![CDATA[Checkmarx confirms Lapsus$ hackers breached their systems! Learn how this security incident unfolded & what sensitive data was exposed. Protect your business no]]></description>
+    <pubDate>Fri, 01 May 2026 19:04:08 GMT</pubDate>
+    <category>application security</category>
+    <category>data breach</category>
+    <category>github</category>
+    <category>lapsus</category>
+    <category>phishing</category>
+    <category>supply chain attack</category>
+    <category>vulnerability management</category>
+    <language>en</language>
+  </item>
   <item>
     <title><![CDATA[Microsoft VibeVoice: The Ultimate Open-Source Guide for 2026]]></title>
     <link>https://quillmatick.github.io/blog/microsoft-vibevoice-the-ultimate-open-source-guide</link>
@@ -300,22 +315,6 @@
     <category>network security</category>
     <category>legal consequences</category>
     <category>preventive measures</category>
-    <language>en</language>
-  </item>
-  <item>
-    <title><![CDATA[Robinhood Account Creation Flaw: A Security Guide for 2026]]></title>
-    <link>https://quillmatick.github.io/blog/robinhood-account-creation-flaw-a-security-guide</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/blog/robinhood-account-creation-flaw-a-security-guide</guid>
-    <description><![CDATA[Learn how a Robinhood account creation flaw was abused & protect your funds. This guide reveals the vulnerability & steps to secure your account. Stay safe!]]></description>
-    <pubDate>Fri, 01 May 2026 19:02:00 GMT</pubDate>
-    <category>multi-factor authentication</category>
-    <category>security guide</category>
-    <category>robinhood account creation flaw</category>
-    <category>phishing links</category>
-    <category>email domains</category>
-    <category>unusual login activity</category>
-    <category>account compromise</category>
-    <category>credential harvesting</category>
     <language>en</language>
   </item>
 </channel>
