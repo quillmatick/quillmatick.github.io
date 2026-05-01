@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/blog</link>
   <description>Latest articles on technology, AI, and software development.</description>
   <language>en</language>
-  <lastBuildDate>Fri, 01 May 2026 19:04:08 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 01 May 2026 19:04:19 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How These Guides Outline OPSEC for Threat Actors for 2026]]></title>
+    <link>https://quillmatick.github.io/blog/how-these-guides-outline-opsec-for-threat-actors</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/blog/how-these-guides-outline-opsec-for-threat-actors</guid>
+    <description><![CDATA[How these guides outline critical OPSEC strategies used by threat actors. Learn layered defense techniques & protect your data. Gain a competitive edge now!]]></description>
+    <pubDate>Fri, 01 May 2026 19:04:19 GMT</pubDate>
+    <category>opsec</category>
+    <category>threat actors</category>
+    <category>cybersecurity</category>
+    <category>guide</category>
+    <category>framework</category>
+    <category>security</category>
+    <category>tactics</category>
+    <language>en</language>
+  </item>
   <item>
     <title><![CDATA[The Ultimate Guide: Checkmarx Confirms Lapsus$ Hack: What...]]></title>
     <link>https://quillmatick.github.io/blog/checkmarx-confirms-lapsusdollar-hack-what-you-need-to-know</link>
@@ -300,21 +315,6 @@
     <category>data privacy</category>
     <category>mobile governance</category>
     <category>app management</category>
-    <language>en</language>
-  </item>
-  <item>
-    <title><![CDATA[The Ultimate Guide: Canada Arrests Three: SMS Blaster Dev...]]></title>
-    <link>https://quillmatick.github.io/blog/canada-arrests-three-sms-blaster-device-explained</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/blog/canada-arrests-three-sms-blaster-device-explained</guid>
-    <description><![CDATA[Canada arrests three: Learn how an SMS blaster device operates & the legal ramifications. Understand the risks & avoid hefty fines. Get the full story now!]]></description>
-    <pubDate>Fri, 01 May 2026 19:02:03 GMT</pubDate>
-    <category>canada arrests three</category>
-    <category>sms blaster device</category>
-    <category>technical components</category>
-    <category>cellular tower spoofing</category>
-    <category>network security</category>
-    <category>legal consequences</category>
-    <category>preventive measures</category>
     <language>en</language>
   </item>
 </channel>
