@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/blog</link>
   <description>Latest articles on technology, AI, and software development.</description>
   <language>en</language>
-  <lastBuildDate>Fri, 01 May 2026 19:04:31 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 01 May 2026 19:04:42 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[The Ultimate Guide: Microsoft Asks iPhone Users: Reauthen...]]></title>
+    <link>https://quillmatick.github.io/blog/microsoft-asks-iphone-users-reauthenticate-now</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/blog/microsoft-asks-iphone-users-reauthenticate-now</guid>
+    <description><![CDATA[Microsoft asks iPhone users to reauthenticate! Learn why Microsoft is requesting this security update & how to protect your data. Stay secure – follow these ste]]></description>
+    <pubDate>Fri, 01 May 2026 19:04:42 GMT</pubDate>
+    <category>microsoft</category>
+    <category>iphone</category>
+    <category>reauthentication</category>
+    <category>multi-factor authentication</category>
+    <category>mfa</category>
+    <category>system updates</category>
+    <category>security awareness</category>
+    <language>en</language>
+  </item>
   <item>
     <title><![CDATA[The Ultimate Guide: How to Fix Remote Desktop Warnings Di...]]></title>
     <link>https://quillmatick.github.io/blog/how-to-fix-remote-desktop-warnings-displaying-incorrectly</link>
@@ -300,21 +315,6 @@
     <category>diversification</category>
     <category>portfolio management</category>
     <category>esg alignment</category>
-    <language>en</language>
-  </item>
-  <item>
-    <title><![CDATA[The Ultimate Guide: Alleged Silk Typhoon Hacker: US Extra...]]></title>
-    <link>https://quillmatick.github.io/blog/alleged-silk-typhoon-hacker-us-extradition-explained</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/blog/alleged-silk-typhoon-hacker-us-extradition-explained</guid>
-    <description><![CDATA[The alleged silk typhoon hacker faces US extradition. Learn how this complex case unfolds & what it means for cybercrime justice. Get clarity now!]]></description>
-    <pubDate>Fri, 01 May 2026 19:02:07 GMT</pubDate>
-    <category>cybercrime</category>
-    <category>extradition</category>
-    <category>us-china relations</category>
-    <category>cyber espionage</category>
-    <category>computer fraud and abuse act cfaa</category>
-    <category>international law</category>
-    <category>state-sponsored hacking</category>
     <language>en</language>
   </item>
 </channel>
