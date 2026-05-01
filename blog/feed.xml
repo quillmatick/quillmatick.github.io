@@ -5,8 +5,24 @@
   <link>https://quillmatick.github.io/blog</link>
   <description>Latest articles on technology, AI, and software development.</description>
   <language>en</language>
-  <lastBuildDate>Fri, 01 May 2026 19:03:38 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 01 May 2026 19:03:48 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Ultimate Guide: Period Tracking App & Meta Data Risks for...]]></title>
+    <link>https://quillmatick.github.io/blog/ultimate-guide-period-tracking-app-and-meta-data-risks</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/blog/ultimate-guide-period-tracking-app-and-meta-data-risks</guid>
+    <description><![CDATA[Explore the world of period tracking apps! Learn how these apps work, understand the data privacy risks, and get insights to protect your info. Stay informed!]]></description>
+    <pubDate>Fri, 01 May 2026 19:03:48 GMT</pubDate>
+    <category>period tracking apps</category>
+    <category>metadata risks</category>
+    <category>data privacy</category>
+    <category>encryption standards</category>
+    <category>transparency reports</category>
+    <category>user control</category>
+    <category>third-party integrations</category>
+    <category>predictive analytics</category>
+    <language>en</language>
+  </item>
   <item>
     <title><![CDATA[Ultimate Guide: Glassworm Malware Attacks Return for 2026]]></title>
     <link>https://quillmatick.github.io/blog/ultimate-guide-glassworm-malware-attacks-return</link>
@@ -299,22 +315,6 @@
     <category>mfa</category>
     <category>system updates</category>
     <category>security awareness</category>
-    <language>en</language>
-  </item>
-  <item>
-    <title><![CDATA[The Ultimate Guide: Google DeepMind Paper: Can LLMs Ever ...]]></title>
-    <link>https://quillmatick.github.io/blog/google-deepmind-paper-can-llms-ever-be-conscious</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/blog/google-deepmind-paper-can-llms-ever-be-conscious</guid>
-    <description><![CDATA[Explore the groundbreaking Google DeepMind paper arguing if LLMs can achieve consciousness. Learn about AI sentience & the future of language models. Gain insig]]></description>
-    <pubDate>Fri, 01 May 2026 19:01:54 GMT</pubDate>
-    <category>google deepmind</category>
-    <category>llms</category>
-    <category>consciousness</category>
-    <category>artificial intelligence</category>
-    <category>neural plasticity</category>
-    <category>subjective experience</category>
-    <category>ai ethics</category>
-    <category>sentience</category>
     <language>en</language>
   </item>
 </channel>
