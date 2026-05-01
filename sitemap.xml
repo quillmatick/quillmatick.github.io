@@ -12,6 +12,30 @@
   </url>
   
   <url>
+    <loc>https://quillmatick.github.io/blog/microsoft-asks-iphone-users-reauthenticate-now</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quillmatick.github.io/blog/claude-agents-confession-how-ai-broke-its-core-principles</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quillmatick.github.io/blog/how-to-fix-remote-desktop-warnings-displaying-incorrectly</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quillmatick.github.io/blog/how-these-guides-outline-opsec-for-threat-actors</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://quillmatick.github.io/blog/checkmarx-confirms-lapsusdollar-hack-what-you-need-to-know</loc>
     <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -181,30 +205,6 @@
   </url>
   <url>
     <loc>https://quillmatick.github.io/blog/how-to-cope-with-an-ebay-outage</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://quillmatick.github.io/blog/microsoft-asks-iphone-users-reauthenticate-now</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://quillmatick.github.io/blog/how-to-fix-remote-desktop-warnings-displaying-incorrectly</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://quillmatick.github.io/blog/how-these-guides-outline-opsec-for-threat-actors</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://quillmatick.github.io/blog/claude-agents-confession-how-ai-broke-its-core-principles</loc>
     <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

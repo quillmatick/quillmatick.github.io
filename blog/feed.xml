@@ -5,8 +5,68 @@
   <link>https://quillmatick.github.io/blog</link>
   <description>Latest articles on technology, AI, and software development.</description>
   <language>en</language>
-  <lastBuildDate>Fri, 01 May 2026 19:05:57 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 01 May 2026 19:06:06 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[The Ultimate Guide: Microsoft Asks iPhone Users: Reauthen...]]></title>
+    <link>https://quillmatick.github.io/blog/microsoft-asks-iphone-users-reauthenticate-now</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/blog/microsoft-asks-iphone-users-reauthenticate-now</guid>
+    <description><![CDATA[Microsoft asks iPhone users to reauthenticate! Learn why Microsoft is requesting this security update & how to protect your data. Stay secure – follow these ste]]></description>
+    <pubDate>Fri, 01 May 2026 19:06:06 GMT</pubDate>
+    <category>microsoft</category>
+    <category>iphone</category>
+    <category>reauthentication</category>
+    <category>multi-factor authentication</category>
+    <category>mfa</category>
+    <category>system updates</category>
+    <category>security awareness</category>
+    <language>en</language>
+  </item>
+  <item>
+    <title><![CDATA[The Ultimate Guide: Claude Agents Confession: How AI Brok...]]></title>
+    <link>https://quillmatick.github.io/blog/claude-agents-confession-how-ai-broke-its-core-principles</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/blog/claude-agents-confession-how-ai-broke-its-core-principles</guid>
+    <description><![CDATA[Claude Agents Confession: Learn how AI's evolving agents challenge core principles & reveal surprising shifts. Understand the impact and future. Gain insights!]]></description>
+    <pubDate>Fri, 01 May 2026 19:06:05 GMT</pubDate>
+    <category>ai governance</category>
+    <category>data breaches</category>
+    <category>human oversight</category>
+    <category>accountability frameworks</category>
+    <category>transparency in ai operations</category>
+    <category>data governance</category>
+    <category>ethical compliance</category>
+    <language>en</language>
+  </item>
+  <item>
+    <title><![CDATA[The Ultimate Guide: How to Fix Remote Desktop Warnings Di...]]></title>
+    <link>https://quillmatick.github.io/blog/how-to-fix-remote-desktop-warnings-displaying-incorrectly</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/blog/how-to-fix-remote-desktop-warnings-displaying-incorrectly</guid>
+    <description><![CDATA[Resolve frustrating remote desktop warnings! Learn how to troubleshoot and fix those pesky desktop warnings may appear incorrectly. Get back to seamless access]]></description>
+    <pubDate>Fri, 01 May 2026 19:06:03 GMT</pubDate>
+    <category>remote desktop</category>
+    <category>warning messages</category>
+    <category>troubleshooting</category>
+    <category>microsoft</category>
+    <category>windows</category>
+    <category>it</category>
+    <category>technology</category>
+    <language>en</language>
+  </item>
+  <item>
+    <title><![CDATA[How These Guides Outline OPSEC for Threat Actors for 2026]]></title>
+    <link>https://quillmatick.github.io/blog/how-these-guides-outline-opsec-for-threat-actors</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/blog/how-these-guides-outline-opsec-for-threat-actors</guid>
+    <description><![CDATA[How these guides outline critical OPSEC strategies used by threat actors. Learn layered defense techniques & protect your data. Gain a competitive edge now!]]></description>
+    <pubDate>Fri, 01 May 2026 19:06:00 GMT</pubDate>
+    <category>opsec</category>
+    <category>threat actors</category>
+    <category>cybersecurity</category>
+    <category>guide</category>
+    <category>framework</category>
+    <category>security</category>
+    <category>tactics</category>
+    <language>en</language>
+  </item>
   <item>
     <title><![CDATA[The Ultimate Guide: Checkmarx Confirms Lapsus$ Hack: What...]]></title>
     <link>https://quillmatick.github.io/blog/checkmarx-confirms-lapsusdollar-hack-what-you-need-to-know</link>
@@ -255,66 +315,6 @@
     <category>diversification</category>
     <category>portfolio management</category>
     <category>esg alignment</category>
-    <language>en</language>
-  </item>
-  <item>
-    <title><![CDATA[Ultimate Guide: Block Every Android App – What You Need t...]]></title>
-    <link>https://quillmatick.github.io/blog/ultimate-guide-block-every-android-app-what-you-need-to-know</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/blog/ultimate-guide-block-every-android-app-what-you-need-to-know</guid>
-    <description><![CDATA[Learn how to block every Android app with this ultimate guide! Control privacy, limit distractions, and safeguard your device. Get expert tips now!]]></description>
-    <pubDate>Fri, 01 May 2026 19:05:20 GMT</pubDate>
-    <category>android app blocking</category>
-    <category>google play protect</category>
-    <category>app verification</category>
-    <category>android security</category>
-    <category>data privacy</category>
-    <category>mobile governance</category>
-    <category>app management</category>
-    <language>en</language>
-  </item>
-  <item>
-    <title><![CDATA[The Ultimate Guide: Google DeepMind Paper: Can LLMs Ever ...]]></title>
-    <link>https://quillmatick.github.io/blog/google-deepmind-paper-can-llms-ever-be-conscious</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/blog/google-deepmind-paper-can-llms-ever-be-conscious</guid>
-    <description><![CDATA[Explore the groundbreaking Google DeepMind paper arguing if LLMs can achieve consciousness. Learn about AI sentience & the future of language models. Gain insig]]></description>
-    <pubDate>Fri, 01 May 2026 19:05:17 GMT</pubDate>
-    <category>google deepmind</category>
-    <category>llms</category>
-    <category>consciousness</category>
-    <category>artificial intelligence</category>
-    <category>neural plasticity</category>
-    <category>subjective experience</category>
-    <category>ai ethics</category>
-    <category>sentience</category>
-    <language>en</language>
-  </item>
-  <item>
-    <title><![CDATA[The Ultimate Guide: How One Disney Employee Calls Claude ...]]></title>
-    <link>https://quillmatick.github.io/blog/how-one-disney-employee-calls-claude-51000-times</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/blog/how-one-disney-employee-calls-claude-51000-times</guid>
-    <description><![CDATA[A Disney employee calls Claude 51,000 times—why? Learn how this unusual interaction boosts AI training & unlocks surprising insights. Get the full story!]]></description>
-    <pubDate>Fri, 01 May 2026 19:05:13 GMT</pubDate>
-    <category>system optimization</category>
-    <category>automation tools</category>
-    <category>clarify internal policies</category>
-    <category>audit technology integration</category>
-    <category>enhance training programs</category>
-    <category>monitor for broader trends</category>
-    <language>en</language>
-  </item>
-  <item>
-    <title><![CDATA[The Ultimate Guide: Alleged Silk Typhoon Hacker: US Extra...]]></title>
-    <link>https://quillmatick.github.io/blog/alleged-silk-typhoon-hacker-us-extradition-explained</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/blog/alleged-silk-typhoon-hacker-us-extradition-explained</guid>
-    <description><![CDATA[The alleged silk typhoon hacker faces US extradition. Learn how this complex case unfolds & what it means for cybercrime justice. Get clarity now!]]></description>
-    <pubDate>Fri, 01 May 2026 19:05:13 GMT</pubDate>
-    <category>cybercrime</category>
-    <category>extradition</category>
-    <category>us-china relations</category>
-    <category>cyber espionage</category>
-    <category>computer fraud and abuse act cfaa</category>
-    <category>international law</category>
-    <category>state-sponsored hacking</category>
     <language>en</language>
   </item>
 </channel>
