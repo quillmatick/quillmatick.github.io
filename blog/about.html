@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Quillmatick</title>
+  <meta name="description" content="About Quillmatick and how to contact us." />
+  <link rel="stylesheet" href="/blog/style.css" />
+  <link rel="canonical" href="https://quillmatick.github.io/blog/about.html" />
+  <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
+  
+</head>
+<body>
+  
+  <header class="site-header">
+    <nav>
+      <div class="header-left">
+        <a href="/" class="logo">Quillmatick</a>
+        <a href="/blog" class="">Blog</a>
+        <a href="/blog/about.html" class="active">About Us</a>
+      </div>
+      <div class="header-right">
+        <form action="/blog/search.html" method="GET" class="search-form">
+          <input type="text" name="q" placeholder="Search..." aria-label="Search blog" required />
+          <button type="submit">🔍</button>
+        </form>
+        <button id="theme-btn" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </nav>
+    <div class="trending-bar">
+      <span class="trending-label">TRENDING:</span>
+      <div class="ticker-wrap">
+        <div class="ticker">
+          <span class="ticker-item">#CyberSecurity2025</span>
+          <span class="ticker-item">#GenerativeAI</span>
+          <span class="ticker-item">#Web3Security</span>
+          <span class="ticker-item">#MachineLearning</span>
+          <span class="ticker-item">#DevSecOps</span>
+          <span class="ticker-item">#AI_Regulation</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="post-container">
+    <article class="post-content" style="max-width: 800px; margin: 0 auto; padding: 40px 20px;">
+      <h1>About Quillmatick</h1>
+      <p>Welcome to Quillmatick, an AI-powered content platform designed to deliver high-quality, relevant, and engaging articles on technology, cybersecurity, and software development.</p>
+      
+      <h2>Our Mission</h2>
+      <p>Our goal is to provide readers with well-researched, automated insights that keep you ahead of the curve in a fast-paced digital world.</p>
+
+      <h2>Contact & Consulting</h2>
+      <p>We help businesses build resilient, compliant, and automated security pipelines. If you're interested in our enterprise consulting services or have any questions about our content, please reach out.</p>
+      
+      <p><strong>Email:</strong> <a href="mailto:amrender.singh@quillmatick.com">amrender.singh@quillmatick.com</a></p>
+    </article>
+  </main>
+  
+  <footer class="site-footer">
+    <p>&copy; 2026 Quillmatick. All rights reserved.</p>
+    <nav class="footer-links" aria-label="Legal links">
+      <a href="/legal/privacy/">Privacy Policy</a>
+      <a href="/legal/terms/">Terms of Service</a>
+      <a href="/blog/feed.xml">RSS Feed</a>
+    </nav>
+  </footer>
+  <!-- Cookie consent -->
+  <div id="cookie-banner" role="dialog" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a24;border-top:1px solid #7c6fff;padding:14px 24px;align-items:center;justify-content:space-between;gap:16px;z-index:999;flex-wrap:wrap;">
+    <p style="margin:0;font-size:13px;color:#b0b0c8;">
+      This site stores theme preferences and anonymous view counts.
+      <a href="/legal/privacy" style="color:#7c6fff;margin-left:8px;">Privacy Policy</a>
+    </p>
+    <div style="display:flex;gap:8px;">
+      <button onclick="cookieAccept()" style="background:#7c6fff;color:#fff;border:none;padding:8px 18px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:600;">Got it</button>
+      <button onclick="cookieDecline()" style="background:transparent;color:#8080a8;border:1px solid #2a2a3a;padding:8px 18px;border-radius:6px;cursor:pointer;font-size:13px;">Decline</button>
+    </div>
+  </div>
+  <script>
+    (function(){
+      if(!localStorage.getItem('qm-consent')){
+        const b=document.getElementById('cookie-banner');
+        if(b) b.style.display='flex';
+      }
+    })();
+    function cookieAccept(){localStorage.setItem('qm-consent','yes');document.getElementById('cookie-banner').style.display='none';if(window.__qmTrackView)window.__qmTrackView();}
+    function cookieDecline(){localStorage.setItem('qm-consent','no');document.getElementById('cookie-banner').style.display='none';}
+  </script>
+  <script>
+    (function() {
+      function initTheme() {
+        const saved = localStorage.getItem('qm-theme');
+        const theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+        
+        const btn = document.getElementById('theme-btn');
+        if (btn) {
+          btn.innerHTML = theme === 'dark' ? '☀️' : '🌙';
+          // Remove old listeners if any (though unlikely in static)
+          btn.onclick = null; 
+          btn.addEventListener('click', function() {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('qm-theme', next);
+            btn.innerHTML = next === 'dark' ? '☀️' : '🌙';
+            console.log('Theme switched to:', next);
+          });
+        }
+      }
+      
+      // Run immediately
+      initTheme();
+      // Also run on DOMContentLoaded just in case
+      document.addEventListener('DOMContentLoaded', initTheme);
+    })();
+  </script>
+  <script>
+    (function() {
+      if (navigator.doNotTrack === '1' || window.doNotTrack === '1') return;
+      if (localStorage.getItem('qm-consent') === 'no') return;
+      const apiBase = 'http://localhost:4000';
+      let sessionId = null;
+      let startTime = Date.now();
+
+      async function trackView() {
+        let slug = window.location.pathname;
+        if (slug.endsWith('/') && slug !== '/') slug = slug.slice(0, -1);
+        const referrer = document.referrer ? new URL(document.referrer).hostname : '';
+        try {
+          const res = await fetch(apiBase + '/api/analytics/pageview', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            mode: 'cors',
+            body: JSON.stringify({ slug: slug, referrer: referrer }),
+          });
+          const data = await res.json();
+          if (data.id) sessionId = data.id;
+        } catch (e) {}
+      }
+
+      async function sendHeartbeat() {
+        if (!sessionId) return;
+        const now = Date.now();
+        const duration = Math.floor((now - startTime) / 1000);
+        startTime = now;
+        try {
+          fetch(apiBase + '/api/analytics/pageview', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            mode: 'cors',
+            body: JSON.stringify({ id: sessionId, duration: duration }),
+          });
+        } catch (e) {}
+      }
+
+      if (localStorage.getItem('qm-consent') === 'yes') { trackView(); }
+      window.__qmTrackView = trackView;
+      window.__qmLogSearch = function(query, count) {
+        fetch(apiBase + '/api/analytics/search-log', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          mode: 'cors',
+          body: JSON.stringify({ query: query, count: count }),
+        }).catch(function() {});
+      };
+
+      // Heartbeat every 15s
+      setInterval(sendHeartbeat, 15000);
+      window.addEventListener('beforeunload', sendHeartbeat);
+      document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'hidden') sendHeartbeat();
+      });
+    })();
+  </script>
+</body>
+</html>

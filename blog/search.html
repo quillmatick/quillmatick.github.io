@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Results | Quillmatick</title>
+  <link rel="stylesheet" href="/blog/style.css" />
+</head>
+<body>
+  
+  <header class="site-header">
+    <nav>
+      <div class="header-left">
+        <a href="/" class="logo">Quillmatick</a>
+        <a href="/blog" class="active">Blog</a>
+        <a href="/blog/about.html" class="">About Us</a>
+      </div>
+      <div class="header-right">
+        <form action="/blog/search.html" method="GET" class="search-form">
+          <input type="text" name="q" placeholder="Search..." aria-label="Search blog" required />
+          <button type="submit">🔍</button>
+        </form>
+        <button id="theme-btn" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </nav>
+    <div class="trending-bar">
+      <span class="trending-label">TRENDING:</span>
+      <div class="ticker-wrap">
+        <div class="ticker">
+          <span class="ticker-item">#CyberSecurity2025</span>
+          <span class="ticker-item">#GenerativeAI</span>
+          <span class="ticker-item">#Web3Security</span>
+          <span class="ticker-item">#MachineLearning</span>
+          <span class="ticker-item">#DevSecOps</span>
+          <span class="ticker-item">#AI_Regulation</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="blog-index">
+    <h1 id="search-title">Search Results</h1>
+    <div id="results-count" style="margin-bottom: 2rem; color: var(--muted);">Searching...</div>
+    <div id="search-results" class="post-grid"></div>
+    <div id="pagination" style="display:flex; justify-content:center; gap:10px; margin-top:3rem;"></div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('q') || '';
+    const page = parseInt(params.get('page')) || 1;
+    
+    document.getElementById('search-title').textContent = q ? 'Results for: ' + q : 'Search';
+    
+    async function doSearch() {
+      if (!q) {
+        document.getElementById('results-count').textContent = 'Enter a search term above.';
+        return;
+      }
+      try {
+        const res = await fetch('/api/dashboard/public/search?q=' + encodeURIComponent(q) + '&page=' + page);
+        const data = await res.json();
+        renderResults(data);
+        if (window.__qmLogSearch) window.__qmLogSearch(q, data.meta.total);
+      } catch (e) {
+        document.getElementById('results-count').textContent = 'Search failed. Please try again.';
+      }
+    }
+
+    function renderResults(res) {
+      const container = document.getElementById('search-results');
+      const count = document.getElementById('results-count');
+      count.textContent = res.meta.total + ' article(s) found';
+      
+      if (!res.data.length) {
+        container.innerHTML = '<div style="grid-column: 1/-1; text-align:center; padding:3rem; color:var(--muted);">No matches found for "' + q + '".</div>';
+        return;
+      }
+
+      container.innerHTML = res.data.map(post => {
+        const date = new Date(post.published_at * 1000).toLocaleDateString();
+        const readTime = Math.ceil(post.word_count / 250);
+        const img = post.featured_image 
+          ? '<img src="' + post.featured_image + '" alt="' + post.title + '" />'
+          : '<div class="card-placeholder"></div>';
+
+        return `
+          <article class="post-card">
+            <a href="/blog/${post.slug}">
+              ${img}
+              <div class="card-body">
+                <h2>${post.title}</h2>
+                <p>${post.meta_description}</p>
+                <div class="card-meta">
+                  <time>${date}</time>
+                  <span>${readTime} min read</span>
+                </div>
+              </div>
+            </a>
+          </article>
+        `;
+      }).join('');
+
+      // Simple pagination
+      const pag = document.getElementById('pagination');
+      if (res.meta.pages > 1) {
+        let phtml = '';
+        if (page > 1) phtml += '<a href="?q=' + encodeURIComponent(q) + '&page=' + (page-1) + '" class="tag">← Previous</a>';
+        phtml += '<span style="padding:4px 10px">' + page + ' / ' + res.meta.pages + '</span>';
+        if (page < res.meta.pages) phtml += '<a href="?q=' + encodeURIComponent(q) + '&page=' + (page+1) + '" class="tag">Next →</a>';
+        pag.innerHTML = phtml;
+      }
+    }
+
+    doSearch();
+  </script>
+  
+  <footer class="site-footer">
+    <p>&copy; 2026 Quillmatick. All rights reserved.</p>
+    <nav class="footer-links" aria-label="Legal links">
+      <a href="/legal/privacy/">Privacy Policy</a>
+      <a href="/legal/terms/">Terms of Service</a>
+      <a href="/blog/feed.xml">RSS Feed</a>
+    </nav>
+  </footer>
+  <!-- Cookie consent -->
+  <div id="cookie-banner" role="dialog" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a24;border-top:1px solid #7c6fff;padding:14px 24px;align-items:center;justify-content:space-between;gap:16px;z-index:999;flex-wrap:wrap;">
+    <p style="margin:0;font-size:13px;color:#b0b0c8;">
+      This site stores theme preferences and anonymous view counts.
+      <a href="/legal/privacy" style="color:#7c6fff;margin-left:8px;">Privacy Policy</a>
+    </p>
+    <div style="display:flex;gap:8px;">
+      <button onclick="cookieAccept()" style="background:#7c6fff;color:#fff;border:none;padding:8px 18px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:600;">Got it</button>
+      <button onclick="cookieDecline()" style="background:transparent;color:#8080a8;border:1px solid #2a2a3a;padding:8px 18px;border-radius:6px;cursor:pointer;font-size:13px;">Decline</button>
+    </div>
+  </div>
+  <script>
+    (function(){
+      if(!localStorage.getItem('qm-consent')){
+        const b=document.getElementById('cookie-banner');
+        if(b) b.style.display='flex';
+      }
+    })();
+    function cookieAccept(){localStorage.setItem('qm-consent','yes');document.getElementById('cookie-banner').style.display='none';if(window.__qmTrackView)window.__qmTrackView();}
+    function cookieDecline(){localStorage.setItem('qm-consent','no');document.getElementById('cookie-banner').style.display='none';}
+  </script>
+  <script>
+    (function() {
+      function initTheme() {
+        const saved = localStorage.getItem('qm-theme');
+        const theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+        
+        const btn = document.getElementById('theme-btn');
+        if (btn) {
+          btn.innerHTML = theme === 'dark' ? '☀️' : '🌙';
+          // Remove old listeners if any (though unlikely in static)
+          btn.onclick = null; 
+          btn.addEventListener('click', function() {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('qm-theme', next);
+            btn.innerHTML = next === 'dark' ? '☀️' : '🌙';
+            console.log('Theme switched to:', next);
+          });
+        }
+      }
+      
+      // Run immediately
+      initTheme();
+      // Also run on DOMContentLoaded just in case
+      document.addEventListener('DOMContentLoaded', initTheme);
+    })();
+  </script>
+  <script>
+    (function() {
+      if (navigator.doNotTrack === '1' || window.doNotTrack === '1') return;
+      if (localStorage.getItem('qm-consent') === 'no') return;
+      const apiBase = 'http://localhost:4000';
+      let sessionId = null;
+      let startTime = Date.now();
+
+      async function trackView() {
+        let slug = window.location.pathname;
+        if (slug.endsWith('/') && slug !== '/') slug = slug.slice(0, -1);
+        const referrer = document.referrer ? new URL(document.referrer).hostname : '';
+        try {
+          const res = await fetch(apiBase + '/api/analytics/pageview', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            mode: 'cors',
+            body: JSON.stringify({ slug: slug, referrer: referrer }),
+          });
+          const data = await res.json();
+          if (data.id) sessionId = data.id;
+        } catch (e) {}
+      }
+
+      async function sendHeartbeat() {
+        if (!sessionId) return;
+        const now = Date.now();
+        const duration = Math.floor((now - startTime) / 1000);
+        startTime = now;
+        try {
+          fetch(apiBase + '/api/analytics/pageview', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            mode: 'cors',
+            body: JSON.stringify({ id: sessionId, duration: duration }),
+          });
+        } catch (e) {}
+      }
+
+      if (localStorage.getItem('qm-consent') === 'yes') { trackView(); }
+      window.__qmTrackView = trackView;
+      window.__qmLogSearch = function(query, count) {
+        fetch(apiBase + '/api/analytics/search-log', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          mode: 'cors',
+          body: JSON.stringify({ query: query, count: count }),
+        }).catch(function() {});
+      };
+
+      // Heartbeat every 15s
+      setInterval(sendHeartbeat, 15000);
+      window.addEventListener('beforeunload', sendHeartbeat);
+      document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'hidden') sendHeartbeat();
+      });
+    })();
+  </script>
+</body>
+</html>
