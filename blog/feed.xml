@@ -5,8 +5,24 @@
   <link>https://quillmatick.github.io/blog</link>
   <description>Latest articles on technology, AI, and software development.</description>
   <language>en</language>
-  <lastBuildDate>Fri, 01 May 2026 19:03:48 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 01 May 2026 19:03:58 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Microsoft VibeVoice: The Ultimate Open-Source Guide for 2026]]></title>
+    <link>https://quillmatick.github.io/blog/microsoft-vibevoice-the-ultimate-open-source-guide</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/blog/microsoft-vibevoice-the-ultimate-open-source-guide</guid>
+    <description><![CDATA[Explore Microsoft VibeVoice opensource frontier! Learn how to build engaging, employee-centric platforms. Boost internal comms & unlock valuable insights. Start]]></description>
+    <pubDate>Fri, 01 May 2026 19:03:58 GMT</pubDate>
+    <category>microsoft vibevoice</category>
+    <category>open-source</category>
+    <category>voice-driven applications</category>
+    <category>cross-platform compatibility</category>
+    <category>azure cognitive services</category>
+    <category>scalability</category>
+    <category>ai-driven communication</category>
+    <category>accessibility</category>
+    <language>en</language>
+  </item>
   <item>
     <title><![CDATA[Ultimate Guide: Period Tracking App & Meta Data Risks for...]]></title>
     <link>https://quillmatick.github.io/blog/ultimate-guide-period-tracking-app-and-meta-data-risks</link>
@@ -300,21 +316,6 @@
     <category>unusual login activity</category>
     <category>account compromise</category>
     <category>credential harvesting</category>
-    <language>en</language>
-  </item>
-  <item>
-    <title><![CDATA[The Ultimate Guide: Microsoft Asks iPhone Users: Reauthen...]]></title>
-    <link>https://quillmatick.github.io/blog/microsoft-asks-iphone-users-reauthenticate-now</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/blog/microsoft-asks-iphone-users-reauthenticate-now</guid>
-    <description><![CDATA[Microsoft asks iPhone users to reauthenticate! Learn why Microsoft is requesting this security update & how to protect your data. Stay secure – follow these ste]]></description>
-    <pubDate>Fri, 01 May 2026 19:01:57 GMT</pubDate>
-    <category>microsoft</category>
-    <category>iphone</category>
-    <category>reauthentication</category>
-    <category>multi-factor authentication</category>
-    <category>mfa</category>
-    <category>system updates</category>
-    <category>security awareness</category>
     <language>en</language>
   </item>
 </channel>
