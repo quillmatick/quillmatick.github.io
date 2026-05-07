@@ -87,9 +87,7 @@
         const btn = document.getElementById('theme-btn');
         if (btn) {
           btn.innerHTML = theme === 'dark' ? '☀️' : '🌙';
-          // Remove old listeners if any (though unlikely in static)
-          btn.onclick = null; 
-          btn.addEventListener('click', function() {
+          btn.onclick = function() {
             const current = document.documentElement.getAttribute('data-theme');
             const next = current === 'dark' ? 'light' : 'dark';
             
@@ -97,7 +95,7 @@
             localStorage.setItem('qm-theme', next);
             btn.innerHTML = next === 'dark' ? '☀️' : '🌙';
             console.log('Theme switched to:', next);
-          });
+          };
         }
       }
       
