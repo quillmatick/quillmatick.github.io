@@ -2,29 +2,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 html[data-theme="dark"], :root {
-  --bg: #0b0b10;
-  --surface: #14141d;
-  --border: #232331;
-  --text: #e2e2f0;
-  --muted: #8888b0;
-  --accent: #7c6fff;
-  --accent-light: rgba(124, 111, 255, 0.1);
-  --header-bg: rgba(20, 20, 29, 0.8);
-  --card-bg: #14141d;
+  --bg: #0d0b0a;
+  --surface: #161312;
+  --border: #221d1b;
+  --text: #faf6f5;
+  --muted: #8e7f7a;
+  --accent: #ff7a00;
+  --accent-light: rgba(255, 122, 0, 0.1);
+  --header-bg: rgba(22, 19, 18, 0.8);
+  --card-bg: #161312;
   --font: 'Inter', system-ui, -apple-system, sans-serif;
   --mono: 'JetBrains Mono', 'Fira Code', monospace;
   color-scheme: dark;
 }
 
 html[data-theme="light"] {
-  --bg: #f8f8fb;
+  --bg: #fffaf8;
   --surface: #ffffff;
-  --border: #e2e2ee;
-  --text: #1a1a2e;
-  --muted: #606088;
-  --accent: #5b4fe0;
-  --accent-light: rgba(91, 79, 224, 0.08);
-  --header-bg: rgba(248, 248, 251, 0.85);
+  --border: #ebd5cc;
+  --text: #1e130c;
+  --muted: #847368;
+  --accent: #ea580c;
+  --accent-light: rgba(234, 88, 12, 0.08);
+  --header-bg: rgba(255, 250, 248, 0.85);
   --card-bg: #ffffff;
   color-scheme: light;
 }
