@@ -96,7 +96,7 @@
       </div>
       <div class="header-right">
         <form action="/blog/search.html" method="GET" class="search-form">
-          <input type="text" name="q" placeholder="Search..." aria-label="Search blog" required />
+          <input type="text" name="q" placeholder="Search..." aria-label="Search blog" autocomplete="off" required />
           <button type="submit">🔍</button>
         </form>
         <button id="theme-btn" class="theme-toggle" aria-label="Toggle theme">🌙</button>
@@ -289,7 +289,7 @@ More secure, less convenient
         <h3>Join the Inner Circle</h3>
         <p>Get exclusive AI insights and cybersecurity strategy delivered to your inbox weekly.</p>
         <form class="newsletter-form" onsubmit="if(window.__qmSubscribe){window.__qmSubscribe(event, this);}else{event.preventDefault();alert('Subscription service offline');}">
-          <input type="email" name="email" placeholder="Enter your email..." required />
+          <input type="email" name="email" placeholder="Enter your email..." autocomplete="off" required />
           <button type="submit">Join Now</button>
         </form>
       </section>
@@ -443,6 +443,96 @@ More secure, less convenient
         submitBtn.disabled = false;
       }
     };
+  </script>
+  <script>
+    (function() {
+      const apiBase = 'http://localhost:4000';
+      const forms = document.querySelectorAll('.search-form');
+      
+      forms.forEach(form => {
+        const input = form.querySelector('input[name="q"]');
+        if (!input) return;
+        
+        // Extra guarantee for disabling autocomplete
+        input.setAttribute('autocomplete', 'off');
+        
+        // Create dropdown container
+        const dropdown = document.createElement('div');
+        dropdown.className = 'search-dropdown';
+        form.appendChild(dropdown);
+        
+        let debounceTimeout = null;
+        
+        input.addEventListener('input', function() {
+          const val = input.value.trim();
+          
+          if (debounceTimeout) clearTimeout(debounceTimeout);
+          
+          if (!val) {
+            dropdown.classList.remove('active');
+            dropdown.innerHTML = '';
+            
+            if (window.location.pathname.includes('/search.html') && window.__qmDoSearchPageUpdate) {
+              window.__qmDoSearchPageUpdate('');
+            }
+            return;
+          }
+          
+          // If on search page, update main results grid in real-time
+          if (window.location.pathname.includes('/search.html') && window.__qmDoSearchPageUpdate) {
+            debounceTimeout = setTimeout(() => {
+              window.__qmDoSearchPageUpdate(val);
+            }, 150);
+            return;
+          }
+          
+          // Otherwise, show real-time dropdown matches
+          debounceTimeout = setTimeout(async function() {
+            try {
+              const res = await fetch(apiBase + '/api/dashboard/public/search?q=' + encodeURIComponent(val));
+              const data = await res.json();
+              
+              if (!dropdown) return;
+              
+              if (data.data && data.data.length > 0) {
+                dropdown.innerHTML = data.data.slice(0, 5).map(post => {
+                  const readTime = Math.ceil((post.word_count || 1000) / 250);
+                  return '<a href="/blog/' + post.slug + '" class="search-dropdown-item">' +
+                    '<h4>' + post.title + '</h4>' +
+                    '<p>' + readTime + ' min read • ' + post.meta_description + '</p>' +
+                    '</a>';
+                }).join('');
+                dropdown.classList.add('active');
+              } else {
+                dropdown.innerHTML = '<div class="search-dropdown-empty">No matches found for "' + val + '"</div>';
+                dropdown.classList.add('active');
+              }
+            } catch (err) {
+              console.error('Realtime search failed:', err);
+            }
+          }, 150);
+        });
+        
+        // Block form submit if empty
+        form.addEventListener('submit', function(e) {
+          if (!input.value.trim()) e.preventDefault();
+        });
+        
+        // Hide on click outside
+        document.addEventListener('click', function(e) {
+          if (!form.contains(e.target)) {
+            dropdown.classList.remove('active');
+          }
+        });
+        
+        // Re-focus triggers dropdown display
+        input.addEventListener('focus', function() {
+          if (input.value.trim() && !window.location.pathname.includes('/search.html')) {
+            dropdown.classList.add('active');
+          }
+        });
+      });
+    })();
   </script>
 </body>
 </html>

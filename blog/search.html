@@ -28,7 +28,7 @@
       </div>
       <div class="header-right">
         <form action="/blog/search.html" method="GET" class="search-form">
-          <input type="text" name="q" placeholder="Search..." aria-label="Search blog" required />
+          <input type="text" name="q" placeholder="Search..." aria-label="Search blog" autocomplete="off" required />
           <button type="submit">🔍</button>
         </form>
         <button id="theme-btn" class="theme-toggle" aria-label="Toggle theme">🌙</button>
@@ -57,16 +57,24 @@
 
   <script>
     const params = new URLSearchParams(window.location.search);
-    const q = params.get('q') || '';
-    const page = parseInt(params.get('page')) || 1;
+    let q = params.get('q') || '';
+    let page = parseInt(params.get('page')) || 1;
     
-    document.getElementById('search-title').textContent = q ? 'Results for: ' + q : 'Search';
+    // Sync the header search field value with active query on page load
+    const headerInput = document.querySelector('.search-form input[name="q"]');
+    if (headerInput) {
+      headerInput.value = q;
+    }
     
     async function doSearch() {
       if (!q) {
+        document.getElementById('search-title').textContent = 'Search';
         document.getElementById('results-count').textContent = 'Enter a search term above.';
+        document.getElementById('search-results').innerHTML = '';
+        document.getElementById('pagination').innerHTML = '';
         return;
       }
+      document.getElementById('search-title').textContent = 'Results for: ' + q;
       try {
         const res = await fetch('http://localhost:4000/api/dashboard/public/search?q=' + encodeURIComponent(q) + '&page=' + page);
         const data = await res.json();
@@ -77,6 +85,18 @@
       }
     }
 
+    // Exposed endpoint called by global header search keypresses
+    window.__qmDoSearchPageUpdate = function(newQuery) {
+      q = newQuery;
+      page = 1; // Reset to page 1 for new search
+      
+      // Update URL search parameters without triggering page reload
+      const newUrl = window.location.pathname + (q ? '?q=' + encodeURIComponent(q) : '');
+      window.history.replaceState({ q: q }, '', newUrl);
+      
+      doSearch();
+    };
+    
     function renderResults(res) {
       const container = document.getElementById('search-results');
       const count = document.getElementById('results-count');
@@ -84,6 +104,7 @@
       
       if (!res.data.length) {
         container.innerHTML = '<div style="grid-column: 1/-1; text-align:center; padding:3rem; color:var(--muted);">No matches found for "' + q + '".</div>';
+        document.getElementById('pagination').innerHTML = '';
         return;
       }
 
@@ -119,6 +140,8 @@
         phtml += '<span style="padding:4px 10px">' + page + ' / ' + res.meta.pages + '</span>';
         if (page < res.meta.pages) phtml += '<a href="?q=' + encodeURIComponent(q) + '&page=' + (page+1) + '" class="tag">Next →</a>';
         pag.innerHTML = phtml;
+      } else {
+        pag.innerHTML = '';
       }
     }
 
@@ -267,6 +290,96 @@
         submitBtn.disabled = false;
       }
     };
+  </script>
+  <script>
+    (function() {
+      const apiBase = 'http://localhost:4000';
+      const forms = document.querySelectorAll('.search-form');
+      
+      forms.forEach(form => {
+        const input = form.querySelector('input[name="q"]');
+        if (!input) return;
+        
+        // Extra guarantee for disabling autocomplete
+        input.setAttribute('autocomplete', 'off');
+        
+        // Create dropdown container
+        const dropdown = document.createElement('div');
+        dropdown.className = 'search-dropdown';
+        form.appendChild(dropdown);
+        
+        let debounceTimeout = null;
+        
+        input.addEventListener('input', function() {
+          const val = input.value.trim();
+          
+          if (debounceTimeout) clearTimeout(debounceTimeout);
+          
+          if (!val) {
+            dropdown.classList.remove('active');
+            dropdown.innerHTML = '';
+            
+            if (window.location.pathname.includes('/search.html') && window.__qmDoSearchPageUpdate) {
+              window.__qmDoSearchPageUpdate('');
+            }
+            return;
+          }
+          
+          // If on search page, update main results grid in real-time
+          if (window.location.pathname.includes('/search.html') && window.__qmDoSearchPageUpdate) {
+            debounceTimeout = setTimeout(() => {
+              window.__qmDoSearchPageUpdate(val);
+            }, 150);
+            return;
+          }
+          
+          // Otherwise, show real-time dropdown matches
+          debounceTimeout = setTimeout(async function() {
+            try {
+              const res = await fetch(apiBase + '/api/dashboard/public/search?q=' + encodeURIComponent(val));
+              const data = await res.json();
+              
+              if (!dropdown) return;
+              
+              if (data.data && data.data.length > 0) {
+                dropdown.innerHTML = data.data.slice(0, 5).map(post => {
+                  const readTime = Math.ceil((post.word_count || 1000) / 250);
+                  return '<a href="/blog/' + post.slug + '" class="search-dropdown-item">' +
+                    '<h4>' + post.title + '</h4>' +
+                    '<p>' + readTime + ' min read • ' + post.meta_description + '</p>' +
+                    '</a>';
+                }).join('');
+                dropdown.classList.add('active');
+              } else {
+                dropdown.innerHTML = '<div class="search-dropdown-empty">No matches found for "' + val + '"</div>';
+                dropdown.classList.add('active');
+              }
+            } catch (err) {
+              console.error('Realtime search failed:', err);
+            }
+          }, 150);
+        });
+        
+        // Block form submit if empty
+        form.addEventListener('submit', function(e) {
+          if (!input.value.trim()) e.preventDefault();
+        });
+        
+        // Hide on click outside
+        document.addEventListener('click', function(e) {
+          if (!form.contains(e.target)) {
+            dropdown.classList.remove('active');
+          }
+        });
+        
+        // Re-focus triggers dropdown display
+        input.addEventListener('focus', function() {
+          if (input.value.trim() && !window.location.pathname.includes('/search.html')) {
+            dropdown.classList.add('active');
+          }
+        });
+      });
+    })();
   </script>
 </body>
 </html>
