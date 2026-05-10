@@ -222,8 +222,8 @@ body {
 .ticker-wrap { overflow: hidden; width: 100%; }
 .ticker { display: flex; gap: 2rem; animation: ticker 40s linear infinite; width: max-content; }
 .ticker:hover { animation-play-state: paused; }
-.ticker-item { color: var(--muted); white-space: nowrap; transition: color 0.2s; cursor: pointer; }
-.ticker-item:hover { color: var(--accent); }
+.ticker-item { color: var(--muted); white-space: nowrap; transition: color 0.2s, transform 0.2s; cursor: pointer; text-decoration: none !important; display: inline-block; }
+.ticker-item:hover, .ticker-item:focus { color: var(--accent); transform: scale(1.05); outline: none; }
 
 @keyframes ticker {
   0% { transform: translateX(100%); }

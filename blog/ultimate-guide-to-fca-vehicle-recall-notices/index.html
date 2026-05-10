@@ -105,13 +105,13 @@
     <div class="trending-bar">
       <span class="trending-label">TRENDING:</span>
       <div class="ticker-wrap">
-        <div class="ticker">
-          <span class="ticker-item">#CyberSecurity2026</span>
-          <span class="ticker-item">#GenerativeAI</span>
-          <span class="ticker-item">#Web3Security</span>
-          <span class="ticker-item">#MachineLearning</span>
-          <span class="ticker-item">#DevSecOps</span>
-          <span class="ticker-item">#AI_Regulation</span>
+        <div class="ticker" id="trending-ticker">
+          <a href="/blog/search.html?q=CyberSecurity2026" class="ticker-item" data-tag="CyberSecurity2026">#CyberSecurity2026</a>
+          <a href="/blog/search.html?q=GenerativeAI" class="ticker-item" data-tag="GenerativeAI">#GenerativeAI</a>
+          <a href="/blog/search.html?q=Web3Security" class="ticker-item" data-tag="Web3Security">#Web3Security</a>
+          <a href="/blog/search.html?q=MachineLearning" class="ticker-item" data-tag="MachineLearning">#MachineLearning</a>
+          <a href="/blog/search.html?q=DevSecOps" class="ticker-item" data-tag="DevSecOps">#DevSecOps</a>
+          <a href="/blog/search.html?q=AI_Regulation" class="ticker-item" data-tag="AI_Regulation">#AI_Regulation</a>
         </div>
       </div>
     </div>
@@ -570,6 +570,61 @@ ECU software update
           }
         });
       });
+    })();
+  </script>
+  <script>
+    (function() {
+      const apiBase = 'http://localhost:4000';
+      
+      function bindTickerClicks() {
+        const items = document.querySelectorAll('#trending-ticker .ticker-item');
+        items.forEach(item => {
+          item.addEventListener('click', function(e) {
+            const queryVal = item.getAttribute('data-tag');
+            if (!queryVal) return;
+            
+            // If on search page, intercept click to update results instantly in real-time
+            if (window.location.pathname.includes('/search.html') && window.__qmDoSearchPageUpdate) {
+              e.preventDefault();
+              
+              const headerInput = document.querySelector('.search-form input[name="q"]');
+              if (headerInput) {
+                headerInput.value = queryVal;
+              }
+              
+              window.__qmDoSearchPageUpdate(queryVal);
+            }
+          });
+        });
+      }
+      
+      async function loadTrendingTags() {
+        try {
+          const res = await fetch(apiBase + '/api/dashboard/public/trending-tags');
+          const data = await res.json();
+          if (data.tags && data.tags.length > 0) {
+            const ticker = document.getElementById('trending-ticker');
+            if (ticker) {
+              ticker.innerHTML = data.tags.map(tag => {
+                const displayName = tag.name.startsWith('#') ? tag.name : '#' + tag.name;
+                const queryVal = tag.name.startsWith('#') ? tag.name.slice(1) : tag.name;
+                return '<a href="/blog/search.html?q=' + encodeURIComponent(queryVal) + '" class="ticker-item" data-tag="' + queryVal + '">' + displayName + '</a>';
+              }).join('');
+              
+              // Re-bind dynamic handlers for search updates
+              bindTickerClicks();
+            }
+          }
+        } catch (err) {
+          console.error('Failed to fetch trending tags:', err);
+        }
+      }
+      
+      // Initially bind standard static fallback tags
+      bindTickerClicks();
+      
+      // Async load actual real-time tags
+      loadTrendingTags();
     })();
   </script>
 </body>
