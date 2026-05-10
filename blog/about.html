@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  ${getHeadThemeScript()}
   <title>About Us | Quillmatick</title>
   <meta name="description" content="About Quillmatick and how to contact us." />
   <link rel="stylesheet" href="/blog/style.css" />
@@ -87,30 +88,22 @@
   </script>
   <script>
     (function() {
-      function initTheme() {
-        const saved = localStorage.getItem('qm-theme');
-        const theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-        document.documentElement.setAttribute('data-theme', theme);
-        
+      try {
         const btn = document.getElementById('theme-btn');
         if (btn) {
-          btn.innerHTML = theme === 'dark' ? '☀️' : '🌙';
+          const current = document.documentElement.getAttribute('data-theme') || 'dark';
+          btn.innerHTML = current === 'dark' ? '☀️' : '🌙';
           btn.onclick = function() {
-            const current = document.documentElement.getAttribute('data-theme');
-            const next = current === 'dark' ? 'light' : 'dark';
-            
-            document.documentElement.setAttribute('data-theme', next);
-            localStorage.setItem('qm-theme', next);
-            btn.innerHTML = next === 'dark' ? '☀️' : '🌙';
-            console.log('Theme switched to:', next);
+            try {
+              const active = document.documentElement.getAttribute('data-theme') || 'dark';
+              const next = active === 'dark' ? 'light' : 'dark';
+              document.documentElement.setAttribute('data-theme', next);
+              localStorage.setItem('qm-theme', next);
+              btn.innerHTML = next === 'dark' ? '☀️' : '🌙';
+            } catch (err) {}
           };
         }
-      }
-      
-      // Run immediately
-      initTheme();
-      // Also run on DOMContentLoaded just in case
-      document.addEventListener('DOMContentLoaded', initTheme);
+      } catch (e) {}
     })();
   </script>
   <script>

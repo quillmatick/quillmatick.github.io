@@ -3,4 +3,20 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
+# AI-powered scrapers and assistants (GEO optimization)
+User-agent: GPTBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
 Sitemap: https://quillmatick.github.io/sitemap.xml
