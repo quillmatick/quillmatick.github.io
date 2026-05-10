@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="/blog/style.css" />
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   
   <header class="site-header">
     <nav>
@@ -47,7 +48,7 @@
       </div>
     </div>
   </header>
-  <main class="blog-index">
+  <main id="main-content" class="blog-index">
     <h1 id="search-title">Search Results</h1>
     <div id="results-count" style="margin-bottom: 2rem; color: var(--muted);">Searching...</div>
     <div id="search-results" class="post-grid"></div>
@@ -67,7 +68,7 @@
         return;
       }
       try {
-        const res = await fetch('/api/dashboard/public/search?q=' + encodeURIComponent(q) + '&page=' + page);
+        const res = await fetch('http://localhost:4000/api/dashboard/public/search?q=' + encodeURIComponent(q) + '&page=' + page);
         const data = await res.json();
         renderResults(data);
         if (window.__qmLogSearch) window.__qmLogSearch(q, data.meta.total);
