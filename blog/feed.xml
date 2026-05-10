@@ -5,8 +5,24 @@
   <link>https://quillmatick.github.io/blog</link>
   <description>Latest articles on technology, AI, and software development.</description>
   <language>en</language>
-  <lastBuildDate>Sun, 10 May 2026 16:30:40 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 10 May 2026 18:31:30 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[The Ultimate Guide: Former Contractor Convicted for Wipin...]]></title>
+    <link>https://quillmatick.github.io/blog/former-contractor-convicted-for-wiping-government-databases</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/blog/former-contractor-convicted-for-wiping-government-databases</guid>
+    <description><![CDATA[Former contractor convicted for wiping government databases faces justice. Learn how this breach happened and how to protect your data. Read the full story.]]></description>
+    <pubDate>Sun, 10 May 2026 18:31:30 GMT</pubDate>
+    <category>cybersecurity</category>
+    <category>insider threat</category>
+    <category>zero trust</category>
+    <category>data protection</category>
+    <category>access control</category>
+    <category>incident response</category>
+    <category>government security</category>
+    <category>data recovery</category>
+    <language>en</language>
+  </item>
   <item>
     <title><![CDATA[The Ultimate Guide: Scattered Spider Hacker: Reportedly C...]]></title>
     <link>https://quillmatick.github.io/blog/scattered-spider-hacker-reportedly-charges-filed-now</link>
@@ -301,21 +317,6 @@
     <category>real-time adaptability</category>
     <category>energy efficiency</category>
     <category>scalability</category>
-    <language>en</language>
-  </item>
-  <item>
-    <title><![CDATA[Ultimate Guide: Agentic Coding Trap & Cognitive Debt for ...]]></title>
-    <link>https://quillmatick.github.io/blog/ultimate-guide-agentic-coding-trap-and-cognitive-debt</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/blog/ultimate-guide-agentic-coding-trap-and-cognitive-debt</guid>
-    <description><![CDATA[Avoid the agentic coding trap! Learn how to identify & resolve coding trap remaining, preventing future cognitive debt. Boost developer productivity now—read on]]></description>
-    <pubDate>Fri, 01 May 2026 19:03:16 GMT</pubDate>
-    <category>agentic coding trap</category>
-    <category>cognitive debt</category>
-    <category>code reviews</category>
-    <category>technical debt</category>
-    <category>collaboration</category>
-    <category>maintainability</category>
-    <category>productivity</category>
     <language>en</language>
   </item>
 </channel>
