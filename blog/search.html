@@ -3,7 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  ${getHeadThemeScript()}
+  
+  <script>
+    (function() {
+      try {
+        const saved = localStorage.getItem('qm-theme');
+        const theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
   <title>Search Results | Quillmatick</title>
   <link rel="stylesheet" href="/blog/style.css" />
 </head>
@@ -28,7 +37,7 @@
       <span class="trending-label">TRENDING:</span>
       <div class="ticker-wrap">
         <div class="ticker">
-          <span class="ticker-item">#CyberSecurity2025</span>
+          <span class="ticker-item">#CyberSecurity2026</span>
           <span class="ticker-item">#GenerativeAI</span>
           <span class="ticker-item">#Web3Security</span>
           <span class="ticker-item">#MachineLearning</span>
@@ -221,6 +230,42 @@
         if (document.visibilityState === 'hidden') sendHeartbeat();
       });
     })();
+  </script>
+  <script>
+    window.__qmSubscribe = async function(event, form) {
+      event.preventDefault();
+      const emailInput = form.querySelector('input[type="email"]');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (!emailInput || !submitBtn) return;
+
+      const email = emailInput.value.trim();
+      if (!email) return;
+
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.textContent = 'Joining...';
+      submitBtn.disabled = true;
+
+      try {
+        const res = await fetch('http://localhost:4000/api/analytics/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          mode: 'cors',
+          body: JSON.stringify({ email: email })
+        });
+        const data = await res.json();
+        if (data.success) {
+          alert(data.message || 'Signed up successfully!');
+          emailInput.value = '';
+        } else {
+          alert(data.error || 'Failed to subscribe. Please try again.');
+        }
+      } catch (err) {
+        alert('Could not connect to subscription service. Please try again later.');
+      } finally {
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+      }
+    };
   </script>
 </body>
 </html>

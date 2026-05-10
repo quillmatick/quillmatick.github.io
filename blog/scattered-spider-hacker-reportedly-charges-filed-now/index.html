@@ -3,8 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  ${getHeadThemeScript()}
-  ${metaTags}
+  
+  <script>
+    (function() {
+      try {
+        const saved = localStorage.getItem('qm-theme');
+        const theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+  <title>The Ultimate Guide: Scattered Spider Hacker: Reportedly C...</title>
+<meta name="description" content="Reportedly charges filed against the Scattered Spider hacker. Learn the details of this major cybercrime case &amp; understand the implications. Stay informed!" />
+<meta name="keywords" content="reportedly charges scattered, charges scattered spider, scattered spider hacker, spider hacker arrested, hacker arrested finland, arrested finland 19yearold, finland 19yearold dual, 19yearold dual united" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://quillmatick.github.io/blog/scattered-spider-hacker-reportedly-charges-filed-now" />
+<meta property="og:title" content="The Ultimate Guide: Scattered Spider Hacker: Reportedly C..." />
+<meta property="og:description" content="Reportedly charges filed against the Scattered Spider hacker. Learn the details of this major cybercrime case &amp; understand the implications. Stay informed!" />
+<meta property="og:url" content="https://quillmatick.github.io/blog/scattered-spider-hacker-reportedly-charges-filed-now" />
+<meta property="og:type" content="article" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Ultimate Guide: Scattered Spider Hacker: Reportedly C..." />
+<meta name="twitter:description" content="Reportedly charges filed against the Scattered Spider hacker. Learn the details of this major cybercrime case &amp; understand the implications. Stay informed!" />
   <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
   <link rel="stylesheet" href="/blog/style.css" />
@@ -85,7 +105,7 @@
       <span class="trending-label">TRENDING:</span>
       <div class="ticker-wrap">
         <div class="ticker">
-          <span class="ticker-item">#CyberSecurity2025</span>
+          <span class="ticker-item">#CyberSecurity2026</span>
           <span class="ticker-item">#GenerativeAI</span>
           <span class="ticker-item">#Web3Security</span>
           <span class="ticker-item">#MachineLearning</span>
@@ -102,8 +122,8 @@
 
       <header class="post-header">
         <div class="post-meta">
-          <time itemprop="datePublished" datetime="1970-01-01T00:00:00.000Z">
-            January 1, 1970
+          <time itemprop="datePublished" datetime="2026-05-10T11:49:16.000Z">
+            May 10, 2026
           </time>
           <span class="word-count">1367 words</span>
           <span class="read-time">6 min read</span>
@@ -294,8 +314,8 @@ None established
       <section class="newsletter-box">
         <h3>Join the Inner Circle</h3>
         <p>Get exclusive AI insights and cybersecurity strategy delivered to your inbox weekly.</p>
-        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Signed up! (Demo Mode)');">
-          <input type="email" placeholder="Enter your email..." required />
+        <form class="newsletter-form" onsubmit="if(window.__qmSubscribe){window.__qmSubscribe(event, this);}else{event.preventDefault();alert('Subscription service offline');}">
+          <input type="email" name="email" placeholder="Enter your email..." required />
           <button type="submit">Join Now</button>
         </form>
       </section>
@@ -413,6 +433,42 @@ None established
         if (document.visibilityState === 'hidden') sendHeartbeat();
       });
     })();
+  </script>
+  <script>
+    window.__qmSubscribe = async function(event, form) {
+      event.preventDefault();
+      const emailInput = form.querySelector('input[type="email"]');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (!emailInput || !submitBtn) return;
+
+      const email = emailInput.value.trim();
+      if (!email) return;
+
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.textContent = 'Joining...';
+      submitBtn.disabled = true;
+
+      try {
+        const res = await fetch('http://localhost:4000/api/analytics/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          mode: 'cors',
+          body: JSON.stringify({ email: email })
+        });
+        const data = await res.json();
+        if (data.success) {
+          alert(data.message || 'Signed up successfully!');
+          emailInput.value = '';
+        } else {
+          alert(data.error || 'Failed to subscribe. Please try again.');
+        }
+      } catch (err) {
+        alert('Could not connect to subscription service. Please try again later.');
+      } finally {
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+      }
+    };
   </script>
 </body>
 </html>
