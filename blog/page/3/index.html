@@ -13,6 +13,49 @@
       } catch (e) {}
     })();
   </script>
+  <!-- Anti-Copy and Right-Click Protection (100% Free Code Protection) -->
+  <style>
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    /* Let users search text if needed, but disable dragging/copying of paragraphs */
+    article p, article li {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  </style>
+  <script>
+    (function() {
+      // 1. Disable mouse right-click menu
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
+
+      // 2. Disable Keyboard shortcuts (Ctrl+C / Cmd+C, Ctrl+U / Cmd+U, F12, Ctrl+Shift+I)
+      document.addEventListener('keydown', function(e) {
+        // Disable Copy (Ctrl+C or Cmd+C)
+        if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
+          e.preventDefault();
+          return false;
+        }
+        // Disable View Source (Ctrl+U or Cmd+U)
+        if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
+          e.preventDefault();
+          return false;
+        }
+        // Disable DevTools inspect (F12 or Ctrl+Shift+I / Cmd+Option+I)
+        if (e.key === 'F12' || ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'i')) {
+          e.preventDefault();
+          return false;
+        }
+      });
+    })();
+  </script>
   <title>Blog - Page 3 | Quillmatick</title>
   <meta name="description" content="Latest articles on technology, AI, and software development. Page 3" />
   <link rel="stylesheet" href="/blog/style.css" />
@@ -78,7 +121,7 @@
           <p>A Disney employee calls Claude 51,000 times—why? Learn how this unusual interaction boosts AI training &amp; unlocks surprising insights. Get the full story!</p>
           <div class="card-meta">
             <time>5/2/2026</time>
-            <span>7 min read</span>
+            <span>6 min read</span>
           </div>
         </div>
       </a>
@@ -108,7 +151,7 @@
           <p>PBKS faces RR: We analyze key player matchups and tactical battles. Understand strengths, weaknesses, and gain an edge – see who will dominate!</p>
           <div class="card-meta">
             <time>5/2/2026</time>
-            <span>6 min read</span>
+            <span>5 min read</span>
           </div>
         </div>
       </a>
@@ -168,7 +211,7 @@
           <p>AI now costs more than human workers? Explore the surprising economics of automation, revealing hidden expenses &amp; potential pitfalls. Optimize your strategy—lea</p>
           <div class="card-meta">
             <time>5/2/2026</time>
-            <span>6 min read</span>
+            <span>5 min read</span>
           </div>
         </div>
       </a>
@@ -183,7 +226,7 @@
           <p>eBay outage got you down? Learn how to navigate disruptions, protect your listings, and minimize losses. Stay informed and keep selling—find practical tips now.</p>
           <div class="card-meta">
             <time>5/2/2026</time>
-            <span>6 min read</span>
+            <span>5 min read</span>
           </div>
         </div>
       </a>

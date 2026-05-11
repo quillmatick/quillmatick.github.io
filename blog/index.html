@@ -13,6 +13,49 @@
       } catch (e) {}
     })();
   </script>
+  <!-- Anti-Copy and Right-Click Protection (100% Free Code Protection) -->
+  <style>
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    /* Let users search text if needed, but disable dragging/copying of paragraphs */
+    article p, article li {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  </style>
+  <script>
+    (function() {
+      // 1. Disable mouse right-click menu
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
+
+      // 2. Disable Keyboard shortcuts (Ctrl+C / Cmd+C, Ctrl+U / Cmd+U, F12, Ctrl+Shift+I)
+      document.addEventListener('keydown', function(e) {
+        // Disable Copy (Ctrl+C or Cmd+C)
+        if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
+          e.preventDefault();
+          return false;
+        }
+        // Disable View Source (Ctrl+U or Cmd+U)
+        if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
+          e.preventDefault();
+          return false;
+        }
+        // Disable DevTools inspect (F12 or Ctrl+Shift+I / Cmd+Option+I)
+        if (e.key === 'F12' || ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'i')) {
+          e.preventDefault();
+          return false;
+        }
+      });
+    })();
+  </script>
   <title>Blog  | Quillmatick</title>
   <meta name="description" content="Latest articles on technology, AI, and software development. Page 1" />
   <link rel="stylesheet" href="/blog/style.css" />
@@ -198,7 +241,7 @@
           <p>The president administration cites national security concerns, halting wind farm progress. Learn how this impacts energy &amp; understand the legal reasoning. Get c</p>
           <div class="card-meta">
             <time>5/8/2026</time>
-            <span>7 min read</span>
+            <span>6 min read</span>
           </div>
         </div>
       </a>
@@ -228,7 +271,7 @@
           <p>A college student suing a dating app sparks controversy! Learn about the TikTok allegations &amp; legal battle. Understand the risks &amp; protect yourself. Get the det</p>
           <div class="card-meta">
             <time>5/8/2026</time>
-            <span>6 min read</span>
+            <span>5 min read</span>
           </div>
         </div>
       </a>
@@ -273,7 +316,7 @@
           <p>Peter Thiel backs 1bn ocean data centre? Learn how this ambitious project aims to map the ocean floor &amp; unlock vital resources. Get insights into the future!</p>
           <div class="card-meta">
             <time>5/7/2026</time>
-            <span>7 min read</span>
+            <span>6 min read</span>
           </div>
         </div>
       </a>
@@ -288,7 +331,7 @@
           <p>Explore why Meta lost million users &amp; understand the factors behind this significant shift. Learn how this impacts the future &amp; gain valuable insights. Find out</p>
           <div class="card-meta">
             <time>5/7/2026</time>
-            <span>7 min read</span>
+            <span>5 min read</span>
           </div>
         </div>
       </a>
@@ -333,7 +376,7 @@
           <p>Checkmarx confirms Lapsus$ hackers breached their systems! Learn how this security incident unfolded &amp; what sensitive data was exposed. Protect your business no</p>
           <div class="card-meta">
             <time>5/2/2026</time>
-            <span>7 min read</span>
+            <span>6 min read</span>
           </div>
         </div>
       </a>
@@ -348,7 +391,7 @@
           <p>Explore Microsoft VibeVoice opensource frontier! Learn how to build engaging, employee-centric platforms. Boost internal comms &amp; unlock valuable insights. Start</p>
           <div class="card-meta">
             <time>5/2/2026</time>
-            <span>7 min read</span>
+            <span>6 min read</span>
           </div>
         </div>
       </a>

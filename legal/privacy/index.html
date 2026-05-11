@@ -9,6 +9,49 @@
       } catch (e) {}
     })();
   </script>
+  <!-- Anti-Copy and Right-Click Protection (100% Free Code Protection) -->
+  <style>
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    /* Let users search text if needed, but disable dragging/copying of paragraphs */
+    article p, article li {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  </style>
+  <script>
+    (function() {
+      // 1. Disable mouse right-click menu
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
+
+      // 2. Disable Keyboard shortcuts (Ctrl+C / Cmd+C, Ctrl+U / Cmd+U, F12, Ctrl+Shift+I)
+      document.addEventListener('keydown', function(e) {
+        // Disable Copy (Ctrl+C or Cmd+C)
+        if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
+          e.preventDefault();
+          return false;
+        }
+        // Disable View Source (Ctrl+U or Cmd+U)
+        if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
+          e.preventDefault();
+          return false;
+        }
+        // Disable DevTools inspect (F12 or Ctrl+Shift+I / Cmd+Option+I)
+        if (e.key === 'F12' || ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'i')) {
+          e.preventDefault();
+          return false;
+        }
+      });
+    })();
+  </script>
     <title>Privacy Policy | Quillmatick</title>
     <link rel="stylesheet" href="/blog/style.css" />
     </head><body>

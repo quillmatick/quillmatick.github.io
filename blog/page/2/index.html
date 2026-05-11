@@ -13,6 +13,49 @@
       } catch (e) {}
     })();
   </script>
+  <!-- Anti-Copy and Right-Click Protection (100% Free Code Protection) -->
+  <style>
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    /* Let users search text if needed, but disable dragging/copying of paragraphs */
+    article p, article li {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  </style>
+  <script>
+    (function() {
+      // 1. Disable mouse right-click menu
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
+
+      // 2. Disable Keyboard shortcuts (Ctrl+C / Cmd+C, Ctrl+U / Cmd+U, F12, Ctrl+Shift+I)
+      document.addEventListener('keydown', function(e) {
+        // Disable Copy (Ctrl+C or Cmd+C)
+        if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
+          e.preventDefault();
+          return false;
+        }
+        // Disable View Source (Ctrl+U or Cmd+U)
+        if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
+          e.preventDefault();
+          return false;
+        }
+        // Disable DevTools inspect (F12 or Ctrl+Shift+I / Cmd+Option+I)
+        if (e.key === 'F12' || ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'i')) {
+          e.preventDefault();
+          return false;
+        }
+      });
+    })();
+  </script>
   <title>Blog - Page 2 | Quillmatick</title>
   <meta name="description" content="Latest articles on technology, AI, and software development. Page 2" />
   <link rel="stylesheet" href="/blog/style.css" />
@@ -213,7 +256,7 @@
           <p>Understand your **FCA vehicle recall** with our ultimate guide! Learn how to check for alerts, interpret notices, and protect your investment. Stay informed &amp; d</p>
           <div class="card-meta">
             <time>5/2/2026</time>
-            <span>7 min read</span>
+            <span>6 min read</span>
           </div>
         </div>
       </a>
@@ -228,7 +271,7 @@
           <p>Understand Microsofts GitHub Shifts metered billing! Learn how to optimize usage &amp; avoid unexpected costs. Get clarity on pricing &amp; maximize value. Explore now!</p>
           <div class="card-meta">
             <time>5/2/2026</time>
-            <span>6 min read</span>
+            <span>5 min read</span>
           </div>
         </div>
       </a>
@@ -258,7 +301,7 @@
           <p>Learn how to invest in meta stock &amp; understand Meta&#039;s business model. This guide simplifies stock investing, helping you build wealth &amp; confidently navigate the</p>
           <div class="card-meta">
             <time>5/2/2026</time>
-            <span>6 min read</span>
+            <span>5 min read</span>
           </div>
         </div>
       </a>
@@ -303,7 +346,7 @@
           <p>Learn how to block every Android app with this ultimate guide! Control privacy, limit distractions, and safeguard your device. Get expert tips now!</p>
           <div class="card-meta">
             <time>5/2/2026</time>
-            <span>7 min read</span>
+            <span>6 min read</span>
           </div>
         </div>
       </a>
@@ -318,7 +361,7 @@
           <p>Canada arrests three: Learn how an SMS blaster device operates &amp; the legal ramifications. Understand the risks &amp; avoid hefty fines. Get the full story now!</p>
           <div class="card-meta">
             <time>5/2/2026</time>
-            <span>7 min read</span>
+            <span>6 min read</span>
           </div>
         </div>
       </a>
