@@ -9,7 +9,7 @@ The articles, guides, and layouts in this repository are compiled statically and
 
 ## 🚀 Key Highlights of the Platform
 
-* **Autonomously Curated Trends:** Articles are generated based on real-time virality assessments from sources like HackerNews, Google Trends, Reddit, and global cyber incident feeds.
+* **Autonomously Curated Trends:** Articles are curated using sophisticated data aggregation engines that monitor real-time security bulletins, high-authority technology feeds, and viral tech-sector metadata.
 * **Ultra-Fast Performance:** 100% static HTML pages with zero bloated Javascript runtime, ensuring immediate page-loads, optimal performance, and premium SEO core web vitals.
 * **Premium Aesthetic Interface:** Responsive typography, sleek dark & light theme modes, and an interactive tags ticker bar.
 * **Real-Time Interactive Features:** Instant client-side search indexing, real-time predictive search dropdowns, and automated newsletter subscription channels.
