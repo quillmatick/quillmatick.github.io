@@ -5,8 +5,24 @@
   <link>https://quillmatick.github.io/blog</link>
   <description>Latest articles on technology, AI, and software development.</description>
   <language>en</language>
-  <lastBuildDate>Mon, 11 May 2026 01:30:54 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 11 May 2026 01:31:03 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Cruz Azul Atlas Guide: Everything You Need to Know for 2026]]></title>
+    <link>https://quillmatick.github.io/blog/cruz-azul-atlas-guide-everything-you-need-to-know</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/blog/cruz-azul-atlas-guide-everything-you-need-to-know</guid>
+    <description><![CDATA[Master the Cruz Azul Atlas with our complete guide. Learn key features and setup tips to optimize your performance and save time. Get the full breakdown here.]]></description>
+    <pubDate>Mon, 11 May 2026 01:31:03 GMT</pubDate>
+    <category>cruz azul atlas</category>
+    <category>precision engineering</category>
+    <category>operational efficiency</category>
+    <category>industrial automation</category>
+    <category>performance optimization</category>
+    <category>hardware guide</category>
+    <category>roi</category>
+    <category>technical infrastructure</category>
+    <language>en</language>
+  </item>
   <item>
     <title><![CDATA[Twins Guardians: The Complete Guide to Choosing Your Path...]]></title>
     <link>https://quillmatick.github.io/blog/twins-guardians-the-complete-guide-to-choosing-your-path</link>
@@ -302,21 +318,6 @@
     <category>user control</category>
     <category>third-party integrations</category>
     <category>predictive analytics</category>
-    <language>en</language>
-  </item>
-  <item>
-    <title><![CDATA[Ultimate Guide: Glassworm Malware Attacks Return for 2026]]></title>
-    <link>https://quillmatick.github.io/blog/ultimate-guide-glassworm-malware-attacks-return</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/blog/ultimate-guide-glassworm-malware-attacks-return</guid>
-    <description><![CDATA[Glassworm malware attacks return, targeting businesses! Learn how this sophisticated threat operates & protect your data. Get practical prevention tips now.]]></description>
-    <pubDate>Fri, 01 May 2026 19:03:38 GMT</pubDate>
-    <category>glassworm malware</category>
-    <category>openvsx</category>
-    <category>endpoint detection</category>
-    <category>network segmentation</category>
-    <category>code review</category>
-    <category>secure coding practices</category>
-    <category>edr systems</category>
     <language>en</language>
   </item>
 </channel>
