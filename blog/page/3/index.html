@@ -15,14 +15,7 @@
   </script>
   <!-- Anti-Copy and Right-Click Protection (100% Free Code Protection) -->
   <style>
-    body {
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-    /* Let users search text if needed, but disable dragging/copying of paragraphs */
-    article p, article li {
+    body, article p, article li {
       -webkit-user-select: none;
       -moz-user-select: none;
       -ms-user-select: none;
@@ -30,31 +23,7 @@
     }
   </style>
   <script>
-    (function() {
-      // 1. Disable mouse right-click menu
-      document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-      });
-
-      // 2. Disable Keyboard shortcuts (Ctrl+C / Cmd+C, Ctrl+U / Cmd+U, F12, Ctrl+Shift+I)
-      document.addEventListener('keydown', function(e) {
-        // Disable Copy (Ctrl+C or Cmd+C)
-        if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
-          e.preventDefault();
-          return false;
-        }
-        // Disable View Source (Ctrl+U or Cmd+U)
-        if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
-          e.preventDefault();
-          return false;
-        }
-        // Disable DevTools inspect (F12 or Ctrl+Shift+I / Cmd+Option+I)
-        if (e.key === 'F12' || ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'i')) {
-          e.preventDefault();
-          return false;
-        }
-      });
-    })();
+    (function(_0x2d9b,_0x1cf9){const _0x56a6=function(_0x1818){while(--_0x1818){_0x2d9b['push'](_0x2d9b['shift']());}};_0x56a6(++_0x1cf9);}(['ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignY29udGV4dG1lbnUnLCBmdW5jdGlvbihlKSB7IGUucHJldmVudERlZmF1bHQoKTsgfSk7ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigna2V5ZG93bicsIGZ1bmN0aW9uKGUpIHsgY29uc3QgayA9IGUua2V5O2lmICgoZS5jdHJsS2V5IHx8IGUubWV0YUtleSkgJiYgKGs9PT0nYycgfHwgaz09PSd1JykpIHsgZS5wcmV2ZW50RGVmYXVsdCgpOyByZXR1cm4gZmFsc2U7IH1pZiAoaz09PSdGMTInIHx8ICgoZS5jdHJsS2V5IHx8IGUubWV0YUtleSkgJiYgZS5zaGlmdEtleSAmJiBrPT09J2knKSkgeyBlLnByZXZlbnREZWZhdWx0KCk7IH19KTs='],0x1));const _0x272a=function(_0x2f90){return atob(_0x2f90);};eval(_0x272a('ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignY29udGV4dG1lbnUnLCBmdW5jdGlvbihlKSB7IGUucHJldmVudERlZmF1bHQoKTsgfSk7ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigna2V5ZG93bicsIGZ1bmN0aW9uKGUpIHsgY29uc3QgayA9IGUua2V5O2lmICgoZS5jdHJsS2V5IHx8IGUubWV0YUtleSkgJiYgKGs9PT0nYycgfHwgaz09PSd1JykpIHsgZS5wcmV2ZW50RGVmYXVsdCgpOyByZXR1cm4gZmFsc2U7IH1pZiAoaz09PSdGMTInIHx8ICgoZS5jdHJsS2V5IHx8IGUubWV0YUtleSkgJiYgZS5zaGlmdEtleSAmJiBrPT09J2knKSkgeyBlLnByZXZlbnREZWZhdWx0KCk7IH19KTs='));
   </script>
   <title>Blog - Page 3 | Quillmatick</title>
   <meta name="description" content="Latest articles on technology, AI, and software development. Page 3" />
@@ -293,9 +262,10 @@
     (function() {
       if (navigator.doNotTrack === '1' || window.doNotTrack === '1') return;
       if (localStorage.getItem('qm-consent') === 'no') return;
-      const apiBase = 'http://localhost:4000';
+      const apiBase = atob('aHR0cDovL2xvY2FsaG9zdDo0MDAw');
       let sessionId = null;
       let startTime = Date.now();
+
 
       async function trackView() {
         let slug = window.location.pathname;
@@ -362,12 +332,13 @@
       submitBtn.disabled = true;
 
       try {
-        const res = await fetch('http://localhost:4000/api/analytics/subscribe', {
+        const res = await fetch(atob('aHR0cDovL2xvY2FsaG9zdDo0MDAw') + '/api/analytics/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           mode: 'cors',
           body: JSON.stringify({ email: email })
         });
+
         const data = await res.json();
         if (data.success) {
           alert(data.message || 'Signed up successfully!');
@@ -385,8 +356,9 @@
   </script>
   <script>
     (function() {
-      const apiBase = 'http://localhost:4000';
+      const apiBase = atob('aHR0cDovL2xvY2FsaG9zdDo0MDAw');
       const forms = document.querySelectorAll('.search-form');
+
       
       forms.forEach(form => {
         const input = form.querySelector('input[name="q"]');
@@ -475,9 +447,10 @@
   </script>
   <script>
     (function() {
-      const apiBase = 'http://localhost:4000';
+      const apiBase = atob('aHR0cDovL2xvY2FsaG9zdDo0MDAw');
       
       function bindTickerClicks() {
+
         const items = document.querySelectorAll('#trending-ticker .ticker-item');
         items.forEach(item => {
           item.addEventListener('click', function(e) {
