@@ -5,8 +5,24 @@
   <link>https://quillmatick.github.io/blog</link>
   <description>Latest articles on technology, AI, and software development.</description>
   <language>en</language>
-  <lastBuildDate>Tue, 12 May 2026 10:28:11 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 12 May 2026 11:02:56 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How to Fix Microsoft Edge Passwords Leaking in Plaintext for 2026]]></title>
+    <link>https://quillmatick.github.io/blog/how-to-fix-microsoft-edge-passwords-leaking-in-plaintext</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/blog/how-to-fix-microsoft-edge-passwords-leaking-in-plaintext</guid>
+    <description><![CDATA[Stop Microsoft Edge passwords leaking in plaintext. Learn to clear passwords from memory and secure your data to prevent theft. Protect your account now.]]></description>
+    <pubDate>Tue, 12 May 2026 11:02:55 GMT</pubDate>
+    <category>microsoft edge</category>
+    <category>password security</category>
+    <category>cybersecurity</category>
+    <category>credential harvesting</category>
+    <category>dpapi</category>
+    <category>memory vulnerabilities</category>
+    <category>password managers</category>
+    <category>windows security</category>
+    <language>en</language>
+  </item>
   <item>
     <title><![CDATA[Sam Altman: The Complete Guide to His Impact on AI for 2026]]></title>
     <link>https://quillmatick.github.io/blog/sam-altman-the-complete-guide-to-his-impact-on-ai</link>
@@ -303,21 +319,6 @@
     <category>framework</category>
     <category>security</category>
     <category>tactics</category>
-    <language>en</language>
-  </item>
-  <item>
-    <title><![CDATA[The Ultimate Guide: Checkmarx Confirms Lapsus$ Hack: What...]]></title>
-    <link>https://quillmatick.github.io/blog/checkmarx-confirms-lapsusdollar-hack-what-you-need-to-know</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/blog/checkmarx-confirms-lapsusdollar-hack-what-you-need-to-know</guid>
-    <description><![CDATA[Checkmarx confirms Lapsus$ hackers breached their systems! Learn how this security incident unfolded & what sensitive data was exposed. Protect your business no]]></description>
-    <pubDate>Fri, 01 May 2026 19:04:08 GMT</pubDate>
-    <category>application security</category>
-    <category>data breach</category>
-    <category>github</category>
-    <category>lapsus</category>
-    <category>phishing</category>
-    <category>supply chain attack</category>
-    <category>vulnerability management</category>
     <language>en</language>
   </item>
 </channel>
