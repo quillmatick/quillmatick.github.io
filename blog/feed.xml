@@ -5,8 +5,24 @@
   <link>https://quillmatick.github.io/blog</link>
   <description>Latest articles on technology, AI, and software development.</description>
   <language>en</language>
-  <lastBuildDate>Tue, 12 May 2026 11:02:56 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 13 May 2026 09:27:18 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Twin Brothers Wipe 96 Govt Databases: The Complete Guide]]></title>
+    <link>https://quillmatick.github.io/blog/twin-brothers-wipe-96-govt-databases-the-complete-guide</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/blog/twin-brothers-wipe-96-govt-databases-the-complete-guide</guid>
+    <description><![CDATA[See how twin brothers wipe 96 govt databases in this deep dive. Learn the exact methods used and secure your own data from similar risks. Read the full guide.]]></description>
+    <pubDate>Wed, 13 May 2026 09:27:18 GMT</pubDate>
+    <category>cybersecurity</category>
+    <category>insider threat</category>
+    <category>data breach</category>
+    <category>privileged access management</category>
+    <category>government security</category>
+    <category>data loss prevention</category>
+    <category>it security</category>
+    <category>access control</category>
+    <language>en</language>
+  </item>
   <item>
     <title><![CDATA[How to Fix Microsoft Edge Passwords Leaking in Plaintext for 2026]]></title>
     <link>https://quillmatick.github.io/blog/how-to-fix-microsoft-edge-passwords-leaking-in-plaintext</link>
@@ -304,21 +320,6 @@
     <category>windows</category>
     <category>it</category>
     <category>technology</category>
-    <language>en</language>
-  </item>
-  <item>
-    <title><![CDATA[How These Guides Outline OPSEC for Threat Actors for 2026]]></title>
-    <link>https://quillmatick.github.io/blog/how-these-guides-outline-opsec-for-threat-actors</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/blog/how-these-guides-outline-opsec-for-threat-actors</guid>
-    <description><![CDATA[How these guides outline critical OPSEC strategies used by threat actors. Learn layered defense techniques & protect your data. Gain a competitive edge now!]]></description>
-    <pubDate>Fri, 01 May 2026 19:04:19 GMT</pubDate>
-    <category>opsec</category>
-    <category>threat actors</category>
-    <category>cybersecurity</category>
-    <category>guide</category>
-    <category>framework</category>
-    <category>security</category>
-    <category>tactics</category>
     <language>en</language>
   </item>
 </channel>
