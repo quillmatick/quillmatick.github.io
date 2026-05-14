@@ -5,8 +5,24 @@
   <link>https://quillmatick.github.io/blog</link>
   <description>Latest articles on technology, AI, and software development.</description>
   <language>en</language>
-  <lastBuildDate>Thu, 14 May 2026 11:08:59 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 14 May 2026 11:13:39 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[microsoft bitlockerprotected drives: How to Stop YellowKey]]></title>
+    <link>https://quillmatick.github.io/blog/how-to-stop-yellowkey-zero-day-exploit-bitlocker-attacks</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/blog/how-to-stop-yellowkey-zero-day-exploit-bitlocker-attacks</guid>
+    <description><![CDATA[Learn more about microsoft bitlockerprotected drives. Stop YellowKey USB stick attacks now. Learn to secure Microsoft BitLocker protected drives and prevent ...]]></description>
+    <pubDate>Thu, 14 May 2026 11:13:39 GMT</pubDate>
+    <category>bitlocker</category>
+    <category>yellowkey</category>
+    <category>zero-day exploit</category>
+    <category>cybersecurity</category>
+    <category>usb security</category>
+    <category>hid emulation</category>
+    <category>dma protection</category>
+    <category>windows security</category>
+    <language>en</language>
+  </item>
   <item>
     <title><![CDATA[The Ultimate Guide: How Data Center Drained Million Gallons]]></title>
     <link>https://quillmatick.github.io/blog/how-data-center-drained-million-gallons-of-water-unreported</link>
@@ -305,22 +321,6 @@
     <category>local gdp growth</category>
     <category>co reduction</category>
     <category>great plains</category>
-    <language>en</language>
-  </item>
-  <item>
-    <title><![CDATA[The Ultimate Guide: Nvidia Exec Says: AI Costs More Than ...]]></title>
-    <link>https://quillmatick.github.io/blog/nvidia-exec-says-ai-costs-more-than-actual-workers</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/blog/nvidia-exec-says-ai-costs-more-than-actual-workers</guid>
-    <description><![CDATA[Nvidia exec says AI is pricier than actual workers! Learn how AI costs stack up against human labor & the surprising implications for businesses. Get insights n]]></description>
-    <pubDate>Fri, 08 May 2026 06:00:00 GMT</pubDate>
-    <category>ai costs</category>
-    <category>nvidia exec</category>
-    <category>budgeting</category>
-    <category>upfront costs</category>
-    <category>ongoing costs</category>
-    <category>hidden expenses</category>
-    <category>data privacy regulations</category>
-    <category>strategic planning</category>
     <language>en</language>
   </item>
 </channel>
