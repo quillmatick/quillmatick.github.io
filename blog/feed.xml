@@ -5,8 +5,24 @@
   <link>https://quillmatick.github.io/blog</link>
   <description>Latest articles on technology, AI, and software development.</description>
   <language>en</language>
-  <lastBuildDate>Fri, 15 May 2026 15:23:32 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 15 May 2026 15:27:48 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How to Handle When Nobody Wants Data Centers Nearby for 2026]]></title>
+    <link>https://quillmatick.github.io/blog/how-to-handle-when-nobody-wants-data-centers-nearby</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/blog/how-to-handle-when-nobody-wants-data-centers-nearby</guid>
+    <description><![CDATA[When nobody wants data centers nearby, you must act fast. Learn proven strategies to overcome local opposition, gain trust, and secure your site. Read more.]]></description>
+    <pubDate>Fri, 15 May 2026 15:27:48 GMT</pubDate>
+    <category>data center development</category>
+    <category>community relations</category>
+    <category>zoning and permits</category>
+    <category>environmental impact</category>
+    <category>sustainable infrastructure</category>
+    <category>site acquisition</category>
+    <category>public relations</category>
+    <category>urban planning</category>
+    <language>en</language>
+  </item>
   <item>
     <title><![CDATA[The Ultimate Guide: How Princeton Scraps Honor Code for AI Exam]]></title>
     <link>https://quillmatick.github.io/blog/how-princeton-scraps-honor-code-for-ai-exam-supervision</link>
@@ -304,21 +320,6 @@
     <category>windows</category>
     <category>it</category>
     <category>technology</category>
-    <language>en</language>
-  </item>
-  <item>
-    <title><![CDATA[How These Guides Outline OPSEC for Threat Actors for 2026]]></title>
-    <link>https://quillmatick.github.io/blog/how-these-guides-outline-opsec-for-threat-actors</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/blog/how-these-guides-outline-opsec-for-threat-actors</guid>
-    <description><![CDATA[How these guides outline critical OPSEC strategies used by threat actors. Learn layered defense techniques & protect your data. Gain a competitive edge now!]]></description>
-    <pubDate>Fri, 01 May 2026 19:04:19 GMT</pubDate>
-    <category>opsec</category>
-    <category>threat actors</category>
-    <category>cybersecurity</category>
-    <category>guide</category>
-    <category>framework</category>
-    <category>security</category>
-    <category>tactics</category>
     <language>en</language>
   </item>
 </channel>
