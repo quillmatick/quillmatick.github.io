@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Quillmatick</title>
+  <link>https://quillmatick.github.io/tech</link>
+  <description>AI-Powered Content Automation</description>
+  <language>en</language>
+  <lastBuildDate>Sun, 07 Jun 2026 05:58:11 GMT</lastBuildDate>
+  <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+
+</channel>
+</rss>

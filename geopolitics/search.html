@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <meta name="impact-site-verification" value="47413e58-28f4-4b8a-b485-6d184eb0050b">
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <script>
+    (function() {
+      try {
+        const saved = localStorage.getItem('qm-theme');
+        const theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+  <title>Search Results | Quillmatick Geopolitics</title>
+  <meta name="description" content="Search results for Quillmatick Geopolitics" />
+  <meta property="og:title" content="Search Results | Quillmatick Geopolitics" />
+  <meta property="og:description" content="Search results for Quillmatick Geopolitics" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="/geopolitics/style.css?v=1780725139059" />
+</head>
+<body>
+  
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ─── LIVE TICKER ─── -->
+  <div class="ticker" role="marquee" aria-label="Trending topics">
+    <div class="ticker-inner container">
+      <span class="ticker-label">Live</span>
+      <div class="ticker-track">
+        <div class="ticker-scroll" id="trending-ticker">
+          <a href="/geopolitics/how-hezbollah-rejects-renewed-ceasefire-agreed-by-israel" class="ticker-item"><span class="tag">#hezbollah</span>How Hezbollah Rejects Renewed Ceasefire Agreed by Israel</a><a href="/geopolitics/zelensky-proposes-face-to-face-talks-a-guide-to-the-letter" class="ticker-item"><span class="tag">#volodymyrzelenskyy</span>zelensky proposes facetoface: Zelensky Proposes Face-to-Face Talks: A Guide to the Letter</a><a href="/geopolitics/two-people-shot-dead-amid-kenya-protests-a-full-guide" class="ticker-item"><span class="tag">#kenyaprotests</span>Two People Shot Dead Amid Kenya Protests: A Full Guide for 2026</a><a href="/geopolitics/clashes-continue-lebanon-the-complete-guide-to-the-conflict" class="ticker-item"><span class="tag">#lebanonconflict</span>Clashes Continue Lebanon: The Complete Guide to the Conflict for 2026</a><a href="/geopolitics/ukraine-rescuers-pull-dead-from-rubble-after-russian-strikes" class="ticker-item"><span class="tag">#ukrainewar</span>Ukraine Rescuers Pull Dead From Rubble After</a><a href="/geopolitics/iran-condemns-strikes-a-guide-to-the-gross-violation" class="ticker-item"><span class="tag">#iran</span>Iran Condemns Strikes: A Guide to the Gross Violation for 2026</a><a href="/geopolitics/how-hezbollah-rejects-renewed-ceasefire-agreed-by-israel" class="ticker-item"><span class="tag">#hezbollah</span>How Hezbollah Rejects Renewed Ceasefire Agreed by Israel</a><a href="/geopolitics/zelensky-proposes-face-to-face-talks-a-guide-to-the-letter" class="ticker-item"><span class="tag">#volodymyrzelenskyy</span>zelensky proposes facetoface: Zelensky Proposes Face-to-Face Talks: A Guide to the Letter</a><a href="/geopolitics/two-people-shot-dead-amid-kenya-protests-a-full-guide" class="ticker-item"><span class="tag">#kenyaprotests</span>Two People Shot Dead Amid Kenya Protests: A Full Guide for 2026</a><a href="/geopolitics/clashes-continue-lebanon-the-complete-guide-to-the-conflict" class="ticker-item"><span class="tag">#lebanonconflict</span>Clashes Continue Lebanon: The Complete Guide to the Conflict for 2026</a><a href="/geopolitics/ukraine-rescuers-pull-dead-from-rubble-after-russian-strikes" class="ticker-item"><span class="tag">#ukrainewar</span>Ukraine Rescuers Pull Dead From Rubble After</a><a href="/geopolitics/iran-condemns-strikes-a-guide-to-the-gross-violation" class="ticker-item"><span class="tag">#iran</span>Iran Condemns Strikes: A Guide to the Gross Violation for 2026</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── NAVBAR ─── -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="navbar-inner">
+        <a href="/" class="logo" aria-label="Quillmatick home">
+          Quill<span>matick</span><span class="logo-dot" aria-hidden="true"></span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="/tech" class="">Tech</a></li>
+          <li><a href="/geopolitics" class="">Geopolitics</a></li>
+          <li><a href="/geopolitics/about.html" class="">About</a></li>
+        </ul>
+        <div class="nav-actions">
+          <form class="search-form" action="/geopolitics/search.html" method="GET" role="search">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="text" name="q" placeholder="Search..." autocomplete="off" required aria-label="Search" />
+          </form>
+          <button class="nav-icon-btn" id="themeToggle" aria-label="Toggle theme">
+            <svg id="themeIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="#newsletter" class="nav-subscribe">Subscribe free</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ─── FILTER BAR ─── -->
+  <div class="filter-bar" role="navigation" aria-label="Category filter">
+    <div class="filter-bar-inner">
+      <a href="/geopolitics/search.html?q=" class="filter-pill active" data-category="all">All topics</a><a href="/geopolitics/search.html?q=geopolitics" class="filter-pill" data-category="geopolitics">geopolitics</a><a href="/geopolitics/search.html?q=national%20security" class="filter-pill" data-category="national security">national security</a><a href="/geopolitics/search.html?q=nato" class="filter-pill" data-category="nato">nato</a><a href="/geopolitics/search.html?q=ukraine-russia%20war" class="filter-pill" data-category="ukraine-russia war">ukraine-russia war</a><a href="/geopolitics/search.html?q=strategic%20analysis" class="filter-pill" data-category="strategic analysis">strategic analysis</a><a href="/geopolitics/search.html?q=military%20doctrine" class="filter-pill" data-category="military doctrine">military doctrine</a><a href="/geopolitics/search.html?q=military%20strategy" class="filter-pill" data-category="military strategy">military strategy</a><a href="/geopolitics/search.html?q=middle%20east%20security" class="filter-pill" data-category="middle east security">middle east security</a>
+    </div>
+  </div>
+  <main id="main-content" class="container" style="padding-top: 3rem; padding-bottom: 5rem; min-height: 60vh;">
+    <div style="max-width: 800px; margin: 0 auto; text-align: left;">
+      <div style="margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem;">
+        <h1 id="search-title" class="hero-headline" style="font-size: 2rem; margin-bottom: 0.5rem;">Search</h1>
+        <div id="results-count" style="font-family: var(--font-mono); font-size: 13px; color: var(--ink3);">Searching...</div>
+      </div>
+      <div id="search-results" class="article-list" role="list"></div>
+      <nav id="pagination" class="pagination" aria-label="Page navigation" style="border-top: none; margin-top: 2rem;"></nav>
+    </div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    let q = params.get('q') || '';
+    let page = parseInt(params.get('page')) || 1;
+    
+    // Sync search input
+    const headerInput = document.querySelector('.search-form input[name="q"]');
+    if (headerInput) {
+      headerInput.value = q;
+    }
+    
+    let searchIndex = null;
+
+    async function loadIndex() {
+      if (searchIndex) return searchIndex;
+      try {
+        const res = await fetch('./search-index.json');
+        searchIndex = await res.json();
+        return searchIndex;
+      } catch (err) {
+        console.error('Failed to load search index:', err);
+        throw err;
+      }
+    }
+
+    async function doSearch() {
+      if (!q) {
+        document.getElementById('search-title').textContent = 'Search';
+        document.getElementById('results-count').textContent = 'Enter a search term above.';
+        document.getElementById('search-results').innerHTML = '';
+        document.getElementById('pagination').innerHTML = '';
+        return;
+      }
+      document.getElementById('search-title').textContent = 'Results for: ' + q;
+      document.getElementById('results-count').textContent = 'Searching...';
+
+      try {
+        const index = await loadIndex();
+        const query = q.toLowerCase().trim();
+        
+        // Filter results client-side
+        const matches = index.filter(post => {
+          return (post.title && post.title.toLowerCase().includes(query)) ||
+                 (post.meta_description && post.meta_description.toLowerCase().includes(query)) ||
+                 (post.tags && post.tags.toLowerCase().includes(query));
+        });
+
+        // Pagination metadata
+        const limit = 10;
+        const total = matches.length;
+        const pages = Math.ceil(total / limit) || 1;
+        
+        // Clamp bounds
+        if (page > pages) page = pages;
+        if (page < 1) page = 1;
+        
+        const start = (page - 1) * limit;
+        const pageData = matches.slice(start, start + limit);
+
+        const data = {
+          data: pageData,
+          meta: {
+            total: total,
+            page: page,
+            pages: pages,
+            limit: limit
+          }
+        };
+
+        renderResults(data);
+        if (window.__qmLogSearch) window.__qmLogSearch(q, total);
+      } catch (e) {
+        document.getElementById('results-count').textContent = 'Search failed. Please try again.';
+      }
+    }
+
+    window.__qmDoSearchPageUpdate = function(newQuery) {
+      q = newQuery;
+      page = 1;
+      const newUrl = window.location.pathname + (q ? '?q=' + encodeURIComponent(q) : '');
+      window.history.replaceState({ q: q }, '', newUrl);
+      doSearch();
+    };
+
+    function getCategoryEmoji(cat) {
+      const clean = (cat || '').toLowerCase();
+      if (clean.includes('security') || clean.includes('cyber')) return '🛡️';
+      if (clean.includes('policy') || clean.includes('regulation') || clean.includes('tax')) return '⚖️';
+      if (clean.includes('privacy') || clean.includes('surveillance')) return '👁️';
+      if (clean.includes('career') || clean.includes('job') || clean.includes('future')) return '💼';
+      if (clean.includes('society') || clean.includes('pope')) return '🌍';
+      return '🤖';
+    }
+    
+    function renderResults(res) {
+      const container = document.getElementById('search-results');
+      const count = document.getElementById('results-count');
+      count.textContent = res.meta.total + ' article(s) found';
+      
+      if (!res.data.length) {
+        container.innerHTML = '<div style="padding:3rem 0; text-align:center; color:var(--ink3); font-size:15px;">No matches found for "' + escapeHtml(q) + '".</div>';
+        document.getElementById('pagination').innerHTML = '';
+        return;
+      }
+
+      container.innerHTML = res.data.map((post, index) => {
+        const date = new Date(post.published_at * 1000).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+        const readTime = Math.ceil(post.word_count / 250);
+        const numStr = (index + 1 + (page - 1) * 10).toString().padStart(2, '0');
+        const badgeClass = 'true' === 'true' ? 'badge-society' : 'badge-ai';
+        const displayCategory = post.category || 'geopolitics';
+        const displayCatName = displayCategory.charAt(0).toUpperCase() + displayCategory.slice(1);
+        const emoji = getCategoryEmoji(post.title + ' ' + post.meta_description + ' ' + displayCategory);
+        
+        let thumbHtml = '';
+        if (post.featured_image) {
+          thumbHtml = '<div class="article-row-thumb" style="opacity: 1; background-image: url(' + post.featured_image + '); background-size: cover; background-position: center;"></div>';
+        } else {
+          thumbHtml = '<div class="article-row-thumb" aria-hidden="true">' + emoji + '</div>';
+        }
+
+        return `
+          <a class="article-row" href="/${displayCategory}/${post.slug}" role="listitem">
+            <span class="article-row-num">${numStr}</span>
+            <div class="article-row-body">
+              <div style="margin-bottom: 0.25rem;">
+                <span class="badge ${badgeClass}">${displayCatName}</span>
+              </div>
+              <span class="article-row-title">${escapeHtml(post.title)}</span>
+              <span class="article-row-excerpt">${escapeHtml(post.meta_description)}</span>
+              <div class="article-row-foot">
+                <span class="article-row-date">${date}</span>
+                <span class="article-row-time">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  ${readTime} min
+                </span>
+              </div>
+            </div>
+            ${thumbHtml}
+          </a>
+        `;
+      }).join('');
+
+      // Simple pagination
+      const pag = document.getElementById('pagination');
+      if (res.meta.pages > 1) {
+        let phtml = '';
+        if (page > 1) {
+          phtml += '<a href="?q=' + encodeURIComponent(q) + '&page=' + (page-1) + '" class="page-btn page-arrow" style="width:auto; padding: 0 16px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></a>';
+        }
+        phtml += '<span class="page-btn active" style="pointer-events:none;">' + page + ' of ' + res.meta.pages + '</span>';
+        if (page < res.meta.pages) {
+          phtml += '<a href="?q=' + encodeURIComponent(q) + '&page=' + (page+1) + '" class="page-btn page-arrow" style="width:auto; padding: 0 16px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>';
+        }
+        pag.innerHTML = phtml;
+      } else {
+        pag.innerHTML = '';
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    }
+
+    doSearch();
+  </script>
+  
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-col-h">Sections</div>
+          <ul class="footer-links" role="list">
+            <li><a href="/tech">Tech</a></li>
+            <li><a href="/geopolitics">Geopolitics</a></li>
+            <li><a href="/geopolitics/about.html">About us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-h">Topics</div>
+          <ul class="footer-links" role="list">
+            <li><a href="/geopolitics/search.html?q=geopolitics">geopolitics</a></li><li><a href="/geopolitics/search.html?q=national%20security">national security</a></li><li><a href="/geopolitics/search.html?q=nato">nato</a></li><li><a href="/geopolitics/search.html?q=ukraine-russia%20war">ukraine-russia war</a></li><li><a href="/geopolitics/search.html?q=strategic%20analysis">strategic analysis</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-h">Company</div>
+          <ul class="footer-links" role="list">
+            <li><a href="/geopolitics/about.html">About</a></li>
+            <li><a href="/geopolitics/legal/privacy/">Privacy policy</a></li>
+            <li><a href="/geopolitics/legal/terms/">Terms of service</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-h">Subscribe</div>
+          <p style="font-size: 12px; color: var(--ink3); margin-bottom: 0.75rem; line-height: 1.6; max-width: 200px;">Weekly briefing on AI and tech. Free forever.</p>
+          <a href="#newsletter" class="btn-primary" style="font-size: 12px; padding: 8px 16px;">Get the newsletter</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2026 Quillmatick. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="/geopolitics/legal/privacy/">Privacy</a>
+          <a href="/geopolitics/legal/terms/">Terms</a>
+        </div>
+        <a href="/geopolitics/feed.xml" class="footer-rss">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19.01 7.38 20 6.18 20C4.98 20 4 19.01 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>
+          RSS Feed
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── COOKIE BANNER ─── -->
+  <div class="cookie-banner hidden" id="cookieBanner" role="dialog" aria-label="Cookie consent" aria-describedby="cookieText">
+    <p class="cookie-text" id="cookieText">
+      This site stores theme preferences and anonymous view counts.
+      <a href="/geopolitics/legal/privacy/">Privacy policy</a>
+    </p>
+    <div class="cookie-actions">
+      <button class="cookie-accept" onclick="acceptCookie()">Accept</button>
+      <button class="cookie-decline" onclick="declineCookie()">Decline</button>
+    </div>
+  </div>
+
+  <!-- ─── NEWSLETTER MODAL ─── -->
+  <div class="modal-overlay" id="newsletterModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-body" style="text-align: center;">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--border); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+        </div>
+        <h3 id="modalTitle" class="newsletter-h" style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; font-family: var(--font-display); color: var(--ink);">Subscribe to Quillmatick</h3>
+        <p class="newsletter-p" style="font-size: 14px; color: var(--ink3); line-height: 1.5; margin-bottom: 1.5rem;">Get the weekly briefing on AI and technology. Free forever, unsubscribe anytime.</p>
+        <form class="newsletter-form" onsubmit="window.__qmSubscribe && window.__qmSubscribe(event, this)">
+          <input class="newsletter-input" type="email" placeholder="Your email address" required aria-label="Email address" style="margin-bottom: 1rem; width: 100%; box-sizing: border-box;" />
+          <button type="submit" class="newsletter-btn" style="width: 100%;">Subscribe free →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── EXIT-INTENT MODAL ─── -->
+  <div class="modal-overlay" id="exitIntentModal" role="dialog" aria-modal="true" aria-labelledby="exitModalTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="closeExitModalBtn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-body" style="text-align: center;">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--border); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+          <span style="font-size: 24px;">🎁</span>
+        </div>
+        <h3 id="exitModalTitle" class="newsletter-h" style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; font-family: var(--font-display); color: var(--ink);">Before you go...</h3>
+        <p class="newsletter-p" style="font-size: 14px; color: var(--ink3); line-height: 1.5; margin-bottom: 1.5rem;">Download our exclusive AI Strategy Cheat Sheet for free! Just enter your email below to get instant access.</p>
+        <form class="newsletter-form" onsubmit="window.__qmSubscribe && window.__qmSubscribe(event, this)">
+          <input class="newsletter-input" type="email" placeholder="Your best email" required aria-label="Email address" style="margin-bottom: 1rem; width: 100%; box-sizing: border-box;" />
+          <button type="submit" class="newsletter-btn" style="width: 100%;">Get the Free Cheat Sheet →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── STICKY BOTTOM CTA (Mobile) ─── -->
+  <div id="stickyBottomCta" style="position: fixed; bottom: -100px; left: 0; right: 0; background: linear-gradient(to top, rgba(20, 18, 17, 0.95), rgba(29, 27, 26, 0.95)); border-top: 1px solid var(--border, #3a312a); padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; z-index: 1000; box-shadow: 0 -4px 20px rgba(0,0,0,0.3); transition: bottom 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+    <div style="display: flex; flex-direction: column; gap: 2px;">
+      <span style="font-size: 13px; font-weight: 700; color: #fff;">Premium Guide</span>
+      <span style="font-size: 11px; color: var(--text-muted, #ebd5cc);">Unlock the full potential</span>
+    </div>
+    <a href="#newsletter" style="background: var(--primary, #ff7a00); color: #fff; text-decoration: none; padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 700; box-shadow: 0 4px 14px rgba(255, 122, 0, 0.3);">
+      Unlock Now
+    </a>
+  </div>
+
+  <style>
+    /* Programmatic Ad Slot placeholder (for dev/testing, will be filled by AdSense/Mediavine) */
+    .qm-ad-slot {
+      margin: 40px auto;
+      text-align: center;
+      min-height: 250px;
+      background-color: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink3);
+      font-size: 12px;
+      font-family: var(--font-mono);
+    }
+    .qm-ad-slot::before {
+      content: 'Advertisement';
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Newsletter modal styling */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10, 8, 8, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      max-width: 420px;
+      width: 90%;
+      position: relative;
+      transform: translateY(20px);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    }
+    .modal-overlay.active .modal-card {
+      transform: translateY(0);
+    }
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      color: var(--ink3);
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+    .modal-close:hover {
+      background: var(--border);
+      color: var(--ink);
+    }
+  </style>
+
+  <!-- Cookie script -->
+  <script>
+    function acceptCookie() {
+      document.getElementById('cookieBanner').classList.add('hidden');
+      try { localStorage.setItem('qm-consent', 'yes'); } catch(e) {}
+      if (window.__qmTrackView) window.__qmTrackView();
+    }
+    function declineCookie() {
+      document.getElementById('cookieBanner').classList.add('hidden');
+      try { localStorage.setItem('qm-consent', 'no'); } catch(e) {}
+    }
+    (function(){
+      if(!localStorage.getItem('qm-consent')){
+        const b = document.getElementById('cookieBanner');
+        if(b) b.classList.remove('hidden');
+      }
+    })();
+  </script>
+
+  <!-- Theme Toggle script -->
+  <script>
+    (function() {
+      try {
+        const themeBtn = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        if (themeBtn && themeIcon) {
+          const sunSvg = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+          const moonSvg = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+          
+          let current = document.documentElement.getAttribute('data-theme') || 'dark';
+          themeIcon.innerHTML = current === 'dark' ? moonSvg : sunSvg;
+
+          themeBtn.onclick = function() {
+            try {
+              const active = document.documentElement.getAttribute('data-theme') || 'dark';
+              const next = active === 'dark' ? 'light' : 'dark';
+              document.documentElement.setAttribute('data-theme', next);
+              localStorage.setItem('qm-theme', next);
+              themeIcon.innerHTML = next === 'dark' ? moonSvg : sunSvg;
+            } catch (err) {}
+          };
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Analytics and Autocomplete script -->
+  <script>
+    (function() {
+      if (navigator.doNotTrack === '1' || window.doNotTrack === '1') return;
+      if (localStorage.getItem('qm-consent') === 'no') return;
+      const apiBase = atob('aHR0cHM6Ly90aGlua3Mtcm9sbGVkLXNlYXJjaGVkLXJlYWR5LnRyeWNsb3VkZmxhcmUuY29t');
+      let sessionId = null;
+      let startTime = Date.now();
+
+      async function trackView() {
+        let slug = window.location.pathname;
+        if (slug.endsWith('/') && slug !== '/') slug = slug.slice(0, -1);
+        const referrer = document.referrer ? new URL(document.referrer).hostname : '';
+        try {
+          const res = await fetch(apiBase + '/api/analytics/pageview', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            mode: 'cors',
+            body: JSON.stringify({ slug: slug, referrer: referrer }),
+          });
+          const data = await res.json();
+          if (data.id) sessionId = data.id;
+        } catch (e) {}
+      }
+
+      async function sendHeartbeat() {
+        if (!sessionId) return;
+        const now = Date.now();
+        const duration = Math.floor((now - startTime) / 1000);
+        startTime = now;
+        try {
+          fetch(apiBase + '/api/analytics/pageview', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            mode: 'cors',
+            body: JSON.stringify({ id: sessionId, duration: duration }),
+          });
+        } catch (e) {}
+      }
+
+      if (localStorage.getItem('qm-consent') === 'yes') { trackView(); }
+      window.__qmTrackView = trackView;
+      window.__qmLogSearch = function(query, count) {
+        fetch(apiBase + '/api/analytics/search-log', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          mode: 'cors',
+          body: JSON.stringify({ query: query, count: count }),
+        }).catch(function() {});
+      };
+      
+      window.__qmTrackClick = function(event, label) {
+        let target = event.currentTarget || event.target;
+        let path = target ? target.href : window.location.pathname;
+        fetch(apiBase + '/api/analytics/click', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          mode: 'cors',
+          body: JSON.stringify({ type: 'affiliate_click', label: label, path: path }),
+        }).catch(function() {});
+      };
+
+      // Heartbeat every 15s
+      setInterval(sendHeartbeat, 15000);
+      window.addEventListener('beforeunload', sendHeartbeat);
+      document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'hidden') sendHeartbeat();
+      });
+    })();
+  </script>
+
+  <!-- Newsletter signup Form submit script -->
+  <script>
+    window.__qmSubscribe = async function(event, form) {
+      event.preventDefault();
+      const emailInput = form.querySelector('input[type="email"]');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (!emailInput || !submitBtn) return;
+
+      const email = emailInput.value.trim();
+      if (!email) return;
+
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.textContent = 'Joining...';
+      submitBtn.disabled = true;
+
+      const targetUrl = atob('aHR0cHM6Ly90aGlua3Mtcm9sbGVkLXNlYXJjaGVkLXJlYWR5LnRyeWNsb3VkZmxhcmUuY29t') + '/api/analytics/subscribe';
+
+      // Helper to display error message inline
+      const showError = (msg) => {
+        const statusDiv = document.createElement('div');
+        statusDiv.className = 'subscribe-status-msg';
+        statusDiv.style.color = 'var(--red)';
+        statusDiv.style.fontSize = '12px';
+        statusDiv.style.marginTop = '8px';
+        statusDiv.style.fontFamily = 'var(--font-mono)';
+        statusDiv.textContent = msg;
+        
+        const oldMsg = form.querySelector('.subscribe-status-msg');
+        if (oldMsg) oldMsg.remove();
+        
+        form.appendChild(statusDiv);
+        setTimeout(() => statusDiv.remove(), 4000);
+      };
+
+      try {
+        const res = await fetch(targetUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          mode: 'cors',
+          body: JSON.stringify({ email: email })
+        });
+
+        const data = await res.json();
+        if (res.ok && (data.success || !data.error)) {
+          submitBtn.textContent = "✓ You're in!";
+          const originalBg = submitBtn.style.background;
+          const originalColor = submitBtn.style.color;
+          const originalBorder = submitBtn.style.borderColor;
+
+          submitBtn.style.background = 'var(--green)';
+          submitBtn.style.color = '#fff';
+          submitBtn.style.borderColor = 'var(--green)';
+          emailInput.value = '';
+
+          // Close modal after success if inside modal
+          if (form.closest('#newsletterModal') && window.__qmCloseSubscribeModal) {
+            setTimeout(window.__qmCloseSubscribeModal, 1500);
+          }
+
+          // Revert button after 4 seconds
+          setTimeout(() => {
+            submitBtn.textContent = originalBtnText;
+            submitBtn.style.background = originalBg;
+            submitBtn.style.color = originalColor;
+            submitBtn.style.borderColor = originalBorder;
+            submitBtn.disabled = false;
+          }, 4000);
+        } else {
+          showError(data.error || data.message || 'Subscription failed. Please try again.');
+          submitBtn.textContent = originalBtnText;
+          submitBtn.disabled = false;
+        }
+      } catch (err) {
+        showError('Could not connect to subscription service. Please try again.');
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+      }
+    };
+  </script>
+
+  <!-- Search autocomplete & dropdown logic -->
+  <script>
+    (function() {
+      function escapeHtml(str) {
+        if (!str) return '';
+        return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+      }
+      const basePath = '/geopolitics';
+      const forms = document.querySelectorAll('.search-form');
+
+      let searchIndex = null;
+      async function getSearchIndex() {
+        if (searchIndex) return searchIndex;
+        try {
+          const res = await fetch(basePath + '/search-index.json');
+          searchIndex = await res.json();
+          return searchIndex;
+        } catch (e) {
+          console.error('Failed to load search index for autocomplete:', e);
+          return [];
+        }
+      }
+
+      forms.forEach(form => {
+        const input = form.querySelector('input[name="q"]');
+        if (!input) return;
+        
+        input.setAttribute('autocomplete', 'off');
+        
+        const dropdown = document.createElement('div');
+        dropdown.className = 'search-dropdown';
+        dropdown.setAttribute('aria-live', 'polite');
+        form.appendChild(dropdown);
+        
+        let debounceTimeout = null;
+        
+        input.addEventListener('input', function() {
+          const val = input.value.trim();
+          
+          if (debounceTimeout) clearTimeout(debounceTimeout);
+          
+          if (!val) {
+            dropdown.classList.remove('active');
+            dropdown.innerHTML = '';
+            
+            if (window.location.pathname.includes('/search.html') && window.__qmDoSearchPageUpdate) {
+              window.__qmDoSearchPageUpdate('');
+            }
+            return;
+          }
+          
+          if (window.location.pathname.includes('/search.html') && window.__qmDoSearchPageUpdate) {
+            debounceTimeout = setTimeout(() => {
+              window.__qmDoSearchPageUpdate(val);
+            }, 150);
+            return;
+          }
+          
+          debounceTimeout = setTimeout(async function() {
+            try {
+              const index = await getSearchIndex();
+              const query = val.toLowerCase();
+              
+              const matches = index.filter(post => {
+                return (post.title && post.title.toLowerCase().includes(query)) ||
+                       (post.meta_description && post.meta_description.toLowerCase().includes(query)) ||
+                       (post.tags && post.tags.toLowerCase().includes(query));
+              });
+              
+              if (!dropdown) return;
+              
+              if (matches.length > 0) {
+                dropdown.innerHTML = matches.slice(0, 5).map(post => {
+                  const readTime = Math.ceil((post.word_count || 1000) / 250);
+                  const cat = post.category || 'tech';
+                  const catPath = cat === 'geopolitics' ? '/geopolitics' : '/tech';
+                  return '<a href="' + catPath + '/' + post.slug + '" class="search-dropdown-item">' +
+                    '<h4>' + escapeHtml(post.title) + '</h4>' +
+                    '<p>' + readTime + ' min read • ' + escapeHtml(post.meta_description) + '</p>' +
+                    '</a>';
+                }).join('');
+                dropdown.classList.add('active');
+              } else {
+                dropdown.innerHTML = '<div class="search-dropdown-empty">No matches found for "' + escapeHtml(val) + '"</div>';
+                dropdown.classList.add('active');
+              }
+            } catch (err) {
+              console.error('Realtime search failed:', err);
+            }
+          }, 150);
+        });
+        
+        form.addEventListener('submit', function(e) {
+          if (!input.value.trim()) e.preventDefault();
+        });
+        
+        document.addEventListener('click', function(e) {
+          if (!form.contains(e.target)) {
+            dropdown.classList.remove('active');
+          }
+        });
+        
+        input.addEventListener('focus', function() {
+          if (input.value.trim() && !window.location.pathname.includes('/search.html')) {
+            dropdown.classList.add('active');
+          }
+        });
+      });
+    })();
+  </script>
+
+  <!-- Newsletter Modal Controller script -->
+  <script>
+    (function() {
+      const modal = document.getElementById('newsletterModal');
+      const closeBtn = document.getElementById('closeModalBtn');
+      
+      function openModal() {
+        if (modal) {
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          const emailInput = modal.querySelector('input[type="email"]');
+          if (emailInput) setTimeout(() => emailInput.focus(), 100);
+        }
+      }
+      
+      function closeModal() {
+        if (modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+      
+      if (closeBtn) {
+        closeBtn.onclick = closeModal;
+      }
+      
+      if (modal) {
+        modal.onclick = function(e) {
+          if (e.target === modal) closeModal();
+        };
+      }
+      
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+          closeModal();
+        }
+      });
+      
+      // Intercept all subscribe links
+      document.addEventListener('click', function(e) {
+        const target = e.target.closest('a');
+        if (target && target.getAttribute('href') === '#newsletter') {
+          // If the user clicked the nav button or footer button, always open the modal
+          if (target.classList.contains('nav-subscribe') || target.classList.contains('btn-primary')) {
+            e.preventDefault();
+            openModal();
+            return;
+          }
+          
+          // Otherwise, if there is an inline form with id="newsletter" on this page, scroll to it
+          const inlineForm = document.getElementById('newsletter');
+          if (inlineForm) {
+            // Let the browser handle the anchor scroll naturally
+            return;
+          }
+          // No inline form, so open the modal!
+          e.preventDefault();
+          openModal();
+        }
+      });
+      
+      // Expose globally
+      window.__qmOpenSubscribeModal = openModal;
+      window.__qmCloseSubscribeModal = closeModal;
+    })();
+  </script>
+
+  <!-- Exit Intent & Sticky CTA Logic -->
+  <script>
+    (function() {
+      let exitTriggered = false;
+      const exitModal = document.getElementById('exitIntentModal');
+      const closeExitBtn = document.getElementById('closeExitModalBtn');
+      const stickyCta = document.getElementById('stickyBottomCta');
+
+      // Sticky Bottom CTA logic (Show after scrolling 300px)
+      window.addEventListener('scroll', function() {
+        if (!stickyCta) return;
+        if (window.scrollY > 300) {
+          stickyCta.style.bottom = '0';
+        } else {
+          stickyCta.style.bottom = '-100px';
+        }
+      });
+
+      // Exit Intent logic (Desktop: mouseleave top, Mobile: fast scroll up near top)
+      function showExitModal() {
+        if (exitTriggered || !exitModal) return;
+        if (localStorage.getItem('qm-exit-shown')) return;
+        
+        exitModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        exitTriggered = true;
+        localStorage.setItem('qm-exit-shown', 'true');
+      }
+
+      function hideExitModal() {
+        if (exitModal) {
+          exitModal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (closeExitBtn) closeExitBtn.onclick = hideExitModal;
+      if (exitModal) exitModal.onclick = function(e) { if (e.target === exitModal) hideExitModal(); };
+
+      // Desktop exit intent
+      document.addEventListener('mouseleave', function(e) {
+        if (e.clientY < 10) showExitModal();
+      });
+
+      // Mobile exit intent (heuristic: fast scroll up near the top)
+      let lastScroll = window.scrollY;
+      window.addEventListener('scroll', function() {
+        const currentScroll = window.scrollY;
+        if (lastScroll - currentScroll > 50 && currentScroll < 200) {
+          showExitModal();
+        }
+        lastScroll = currentScroll;
+      });
+    })();
+  </script>
+
+  <!-- Dynamic Newsletter Stats script -->
+  <script>
+    (function() {
+      // Wait for DOM to be ready
+      document.addEventListener("DOMContentLoaded", async function() {
+        const readersEl = document.getElementById('qm-stat-readers');
+        const openRateEl = document.getElementById('qm-stat-openrate');
+        
+        if (!readersEl && !openRateEl) return;
+
+        try {
+          const targetUrl = atob('aHR0cHM6Ly90aGlua3Mtcm9sbGVkLXNlYXJjaGVkLXJlYWR5LnRyeWNsb3VkZmxhcmUuY29t') + '/api/analytics/newsletter-stats';
+          const res = await fetch(targetUrl, { mode: 'cors' });
+          if (!res.ok) return;
+
+          const data = await res.json();
+          if (data.readers && readersEl) {
+            readersEl.textContent = data.readers;
+          }
+          if (data.openRate && openRateEl) {
+            openRateEl.textContent = data.openRate;
+          }
+        } catch (e) {
+          // Fail silently, keep the static fallback values
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
