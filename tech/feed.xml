@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Thu, 11 Jun 2026 08:53:49 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 11 Jun 2026 08:58:05 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How to Manage AWS Bedrock Require Data Sharing Rules]]></title>
+    <link>https://quillmatick.github.io/tech/how-to-manage-aws-bedrock-require-data-sharing-rules</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-manage-aws-bedrock-require-data-sharing-rules</guid>
+    <description><![CDATA[Master AWS Bedrock require data sharing rules to secure your AI models. Learn to configure settings, ensure compliance, and optimize privacy. Read the guide now]]></description>
+    <pubDate>Thu, 11 Jun 2026 08:58:01 GMT</pubDate>
+    <category>aws bedrock</category>
+    <category>data privacy</category>
+    <category>compliance</category>
+    <category>gdpr</category>
+    <category>cloud governance</category>
+    <category>ai security</category>
+    <category>aws config</category>
+    <category>model training</category>
+  </item>
   <item>
     <title><![CDATA[German Ruling Declares Google Liable for AI Hallucinations]]></title>
     <link>https://quillmatick.github.io/tech/german-ruling-declares-google-liable-for-ai-hallucinations</link>
@@ -291,21 +306,6 @@
     <category>toxicology</category>
     <category>epidemiology</category>
     <category>erin brockovich</category>
-  </item>
-  <item>
-    <title><![CDATA[complacency dont let: How Billionaires Are]]></title>
-    <link>https://quillmatick.github.io/tech/how-billionaires-are-trying-lull-us-into-ai-complacency</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-billionaires-are-trying-lull-us-into-ai-complacency</guid>
-    <description><![CDATA[Learn more about complacency dont let. Billionaires are trying to lull us into AI complacency. Learn how to spot these tactics to protect your future and reg...]]></description>
-    <pubDate>Thu, 28 May 2026 05:43:52 GMT</pubDate>
-    <category>ai safety</category>
-    <category>regulatory capture</category>
-    <category>algorithmic bias</category>
-    <category>ai ethics</category>
-    <category>corporate control</category>
-    <category>existential risk</category>
-    <category>ai governance</category>
-    <category>tech monopolies</category>
   </item>
 </channel>
 </rss>
