@@ -33,7 +33,7 @@
   <meta property="og:title" content="Quillmatick - Page 7" />
   <meta property="og:description" content="Latest articles on technology, AI, and software development. Page 7" />
   <meta property="og:type" content="website" />
-  <link rel="stylesheet" href="/tech/style.css?v=1781154491732" />
+  <link rel="stylesheet" href="/tech/style.css?v=1781159027360" />
   <link rel="canonical" href="https://quillmatick.github.io/tech/page/7" />
 </head>
 <body>
@@ -46,7 +46,9 @@
       <span class="ticker-label">Live</span>
       <div class="ticker-track">
         <div class="ticker-scroll" id="trending-ticker">
-          <a href="/tech/supply-chain-attack-hola-browser-windows-compromised" class="ticker-item"><span class="tag">#supplychainattack</span>windows compromised deliver: Supply Chain Attack: Hola Browser Windows Compromised</a><a href="/tech/how-to-stop-the-card-theft-campaign-abusing-stripe" class="ticker-item"><span class="tag">#stripe</span>credit card theft: How to Stop the Card Theft Campaign Abusing Stripe</a><a href="/tech/dentaquest-data-breach-how-to-protect-your-personal-info" class="ticker-item"><span class="tag">#dentaquest</span>DentaQuest Data Breach: How to Protect Your Personal Info</a><a href="/tech/agency-discloses-breach-affecting-600000-gaza-households" class="ticker-item"><span class="tag">#databreach</span>food agency discloses: Agency Discloses Breach Affecting 600,000 Gaza Households</a><a href="/tech/how-to-defend-against-ironworm-malware-hits-in-npm" class="ticker-item"><span class="tag">#npm</span>How to Defend Against IronWorm Malware Hits in npm</a><a href="/tech/cisco-warns-critical-unified-cm-flaw-poc-exploit-code-guide" class="ticker-item"><span class="tag">#ciscounifiedcm</span>Cisco Warns Critical Unified CM Flaw: PoC Exploit Code Guide</a><a href="/tech/supply-chain-attack-hola-browser-windows-compromised" class="ticker-item"><span class="tag">#supplychainattack</span>windows compromised deliver: Supply Chain Attack: Hola Browser Windows Compromised</a><a href="/tech/how-to-stop-the-card-theft-campaign-abusing-stripe" class="ticker-item"><span class="tag">#stripe</span>credit card theft: How to Stop the Card Theft Campaign Abusing Stripe</a><a href="/tech/dentaquest-data-breach-how-to-protect-your-personal-info" class="ticker-item"><span class="tag">#dentaquest</span>DentaQuest Data Breach: How to Protect Your Personal Info</a><a href="/tech/agency-discloses-breach-affecting-600000-gaza-households" class="ticker-item"><span class="tag">#databreach</span>food agency discloses: Agency Discloses Breach Affecting 600,000 Gaza Households</a><a href="/tech/how-to-defend-against-ironworm-malware-hits-in-npm" class="ticker-item"><span class="tag">#npm</span>How to Defend Against IronWorm Malware Hits in npm</a><a href="/tech/cisco-warns-critical-unified-cm-flaw-poc-exploit-code-guide" class="ticker-item"><span class="tag">#ciscounifiedcm</span>Cisco Warns Critical Unified CM Flaw: PoC Exploit Code Guide</a>
+          
+    <span class="ticker-item"><span class="tag">#Trending</span>Stay tuned for new stories!</span>
+  
         </div>
       </div>
     </div>
@@ -81,7 +83,7 @@
   <!-- ─── FILTER BAR ─── -->
   <div class="filter-bar" role="navigation" aria-label="Category filter">
     <div class="filter-bar-inner">
-      <a href="/tech" class="filter-pill active" data-category="all">All topics</a><a href="/tech/search.html?q=cybersecurity" class="filter-pill" data-category="cybersecurity">cybersecurity</a><a href="/tech/search.html?q=generative%20ai" class="filter-pill" data-category="generative ai">generative ai</a><a href="/tech/search.html?q=ai%20ethics" class="filter-pill" data-category="ai ethics">ai ethics</a><a href="/tech/search.html?q=vulnerability%20management" class="filter-pill" data-category="vulnerability management">vulnerability management</a><a href="/tech/search.html?q=data%20privacy" class="filter-pill" data-category="data privacy">data privacy</a><a href="/tech/search.html?q=artificial%20intelligence" class="filter-pill" data-category="artificial intelligence">artificial intelligence</a><a href="/tech/search.html?q=data%20protection" class="filter-pill" data-category="data protection">data protection</a><a href="/tech/search.html?q=llms" class="filter-pill" data-category="llms">llms</a>
+      <a href="/tech" class="filter-pill active" data-category="all">All topics</a>
     </div>
   </div>
   <main id="main-content" class="blog-index">
@@ -336,7 +338,7 @@
         <div>
           <div class="footer-col-h">Topics</div>
           <ul class="footer-links" role="list">
-            <li><a href="/tech/search.html?q=cybersecurity">cybersecurity</a></li><li><a href="/tech/search.html?q=generative%20ai">generative ai</a></li><li><a href="/tech/search.html?q=ai%20ethics">ai ethics</a></li><li><a href="/tech/search.html?q=vulnerability%20management">vulnerability management</a></li><li><a href="/tech/search.html?q=data%20privacy">data privacy</a></li>
+            
           </ul>
         </div>
         <div>
@@ -618,6 +620,20 @@
           body: JSON.stringify({ type: 'affiliate_click', label: label, path: path }),
         }).catch(function() {});
       };
+
+      document.addEventListener('click', function(event) {
+        const cta = event.target.closest('.qm-cta-btn');
+        if (cta) {
+          const label = cta.getAttribute('data-qm-track') || 'affiliate_card';
+          const path = cta.href || window.location.pathname;
+          fetch(apiBase + '/api/analytics/click', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            mode: 'cors',
+            body: JSON.stringify({ type: 'affiliate_click', label: label, path: path }),
+          }).catch(function() {});
+        }
+      });
 
       // Heartbeat every 15s
       setInterval(sendHeartbeat, 15000);
