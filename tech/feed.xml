@@ -5,8 +5,38 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Thu, 11 Jun 2026 07:19:27 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 11 Jun 2026 08:53:49 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[German Ruling Declares Google Liable for AI Hallucinations]]></title>
+    <link>https://quillmatick.github.io/tech/german-ruling-declares-google-liable-for-ai-hallucinations</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/german-ruling-declares-google-liable-for-ai-hallucinations</guid>
+    <description><![CDATA[German ruling declares Google liable for AI hallucinations. Learn how this legal precedent impacts AI safety and protects your rights. Read the full analysis.]]></description>
+    <pubDate>Thu, 11 Jun 2026 08:53:46 GMT</pubDate>
+    <category>ai liability</category>
+    <category>google</category>
+    <category>german law</category>
+    <category>ai hallucinations</category>
+    <category>legal compliance</category>
+    <category>llm governance</category>
+    <category>data protection</category>
+    <category>tech law</category>
+  </item>
+  <item>
+    <title><![CDATA[How to Set Up macOS Container Machines for Development]]></title>
+    <link>https://quillmatick.github.io/tech/how-to-set-up-macos-container-machines-for-development</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-set-up-macos-container-machines-for-development</guid>
+    <description><![CDATA[Discover set up macOS container machines for development with our step-by-step guide. Streamline your workflow and isolate environments. Start building your ...]]></description>
+    <pubDate>Thu, 11 Jun 2026 08:35:37 GMT</pubDate>
+    <category>macos</category>
+    <category>docker</category>
+    <category>containerization</category>
+    <category>apple silicon</category>
+    <category>dev ops</category>
+    <category>lima</category>
+    <category>colima</category>
+    <category>software development</category>
+  </item>
   <item>
     <title><![CDATA[Claude Fable 5: The Complete Guide to Mastering the Tool]]></title>
     <link>https://quillmatick.github.io/tech/claude-fable-5-the-complete-guide-to-mastering-the-tool</link>
@@ -276,36 +306,6 @@
     <category>existential risk</category>
     <category>ai governance</category>
     <category>tech monopolies</category>
-  </item>
-  <item>
-    <title><![CDATA[ceos expect aidriven: How to Survive AI-Driven Layoffs in the]]></title>
-    <link>https://quillmatick.github.io/tech/how-to-survive-ai-driven-layoffs-in-the-next-two-years</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-survive-ai-driven-layoffs-in-the-next-two-years</guid>
-    <description><![CDATA[Learn more about ceos expect aidriven. CEOs expect AI-driven layoffs in the next two years. Learn how to future-proof your career and stay indispensable to s...]]></description>
-    <pubDate>Thu, 28 May 2026 05:41:00 GMT</pubDate>
-    <category>ai layoffs</category>
-    <category>career resilience</category>
-    <category>upskilling</category>
-    <category>workforce automation</category>
-    <category>future of work</category>
-    <category>strategic reskilling</category>
-    <category>ai displacement</category>
-    <category>professional development</category>
-  </item>
-  <item>
-    <title><![CDATA[How to Stop the First Apple Memory Exploit Using Anthropic for 2026]]></title>
-    <link>https://quillmatick.github.io/tech/how-to-stop-the-first-apple-memory-exploit-using-anthropic</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-stop-the-first-apple-memory-exploit-using-anthropic</guid>
-    <description><![CDATA[Stop the first apple memory exploit using Anthropic. Learn to patch vulnerabilities and secure your system for total peace of mind. Protect your device now.]]></description>
-    <pubDate>Thu, 28 May 2026 05:36:13 GMT</pubDate>
-    <category>apple security</category>
-    <category>memory exploits</category>
-    <category>anthropic claude</category>
-    <category>xnu kernel</category>
-    <category>vulnerability management</category>
-    <category>iokit</category>
-    <category>cybersecurity</category>
-    <category>ai in security</category>
   </item>
 </channel>
 </rss>
