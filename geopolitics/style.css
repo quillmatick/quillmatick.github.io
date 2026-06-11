@@ -1660,3 +1660,168 @@ img { display: block; max-width: 100%; }
 @media (max-width: 480px) {
   .article-row-thumb { display: none; }
 }
+
+/* ── Monetization & Affiliate Styling ── */
+.qm-affiliate-disclosure {
+  margin: 0 0 30px 0;
+  padding: 14px 18px;
+  background: var(--bg2);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink2);
+}
+
+.qm-sponsorship-banner {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 14px;
+  border-radius: var(--radius-md);
+  margin: 24px 0;
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink2);
+}
+.qm-sponsorship-banner strong {
+  color: var(--ink);
+}
+.qm-sponsorship-banner a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.qm-sponsorship-banner a:hover {
+  opacity: 0.8;
+}
+
+.qm-product-cards-wrapper {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.qm-product-cards-wrapper h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+  color: var(--ink);
+}
+
+.qm-product-card {
+  position: relative;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+html[data-theme="dark"] .qm-product-card {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+.qm-product-card:hover {
+  transform: translateY(-2px);
+}
+
+.qm-product-card .badge-choice {
+  position: absolute;
+  top: -12px;
+  left: 24px;
+  background: var(--accent);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+.qm-product-card h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: var(--ink);
+}
+
+.qm-product-card .rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.qm-product-card p {
+  font-size: 14px;
+  color: var(--ink2);
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+.qm-product-card .features-grid {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+.qm-product-card .feature-col {
+  flex: 1;
+  min-width: 150px;
+}
+.qm-product-card .feature-col strong {
+  display: block;
+  margin-bottom: 4px;
+}
+.qm-product-card .feature-col.pros strong {
+  color: var(--green);
+}
+.qm-product-card .feature-col.cons strong {
+  color: var(--red);
+}
+.qm-product-card .feature-col span {
+  color: var(--ink2);
+}
+
+.qm-product-card .cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  min-width: 200px;
+}
+
+.qm-product-card .qm-cta-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff !important;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  transition: all 0.2s;
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+.qm-product-card .qm-cta-btn:hover {
+  background: var(--accent);
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .qm-product-card {
+    padding: 18px;
+  }
+}

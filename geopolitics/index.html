@@ -33,7 +33,7 @@
   <meta property="og:title" content="Quillmatick Geopolitics " />
   <meta property="og:description" content="Latest articles on geopolitics and international relations. Page 1" />
   <meta property="og:type" content="website" />
-  <link rel="stylesheet" href="/geopolitics/style.css?v=1781156966362" />
+  <link rel="stylesheet" href="/geopolitics/style.css?v=1781162324422" />
   <link rel="canonical" href="https://quillmatick.github.io/geopolitics" />
 </head>
 <body>
@@ -804,6 +804,20 @@
           body: JSON.stringify({ type: 'affiliate_click', label: label, path: path }),
         }).catch(function() {});
       };
+
+      document.addEventListener('click', function(event) {
+        const cta = event.target.closest('.qm-cta-btn');
+        if (cta) {
+          const label = cta.getAttribute('data-qm-track') || 'affiliate_card';
+          const path = cta.href || window.location.pathname;
+          fetch(apiBase + '/api/analytics/click', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            mode: 'cors',
+            body: JSON.stringify({ type: 'affiliate_click', label: label, path: path }),
+          }).catch(function() {});
+        }
+      });
 
       // Heartbeat every 15s
       setInterval(sendHeartbeat, 15000);

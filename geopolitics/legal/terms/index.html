@@ -30,7 +30,7 @@
     <meta property="og:title" content="Terms of Service | Quillmatick Geopolitics" />
     <meta property="og:description" content="Terms of Service for Quillmatick Geopolitics" />
     <meta property="og:type" content="website" />
-    <link rel="stylesheet" href="/geopolitics/style.css?v=1780756689635" />
+    <link rel="stylesheet" href="/geopolitics/style.css?v=1781159062620" />
     </head><body>
       
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -76,14 +76,14 @@
   <!-- ─── FILTER BAR ─── -->
   <div class="filter-bar" role="navigation" aria-label="Category filter">
     <div class="filter-bar-inner">
-      <a href="/geopolitics" class="filter-pill active" data-category="all">All topics</a><a href="/geopolitics/search.html?q=geopolitics" class="filter-pill" data-category="geopolitics">geopolitics</a><a href="/geopolitics/search.html?q=national%20security" class="filter-pill" data-category="national security">national security</a><a href="/geopolitics/search.html?q=nato" class="filter-pill" data-category="nato">nato</a><a href="/geopolitics/search.html?q=ukraine-russia%20war" class="filter-pill" data-category="ukraine-russia war">ukraine-russia war</a><a href="/geopolitics/search.html?q=strategic%20analysis" class="filter-pill" data-category="strategic analysis">strategic analysis</a><a href="/geopolitics/search.html?q=hezbollah" class="filter-pill" data-category="hezbollah">hezbollah</a><a href="/geopolitics/search.html?q=military%20doctrine" class="filter-pill" data-category="military doctrine">military doctrine</a><a href="/geopolitics/search.html?q=military%20strategy" class="filter-pill" data-category="military strategy">military strategy</a>
+      <a href="/geopolitics" class="filter-pill active" data-category="all">All topics</a><a href="/geopolitics/search.html?q=geopolitics" class="filter-pill" data-category="geopolitics">geopolitics</a><a href="/geopolitics/search.html?q=national%20security" class="filter-pill" data-category="national security">national security</a><a href="/geopolitics/search.html?q=nato" class="filter-pill" data-category="nato">nato</a><a href="/geopolitics/search.html?q=ukraine-russia%20war" class="filter-pill" data-category="ukraine-russia war">ukraine-russia war</a><a href="/geopolitics/search.html?q=strategic%20analysis" class="filter-pill" data-category="strategic analysis">strategic analysis</a><a href="/geopolitics/search.html?q=hezbollah" class="filter-pill" data-category="hezbollah">hezbollah</a><a href="/geopolitics/search.html?q=military%20doctrine" class="filter-pill" data-category="military doctrine">military doctrine</a><a href="/geopolitics/search.html?q=middle%20east%20security" class="filter-pill" data-category="middle east security">middle east security</a>
     </div>
   </div>
       <main id="main-content" class="container" style="padding-top: 4rem; padding-bottom: 6rem; display: flex; justify-content: center;">
         <article class="article-page" style="max-width: 720px; width: 100%;">
           <a href="/geopolitics" class="nav-back" style="margin-bottom: 2rem; font-family: var(--font-mono); font-size: 13px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg> Back to Geopolitics</a>
           <h1 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--ink); font-family: var(--font-display); font-weight: 700;">Terms of Service</h1>
-          <p style="color: var(--ink3); font-size: 14px; font-family: var(--font-mono); margin-bottom: 3rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem;">Last Updated: June 6, 2026</p>
+          <p style="color: var(--ink3); font-size: 14px; font-family: var(--font-mono); margin-bottom: 3rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem;">Last Updated: June 11, 2026</p>
           <div class="article-body">
             
     <h2>1. Acceptance</h2>
@@ -394,6 +394,20 @@
           body: JSON.stringify({ type: 'affiliate_click', label: label, path: path }),
         }).catch(function() {});
       };
+
+      document.addEventListener('click', function(event) {
+        const cta = event.target.closest('.qm-cta-btn');
+        if (cta) {
+          const label = cta.getAttribute('data-qm-track') || 'affiliate_card';
+          const path = cta.href || window.location.pathname;
+          fetch(apiBase + '/api/analytics/click', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            mode: 'cors',
+            body: JSON.stringify({ type: 'affiliate_click', label: label, path: path }),
+          }).catch(function() {});
+        }
+      });
 
       // Heartbeat every 15s
       setInterval(sendHeartbeat, 15000);
