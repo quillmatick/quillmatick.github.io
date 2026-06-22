@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Mon, 22 Jun 2026 06:35:12 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 22 Jun 2026 06:39:06 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Klue OAuth Breach: The Complete Guide to the Victim List]]></title>
+    <link>https://quillmatick.github.io/tech/klue-oauth-breach-the-complete-guide-to-the-victim-list</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/klue-oauth-breach-the-complete-guide-to-the-victim-list</guid>
+    <description><![CDATA[Check the Klue OAuth breach victim list to see if your data was exposed. Learn how to secure your accounts and prevent future leaks. Protect your identity now.]]></description>
+    <pubDate>Mon, 22 Jun 2026 06:39:02 GMT</pubDate>
+    <category>klue</category>
+    <category>oauth breach</category>
+    <category>cybersecurity</category>
+    <category>data breach</category>
+    <category>pkce</category>
+    <category>token theft</category>
+    <category>api security</category>
+    <category>incident response</category>
+  </item>
   <item>
     <title><![CDATA[there minimal downside: How to Manage the Minimal Downside Switching to Open Models]]></title>
     <link>https://quillmatick.github.io/tech/how-to-manage-the-minimal-downside-switching-to-open-models</link>
@@ -291,21 +306,6 @@
     <category>domain controller</category>
     <category>vulnerability management</category>
     <category>network security</category>
-  </item>
-  <item>
-    <title><![CDATA[How to Use OpenAI Frontier Models Now Available on AWS for 2026]]></title>
-    <link>https://quillmatick.github.io/tech/how-to-use-openai-frontier-models-now-available-on-aws</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-use-openai-frontier-models-now-available-on-aws</guid>
-    <description><![CDATA[Deploy OpenAI frontier models now available on AWS to scale your AI apps. Learn the setup process to boost performance and reduce latency. Start building today.]]></description>
-    <pubDate>Wed, 03 Jun 2026 11:15:16 GMT</pubDate>
-    <category>aws</category>
-    <category>openai</category>
-    <category>amazon bedrock</category>
-    <category>amazon sagemaker</category>
-    <category>llm deployment</category>
-    <category>cloud security</category>
-    <category>enterprise ai</category>
-    <category>generative ai</category>
   </item>
 </channel>
 </rss>
