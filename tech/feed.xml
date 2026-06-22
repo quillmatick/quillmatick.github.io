@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Mon, 22 Jun 2026 16:33:44 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 22 Jun 2026 16:39:14 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How to Fix the Codex Logging Bug and Save Your Local SSD]]></title>
+    <link>https://quillmatick.github.io/tech/how-to-fix-the-codex-logging-bug-and-save-your-local-ssd</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-fix-the-codex-logging-bug-and-save-your-local-ssd</guid>
+    <description><![CDATA[Stop the codex logging bug from destroying your hardware. Learn how to fix the bug may write error to protect your local SSD and restore system stability now.]]></description>
+    <pubDate>Mon, 22 Jun 2026 16:39:12 GMT</pubDate>
+    <category>codex</category>
+    <category>bug fix</category>
+    <category>ssd maintenance</category>
+    <category>log management</category>
+    <category>system administration</category>
+    <category>linux</category>
+    <category>hardware wear</category>
+    <category>performance tuning</category>
+  </item>
   <item>
     <title><![CDATA[glm opus: GLM vs Opus: The Complete Guide to Choosing Your AI]]></title>
     <link>https://quillmatick.github.io/tech/glm-vs-opus-the-complete-guide-to-choosing-your-ai</link>
@@ -290,21 +305,6 @@
     <category>vpn security</category>
     <category>data protection</category>
     <category>mfa</category>
-    <category>incident response</category>
-  </item>
-  <item>
-    <title><![CDATA[food agency discloses: Agency Discloses Breach Affecting 600,000 Gaza Households]]></title>
-    <link>https://quillmatick.github.io/tech/agency-discloses-breach-affecting-600000-gaza-households</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/agency-discloses-breach-affecting-600000-gaza-households</guid>
-    <description><![CDATA[Food agency discloses a massive data breach affecting 600,000 Gaza households. Learn the risks and how to protect your identity. Stay secure and read more.]]></description>
-    <pubDate>Fri, 05 Jun 2026 11:02:45 GMT</pubDate>
-    <category>data breach</category>
-    <category>gaza</category>
-    <category>cybersecurity</category>
-    <category>humanitarian aid</category>
-    <category>data privacy</category>
-    <category>mfa</category>
-    <category>zero trust</category>
     <category>incident response</category>
   </item>
 </channel>
