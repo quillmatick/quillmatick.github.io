@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Mon, 22 Jun 2026 16:24:47 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 22 Jun 2026 16:28:21 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Apertus Open Foundation: The Complete Guide to Sovereign AI]]></title>
+    <link>https://quillmatick.github.io/tech/apertus-open-foundation-the-complete-guide-to-sovereign-ai</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/apertus-open-foundation-the-complete-guide-to-sovereign-ai</guid>
+    <description><![CDATA[Master the Apertus Open Foundation to build sovereign AI. Learn to deploy an open foundation model for total data control and security. Start your journey now.]]></description>
+    <pubDate>Mon, 22 Jun 2026 16:28:18 GMT</pubDate>
+    <category>sovereign ai</category>
+    <category>federated learning</category>
+    <category>zero-knowledge proofs</category>
+    <category>data privacy</category>
+    <category>ai governance</category>
+    <category>apertus open foundation</category>
+    <category>gdpr compliance</category>
+    <category>machine learning infrastructure</category>
+  </item>
   <item>
     <title><![CDATA[Deno Desktop: The Complete Guide to Modern App Development]]></title>
     <link>https://quillmatick.github.io/tech/deno-desktop-the-complete-guide-to-modern-app-development</link>
@@ -291,21 +306,6 @@
     <category>dependency management</category>
     <category>software security</category>
     <category>javascript</category>
-  </item>
-  <item>
-    <title><![CDATA[Cisco Warns Critical Unified CM Flaw: PoC Exploit Code Guide]]></title>
-    <link>https://quillmatick.github.io/tech/cisco-warns-critical-unified-cm-flaw-poc-exploit-code-guide</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/cisco-warns-critical-unified-cm-flaw-poc-exploit-code-guide</guid>
-    <description><![CDATA[Cisco warns critical Unified CM flaws are active. Learn to analyze the PoC exploit code to secure your network and prevent breaches. Read the full guide now.]]></description>
-    <pubDate>Fri, 05 Jun 2026 10:56:41 GMT</pubDate>
-    <category>cisco unified cm</category>
-    <category>cve</category>
-    <category>remote code execution</category>
-    <category>xxe</category>
-    <category>voip security</category>
-    <category>cybersecurity patch</category>
-    <category>poc exploit</category>
-    <category>network security</category>
   </item>
 </channel>
 </rss>
