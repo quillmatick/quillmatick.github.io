@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Thu, 11 Jun 2026 11:39:54 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 22 Jun 2026 05:43:44 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[identity verification claude: How to Complete Identity Verification on Claude Quickly]]></title>
+    <link>https://quillmatick.github.io/tech/how-to-complete-identity-verification-on-claude-quickly</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-complete-identity-verification-on-claude-quickly</guid>
+    <description><![CDATA[Learn more about identity verification claude. Master identity verification on Claude with our fast guide. Learn the exact steps to verify your account quick...]]></description>
+    <pubDate>Mon, 22 Jun 2026 05:43:42 GMT</pubDate>
+    <category>claude</category>
+    <category>identity verification</category>
+    <category>kyc</category>
+    <category>account security</category>
+    <category>document verification</category>
+    <category>gdpr compliance</category>
+    <category>api rate limits</category>
+    <category>user onboarding</category>
+  </item>
   <item>
     <title><![CDATA[How to Manage AWS Bedrock Require Data Sharing Rules]]></title>
     <link>https://quillmatick.github.io/tech/how-to-manage-aws-bedrock-require-data-sharing-rules</link>
@@ -291,21 +306,6 @@
     <category>vulnerability research</category>
     <category>web security</category>
     <category>account takeover</category>
-  </item>
-  <item>
-    <title><![CDATA[Erin Brockovich Data: The Complete Guide to Transparency for 2026]]></title>
-    <link>https://quillmatick.github.io/tech/erin-brockovich-data-the-complete-guide-to-transparency</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/erin-brockovich-data-the-complete-guide-to-transparency</guid>
-    <description><![CDATA[Master erin brockovich data with our complete guide. Learn how the brockovich data center ensures transparency to protect your health. Start reading today.]]></description>
-    <pubDate>Wed, 03 Jun 2026 10:42:53 GMT</pubDate>
-    <category>environmental transparency</category>
-    <category>public health data</category>
-    <category>data advocacy</category>
-    <category>environmental monitoring</category>
-    <category>corporate accountability</category>
-    <category>toxicology</category>
-    <category>epidemiology</category>
-    <category>erin brockovich</category>
   </item>
 </channel>
 </rss>
