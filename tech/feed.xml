@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Mon, 22 Jun 2026 05:43:44 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 22 Jun 2026 06:30:26 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[The Complete Guide to Apertus Open Foundation Models]]></title>
+    <link>https://quillmatick.github.io/tech/the-complete-guide-to-apertus-open-foundation-models</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-complete-guide-to-apertus-open-foundation-models</guid>
+    <description><![CDATA[Master the Apertus open foundation model with our guide. Learn to build custom AI tools, reduce costs, and scale efficiently. Start optimizing your workflow now]]></description>
+    <pubDate>Mon, 22 Jun 2026 06:30:24 GMT</pubDate>
+    <category>apertus</category>
+    <category>foundation models</category>
+    <category>open source ai</category>
+    <category>mixture-of-experts</category>
+    <category>ai compliance</category>
+    <category>model fine-tuning</category>
+    <category>machine learning architecture</category>
+    <category>enterprise ai</category>
+  </item>
   <item>
     <title><![CDATA[identity verification claude: How to Complete Identity Verification on Claude Quickly]]></title>
     <link>https://quillmatick.github.io/tech/how-to-complete-identity-verification-on-claude-quickly</link>
@@ -291,21 +306,6 @@
     <category>openai</category>
     <category>spacex</category>
     <category>public equity</category>
-  </item>
-  <item>
-    <title><![CDATA[The Newest Instagram Exploit: The Goofiest]]></title>
-    <link>https://quillmatick.github.io/tech/the-newest-instagram-exploit-the-goofiest-ive-seen</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-newest-instagram-exploit-the-goofiest-ive-seen</guid>
-    <description><![CDATA[Explore the newest Instagram exploit and see why it is the goofiest I've seen. Learn how it works to protect your account from glitches. Read the full breakdown]]></description>
-    <pubDate>Wed, 03 Jun 2026 11:05:26 GMT</pubDate>
-    <category>instagram</category>
-    <category>cybersecurity</category>
-    <category>bug bounty</category>
-    <category>api security</category>
-    <category>business logic flaws</category>
-    <category>vulnerability research</category>
-    <category>web security</category>
-    <category>account takeover</category>
   </item>
 </channel>
 </rss>
