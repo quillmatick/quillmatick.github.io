@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Mon, 22 Jun 2026 11:53:12 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 22 Jun 2026 11:57:44 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[CISA Splunk Enterprise Flaw: How to Patch by Sunday]]></title>
+    <link>https://quillmatick.github.io/tech/cisa-splunk-enterprise-flaw-how-to-patch-by-sunday</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/cisa-splunk-enterprise-flaw-how-to-patch-by-sunday</guid>
+    <description><![CDATA[Fix the CISA Splunk Enterprise flaw before Sunday. Learn the exact patching steps to secure your data and stop active exploits. Protect your network now.]]></description>
+    <pubDate>Mon, 22 Jun 2026 11:57:40 GMT</pubDate>
+    <category>cisa</category>
+    <category>splunk enterprise</category>
+    <category>cybersecurity</category>
+    <category>patch management</category>
+    <category>vulnerability mitigation</category>
+    <category>jwt</category>
+    <category>network security</category>
+    <category>incident response</category>
+  </item>
   <item>
     <title><![CDATA[Texas Govt Data Breach: How to Protect Your Identity Now]]></title>
     <link>https://quillmatick.github.io/tech/texas-govt-data-breach-how-to-protect-your-identity-now</link>
@@ -291,21 +306,6 @@
     <category>hybrid cloud</category>
     <category>cloud infrastructure</category>
     <category>cost optimization</category>
-  </item>
-  <item>
-    <title><![CDATA[open code review: Best AI-Powered Code Review CLI for Faster Development]]></title>
-    <link>https://quillmatick.github.io/tech/best-ai-powered-code-review-cli-for-faster-development</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/best-ai-powered-code-review-cli-for-faster-development</guid>
-    <description><![CDATA[Learn more about open code review. Boost speed with an AI-powered code review CLI. Learn how to automate audits, eliminate bugs, and accelerate your workflow...]]></description>
-    <pubDate>Fri, 05 Jun 2026 08:14:23 GMT</pubDate>
-    <category>ai code review</category>
-    <category>cli</category>
-    <category>cicd</category>
-    <category>devsecops</category>
-    <category>software quality</category>
-    <category>compliance</category>
-    <category>owasp</category>
-    <category>developer productivity</category>
   </item>
 </channel>
 </rss>
