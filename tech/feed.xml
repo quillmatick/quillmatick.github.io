@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Mon, 22 Jun 2026 12:03:50 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 22 Jun 2026 16:24:47 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Deno Desktop: The Complete Guide to Modern App Development]]></title>
+    <link>https://quillmatick.github.io/tech/deno-desktop-the-complete-guide-to-modern-app-development</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/deno-desktop-the-complete-guide-to-modern-app-development</guid>
+    <description><![CDATA[Master Deno Desktop with this complete guide. Learn to build modern apps using Deno for faster development and better performance. Start building today.]]></description>
+    <pubDate>Mon, 22 Jun 2026 16:24:45 GMT</pubDate>
+    <category>deno desktop</category>
+    <category>typescript</category>
+    <category>cross-platform development</category>
+    <category>desktop apps</category>
+    <category>app security</category>
+    <category>window management api</category>
+    <category>software engineering</category>
+    <category>deno runtime</category>
+  </item>
   <item>
     <title><![CDATA[How to Manage Every Agent Identity for Better Security]]></title>
     <link>https://quillmatick.github.io/tech/how-to-manage-every-agent-identity-for-better-security</link>
@@ -291,21 +306,6 @@
     <category>cybersecurity patch</category>
     <category>poc exploit</category>
     <category>network security</category>
-  </item>
-  <item>
-    <title><![CDATA[Cisco Warns Unpatched SD-WAN Zero-Day: How to Secure Your Net]]></title>
-    <link>https://quillmatick.github.io/tech/cisco-warns-unpatched-sd-wan-zero-day-how-to-secure-your-net</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/cisco-warns-unpatched-sd-wan-zero-day-how-to-secure-your-net</guid>
-    <description><![CDATA[Cisco warns unpatched SD-WAN zero-day flaws are active. Learn how to secure your network, eliminate vulnerabilities, and stop attacks. Read the full guide now.]]></description>
-    <pubDate>Fri, 05 Jun 2026 09:34:18 GMT</pubDate>
-    <category>cisco</category>
-    <category>sd-wan</category>
-    <category>zero-day</category>
-    <category>cybersecurity</category>
-    <category>bgp</category>
-    <category>network security</category>
-    <category>vulnerability management</category>
-    <category>patch management</category>
   </item>
 </channel>
 </rss>
