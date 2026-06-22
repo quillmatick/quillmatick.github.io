@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Mon, 22 Jun 2026 11:57:44 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 22 Jun 2026 12:03:50 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How to Manage Every Agent Identity for Better Security]]></title>
+    <link>https://quillmatick.github.io/tech/how-to-manage-every-agent-identity-for-better-security</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-manage-every-agent-identity-for-better-security</guid>
+    <description><![CDATA[Manage every agent identity to close security gaps. Learn to secure identity most organizations overlook to stop breaches and harden your defense. Read more.]]></description>
+    <pubDate>Mon, 22 Jun 2026 12:03:48 GMT</pubDate>
+    <category>identity and access management iam</category>
+    <category>non-human identities</category>
+    <category>least privilege</category>
+    <category>secret management</category>
+    <category>cybersecurity</category>
+    <category>rbac</category>
+    <category>credential rotation</category>
+    <category>agent security</category>
+  </item>
   <item>
     <title><![CDATA[CISA Splunk Enterprise Flaw: How to Patch by Sunday]]></title>
     <link>https://quillmatick.github.io/tech/cisa-splunk-enterprise-flaw-how-to-patch-by-sunday</link>
@@ -291,21 +306,6 @@
     <category>network security</category>
     <category>vulnerability management</category>
     <category>patch management</category>
-  </item>
-  <item>
-    <title><![CDATA[azure linux microsofts: The Complete Guide to Azure Linux and Microsoft's New OS]]></title>
-    <link>https://quillmatick.github.io/tech/the-complete-guide-to-azure-linux-and-microsofts-new-os</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-complete-guide-to-azure-linux-and-microsofts-new-os</guid>
-    <description><![CDATA[Learn more about azure linux microsofts. Explore Azure Linux and Microsoft's new OS to master its features. Learn how Microsoft's first general-purpose Linux...]]></description>
-    <pubDate>Fri, 05 Jun 2026 08:26:51 GMT</pubDate>
-    <category>azure linux</category>
-    <category>microsoft azure</category>
-    <category>cloud computing</category>
-    <category>linux vms</category>
-    <category>azure arc</category>
-    <category>hybrid cloud</category>
-    <category>cloud infrastructure</category>
-    <category>cost optimization</category>
   </item>
 </channel>
 </rss>
