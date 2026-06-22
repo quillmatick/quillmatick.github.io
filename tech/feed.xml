@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Mon, 22 Jun 2026 16:39:14 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 22 Jun 2026 16:43:49 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Never Give Them Your Face: The Complete Guide to Privacy]]></title>
+    <link>https://quillmatick.github.io/tech/never-give-them-your-face-the-complete-guide-to-privacy</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/never-give-them-your-face-the-complete-guide-to-privacy</guid>
+    <description><![CDATA[Never give them your face. Learn essential biometric privacy tips to protect your identity from surveillance and reclaim your digital anonymity. Read more.]]></description>
+    <pubDate>Mon, 22 Jun 2026 16:43:46 GMT</pubDate>
+    <category>facial recognition</category>
+    <category>data privacy</category>
+    <category>cybersecurity</category>
+    <category>biometric security</category>
+    <category>gdpr</category>
+    <category>data minimization</category>
+    <category>encryption</category>
+    <category>identity protection</category>
+  </item>
   <item>
     <title><![CDATA[How to Fix the Codex Logging Bug and Save Your Local SSD]]></title>
     <link>https://quillmatick.github.io/tech/how-to-fix-the-codex-logging-bug-and-save-your-local-ssd</link>
@@ -291,21 +306,6 @@
     <category>cybersecurity</category>
     <category>payment security</category>
     <category>webhooks</category>
-  </item>
-  <item>
-    <title><![CDATA[DentaQuest Data Breach: How to Protect Your Personal Info]]></title>
-    <link>https://quillmatick.github.io/tech/dentaquest-data-breach-how-to-protect-your-personal-info</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/dentaquest-data-breach-how-to-protect-your-personal-info</guid>
-    <description><![CDATA[The DentaQuest data breach exposed sensitive info. Learn how to secure your identity and prevent fraud with these essential steps. Protect your data today.]]></description>
-    <pubDate>Sat, 06 Jun 2026 05:41:42 GMT</pubDate>
-    <category>dentaquest</category>
-    <category>data breach</category>
-    <category>cybersecurity</category>
-    <category>identity theft</category>
-    <category>vpn security</category>
-    <category>data protection</category>
-    <category>mfa</category>
-    <category>incident response</category>
   </item>
 </channel>
 </rss>
