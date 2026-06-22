@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Mon, 22 Jun 2026 16:28:21 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 22 Jun 2026 16:33:44 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[glm opus: GLM vs Opus: The Complete Guide to Choosing Your AI]]></title>
+    <link>https://quillmatick.github.io/tech/glm-vs-opus-the-complete-guide-to-choosing-your-ai</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/glm-vs-opus-the-complete-guide-to-choosing-your-ai</guid>
+    <description><![CDATA[Learn more about glm opus. Compare GLM vs Opus to find your ideal AI. Learn key differences in performance and cost to optimize your workflow and save time. ...]]></description>
+    <pubDate>Mon, 22 Jun 2026 16:33:42 GMT</pubDate>
+    <category>llm comparison</category>
+    <category>glm</category>
+    <category>claude opus</category>
+    <category>ai architecture</category>
+    <category>model benchmarking</category>
+    <category>mixture of experts</category>
+    <category>inference latency</category>
+    <category>ai deployment</category>
+  </item>
   <item>
     <title><![CDATA[Apertus Open Foundation: The Complete Guide to Sovereign AI]]></title>
     <link>https://quillmatick.github.io/tech/apertus-open-foundation-the-complete-guide-to-sovereign-ai</link>
@@ -291,21 +306,6 @@
     <category>mfa</category>
     <category>zero trust</category>
     <category>incident response</category>
-  </item>
-  <item>
-    <title><![CDATA[How to Defend Against IronWorm Malware Hits in npm]]></title>
-    <link>https://quillmatick.github.io/tech/how-to-defend-against-ironworm-malware-hits-in-npm</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-defend-against-ironworm-malware-hits-in-npm</guid>
-    <description><![CDATA[Stop ironworm malware hits in npm today. Learn to identify malicious hits packages and secure your supply chain to prevent data theft. Protect your code now.]]></description>
-    <pubDate>Fri, 05 Jun 2026 11:00:00 GMT</pubDate>
-    <category>npm</category>
-    <category>ironworm</category>
-    <category>malware</category>
-    <category>cybersecurity</category>
-    <category>supply chain security</category>
-    <category>dependency management</category>
-    <category>software security</category>
-    <category>javascript</category>
   </item>
 </channel>
 </rss>

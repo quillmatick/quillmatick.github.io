@@ -7,6 +7,12 @@
   </url>
   
   <url>
+    <loc>https://quillmatick.github.io/tech/glm-vs-opus-the-complete-guide-to-choosing-your-ai</loc>
+    <lastmod>2026-06-22T16:33:42.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://quillmatick.github.io/tech/apertus-open-foundation-the-complete-guide-to-sovereign-ai</loc>
     <lastmod>2026-06-22T16:28:18.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -481,14 +487,20 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quillmatick.github.io/tech/nvidia-exec-says-ai-costs-more-than-actual-workers</loc>
-    <lastmod>2026-06-11T10:58:54.000Z</lastmod>
+    <loc>https://quillmatick.github.io/tech/linkedin-hit-with-class-action-lawsuits-over-browser-extension-scanning-how-to-respond</loc>
+    <lastmod>2026-06-11T10:59:30.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://quillmatick.github.io/tech/gen-z-workers-fearful-will-take-their-job-intentionally-sabotage-ai-rollout-strategies-for-better-wo</loc>
     <lastmod>2026-06-11T11:05:05.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quillmatick.github.io/tech/administration-cites-national-security-wind-farm-halt</loc>
+    <lastmod>2026-06-11T11:03:47.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -505,14 +517,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quillmatick.github.io/tech/linkedin-hit-with-class-action-lawsuits-over-browser-extension-scanning-how-to-respond</loc>
-    <lastmod>2026-06-11T10:59:30.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://quillmatick.github.io/tech/administration-cites-national-security-wind-farm-halt</loc>
-    <lastmod>2026-06-11T11:03:47.000Z</lastmod>
+    <loc>https://quillmatick.github.io/tech/nvidia-exec-says-ai-costs-more-than-actual-workers</loc>
+    <lastmod>2026-06-11T10:58:54.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
