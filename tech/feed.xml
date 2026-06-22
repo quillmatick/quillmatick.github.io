@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Mon, 22 Jun 2026 06:39:06 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 22 Jun 2026 06:43:25 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Prinz Eugen Ransomware: The Complete Guide to Protection]]></title>
+    <link>https://quillmatick.github.io/tech/prinz-eugen-ransomware-the-complete-guide-to-protection</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/prinz-eugen-ransomware-the-complete-guide-to-protection</guid>
+    <description><![CDATA[Stop Prinz Eugen ransomware from locking your data. Learn how eugen ransomware prioritizes targets and secure your network to prevent loss. Read the full guide.]]></description>
+    <pubDate>Mon, 22 Jun 2026 06:43:22 GMT</pubDate>
+    <category>prinz eugen ransomware</category>
+    <category>cybersecurity</category>
+    <category>ransomware protection</category>
+    <category>threat mitigation</category>
+    <category>incident response</category>
+    <category>endpoint security</category>
+    <category>data backup</category>
+    <category>malware defense</category>
+  </item>
   <item>
     <title><![CDATA[Klue OAuth Breach: The Complete Guide to the Victim List]]></title>
     <link>https://quillmatick.github.io/tech/klue-oauth-breach-the-complete-guide-to-the-victim-list</link>
@@ -291,21 +306,6 @@
     <category>vulnerability management</category>
     <category>android kernel</category>
     <category>patch management</category>
-  </item>
-  <item>
-    <title><![CDATA[How to Fix the Critical Windows Netlogon RCE Flaw Now for 2026]]></title>
-    <link>https://quillmatick.github.io/tech/how-to-fix-the-critical-windows-netlogon-rce-flaw-now</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-fix-the-critical-windows-netlogon-rce-flaw-now</guid>
-    <description><![CDATA[Stop the critical Windows Netlogon RCE flaw today. Learn step-by-step patching methods to secure your network and prevent breaches. Protect your servers now.]]></description>
-    <pubDate>Wed, 03 Jun 2026 11:18:28 GMT</pubDate>
-    <category>windows netlogon</category>
-    <category>rce</category>
-    <category>cybersecurity</category>
-    <category>patch management</category>
-    <category>active directory</category>
-    <category>domain controller</category>
-    <category>vulnerability management</category>
-    <category>network security</category>
   </item>
 </channel>
 </rss>
