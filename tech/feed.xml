@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Mon, 22 Jun 2026 06:46:59 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 22 Jun 2026 11:53:12 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Texas Govt Data Breach: How to Protect Your Identity Now]]></title>
+    <link>https://quillmatick.github.io/tech/texas-govt-data-breach-how-to-protect-your-identity-now</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/texas-govt-data-breach-how-to-protect-your-identity-now</guid>
+    <description><![CDATA[The Texas govt data breach exposes personal info. Learn how to secure your identity and prevent fraud with our expert recovery steps. Protect your credit now.]]></description>
+    <pubDate>Mon, 22 Jun 2026 11:53:09 GMT</pubDate>
+    <category>texas data breach</category>
+    <category>identity theft protection</category>
+    <category>cybersecurity</category>
+    <category>multi-factor authentication</category>
+    <category>data privacy</category>
+    <category>credit monitoring</category>
+    <category>password security</category>
+    <category>texas government</category>
+  </item>
   <item>
     <title><![CDATA[AryStinger Botnet Infected: How to Secure D-Link Routers]]></title>
     <link>https://quillmatick.github.io/tech/arystinger-botnet-infected-how-to-secure-d-link-routers</link>
@@ -291,21 +306,6 @@
     <category>compliance</category>
     <category>owasp</category>
     <category>developer productivity</category>
-  </item>
-  <item>
-    <title><![CDATA[anthropics opensource framework: How to Use Anthropic's Open-Source Framework for AI Security]]></title>
-    <link>https://quillmatick.github.io/tech/how-to-use-anthropics-open-source-framework-for-ai-security</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-use-anthropics-open-source-framework-for-ai-security</guid>
-    <description><![CDATA[Learn more about anthropics opensource framework. Master Anthropic's opensource framework to automate AI-powered vulnerability discovery. Secure your models ...]]></description>
-    <pubDate>Fri, 05 Jun 2026 08:04:33 GMT</pubDate>
-    <category>ai security</category>
-    <category>anthropic</category>
-    <category>open source</category>
-    <category>kubernetes</category>
-    <category>threat intelligence</category>
-    <category>bert</category>
-    <category>vulnerability management</category>
-    <category>python sdk</category>
   </item>
 </channel>
 </rss>
