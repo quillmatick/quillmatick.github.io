@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Mon, 22 Jun 2026 06:43:25 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 22 Jun 2026 06:46:59 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[AryStinger Botnet Infected: How to Secure D-Link Routers]]></title>
+    <link>https://quillmatick.github.io/tech/arystinger-botnet-infected-how-to-secure-d-link-routers</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/arystinger-botnet-infected-how-to-secure-d-link-routers</guid>
+    <description><![CDATA[AryStinger botnet infected thousands of D-Link routers. Learn how to secure your device and block threats to protect your network. Update your firmware now.]]></description>
+    <pubDate>Mon, 22 Jun 2026 06:46:56 GMT</pubDate>
+    <category>arystinger</category>
+    <category>botnet</category>
+    <category>d-link</category>
+    <category>router security</category>
+    <category>cve-2023-1456</category>
+    <category>firmware update</category>
+    <category>network security</category>
+    <category>malware remediation</category>
+  </item>
   <item>
     <title><![CDATA[Prinz Eugen Ransomware: The Complete Guide to Protection]]></title>
     <link>https://quillmatick.github.io/tech/prinz-eugen-ransomware-the-complete-guide-to-protection</link>
@@ -291,21 +306,6 @@
     <category>bert</category>
     <category>vulnerability management</category>
     <category>python sdk</category>
-  </item>
-  <item>
-    <title><![CDATA[Google Fixes One Actively Exploited Android]]></title>
-    <link>https://quillmatick.github.io/tech/google-fixes-one-actively-exploited-android-zero-day-now</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/google-fixes-one-actively-exploited-android-zero-day-now</guid>
-    <description><![CDATA[Google fixes one actively exploited Android zero-day now. Learn how this critical patch stops hackers and secures your device. Update your phone today.]]></description>
-    <pubDate>Wed, 03 Jun 2026 11:22:05 GMT</pubDate>
-    <category>android</category>
-    <category>google</category>
-    <category>zero-day</category>
-    <category>cybersecurity</category>
-    <category>remote code execution</category>
-    <category>vulnerability management</category>
-    <category>android kernel</category>
-    <category>patch management</category>
   </item>
 </channel>
 </rss>

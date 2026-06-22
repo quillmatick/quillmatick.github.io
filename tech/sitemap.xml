@@ -7,6 +7,12 @@
   </url>
   
   <url>
+    <loc>https://quillmatick.github.io/tech/arystinger-botnet-infected-how-to-secure-d-link-routers</loc>
+    <lastmod>2026-06-22T06:46:56.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://quillmatick.github.io/tech/prinz-eugen-ransomware-the-complete-guide-to-protection</loc>
     <lastmod>2026-06-22T06:43:22.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -445,12 +451,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://quillmatick.github.io/tech/how-to-master-git-commands-before-reading-any-code</loc>
-    <lastmod>2026-06-11T11:04:28.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://quillmatick.github.io/tech/linkedin-hit-with-class-action-lawsuits-over-browser-extension-scanning-how-to-respond</loc>
     <lastmod>2026-06-11T10:59:30.000Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -465,6 +465,12 @@
   <url>
     <loc>https://quillmatick.github.io/tech/nvidia-exec-says-ai-costs-more-than-actual-workers</loc>
     <lastmod>2026-06-11T10:58:54.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quillmatick.github.io/tech/how-to-master-git-commands-before-reading-any-code</loc>
+    <lastmod>2026-06-11T11:04:28.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
