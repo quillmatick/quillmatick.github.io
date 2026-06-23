@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Tue, 23 Jun 2026 05:05:14 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 23 Jun 2026 05:11:01 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How to Build Powerful Apps with Deno Desktop]]></title>
+    <link>https://quillmatick.github.io/tech/how-to-build-powerful-apps-with-deno-desktop</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-build-powerful-apps-with-deno-desktop</guid>
+    <description><![CDATA[Master Deno Desktop to build powerful apps. Learn to create high-performance desktop software with TypeScript for a faster dev cycle. Start building today.]]></description>
+    <pubDate>Tue, 23 Jun 2026 05:10:58 GMT</pubDate>
+    <category>deno desktop</category>
+    <category>typescript</category>
+    <category>desktop app development</category>
+    <category>webgpu</category>
+    <category>cross-platform</category>
+    <category>native apis</category>
+    <category>software architecture</category>
+    <category>deno</category>
+  </item>
   <item>
     <title><![CDATA[Steam Machine Guide: How to Build Your Perfect Gaming PC]]></title>
     <link>https://quillmatick.github.io/tech/steam-machine-guide-how-to-build-your-perfect-gaming-pc</link>
@@ -291,21 +306,6 @@
     <category>hardware optimization</category>
     <category>api integration</category>
     <category>llm benchmarking</category>
-  </item>
-  <item>
-    <title><![CDATA[windows compromised deliver: Supply Chain Attack: Hola Browser Windows Compromised]]></title>
-    <link>https://quillmatick.github.io/tech/supply-chain-attack-hola-browser-windows-compromised</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/supply-chain-attack-hola-browser-windows-compromised</guid>
-    <description><![CDATA[Windows compromised deliver systems face a new supply chain attack. Learn how the Hola Browser cryptominer spreads and secure your network. Read the full report]]></description>
-    <pubDate>Sat, 06 Jun 2026 05:47:22 GMT</pubDate>
-    <category>supply chain attack</category>
-    <category>hola browser</category>
-    <category>cybersecurity</category>
-    <category>malware detection</category>
-    <category>endpoint security</category>
-    <category>mitre attck</category>
-    <category>windows security</category>
-    <category>vulnerability management</category>
   </item>
 </channel>
 </rss>
