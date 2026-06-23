@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Tue, 23 Jun 2026 05:18:49 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 23 Jun 2026 05:23:00 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How to Analyze the Text Claude Codes Extended Thinking]]></title>
+    <link>https://quillmatick.github.io/tech/how-to-analyze-the-text-claude-codes-extended-thinking</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-analyze-the-text-claude-codes-extended-thinking</guid>
+    <description><![CDATA[Master text Claude codes extended thinking to decode complex AI logic. Learn to analyze reasoning patterns for better prompts and faster results. Read the guide]]></description>
+    <pubDate>Tue, 23 Jun 2026 05:22:57 GMT</pubDate>
+    <category>claude</category>
+    <category>extended thinking</category>
+    <category>llm analysis</category>
+    <category>reasoning controller</category>
+    <category>model benchmarking</category>
+    <category>ai optimization</category>
+    <category>chain-of-thought</category>
+    <category>machine learning</category>
+  </item>
   <item>
     <title><![CDATA[How to Fix the Codex Logging Bug Writing TBs to SSDs]]></title>
     <link>https://quillmatick.github.io/tech/how-to-fix-the-codex-logging-bug-writing-tbs-to-ssds</link>
@@ -291,21 +306,6 @@
     <category>ai security</category>
     <category>aws config</category>
     <category>model training</category>
-  </item>
-  <item>
-    <title><![CDATA[German Ruling Declares Google Liable for AI Hallucinations]]></title>
-    <link>https://quillmatick.github.io/tech/german-ruling-declares-google-liable-for-ai-hallucinations</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/german-ruling-declares-google-liable-for-ai-hallucinations</guid>
-    <description><![CDATA[German ruling declares Google liable for AI hallucinations. Learn how this legal precedent impacts AI safety and protects your rights. Read the full analysis.]]></description>
-    <pubDate>Thu, 11 Jun 2026 08:53:46 GMT</pubDate>
-    <category>ai liability</category>
-    <category>google</category>
-    <category>german law</category>
-    <category>ai hallucinations</category>
-    <category>legal compliance</category>
-    <category>llm governance</category>
-    <category>data protection</category>
-    <category>tech law</category>
   </item>
 </channel>
 </rss>
