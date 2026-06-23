@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Tue, 23 Jun 2026 05:59:21 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 23 Jun 2026 06:03:44 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Microsoft Fixes AutoGen Studio Flaw: Complete Security Guide]]></title>
+    <link>https://quillmatick.github.io/tech/microsoft-fixes-autogen-studio-flaw-complete-security-guide</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/microsoft-fixes-autogen-studio-flaw-complete-security-guide</guid>
+    <description><![CDATA[Microsoft fixes AutoGen Studio flaws in this security guide. Learn how to patch vulnerabilities, secure your AI agents, and protect your data. Read more now.]]></description>
+    <pubDate>Tue, 23 Jun 2026 06:03:41 GMT</pubDate>
+    <category>microsoft autogen</category>
+    <category>cybersecurity</category>
+    <category>patch management</category>
+    <category>vulnerability fix</category>
+    <category>sandbox security</category>
+    <category>edr</category>
+    <category>input validation</category>
+    <category>ai security</category>
+  </item>
   <item>
     <title><![CDATA[Texas Govt Data Breach: How to Protect Your Driver's License]]></title>
     <link>https://quillmatick.github.io/tech/texas-govt-data-breach-how-to-protect-your-drivers-license</link>
@@ -291,21 +306,6 @@
     <category>token theft</category>
     <category>api security</category>
     <category>incident response</category>
-  </item>
-  <item>
-    <title><![CDATA[there minimal downside: How to Manage the Minimal Downside Switching to Open Models]]></title>
-    <link>https://quillmatick.github.io/tech/how-to-manage-the-minimal-downside-switching-to-open-models</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-manage-the-minimal-downside-switching-to-open-models</guid>
-    <description><![CDATA[Learn more about there minimal downside. Learn how to handle the minimal downside switching to open models. Master the transition to gain full control over y...]]></description>
-    <pubDate>Mon, 22 Jun 2026 06:35:07 GMT</pubDate>
-    <category>open source ai</category>
-    <category>llm migration</category>
-    <category>ai governance</category>
-    <category>model deployment</category>
-    <category>cost optimization</category>
-    <category>ai compliance</category>
-    <category>machine learning operations</category>
-    <category>enterprise ai</category>
   </item>
 </channel>
 </rss>
