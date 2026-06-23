@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Mon, 22 Jun 2026 16:43:49 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 23 Jun 2026 05:05:14 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Steam Machine Guide: How to Build Your Perfect Gaming PC]]></title>
+    <link>https://quillmatick.github.io/tech/steam-machine-guide-how-to-build-your-perfect-gaming-pc</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/steam-machine-guide-how-to-build-your-perfect-gaming-pc</guid>
+    <description><![CDATA[Build your custom steam machine with our expert guide. Learn to select the best parts and optimize performance for a seamless gaming experience. Start building.]]></description>
+    <pubDate>Tue, 23 Jun 2026 05:05:11 GMT</pubDate>
+    <category>gaming pc</category>
+    <category>pc building</category>
+    <category>steam machine</category>
+    <category>hardware guide</category>
+    <category>gpu</category>
+    <category>cpu</category>
+    <category>nvme ssd</category>
+    <category>steamos</category>
+  </item>
   <item>
     <title><![CDATA[Never Give Them Your Face: The Complete Guide to Privacy]]></title>
     <link>https://quillmatick.github.io/tech/never-give-them-your-face-the-complete-guide-to-privacy</link>
@@ -291,21 +306,6 @@
     <category>mitre attck</category>
     <category>windows security</category>
     <category>vulnerability management</category>
-  </item>
-  <item>
-    <title><![CDATA[credit card theft: How to Stop the Card Theft Campaign Abusing Stripe]]></title>
-    <link>https://quillmatick.github.io/tech/how-to-stop-the-card-theft-campaign-abusing-stripe</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-stop-the-card-theft-campaign-abusing-stripe</guid>
-    <description><![CDATA[Learn more about credit card theft. Stop this card theft campaign abusing Stripe now. Learn to detect fraudulent patterns and secure your payments to prevent...]]></description>
-    <pubDate>Sat, 06 Jun 2026 05:44:14 GMT</pubDate>
-    <category>stripe</category>
-    <category>credit card theft</category>
-    <category>api security</category>
-    <category>fraud prevention</category>
-    <category>stripe radar</category>
-    <category>cybersecurity</category>
-    <category>payment security</category>
-    <category>webhooks</category>
   </item>
 </channel>
 </rss>
