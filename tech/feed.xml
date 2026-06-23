@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Tue, 23 Jun 2026 05:23:00 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 23 Jun 2026 05:51:30 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How Stolen Credentials Attackers Find Targets Faster]]></title>
+    <link>https://quillmatick.github.io/tech/how-stolen-credentials-attackers-find-targets-faster</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-stolen-credentials-attackers-find-targets-faster</guid>
+    <description><![CDATA[Stolen credentials attackers use automated tools to find targets faster. Learn how they bypass security to protect your data and secure your network today.]]></description>
+    <pubDate>Tue, 23 Jun 2026 05:51:28 GMT</pubDate>
+    <category>credential stuffing</category>
+    <category>cybersecurity</category>
+    <category>threat intelligence</category>
+    <category>data breaches</category>
+    <category>identity and access management</category>
+    <category>account takeover</category>
+    <category>attack surface management</category>
+    <category>password security</category>
+  </item>
   <item>
     <title><![CDATA[How to Analyze the Text Claude Codes Extended Thinking]]></title>
     <link>https://quillmatick.github.io/tech/how-to-analyze-the-text-claude-codes-extended-thinking</link>
@@ -291,21 +306,6 @@
     <category>gdpr compliance</category>
     <category>api rate limits</category>
     <category>user onboarding</category>
-  </item>
-  <item>
-    <title><![CDATA[How to Manage AWS Bedrock Require Data Sharing Rules]]></title>
-    <link>https://quillmatick.github.io/tech/how-to-manage-aws-bedrock-require-data-sharing-rules</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-manage-aws-bedrock-require-data-sharing-rules</guid>
-    <description><![CDATA[Master AWS Bedrock require data sharing rules to secure your AI models. Learn to configure settings, ensure compliance, and optimize privacy. Read the guide now]]></description>
-    <pubDate>Thu, 11 Jun 2026 08:58:01 GMT</pubDate>
-    <category>aws bedrock</category>
-    <category>data privacy</category>
-    <category>compliance</category>
-    <category>gdpr</category>
-    <category>cloud governance</category>
-    <category>ai security</category>
-    <category>aws config</category>
-    <category>model training</category>
   </item>
 </channel>
 </rss>
