@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Tue, 23 Jun 2026 05:15:14 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 23 Jun 2026 05:18:49 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How to Fix the Codex Logging Bug Writing TBs to SSDs]]></title>
+    <link>https://quillmatick.github.io/tech/how-to-fix-the-codex-logging-bug-writing-tbs-to-ssds</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-fix-the-codex-logging-bug-writing-tbs-to-ssds</guid>
+    <description><![CDATA[Stop the codex logging bug from destroying your SSDs. Learn how to disable the bug may write loop to save your hardware and restore performance. Fix it now.]]></description>
+    <pubDate>Tue, 23 Jun 2026 05:18:47 GMT</pubDate>
+    <category>codex</category>
+    <category>ssd</category>
+    <category>write amplification</category>
+    <category>firmware update</category>
+    <category>data center</category>
+    <category>logging bug</category>
+    <category>storage optimization</category>
+    <category>ssd endurance</category>
+  </item>
   <item>
     <title><![CDATA[glm opus: GLM vs Opus: The Complete Guide to Choosing the Best Model]]></title>
     <link>https://quillmatick.github.io/tech/glm-vs-opus-the-complete-guide-to-choosing-the-best-model</link>
@@ -291,21 +306,6 @@
     <category>llm governance</category>
     <category>data protection</category>
     <category>tech law</category>
-  </item>
-  <item>
-    <title><![CDATA[How to Set Up macOS Container Machines for Development]]></title>
-    <link>https://quillmatick.github.io/tech/how-to-set-up-macos-container-machines-for-development</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-set-up-macos-container-machines-for-development</guid>
-    <description><![CDATA[Discover set up macOS container machines for development with our step-by-step guide. Streamline your workflow and isolate environments. Start building your ...]]></description>
-    <pubDate>Thu, 11 Jun 2026 08:35:37 GMT</pubDate>
-    <category>macos</category>
-    <category>docker</category>
-    <category>containerization</category>
-    <category>apple silicon</category>
-    <category>dev ops</category>
-    <category>lima</category>
-    <category>colima</category>
-    <category>software development</category>
   </item>
 </channel>
 </rss>
