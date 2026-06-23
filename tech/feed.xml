@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Tue, 23 Jun 2026 05:54:56 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 23 Jun 2026 05:59:21 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Texas Govt Data Breach: How to Protect Your Driver's License]]></title>
+    <link>https://quillmatick.github.io/tech/texas-govt-data-breach-how-to-protect-your-drivers-license</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/texas-govt-data-breach-how-to-protect-your-drivers-license</guid>
+    <description><![CDATA[The Texas govt data breach exposes personal info. Learn how to secure your driver's license and prevent identity theft today. Protect your private data now.]]></description>
+    <pubDate>Tue, 23 Jun 2026 05:59:19 GMT</pubDate>
+    <category>texas data breach</category>
+    <category>cybersecurity</category>
+    <category>data protection</category>
+    <category>identity theft</category>
+    <category>network security</category>
+    <category>mfa</category>
+    <category>vulnerability management</category>
+    <category>drivers license security</category>
+  </item>
   <item>
     <title><![CDATA[microsoft links mastra: Mastra Supply Chain Attack: The Complete Guide to the Risk]]></title>
     <link>https://quillmatick.github.io/tech/mastra-supply-chain-attack-the-complete-guide-to-the-risk</link>
@@ -290,21 +305,6 @@
     <category>cost optimization</category>
     <category>ai compliance</category>
     <category>machine learning operations</category>
-    <category>enterprise ai</category>
-  </item>
-  <item>
-    <title><![CDATA[The Complete Guide to Apertus Open Foundation Models]]></title>
-    <link>https://quillmatick.github.io/tech/the-complete-guide-to-apertus-open-foundation-models</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-complete-guide-to-apertus-open-foundation-models</guid>
-    <description><![CDATA[Master the Apertus open foundation model with our guide. Learn to build custom AI tools, reduce costs, and scale efficiently. Start optimizing your workflow now]]></description>
-    <pubDate>Mon, 22 Jun 2026 06:30:24 GMT</pubDate>
-    <category>apertus</category>
-    <category>foundation models</category>
-    <category>open source ai</category>
-    <category>mixture-of-experts</category>
-    <category>ai compliance</category>
-    <category>model fine-tuning</category>
-    <category>machine learning architecture</category>
     <category>enterprise ai</category>
   </item>
 </channel>
