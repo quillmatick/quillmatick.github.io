@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Tue, 23 Jun 2026 05:11:01 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 23 Jun 2026 05:15:14 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[glm opus: GLM vs Opus: The Complete Guide to Choosing the Best Model]]></title>
+    <link>https://quillmatick.github.io/tech/glm-vs-opus-the-complete-guide-to-choosing-the-best-model</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/glm-vs-opus-the-complete-guide-to-choosing-the-best-model</guid>
+    <description><![CDATA[Learn more about glm opus. Compare GLM vs Opus to find the ideal AI model for your needs. Learn key performance differences to boost productivity and scale f...]]></description>
+    <pubDate>Tue, 23 Jun 2026 05:15:12 GMT</pubDate>
+    <category>llms</category>
+    <category>glm</category>
+    <category>opus</category>
+    <category>model comparison</category>
+    <category>multilingual nlp</category>
+    <category>machine learning deployment</category>
+    <category>ai architecture</category>
+    <category>open source ai</category>
+  </item>
   <item>
     <title><![CDATA[How to Build Powerful Apps with Deno Desktop]]></title>
     <link>https://quillmatick.github.io/tech/how-to-build-powerful-apps-with-deno-desktop</link>
@@ -291,21 +306,6 @@
     <category>lima</category>
     <category>colima</category>
     <category>software development</category>
-  </item>
-  <item>
-    <title><![CDATA[Claude Fable 5: The Complete Guide to Mastering the Tool]]></title>
-    <link>https://quillmatick.github.io/tech/claude-fable-5-the-complete-guide-to-mastering-the-tool</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/claude-fable-5-the-complete-guide-to-mastering-the-tool</guid>
-    <description><![CDATA[Master Claude Fable with our complete guide. Learn advanced techniques to optimize your workflow and boost productivity. Start scaling your output today.]]></description>
-    <pubDate>Thu, 11 Jun 2026 05:08:09 GMT</pubDate>
-    <category>claude fable 5</category>
-    <category>ai deployment</category>
-    <category>rag</category>
-    <category>machine learning</category>
-    <category>kubernetes</category>
-    <category>hardware optimization</category>
-    <category>api integration</category>
-    <category>llm benchmarking</category>
   </item>
 </channel>
 </rss>
