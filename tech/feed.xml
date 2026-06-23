@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Tue, 23 Jun 2026 05:51:30 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 23 Jun 2026 05:54:56 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[microsoft links mastra: Mastra Supply Chain Attack: The Complete Guide to the Risk]]></title>
+    <link>https://quillmatick.github.io/tech/mastra-supply-chain-attack-the-complete-guide-to-the-risk</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/mastra-supply-chain-attack-the-complete-guide-to-the-risk</guid>
+    <description><![CDATA[Stop the Mastra supply chain attack now. Learn how Microsoft links Mastra risks impact your security and secure your infrastructure. Read the full guide today.]]></description>
+    <pubDate>Tue, 23 Jun 2026 05:54:53 GMT</pubDate>
+    <category>supply chain attack</category>
+    <category>mastra</category>
+    <category>cybersecurity</category>
+    <category>malware analysis</category>
+    <category>threat mitigation</category>
+    <category>zero trust</category>
+    <category>edr</category>
+    <category>software security</category>
+  </item>
   <item>
     <title><![CDATA[How Stolen Credentials Attackers Find Targets Faster]]></title>
     <link>https://quillmatick.github.io/tech/how-stolen-credentials-attackers-find-targets-faster</link>
@@ -291,21 +306,6 @@
     <category>model fine-tuning</category>
     <category>machine learning architecture</category>
     <category>enterprise ai</category>
-  </item>
-  <item>
-    <title><![CDATA[identity verification claude: How to Complete Identity Verification on Claude Quickly]]></title>
-    <link>https://quillmatick.github.io/tech/how-to-complete-identity-verification-on-claude-quickly</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-complete-identity-verification-on-claude-quickly</guid>
-    <description><![CDATA[Learn more about identity verification claude. Master identity verification on Claude with our fast guide. Learn the exact steps to verify your account quick...]]></description>
-    <pubDate>Mon, 22 Jun 2026 05:43:42 GMT</pubDate>
-    <category>claude</category>
-    <category>identity verification</category>
-    <category>kyc</category>
-    <category>account security</category>
-    <category>document verification</category>
-    <category>gdpr compliance</category>
-    <category>api rate limits</category>
-    <category>user onboarding</category>
   </item>
 </channel>
 </rss>
