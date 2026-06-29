@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Tue, 23 Jun 2026 06:08:03 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 29 Jun 2026 08:22:20 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How I Used Claude Code to Get a Second Opinion on My MRI]]></title>
+    <link>https://quillmatick.github.io/tech/how-i-used-claude-code-to-get-a-second-opinion-on-my-mri</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-i-used-claude-code-to-get-a-second-opinion-on-my-mri</guid>
+    <description><![CDATA[See how I used Claude Code to get a second opinion on my MRI. Learn to analyze medical data for better clarity and peace of mind. Read the full process here.]]></description>
+    <pubDate>Mon, 29 Jun 2026 08:22:17 GMT</pubDate>
+    <category>claude code</category>
+    <category>mri analysis</category>
+    <category>health ai</category>
+    <category>medical imaging</category>
+    <category>dicom</category>
+    <category>radiology</category>
+    <category>ai diagnostics</category>
+    <category>hipaa compliance</category>
+  </item>
   <item>
     <title><![CDATA[Best VPN and Security Protocols for 2026: A Complete Guide]]></title>
     <link>https://quillmatick.github.io/tech/best-vpn-and-security-protocols-for-2026-a-complete-guide</link>
@@ -291,21 +306,6 @@
     <category>firmware update</category>
     <category>network security</category>
     <category>malware remediation</category>
-  </item>
-  <item>
-    <title><![CDATA[Prinz Eugen Ransomware: The Complete Guide to Protection]]></title>
-    <link>https://quillmatick.github.io/tech/prinz-eugen-ransomware-the-complete-guide-to-protection</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/prinz-eugen-ransomware-the-complete-guide-to-protection</guid>
-    <description><![CDATA[Stop Prinz Eugen ransomware from locking your data. Learn how eugen ransomware prioritizes targets and secure your network to prevent loss. Read the full guide.]]></description>
-    <pubDate>Mon, 22 Jun 2026 06:43:22 GMT</pubDate>
-    <category>prinz eugen ransomware</category>
-    <category>cybersecurity</category>
-    <category>ransomware protection</category>
-    <category>threat mitigation</category>
-    <category>incident response</category>
-    <category>endpoint security</category>
-    <category>data backup</category>
-    <category>malware defense</category>
   </item>
 </channel>
 </rss>
