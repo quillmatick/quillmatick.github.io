@@ -5,8 +5,22 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Tue, 07 Jul 2026 10:02:34 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 09 Jul 2026 06:43:47 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
-
+  <item>
+    <title><![CDATA[Chatto Now Open Source: The Complete Guide to Getting Started]]></title>
+    <link>https://quillmatick.github.io/tech/chatto-now-open-source-the-complete-guide-to-getting-started</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/chatto-now-open-source-the-complete-guide-to-getting-started</guid>
+    <description><![CDATA[Learn more about chatto now open. Chatto is now open source! Learn how to set up and customize your instance with our complete guide to unlock full data cont...]]></description>
+    <pubDate>Thu, 09 Jul 2026 06:43:47 GMT</pubDate>
+    <category>open source</category>
+    <category>chatto</category>
+    <category>installation guide</category>
+    <category>docker</category>
+    <category>nodejs</category>
+    <category>real-time communication</category>
+    <category>self-hosting</category>
+    <category>software development</category>
+  </item>
 </channel>
 </rss>
