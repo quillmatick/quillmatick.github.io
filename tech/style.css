@@ -1128,12 +1128,17 @@ img { display: block; max-width: 100%; }
 .footer-rss:hover { color: var(--ink); }
 
 /* Cookie banner */
+/* Anchored bottom-centre rather than bottom-left. Left-anchored, it sat directly on top
+   of the first story card at every desktop width — the reader's first impression was a
+   consent dialog covering the content it was asking about. Centring it, tightening the
+   padding and letting the page reserve room for it keeps the grid legible while it is up. */
 .cookie-banner {
   position: fixed;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  right: 1.5rem;
-  max-width: 560px;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(680px, calc(100% - 2.5rem));
+  max-width: 680px;
   background: var(--bg3);
   border: 1px solid var(--border-med);
   border-radius: var(--radius-lg);
@@ -1147,7 +1152,7 @@ img { display: block; max-width: 100%; }
   text-align: left;
 }
 .cookie-banner.hidden {
-  transform: translateY(20px);
+  transform: translateX(-50%) translateY(20px);
   opacity: 0;
   pointer-events: none;
 }
@@ -1650,7 +1655,7 @@ img { display: block; max-width: 100%; }
     gap: 0.75rem;
   }
   .sidebar-item { flex: 1 1 100%; }
-  .cookie-banner { left: 1rem; right: 1rem; flex-direction: column; align-items: flex-start; }
+  .cookie-banner { left: 50%; right: auto; width: calc(100% - 2rem); flex-direction: column; align-items: flex-start; }
   .toc-toggle { display: none; }
   .related-grid { grid-template-columns: 1fr; }
   .newsletter-strip-form { flex-direction: column; }
@@ -1824,4 +1829,42 @@ html[data-theme="dark"] .qm-product-card {
   .qm-product-card {
     padding: 18px;
   }
+}
+
+/* ── Card thumbnails ──────────────────────────────────────────────────────────
+   Every post already carries a featured_image; the cards were rendering an emoji
+   on a gradient and discarding it. The gradient stays behind the image, so it
+   still reads correctly while loading and if the remote image never arrives. */
+.featured-card-thumb { position: relative; overflow: hidden; }
+.featured-card-thumb-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: .92;
+  transition: opacity .3s ease, transform .5s cubic-bezier(.2,.7,.2,1);
+}
+.featured-card:hover .featured-card-thumb-img { opacity: 1; transform: scale(1.04); }
+.featured-card-thumb-bar { position: relative; z-index: 1; }
+
+/* ── Empty state ──────────────────────────────────────────────────────────────
+   An archive with nothing in it used to render a page with no body at all. A new
+   blog should read as deliberate rather than broken. */
+.empty-state {
+  max-width: 46ch;
+  margin: clamp(4rem, 12vh, 9rem) auto;
+  text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 1rem;
+}
+.empty-state-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.05; letter-spacing: -.02em;
+  margin: .5rem 0 0;
+}
+.empty-state-title em { font-style: italic; color: var(--accent); }
+.empty-state-desc { color: var(--ink3); font-size: 1.05rem; line-height: 1.65; margin: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .featured-card-thumb-img { transition: none; }
+  .featured-card:hover .featured-card-thumb-img { transform: none; }
 }
