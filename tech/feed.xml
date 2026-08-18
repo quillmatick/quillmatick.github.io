@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Fri, 14 Aug 2026 23:59:06 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 18 Aug 2026 12:25:26 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Third World Engineer Responds: RISC-V and Global Design]]></title>
+    <link>https://quillmatick.github.io/tech/third-world-engineer-responds-risc-v-and-global-design</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/third-world-engineer-responds-risc-v-and-global-design</guid>
+    <description><![CDATA[Third World Engineer responds to the RISC-V movement. Learn how open-source hardware democratizes global design to lower costs. Read the full analysis here.]]></description>
+    <pubDate>Tue, 18 Aug 2026 12:25:22 GMT</pubDate>
+    <category>risc-v</category>
+    <category>isa</category>
+    <category>open-source hardware</category>
+    <category>embedded systems</category>
+    <category>soc design</category>
+    <category>iot</category>
+    <category>computer architecture</category>
+    <category>hardware verification</category>
+  </item>
   <item>
     <title><![CDATA[The Complete Guide to GLM-5.3 Frontier Coding]]></title>
     <link>https://quillmatick.github.io/tech/the-complete-guide-to-glm-53-frontier-coding</link>
