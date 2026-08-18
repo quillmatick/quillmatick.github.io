@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Tue, 18 Aug 2026 12:25:26 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 18 Aug 2026 12:25:45 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Claude System Prompts: The Complete Guide to Better Output]]></title>
+    <link>https://quillmatick.github.io/tech/claude-system-prompts-the-complete-guide-to-better-output</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/claude-system-prompts-the-complete-guide-to-better-output</guid>
+    <description><![CDATA[Master claude system prompts to refine AI behavior. Learn how to structure instructions for precise, high-quality output and boost your productivity. Read more.]]></description>
+    <pubDate>Tue, 18 Aug 2026 12:25:41 GMT</pubDate>
+    <category>claude</category>
+    <category>system prompts</category>
+    <category>prompt engineering</category>
+    <category>llm optimization</category>
+    <category>ai persona</category>
+    <category>json output</category>
+    <category>ai safety</category>
+    <category>model performance</category>
+  </item>
   <item>
     <title><![CDATA[Third World Engineer Responds: RISC-V and Global Design]]></title>
     <link>https://quillmatick.github.io/tech/third-world-engineer-responds-risc-v-and-global-design</link>
