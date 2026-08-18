@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Tue, 18 Aug 2026 12:25:45 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 18 Aug 2026 12:26:03 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[opus codec: Why Does Opus Feel Worse to Work With? A Complete Guide]]></title>
+    <link>https://quillmatick.github.io/tech/why-does-opus-feel-worse-to-work-with-a-complete-guide</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/why-does-opus-feel-worse-to-work-with-a-complete-guide</guid>
+    <description><![CDATA[Learn more about opus codec. Does Opus feel worse to work with? Learn why this happens and how to fix your workflow to boost productivity.]]></description>
+    <pubDate>Tue, 18 Aug 2026 12:25:59 GMT</pubDate>
+    <category>opus codec</category>
+    <category>audio engineering</category>
+    <category>low latency</category>
+    <category>voip</category>
+    <category>c programming</category>
+    <category>audio optimization</category>
+    <category>digital signal processing</category>
+    <category>software development</category>
+  </item>
   <item>
     <title><![CDATA[Claude System Prompts: The Complete Guide to Better Output]]></title>
     <link>https://quillmatick.github.io/tech/claude-system-prompts-the-complete-guide-to-better-output</link>
