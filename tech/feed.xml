@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Wed, 19 Aug 2026 15:48:03 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 19 Aug 2026 15:49:02 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Cerebras CS-4: The Complete Guide to AI Acceleration]]></title>
+    <link>https://quillmatick.github.io/tech/cerebras-cs-4-the-complete-guide-to-ai-acceleration</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/cerebras-cs-4-the-complete-guide-to-ai-acceleration</guid>
+    <description><![CDATA[Master the Cerebras CS-4 to accelerate AI workloads. Learn how this system slashes training times and boosts efficiency. Explore the full guide for your scale.]]></description>
+    <pubDate>Wed, 19 Aug 2026 15:48:58 GMT</pubDate>
+    <category>cerebras cs-4</category>
+    <category>ai acceleration</category>
+    <category>wafer-scale engine</category>
+    <category>machine learning hardware</category>
+    <category>gpu alternatives</category>
+    <category>ai infrastructure</category>
+    <category>model training</category>
+    <category>high-performance computing</category>
+  </item>
   <item>
     <title><![CDATA[Meta's Blockbuster Trial: How It Parallels Big Tobacco]]></title>
     <link>https://quillmatick.github.io/tech/metas-blockbuster-trial-how-it-parallels-big-tobacco</link>
