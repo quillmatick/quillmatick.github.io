@@ -1349,6 +1349,37 @@ img { display: block; max-width: 100%; }
   text-align: left;
 }
 .article-body p { margin-bottom: 1.5rem; }
+
+/* Tables had no styling at all, so they used browser defaults and nothing constrained
+   their width. On a 375px viewport the widest table measured 422px with overflow-x:visible
+   on both itself and its parent, which pushed the whole page to 438px and made the article
+   scroll sideways. display:block turns the table itself into the scroll container, so a
+   wide table scrolls within its own bounds instead of dragging the page with it. */
+.article-body table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.94rem;
+}
+.article-body table th,
+.article-body table td {
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--line, rgba(255,255,255,0.12));
+  text-align: left;
+  vertical-align: top;
+}
+.article-body table th {
+  font-weight: 600;
+  background: var(--surface2, rgba(255,255,255,0.04));
+  white-space: nowrap;
+}
+.article-body table tr:nth-child(even) td {
+  background: var(--surface1, rgba(255,255,255,0.02));
+}
 .article-body h2 {
   font-family: var(--font-display);
   font-size: 1.6rem;
