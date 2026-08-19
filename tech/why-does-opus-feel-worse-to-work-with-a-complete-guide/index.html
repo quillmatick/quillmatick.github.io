@@ -45,7 +45,7 @@
 <meta name="author" content="Quillmatick Staff" />
   <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  <link rel="stylesheet" href="/tech/style.css?v=1787127138782" />
+  <link rel="stylesheet" href="/tech/style.css?v=1787131084080" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
@@ -241,51 +241,39 @@
 
 <h2 id="configuration-best-practices-for-lowlatency-voice">Configuration Best Practices for Low‑Latency Voice</h2>
 <h3 id="frame-size-settings">Frame Size Settings</h3>
-<ul>
-<li><pre><code class="language-c">
+<pre><code class="language-c">opus_encoder_ctl(encoder, OPUS_SET_FRAME_SIZE(20));
 </code></pre>
-</li>
+<ul>
+<li><strong>Lock to 20 ms</strong> to guarantee sub‑20 ms algorithmic delay. </li>
+<li><strong>Adjust dynamically</strong> with <code>OPUS_SET_MAX_BANDWIDTH</code> if network conditions improve.</li>
 </ul>
-<p> opus_encoder_ctl(encoder, OPUS_SET_FRAME_SIZE(20));</p>
-<pre><code>- **Lock to 20 ms** to guarantee sub‑20 ms algorithmic delay. 
-- **Adjust dynamically** with `OPUS_SET_MAX_BANDWIDTH` if network conditions improve. 
-
-### Bitrate Tuning 
-- ```c
-opus_encoder_ctl(encoder, OPUS_SET_BITRATE(24000));
+<h3 id="bitrate-tuning">Bitrate Tuning</h3>
+<pre><code class="language-c">opus_encoder_ctl(encoder, OPUS_SET_BITRATE(24000));
 </code></pre>
 <ul>
 <li><strong>24 kbps</strong> provides clear speech for most VoIP use cases. </li>
 <li>Increase to <strong>32 kbps</strong> only when background noise demands higher fidelity.</li>
 </ul>
 <h3 id="complexity-management">Complexity Management</h3>
-<ul>
-<li><pre><code class="language-c">
+<pre><code class="language-c">opus_encoder_ctl(encoder, OPUS_SET_COMPLEXITY(5));
 </code></pre>
-</li>
+<ul>
+<li><strong>Complexity 5</strong> reduces CPU spikes while preserving MOS &gt; 4.0.</li>
 </ul>
-<p> opus_encoder_ctl(encoder, OPUS_SET_COMPLEXITY(5));</p>
-<pre><code>- **Complexity 5** reduces CPU spikes while preserving MOS &gt; 4.0. 
-
-### Signal Type Enforcement 
-- ```c
-opus_encoder_ctl(encoder, OPUS_SET_SIGNAL(OPUS_SIGNAL_VOICE));
+<h3 id="signal-type-enforcement">Signal Type Enforcement</h3>
+<pre><code class="language-c">opus_encoder_ctl(encoder, OPUS_SET_SIGNAL(OPUS_SIGNAL_VOICE));
 </code></pre>
 <ul>
 <li><strong>Force voice mode</strong> to keep the encoder in SILK, eliminating unnecessary CELT processing.</li>
 </ul>
 <h3 id="inband-fec-activation">In‑Band FEC Activation</h3>
-<ul>
-<li><pre><code class="language-c">
+<pre><code class="language-c">opus_encoder_ctl(encoder, OPUS_SET_INBAND_FEC(1));
 </code></pre>
-</li>
+<ul>
+<li><strong>Enable only</strong> when measured packet loss exceeds <strong>5 %</strong>.</li>
 </ul>
-<p> opus_encoder_ctl(encoder, OPUS_SET_INBAND_FEC(1));</p>
-<pre><code>- **Enable only** when measured packet loss exceeds **5 %**. 
-
-### Application Mode Initialization 
-- ```c
-OpusEncoder *enc = opus_encoder_create(Fs, channels, OPUS_APPLICATION_VOIP, &amp;error);
+<h3 id="application-mode-initialization">Application Mode Initialization</h3>
+<pre><code class="language-c">OpusEncoder *enc = opus_encoder_create(Fs, channels, OPUS_APPLICATION_VOIP, &amp;error);
 </code></pre>
 <ul>
 <li><strong>VOIP mode</strong> selects the low‑latency path and optimal packetization from the start.</li>
@@ -687,6 +675,14 @@ Without a <strong>hard deadline</strong>, Opus frames drift. This is the primary
 <li><strong>Quantisation &amp; packing</strong> – A <strong>range coder</strong> (arithmetic coding variant) allocates bits via the psychoacoustic model. The encoder then writes the <strong>Opus packet header</strong> and the compressed payload.</li>
 </ol>
 <p><strong>Key metric</strong> – <strong>Encoding latency</strong> equals frame size plus processing time. On modern CPUs with <code>complexity ≤ 3</code>, this is typically <strong>≤ 2 ms</strong>. </p>
+<h3 id="decoding-pipeline">Decoding Pipeline</h3>
+<p>Decoding mirrors encoding but adds an overlap‑add step to ensure smooth audio: </p>
+<ol>
+<li><strong>Bitstream parsing</strong> – The decoder validates the Opus header, extracts mode flags, and selects the synthesis path. </li>
+<li><strong>Inverse quantisation</strong> – The range coder reverses, reconstructing spectral coefficients and applying the inverse MDCT or LPC synthesis filter. </li>
+<li><strong>Overlap‑add synthesis</strong> – A <strong>window function</strong> (Vorbis window) merges the current frame with the previous one to eliminate discontinuities.</li>
+</ol>
+<p>The decoder’s <strong>output latency</strong> matches the encoder’s frame size. Total round‑trip latency is <strong>frame size × 2 + processing overhead</strong>. </p>
 <div class="qm-ad-container qm-ad-mid" style="margin: 32px auto; padding: 16px 0; text-align: center; max-width: 728px; min-height: 90px;">
   <ins class="adsbygoogle"
     style="display:block"
@@ -696,14 +692,6 @@ Without a <strong>hard deadline</strong>, Opus frames drift. This is the primary
     data-full-width-responsive="true"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-<h3 id="decoding-pipeline">Decoding Pipeline</h3>
-<p>Decoding mirrors encoding but adds an overlap‑add step to ensure smooth audio: </p>
-<ol>
-<li><strong>Bitstream parsing</strong> – The decoder validates the Opus header, extracts mode flags, and selects the synthesis path. </li>
-<li><strong>Inverse quantisation</strong> – The range coder reverses, reconstructing spectral coefficients and applying the inverse MDCT or LPC synthesis filter. </li>
-<li><strong>Overlap‑add synthesis</strong> – A <strong>window function</strong> (Vorbis window) merges the current frame with the previous one to eliminate discontinuities.</li>
-</ol>
-<p>The decoder’s <strong>output latency</strong> matches the encoder’s frame size. Total round‑trip latency is <strong>frame size × 2 + processing overhead</strong>. </p>
 <h3 id="realtime-constraints">Real‑Time Constraints</h3>
 <p>Low‑latency apps target <strong>end‑to‑end delays</strong> below <strong>30 ms</strong>. Opus supports frame sizes from <strong>2.5 ms to 60 ms</strong>. Be careful: <strong>2.5 ms</strong> and <strong>5 ms</strong> modes spike CPU usage (up to <strong>30%</strong> on low‑end chips) because the transform runs more frequently. </p>
 <p><strong>Why frame size influences “feel worse”</strong> 
