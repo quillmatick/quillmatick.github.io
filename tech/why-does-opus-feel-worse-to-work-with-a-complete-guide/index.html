@@ -45,7 +45,7 @@
 <meta name="author" content="Quillmatick Staff" />
   <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  <link rel="stylesheet" href="/tech/style.css?v=1787125715779" />
+  <link rel="stylesheet" href="/tech/style.css?v=1787125854016" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
@@ -674,7 +674,7 @@ A6: Yes, but you must switch to <strong>CELT‑only mode</strong> (<code>OPUS_SE
 <li><strong>Linux</strong> – <code>SCHED_FIFO</code> or <code>SCHED_RR</code> policies provide deterministic wake‑ups. The <strong><code>rtprio</code></strong> utility can raise thread priority, but containerized deployments often lack the root permissions required for values above 50. </li>
 <li><strong>macOS</strong> – Core Audio’s <strong>Audio Unit</strong> framework maps Opus to a real‑time thread automatically. Yet, <strong>Energy Saver</strong> mode can throttle CPU frequency, increasing per‑frame processing time by up to <strong>12%</strong>.</li>
 </ul>
-<p><strong>Real‑time scheduling <a href="/tech/how-conditions-on-aircraft-carrier-impact-long-sea-tours">impact</a></strong> 
+<p><strong>Real‑time scheduling <a href="/geopolitics/how-conditions-on-aircraft-carrier-impact-long-sea-tours">impact</a></strong> 
 Without a <strong>hard deadline</strong>, Opus frames drift. This is the primary source of the “feel worse” perception. Request real‑time priority explicitly and monitor for priority inversion. </p>
 
 <h2 id="how-opus-works-a-deep-dive">How Opus Works: A Deep Dive</h2>
@@ -710,7 +710,7 @@ Without a <strong>hard deadline</strong>, Opus frames drift. This is the primary
 Larger frames buffer more audio before transmission. A <strong>60 ms</strong> frame adds <strong>~60 ms</strong> of buffering. Combined with network jitter, total latency often exceeds <strong>120 ms</strong>—the point where humans notice lag. Many developers blame the codec for a problem caused by an oversized frame configuration. </p>
 
 <h2 id="benefits-challenges-mitigation">Benefits, Challenges &amp; Mitigation</h2>
-<p>Understanding the pipeline reveals a <a href="/tech/how-dozens-countries-helped-china-dodge-trumps-tariffs">trade</a>-off: you can have extreme efficiency or extreme quality, but rarely both without careful tuning.</p>
+<p>Understanding the pipeline reveals a <a href="/geopolitics/how-dozens-countries-helped-china-dodge-trumps-tariffs">trade</a>-off: you can have extreme efficiency or extreme quality, but rarely both without careful tuning.</p>
 <h3 id="key-benefits">Key Benefits</h3>
 <ul>
 <li><strong>High fidelity at low bitrates</strong> – Opus hits <strong>MOS 4.1</strong> at <strong>12 kbps</strong> for speech, beating G.711 and iLBC in <strong>ITU‑P.862.2</strong> benchmarks. </li>
@@ -966,7 +966,7 @@ Try <strong>G.722</strong> for narrowband speech or <strong>AAC‑ELD</strong> f
         <div>
           <div class="footer-col-h">Topics</div>
           <ul class="footer-links" role="list">
-            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=risc-v">risc-v</a></li><li><a href="/tech/search.html?q=isa">isa</a></li><li><a href="/tech/search.html?q=open-source%20hardware">open-source hardware</a></li><li><a href="/tech/search.html?q=embedded%20systems">embedded systems</a></li>
+            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=claude">claude</a></li><li><a href="/tech/search.html?q=system%20prompts">system prompts</a></li><li><a href="/tech/search.html?q=llm%20optimization">llm optimization</a></li><li><a href="/tech/search.html?q=ai%20persona">ai persona</a></li>
           </ul>
         </div>
         <div>
