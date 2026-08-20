@@ -45,32 +45,10 @@
 <meta name="author" content="Quillmatick Staff" />
   <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  <link rel="stylesheet" href="/tech/style.css?v=1787189772911" />
+  <link rel="stylesheet" href="/tech/style.css?v=1787190467381" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
-  </script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748784056814428" crossorigin="anonymous"></script>
-  <style>
-    /* AdSense marks a slot it declined to fill; collapse it rather than leave a hole. */
-    ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
-  </style>
-  <script>
-    // A slot that AdSense never resolves at all keeps data-ad-status null while still
-    // being sized — measured live at 280px per slot, 936px of blank space per article,
-    // which readers saw as large empty boxes mid-article. Collapse any container whose
-    // slot has not actually rendered an ad by the time the page has settled.
-    window.addEventListener('load', function () {
-      setTimeout(function () {
-        document.querySelectorAll('.qm-ad-container').forEach(function (box) {
-          var ins = box.querySelector('ins.adsbygoogle');
-          if (!ins) { box.style.display = 'none'; return; }
-          var filled = ins.getAttribute('data-ad-status') === 'filled'
-            && ins.getBoundingClientRect().height > 20;
-          if (!filled) box.style.display = 'none';
-        });
-      }, 2500);
-    });
   </script>
 </head>
 <body>
@@ -191,15 +169,6 @@
 <li>Answer the most common questions in the <strong>FAQ</strong>.</li>
 </ol>
 <p>By the end, you will own a <strong>data‑driven checklist</strong> that turns Opus from a pain point into a reliable audio backbone.</p>
-<div class="qm-ad-container qm-ad-top" style="margin: 32px auto; text-align: center; max-width: 728px;">
-  <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-8748784056814428"
-    data-ad-slot="2122985088"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 
 <h2 id="opus-architecture-overview">Opus Architecture Overview</h2>
 <h3 id="hybrid-design">Hybrid Design</h3>
@@ -704,15 +673,6 @@ Without a <strong>hard deadline</strong>, Opus frames drift. This is the primary
 <li><strong>Overlap‑add synthesis</strong> – A <strong>window function</strong> (Vorbis window) merges the current frame with the previous one to eliminate discontinuities.</li>
 </ol>
 <p>The decoder’s <strong>output latency</strong> matches the encoder’s frame size. Total round‑trip latency is <strong>frame size × 2 + processing overhead</strong>. </p>
-<div class="qm-ad-container qm-ad-mid" style="margin: 32px auto; text-align: center; max-width: 728px;">
-  <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-8748784056814428"
-    data-ad-slot="2122985088"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 <h3 id="realtime-constraints">Real‑Time Constraints</h3>
 <p>Low‑latency apps target <strong>end‑to‑end delays</strong> below <strong>30 ms</strong>. Opus supports frame sizes from <strong>2.5 ms to 60 ms</strong>. Be careful: <strong>2.5 ms</strong> and <strong>5 ms</strong> modes spike CPU usage (up to <strong>30%</strong> on low‑end chips) because the transform runs more frequently. </p>
 <p><strong>Why frame size influences “feel worse”</strong> 
@@ -880,15 +840,6 @@ Measure round‑trip time with a timestamped test tone. Profile CPU usage during
 Often. It removes the SILK‑to‑CELT transition overhead. However, speech quality drops at very low bitrates. Check your MOS scores first. </p>
 <p><strong>6. What fallback options exist if Opus feels unacceptable?</strong> 
 Try <strong>G.722</strong> for narrowband speech or <strong>AAC‑ELD</strong> for high fidelity. Both have smaller computational footprints on legacy platforms. </p>
-<div class="qm-ad-container qm-ad-bottom" style="margin: 32px auto; text-align: center; max-width: 728px;">
-  <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-8748784056814428"
-    data-ad-slot="2122985088"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 
 <h2 id="conclusion">Conclusion</h2>
 <p>Opus "feels worse" when developers ignore <strong>frame size</strong>, <strong>complexity</strong>, and <strong>hardware constraints</strong>. By using <strong>benchmark data</strong>, <strong>CPU‑affinity isolation</strong>, and <strong>adaptive bitrate</strong> techniques, you can slash latency and stabilize CPU usage. Use the checklist and code examples above to optimize your pipelines. Stop guessing and start tuning.</p>
@@ -1076,27 +1027,6 @@ Try <strong>G.722</strong> for narrowband speech or <strong>AAC‑ELD</strong> f
   </div>
 
   <style>
-    /* Programmatic Ad Slot placeholder (for dev/testing, will be filled by AdSense/Mediavine) */
-    .qm-ad-slot {
-      margin: 40px auto;
-      text-align: center;
-      min-height: 250px;
-      background-color: var(--surface);
-      border: 1px dashed var(--border);
-      border-radius: var(--radius);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--ink3);
-      font-size: 12px;
-      font-family: var(--font-mono);
-    }
-    .qm-ad-slot::before {
-      content: 'Advertisement';
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
     /* Newsletter modal styling */
     .modal-overlay {
       position: fixed;

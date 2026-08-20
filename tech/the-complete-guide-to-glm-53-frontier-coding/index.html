@@ -45,32 +45,10 @@
 <meta name="author" content="Quillmatick Staff" />
   <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  <link rel="stylesheet" href="/tech/style.css?v=1787189782080" />
+  <link rel="stylesheet" href="/tech/style.css?v=1787190458038" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
-  </script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748784056814428" crossorigin="anonymous"></script>
-  <style>
-    /* AdSense marks a slot it declined to fill; collapse it rather than leave a hole. */
-    ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
-  </style>
-  <script>
-    // A slot that AdSense never resolves at all keeps data-ad-status null while still
-    // being sized — measured live at 280px per slot, 936px of blank space per article,
-    // which readers saw as large empty boxes mid-article. Collapse any container whose
-    // slot has not actually rendered an ad by the time the page has settled.
-    window.addEventListener('load', function () {
-      setTimeout(function () {
-        document.querySelectorAll('.qm-ad-container').forEach(function (box) {
-          var ins = box.querySelector('ins.adsbygoogle');
-          if (!ins) { box.style.display = 'none'; return; }
-          var filled = ins.getAttribute('data-ad-status') === 'filled'
-            && ins.getBoundingClientRect().height > 20;
-          if (!filled) box.style.display = 'none';
-        });
-      }, 2500);
-    });
   </script>
 </head>
 <body>
@@ -413,15 +391,6 @@
 <p><strong>GLM‑5.3</strong> introduces an <strong>ECC layer</strong>, a <strong>16 k token window</strong>, and a security‑oriented <strong>RLHF</strong> loop. These innovations enable the model to generate code that already incorporates defensive patterns, reducing the need for post‑generation hardening. </p>
 <h3 id="how-does-dualprompt-verification-improve-security">How does dual‑prompt verification improve security?</h3>
 <p>By generating two independent completions, the system can automatically detect divergences that often signal hallucinations or hidden flaws. The diff engine either reconciles the differences or flags them for human review, thereby catching vulnerabilities before they enter the codebase. </p>
-<div class="qm-ad-container qm-ad-top" style="margin: 32px auto; text-align: center; max-width: 728px;">
-  <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-8748784056814428"
-    data-ad-slot="2122985088"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 <h3 id="can-i-run-glm53-on-my-own-infrastructure">Can I run <strong>GLM‑5.3</strong> on my own infrastructure?</h3>
 <p>Yes. Z.ai provides an on‑premises container image that complies with <strong>ISO 27001</strong> standards. Deploy the image behind a firewall, enable GPU acceleration, and configure TLS 1.3 for all API calls. </p>
 <h3 id="how-does-embedding-alignment-with-mitre-attck-work-in-practice">How does embedding alignment with <strong>MITRE ATT&amp;CK</strong> work in practice?</h3>
@@ -548,15 +517,6 @@
 <p>This workflow cuts production hallucinations by <strong>73%</strong>.</p>
 <h3 id="ethical-legal-concerns">Ethical &amp; Legal Concerns</h3>
 <p>AI code creates governance gaps:</p>
-<div class="qm-ad-container qm-ad-mid" style="margin: 32px auto; text-align: center; max-width: 728px;">
-  <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-8748784056814428"
-    data-ad-slot="2122985088"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 <ul>
 <li><strong>Intellectual property (IP):</strong> Per 2023 U.S. Copyright Office guidance, AI-only works lack human authorship. Treat GLM‑5.3 output as <strong>public domain</strong> unless humans add substantive edits. </li>
 <li><strong>AI Act compliance:</strong> The EU AI Act requires conformity assessments for high‑risk AI in critical infrastructure. Providers must supply a technical dossier on data provenance and risk management.</li>
@@ -756,15 +716,6 @@ export GLM53_API_KEY=your_api_key_here
 
 <h2 id="conclusion">Conclusion</h2>
 <p>GLM‑5.3 frontier coding changes the math of software development. By leveraging emergent cyber capabilities, teams can ship faster and sleep better. However, the tool is only as good as the governance around it. Success requires disciplined prompting, rigorous verification, and a commitment to regulatory standards.</p>
-<div class="qm-ad-container qm-ad-bottom" style="margin: 32px auto; text-align: center; max-width: 728px;">
-  <ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-8748784056814428"
-    data-ad-slot="2122985088"
-    data-ad-format="auto"
-    data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 <p><strong>Call to Action:</strong> Download the implementation checklist and register for our webinar on emergent cyber capabilities to see live integrations.</p>
 
       </div>
@@ -951,27 +902,6 @@ export GLM53_API_KEY=your_api_key_here
   </div>
 
   <style>
-    /* Programmatic Ad Slot placeholder (for dev/testing, will be filled by AdSense/Mediavine) */
-    .qm-ad-slot {
-      margin: 40px auto;
-      text-align: center;
-      min-height: 250px;
-      background-color: var(--surface);
-      border: 1px dashed var(--border);
-      border-radius: var(--radius);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--ink3);
-      font-size: 12px;
-      font-family: var(--font-mono);
-    }
-    .qm-ad-slot::before {
-      content: 'Advertisement';
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
     /* Newsletter modal styling */
     .modal-overlay {
       position: fixed;
