@@ -45,12 +45,33 @@
 <meta name="author" content="Quillmatick Staff" />
   <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  <link rel="stylesheet" href="/tech/style.css?v=1787160498408" />
+  <link rel="stylesheet" href="/tech/style.css?v=1787189772911" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748784056814428" crossorigin="anonymous"></script>
+  <style>
+    /* AdSense marks a slot it declined to fill; collapse it rather than leave a hole. */
+    ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
+  </style>
+  <script>
+    // A slot that AdSense never resolves at all keeps data-ad-status null while still
+    // being sized — measured live at 280px per slot, 936px of blank space per article,
+    // which readers saw as large empty boxes mid-article. Collapse any container whose
+    // slot has not actually rendered an ad by the time the page has settled.
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        document.querySelectorAll('.qm-ad-container').forEach(function (box) {
+          var ins = box.querySelector('ins.adsbygoogle');
+          if (!ins) { box.style.display = 'none'; return; }
+          var filled = ins.getAttribute('data-ad-status') === 'filled'
+            && ins.getBoundingClientRect().height > 20;
+          if (!filled) box.style.display = 'none';
+        });
+      }, 2500);
+    });
+  </script>
 </head>
 <body>
   <!-- ── Reading progress ── -->
@@ -170,7 +191,7 @@
 <li>Answer the most common questions in the <strong>FAQ</strong>.</li>
 </ol>
 <p>By the end, you will own a <strong>data‑driven checklist</strong> that turns Opus from a pain point into a reliable audio backbone.</p>
-<div class="qm-ad-container qm-ad-top" style="margin: 32px auto; padding: 16px 0; text-align: center; max-width: 728px; min-height: 90px;">
+<div class="qm-ad-container qm-ad-top" style="margin: 32px auto; text-align: center; max-width: 728px;">
   <ins class="adsbygoogle"
     style="display:block"
     data-ad-client="ca-pub-8748784056814428"
@@ -683,7 +704,7 @@ Without a <strong>hard deadline</strong>, Opus frames drift. This is the primary
 <li><strong>Overlap‑add synthesis</strong> – A <strong>window function</strong> (Vorbis window) merges the current frame with the previous one to eliminate discontinuities.</li>
 </ol>
 <p>The decoder’s <strong>output latency</strong> matches the encoder’s frame size. Total round‑trip latency is <strong>frame size × 2 + processing overhead</strong>. </p>
-<div class="qm-ad-container qm-ad-mid" style="margin: 32px auto; padding: 16px 0; text-align: center; max-width: 728px; min-height: 90px;">
+<div class="qm-ad-container qm-ad-mid" style="margin: 32px auto; text-align: center; max-width: 728px;">
   <ins class="adsbygoogle"
     style="display:block"
     data-ad-client="ca-pub-8748784056814428"
@@ -859,7 +880,7 @@ Measure round‑trip time with a timestamped test tone. Profile CPU usage during
 Often. It removes the SILK‑to‑CELT transition overhead. However, speech quality drops at very low bitrates. Check your MOS scores first. </p>
 <p><strong>6. What fallback options exist if Opus feels unacceptable?</strong> 
 Try <strong>G.722</strong> for narrowband speech or <strong>AAC‑ELD</strong> for high fidelity. Both have smaller computational footprints on legacy platforms. </p>
-<div class="qm-ad-container qm-ad-bottom" style="margin: 32px auto; padding: 16px 0; text-align: center; max-width: 728px; min-height: 90px;">
+<div class="qm-ad-container qm-ad-bottom" style="margin: 32px auto; text-align: center; max-width: 728px;">
   <ins class="adsbygoogle"
     style="display:block"
     data-ad-client="ca-pub-8748784056814428"

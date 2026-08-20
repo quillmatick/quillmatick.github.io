@@ -45,12 +45,33 @@
 <meta name="author" content="Quillmatick Staff" />
   <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  <link rel="stylesheet" href="/tech/style.css?v=1787160518937" />
+  <link rel="stylesheet" href="/tech/style.css?v=1787189808864" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748784056814428" crossorigin="anonymous"></script>
+  <style>
+    /* AdSense marks a slot it declined to fill; collapse it rather than leave a hole. */
+    ins.adsbygoogle[data-ad-status="unfilled"] { display: none !important; }
+  </style>
+  <script>
+    // A slot that AdSense never resolves at all keeps data-ad-status null while still
+    // being sized — measured live at 280px per slot, 936px of blank space per article,
+    // which readers saw as large empty boxes mid-article. Collapse any container whose
+    // slot has not actually rendered an ad by the time the page has settled.
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        document.querySelectorAll('.qm-ad-container').forEach(function (box) {
+          var ins = box.querySelector('ins.adsbygoogle');
+          if (!ins) { box.style.display = 'none'; return; }
+          var filled = ins.getAttribute('data-ad-status') === 'filled'
+            && ins.getBoundingClientRect().height > 20;
+          if (!filled) box.style.display = 'none';
+        });
+      }, 2500);
+    });
+  </script>
 </head>
 <body>
   <!-- ── Reading progress ── -->
@@ -354,7 +375,7 @@
 Models exceeding <strong>1 B parameters</strong> benefit most because the on‑wafer memory can hold entire activation maps, eliminating costly off‑chip swaps. Consequently, training time drops dramatically, delivering a clear ROI for large‑scale language and vision models. </p>
 <p><strong>2. How does the CS‑4 compare to a GPU cluster in terms of energy efficiency?</strong> 
 The CS‑4 consumes <strong>≈ 2 kW</strong> while delivering <strong>70 PFLOPs</strong>, resulting in roughly <strong>35 PFLOPs/kW</strong>. In contrast, a 16‑GPU H100 cluster consumes <strong>≈ 6 kW</strong> for <strong>23 PFLOPs</strong>, yielding <strong>~ 3.8 PFLOPs/kW</strong>. Therefore, the wafer‑scale engine is <strong>~9×</strong> more energy‑efficient. </p>
-<div class="qm-ad-container qm-ad-top" style="margin: 32px auto; padding: 16px 0; text-align: center; max-width: 728px; min-height: 90px;">
+<div class="qm-ad-container qm-ad-top" style="margin: 32px auto; text-align: center; max-width: 728px;">
   <ins class="adsbygoogle"
     style="display:block"
     data-ad-client="ca-pub-8748784056814428"
@@ -488,7 +509,7 @@ While the CS‑4 excels at training, its <strong>high memory bandwidth</strong> 
 
 <h2 id="key-benefits-realworld-applications">Key Benefits &amp; Real‑World Applications</h2>
 <p>Does this theoretical power translate to the lab? The data says yes. </p>
-<div class="qm-ad-container qm-ad-mid" style="margin: 32px auto; padding: 16px 0; text-align: center; max-width: 728px; min-height: 90px;">
+<div class="qm-ad-container qm-ad-mid" style="margin: 32px auto; text-align: center; max-width: 728px;">
   <ins class="adsbygoogle"
     style="display:block"
     data-ad-client="ca-pub-8748784056814428"
@@ -682,7 +703,7 @@ A <strong>three‑year hardware warranty</strong> covers parts, labor, and on‑
 <h2 id="conclusion">Conclusion</h2>
 <p>The <strong>Cerebras CS‑4</strong> is a watershed moment for AI acceleration. Its unmatched on‑wafer bandwidth and massive core counts shrink training cycles for the world’s largest models. By mastering its architecture and programming model, engineers and decision‑makers can move from theoretical potential to deployed performance. </p>
 <p>With the right thermal and software strategies, the CS‑4 removes the bottlenecks of traditional compute. Organizations can now accelerate innovation and secure a competitive edge in an AI‑driven economy. </p>
-<div class="qm-ad-container qm-ad-bottom" style="margin: 32px auto; padding: 16px 0; text-align: center; max-width: 728px; min-height: 90px;">
+<div class="qm-ad-container qm-ad-bottom" style="margin: 32px auto; text-align: center; max-width: 728px;">
   <ins class="adsbygoogle"
     style="display:block"
     data-ad-client="ca-pub-8748784056814428"
