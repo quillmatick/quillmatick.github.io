@@ -5,7 +5,7 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Thu, 20 Aug 2026 09:07:01 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 20 Aug 2026 09:08:32 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
   <item>
     <title><![CDATA[Sakura Internet Hack: How to Protect Your Personal Data]]></title>
@@ -21,21 +21,6 @@
     <category>incident response</category>
     <category>information security</category>
     <category>data breach</category>
-  </item>
-  <item>
-    <title><![CDATA[CareCloud Data Breach: How to Protect Your Patient Info]]></title>
-    <link>https://quillmatick.github.io/tech/carecloud-data-breach-how-to-protect-your-patient-info</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/carecloud-data-breach-how-to-protect-your-patient-info</guid>
-    <description><![CDATA[The CareCloud data breach puts patient info at risk. Learn how to secure your health records and prevent identity theft to ensure peace of mind. Read more here.]]></description>
-    <pubDate>Thu, 20 Aug 2026 09:06:01 GMT</pubDate>
-    <category>carecloud</category>
-    <category>data breach</category>
-    <category>healthcare cybersecurity</category>
-    <category>phi protection</category>
-    <category>cloud security</category>
-    <category>hipaa compliance</category>
-    <category>aws security</category>
-    <category>patient data privacy</category>
   </item>
   <item>
     <title><![CDATA[How Google Replaced Git Tags with Google Drive Access]]></title>
