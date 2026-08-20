@@ -5,8 +5,38 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Thu, 20 Aug 2026 01:49:22 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 20 Aug 2026 07:43:38 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How Google Replaced Git Tags with Google Drive Access]]></title>
+    <link>https://quillmatick.github.io/tech/how-google-replaced-git-tags-with-google-drive-access</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-google-replaced-git-tags-with-google-drive-access</guid>
+    <description><![CDATA[See how Google replaced git tags with Drive access for certain source code. Learn to streamline your version control and boost speed. Read the full guide now.]]></description>
+    <pubDate>Thu, 20 Aug 2026 07:41:45 GMT</pubDate>
+    <category>cicd</category>
+    <category>google drive api</category>
+    <category>git</category>
+    <category>devops</category>
+    <category>version control</category>
+    <category>ml ops</category>
+    <category>cloud infrastructure</category>
+    <category>nist compliance</category>
+  </item>
+  <item>
+    <title><![CDATA[Mathematics in the Age of AI: The Complete Guide to Trends]]></title>
+    <link>https://quillmatick.github.io/tech/mathematics-in-the-age-of-ai-the-complete-guide-to-trends</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/mathematics-in-the-age-of-ai-the-complete-guide-to-trends</guid>
+    <description><![CDATA[Explore mathematics in the age of AI. Learn how emerging trends reshape the field to boost your technical edge. Master the future of math and start reading.]]></description>
+    <pubDate>Thu, 20 Aug 2026 07:41:00 GMT</pubDate>
+    <category>artificial intelligence</category>
+    <category>linear algebra</category>
+    <category>bayesian inference</category>
+    <category>machine learning</category>
+    <category>optimization</category>
+    <category>dimensionality reduction</category>
+    <category>data science</category>
+    <category>mathematical modeling</category>
+  </item>
   <item>
     <title><![CDATA[Cursor Launches Origin: The Complete Guide to the New Tool]]></title>
     <link>https://quillmatick.github.io/tech/cursor-launches-origin-the-complete-guide-to-the-new-tool</link>
