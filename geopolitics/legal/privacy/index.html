@@ -30,7 +30,7 @@
     <meta property="og:title" content="Privacy Policy | Quillmatick Geopolitics" />
     <meta property="og:description" content="Privacy Policy for Quillmatick Geopolitics" />
     <meta property="og:type" content="website" />
-    <link rel="stylesheet" href="/geopolitics/style.css?v=1787292014476" />
+    <link rel="stylesheet" href="/geopolitics/style.css?v=1787298601530" />
     </head><body>
       
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -413,7 +413,9 @@
       submitBtn.textContent = 'Joining...';
       submitBtn.disabled = true;
 
-      const targetUrl = atob('aHR0cHM6Ly9lc3Ryb2dlbi1lbmRhbmdlci1jb252ZW50Lm5ncm9rLWZyZWUuZGV2') + '/api/analytics/subscribe';
+      const sbUrl = 'https://ibzoanlrduqihydokjck.supabase.co';
+      const sbKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imliem9hbmxyZHVxaWh5ZG9ramNrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NjA2NDksImV4cCI6MjA5NjMzNjY0OX0.qa4FRt6M6JkQBm-hOUEzlm3W5BCC2_9FfQz8KxDk7rQ';
+      const targetUrl = sbUrl + '/rest/v1/subscribers';
 
       // Helper to display error message inline
       const showError = (msg) => {
@@ -435,13 +437,23 @@
       try {
         const res = await fetch(targetUrl, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': sbKey,
+            'Authorization': 'Bearer ' + sbKey,
+            // return=minimal only. resolution=ignore-duplicates routes PostgREST through
+            // its upsert path, which needs privileges anon does not have — it turned a
+            // working insert into a 401. A repeat address surfaces as 409 instead and is
+            // treated as success below, since "already subscribed" is not a user error.
+            'Prefer': 'return=minimal'
+          },
           mode: 'cors',
           body: JSON.stringify({ email: email })
         });
 
-        const data = await res.json();
-        if (res.ok && (data.success || !data.error)) {
+        // 201 on insert; 409 means the address is already on the list, which is a success
+        // from the visitor's point of view and must not be shown as a failure.
+        if (res.ok || res.status === 409) {
           submitBtn.textContent = "✓ You're in!";
           const originalBg = submitBtn.style.background;
           const originalColor = submitBtn.style.color;
