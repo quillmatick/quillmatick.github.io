@@ -5,8 +5,38 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Thu, 20 Aug 2026 09:10:04 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 21 Aug 2026 02:23:29 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How AliExpress Runs Silent WebAudio Fingerprinting]]></title>
+    <link>https://quillmatick.github.io/tech/how-aliexpress-runs-silent-webaudio-fingerprinting</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-aliexpress-runs-silent-webaudio-fingerprinting</guid>
+    <description><![CDATA[See how AliExpress runs silent WebAudio fingerprinting to track users. Learn how this stealthy technique works to protect your digital privacy. Read more now.]]></description>
+    <pubDate>Fri, 21 Aug 2026 02:23:27 GMT</pubDate>
+    <category>webaudio api</category>
+    <category>browser fingerprinting</category>
+    <category>privacy</category>
+    <category>cybersecurity</category>
+    <category>aliexpress</category>
+    <category>web tracking</category>
+    <category>audio analysis</category>
+    <category>gdpr</category>
+  </item>
+  <item>
+    <title><![CDATA[How Aaron Swartz Was Prosecuted While Meta Does Scraping]]></title>
+    <link>https://quillmatick.github.io/tech/how-aaron-swartz-was-prosecuted-while-meta-does-scraping</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-aaron-swartz-was-prosecuted-while-meta-does-scraping</guid>
+    <description><![CDATA[Explore why scraping while Meta does it freely differs from Aaron Swartz's case. Learn about legal double standards to protect your data.]]></description>
+    <pubDate>Fri, 21 Aug 2026 02:21:12 GMT</pubDate>
+    <category>web scraping</category>
+    <category>cfaa</category>
+    <category>aaron swartz</category>
+    <category>data privacy</category>
+    <category>legal compliance</category>
+    <category>meta</category>
+    <category>case law</category>
+    <category>data extraction</category>
+  </item>
   <item>
     <title><![CDATA[How Google Replaced Git Tags with Google Drive Access]]></title>
     <link>https://quillmatick.github.io/tech/how-google-replaced-git-tags-with-google-drive-access</link>
