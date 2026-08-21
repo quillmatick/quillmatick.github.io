@@ -43,9 +43,9 @@
 <meta name="twitter:description" content="Master claude system prompts to refine AI behavior. Learn how to structure instructions for precise, high-quality output and boost your productivity. Read more." />
 <meta name="twitter:image" content="/tech/claude-system-prompts-the-complete-guide-to-better-output/featured.jpg" />
 <meta name="author" content="Quillmatick Staff" />
-  <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  <link rel="stylesheet" href="/tech/style.css?v=1787190448895" />
+  
+  <link rel="stylesheet" href="/tech/style.css?v=1787279049591" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
@@ -662,7 +662,12 @@ The core mechanism is the same. However, Claude 3.5 adds <strong>token-weighting
     <a class="related-card" href="/tech/the-complete-guide-to-glm-53-frontier-coding">
       <span class="badge badge-ai">glm-53</span>
       <span class="related-card-title">The Complete Guide to GLM-5.3 Frontier Coding</span>
-      <span class="related-card-meta">Aug 15 · 14 min</span>
+      <span class="related-card-meta">Aug 14 · 14 min</span>
+    </a>
+    <a class="related-card" href="/tech/how-google-replaced-git-tags-with-google-drive-access">
+      <span class="badge badge-ai">cicd</span>
+      <span class="related-card-title">How Google Replaced Git Tags with Google Drive Access</span>
+      <span class="related-card-meta">Aug 20 · 14 min</span>
     </a>
     <a class="related-card" href="/tech/cerebras-cs-4-the-complete-guide-to-ai-acceleration">
       <span class="badge badge-ai">cerebras cs-4</span>
@@ -673,11 +678,6 @@ The core mechanism is the same. However, Claude 3.5 adds <strong>token-weighting
       <span class="badge badge-ai">opus codec</span>
       <span class="related-card-title">Why Does Opus Feel Worse to Work With? A Complete Guide</span>
       <span class="related-card-meta">Aug 18 · 17 min</span>
-    </a>
-    <a class="related-card" href="/tech/cursor-launches-origin-the-complete-guide-to-the-new-tool">
-      <span class="badge badge-ai">cursor</span>
-      <span class="related-card-title">Cursor Launches Origin: The Complete Guide to the New Tool</span>
-      <span class="related-card-meta">Aug 19 · 10 min</span>
     </a>
         </div>
       </aside>
@@ -723,7 +723,7 @@ The core mechanism is the same. However, Claude 3.5 adds <strong>token-weighting
         <div>
           <div class="footer-col-h">Topics</div>
           <ul class="footer-links" role="list">
-            <li><a href="/tech/search.html?q=software%20development">software development</a></li><li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=cursor">cursor</a></li><li><a href="/tech/search.html?q=cursor%20origin">cursor origin</a></li><li><a href="/tech/search.html?q=ai%20coding">ai coding</a></li>
+            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=version%20control">version control</a></li><li><a href="/tech/search.html?q=software%20development">software development</a></li><li><a href="/tech/search.html?q=devops">devops</a></li><li><a href="/tech/search.html?q=meta">meta</a></li>
           </ul>
         </div>
         <div>
@@ -928,7 +928,7 @@ The core mechanism is the same. However, Claude 3.5 adds <strong>token-weighting
     (function() {
       if (navigator.doNotTrack === '1' || window.doNotTrack === '1') return;
       if (localStorage.getItem('qm-consent') === 'no') return;
-      const apiBase = atob('aHR0cHM6Ly9lc3Ryb2dlbi1lbmRhbmdlci1jb252ZW50Lm5ncm9rLWZyZWUuZGV2');
+      const apiBase = atob('aHR0cDovL2xvY2FsaG9zdDo0MDAw');
       let sessionId = null;
       let startTime = Date.now();
 
@@ -1023,7 +1023,7 @@ The core mechanism is the same. However, Claude 3.5 adds <strong>token-weighting
       submitBtn.textContent = 'Joining...';
       submitBtn.disabled = true;
 
-      const targetUrl = atob('aHR0cHM6Ly9lc3Ryb2dlbi1lbmRhbmdlci1jb252ZW50Lm5ncm9rLWZyZWUuZGV2') + '/api/analytics/subscribe';
+      const targetUrl = atob('aHR0cDovL2xvY2FsaG9zdDo0MDAw') + '/api/analytics/subscribe';
 
       // Helper to display error message inline
       const showError = (msg) => {
@@ -1333,7 +1333,7 @@ The core mechanism is the same. However, Claude 3.5 adds <strong>token-weighting
         if (!readersEl && !openRateEl) return;
 
         try {
-          const targetUrl = atob('aHR0cHM6Ly9lc3Ryb2dlbi1lbmRhbmdlci1jb252ZW50Lm5ncm9rLWZyZWUuZGV2') + '/api/analytics/newsletter-stats';
+          const targetUrl = atob('aHR0cDovL2xvY2FsaG9zdDo0MDAw') + '/api/analytics/newsletter-stats';
           const res = await fetch(targetUrl, { mode: 'cors' });
           if (!res.ok) return;
 
