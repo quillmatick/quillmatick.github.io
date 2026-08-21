@@ -43,9 +43,9 @@
 <meta name="twitter:description" content="Explore why scraping while Meta does it freely differs from Aaron Swartz&#039;s case. Learn about legal double standards to protect your data." />
 <meta name="twitter:image" content="/tech/how-aaron-swartz-was-prosecuted-while-meta-does-scraping/featured.jpg" />
 <meta name="author" content="Quillmatick Staff" />
-  <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  <link rel="stylesheet" href="/tech/style.css?v=1787281275763" />
+  
+  <link rel="stylesheet" href="/tech/style.css?v=1787285916260" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
@@ -704,10 +704,10 @@ Deploy bot detection (CAPTCHAs), enforce rate limits, publish clear <em>robots.t
       <span class="related-card-title">Claude System Prompts: The Complete Guide to Better Output</span>
       <span class="related-card-meta">Aug 18 · 13 min</span>
     </a>
-    <a class="related-card" href="/tech/the-complete-guide-to-glm-53-frontier-coding">
-      <span class="badge badge-ai">glm-53</span>
-      <span class="related-card-title">The Complete Guide to GLM-5.3 Frontier Coding</span>
-      <span class="related-card-meta">Aug 15 · 14 min</span>
+    <a class="related-card" href="/tech/the-complete-guide-to-malicious-rust-crate-arrayref-risks">
+      <span class="badge badge-ai">rust</span>
+      <span class="related-card-title">The Complete Guide to Malicious Rust Crate Arrayref Risks</span>
+      <span class="related-card-meta">Aug 21 · 15 min</span>
     </a>
         </div>
       </aside>
@@ -755,7 +755,7 @@ Deploy bot detection (CAPTCHAs), enforce rate limits, publish clear <em>robots.t
         <div>
           <div class="footer-col-h">Topics</div>
           <ul class="footer-links" role="list">
-            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=meta">meta</a></li><li><a href="/tech/search.html?q=risc-v">risc-v</a></li><li><a href="/tech/search.html?q=isa">isa</a></li><li><a href="/tech/search.html?q=open-source%20hardware">open-source hardware</a></li>
+            <li><a href="/tech/search.html?q=cybersecurity">cybersecurity</a></li><li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=meta">meta</a></li><li><a href="/tech/search.html?q=webaudio%20api">webaudio api</a></li><li><a href="/tech/search.html?q=browser%20fingerprinting">browser fingerprinting</a></li>
           </ul>
         </div>
         <div>
@@ -960,7 +960,7 @@ Deploy bot detection (CAPTCHAs), enforce rate limits, publish clear <em>robots.t
     (function() {
       if (navigator.doNotTrack === '1' || window.doNotTrack === '1') return;
       if (localStorage.getItem('qm-consent') === 'no') return;
-      const apiBase = atob('aHR0cHM6Ly9lc3Ryb2dlbi1lbmRhbmdlci1jb252ZW50Lm5ncm9rLWZyZWUuZGV2');
+      const apiBase = atob('aHR0cDovL2xvY2FsaG9zdDo0MDAw');
       let sessionId = null;
       let startTime = Date.now();
 
@@ -1055,7 +1055,7 @@ Deploy bot detection (CAPTCHAs), enforce rate limits, publish clear <em>robots.t
       submitBtn.textContent = 'Joining...';
       submitBtn.disabled = true;
 
-      const targetUrl = atob('aHR0cHM6Ly9lc3Ryb2dlbi1lbmRhbmdlci1jb252ZW50Lm5ncm9rLWZyZWUuZGV2') + '/api/analytics/subscribe';
+      const targetUrl = atob('aHR0cDovL2xvY2FsaG9zdDo0MDAw') + '/api/analytics/subscribe';
 
       // Helper to display error message inline
       const showError = (msg) => {
@@ -1365,7 +1365,7 @@ Deploy bot detection (CAPTCHAs), enforce rate limits, publish clear <em>robots.t
         if (!readersEl && !openRateEl) return;
 
         try {
-          const targetUrl = atob('aHR0cHM6Ly9lc3Ryb2dlbi1lbmRhbmdlci1jb252ZW50Lm5ncm9rLWZyZWUuZGV2') + '/api/analytics/newsletter-stats';
+          const targetUrl = atob('aHR0cDovL2xvY2FsaG9zdDo0MDAw') + '/api/analytics/newsletter-stats';
           const res = await fetch(targetUrl, { mode: 'cors' });
           if (!res.ok) return;
 
