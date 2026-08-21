@@ -43,9 +43,9 @@
 <meta name="twitter:description" content="See how Google replaced git tags with Drive access for certain source code. Learn to streamline your version control and boost speed. Read the full guide now." />
 <meta name="twitter:image" content="/tech/how-google-replaced-git-tags-with-google-drive-access/featured.jpg" />
 <meta name="author" content="Quillmatick Staff" />
+  <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  
-  <link rel="stylesheet" href="/tech/style.css?v=1787285911788" />
+  <link rel="stylesheet" href="/tech/style.css?v=1787281252830" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
@@ -725,15 +725,10 @@ gdrive restore --file-id $FILE_ID --version $VERSION
         <div class="related-header">Related articles</div>
         <div class="related-grid">
           
-    <a class="related-card" href="/tech/the-complete-guide-to-malicious-rust-crate-arrayref-risks">
-      <span class="badge badge-ai">rust</span>
-      <span class="related-card-title">The Complete Guide to Malicious Rust Crate Arrayref Risks</span>
-      <span class="related-card-meta">Aug 21 · 15 min</span>
-    </a>
     <a class="related-card" href="/tech/the-complete-guide-to-glm-53-frontier-coding">
       <span class="badge badge-ai">glm-53</span>
       <span class="related-card-title">The Complete Guide to GLM-5.3 Frontier Coding</span>
-      <span class="related-card-meta">Aug 14 · 14 min</span>
+      <span class="related-card-meta">Aug 15 · 14 min</span>
     </a>
     <a class="related-card" href="/tech/claude-system-prompts-the-complete-guide-to-better-output">
       <span class="badge badge-ai">claude</span>
@@ -744,6 +739,11 @@ gdrive restore --file-id $FILE_ID --version $VERSION
       <span class="badge badge-ai">cerebras cs-4</span>
       <span class="related-card-title">Cerebras CS-4: The Complete Guide to AI Acceleration</span>
       <span class="related-card-meta">Aug 19 · 15 min</span>
+    </a>
+    <a class="related-card" href="/tech/third-world-engineer-responds-risc-v-and-global-design">
+      <span class="badge badge-ai">risc-v</span>
+      <span class="related-card-title">Third World Engineer Responds: RISC-V and Global Design</span>
+      <span class="related-card-meta">Aug 18 · 15 min</span>
     </a>
         </div>
       </aside>
@@ -789,7 +789,7 @@ gdrive restore --file-id $FILE_ID --version $VERSION
         <div>
           <div class="footer-col-h">Topics</div>
           <ul class="footer-links" role="list">
-            <li><a href="/tech/search.html?q=cybersecurity">cybersecurity</a></li><li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=meta">meta</a></li><li><a href="/tech/search.html?q=webaudio%20api">webaudio api</a></li><li><a href="/tech/search.html?q=browser%20fingerprinting">browser fingerprinting</a></li>
+            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=meta">meta</a></li><li><a href="/tech/search.html?q=risc-v">risc-v</a></li><li><a href="/tech/search.html?q=isa">isa</a></li><li><a href="/tech/search.html?q=open-source%20hardware">open-source hardware</a></li>
           </ul>
         </div>
         <div>
@@ -994,7 +994,7 @@ gdrive restore --file-id $FILE_ID --version $VERSION
     (function() {
       if (navigator.doNotTrack === '1' || window.doNotTrack === '1') return;
       if (localStorage.getItem('qm-consent') === 'no') return;
-      const apiBase = atob('aHR0cDovL2xvY2FsaG9zdDo0MDAw');
+      const apiBase = atob('aHR0cHM6Ly9lc3Ryb2dlbi1lbmRhbmdlci1jb252ZW50Lm5ncm9rLWZyZWUuZGV2');
       let sessionId = null;
       let startTime = Date.now();
 
@@ -1089,7 +1089,7 @@ gdrive restore --file-id $FILE_ID --version $VERSION
       submitBtn.textContent = 'Joining...';
       submitBtn.disabled = true;
 
-      const targetUrl = atob('aHR0cDovL2xvY2FsaG9zdDo0MDAw') + '/api/analytics/subscribe';
+      const targetUrl = atob('aHR0cHM6Ly9lc3Ryb2dlbi1lbmRhbmdlci1jb252ZW50Lm5ncm9rLWZyZWUuZGV2') + '/api/analytics/subscribe';
 
       // Helper to display error message inline
       const showError = (msg) => {
@@ -1399,7 +1399,7 @@ gdrive restore --file-id $FILE_ID --version $VERSION
         if (!readersEl && !openRateEl) return;
 
         try {
-          const targetUrl = atob('aHR0cDovL2xvY2FsaG9zdDo0MDAw') + '/api/analytics/newsletter-stats';
+          const targetUrl = atob('aHR0cHM6Ly9lc3Ryb2dlbi1lbmRhbmdlci1jb252ZW50Lm5ncm9rLWZyZWUuZGV2') + '/api/analytics/newsletter-stats';
           const res = await fetch(targetUrl, { mode: 'cors' });
           if (!res.ok) return;
 
