@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Fri, 21 Aug 2026 03:01:30 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 21 Aug 2026 07:49:53 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[The Complete Guide to Malicious Rust Crate Arrayref Risks]]></title>
+    <link>https://quillmatick.github.io/tech/the-complete-guide-to-malicious-rust-crate-arrayref-risks</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-complete-guide-to-malicious-rust-crate-arrayref-risks</guid>
+    <description><![CDATA[Stop the malicious Rust crate arrayref risk now. Learn how crate arrayref runs, identify threats, and secure your code to prevent breaches. Read the guide.]]></description>
+    <pubDate>Fri, 21 Aug 2026 04:18:10 GMT</pubDate>
+    <category>rust</category>
+    <category>supply chain security</category>
+    <category>cargo</category>
+    <category>malicious crates</category>
+    <category>cybersecurity</category>
+    <category>rustsec</category>
+    <category>dependency management</category>
+    <category>software auditing</category>
+  </item>
   <item>
     <title><![CDATA[How AliExpress Runs Silent WebAudio Fingerprinting]]></title>
     <link>https://quillmatick.github.io/tech/how-aliexpress-runs-silent-webaudio-fingerprinting</link>
