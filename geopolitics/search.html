@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://ibzoanlrduqihydokjck.supabase.co https://www.google-analytics.com https://region1.google-analytics.com" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5W1REQNB57"></script>
   <script>
@@ -33,7 +34,7 @@
   <meta property="og:title" content="Search Results | Quillmatick Geopolitics" />
   <meta property="og:description" content="Search results for Quillmatick Geopolitics" />
   <meta property="og:type" content="website" />
-  <link rel="stylesheet" href="/geopolitics/style.css?v=1787298693763" />
+  <link rel="stylesheet" href="/geopolitics/style.css?v=1787391624826" />
 </head>
 <body>
   
@@ -80,7 +81,7 @@
   <!-- ─── FILTER BAR ─── -->
   <div class="filter-bar" role="navigation" aria-label="Category filter">
     <div class="filter-bar-inner">
-      <a href="/geopolitics/search.html?q=" class="filter-pill active" data-category="all">All topics</a><a href="/geopolitics/search.html?q=diplomacy" class="filter-pill" data-category="diplomacy">diplomacy</a><a href="/geopolitics/search.html?q=international%20law" class="filter-pill" data-category="international law">international law</a><a href="/geopolitics/search.html?q=international%20humanitarian%20law" class="filter-pill" data-category="international humanitarian law">international humanitarian law</a><a href="/geopolitics/search.html?q=geopolitics" class="filter-pill" data-category="geopolitics">geopolitics</a><a href="/geopolitics/search.html?q=supply%20chain%20diversification" class="filter-pill" data-category="supply chain diversification">supply chain diversification</a><a href="/geopolitics/search.html?q=human%20rights" class="filter-pill" data-category="human rights">human rights</a><a href="/geopolitics/search.html?q=ofac" class="filter-pill" data-category="ofac">ofac</a><a href="/geopolitics/search.html?q=russia-ukraine%20war" class="filter-pill" data-category="russia-ukraine war">russia-ukraine war</a>
+      <a href="/geopolitics/search.html?q=" class="filter-pill active" data-category="all">All topics</a><a href="/geopolitics/search.html?q=diplomacy" class="filter-pill" data-category="diplomacy">diplomacy</a><a href="/geopolitics/search.html?q=international%20law" class="filter-pill" data-category="international law">international law</a><a href="/geopolitics/search.html?q=international%20humanitarian%20law" class="filter-pill" data-category="international humanitarian law">international humanitarian law</a><a href="/geopolitics/search.html?q=geopolitics" class="filter-pill" data-category="geopolitics">geopolitics</a><a href="/geopolitics/search.html?q=supply%20chain%20diversification" class="filter-pill" data-category="supply chain diversification">supply chain diversification</a><a href="/geopolitics/search.html?q=human%20rights" class="filter-pill" data-category="human rights">human rights</a><a href="/geopolitics/search.html?q=ofac" class="filter-pill" data-category="ofac">ofac</a><a href="/geopolitics/search.html?q=buenos%20aires" class="filter-pill" data-category="buenos aires">buenos aires</a>
     </div>
   </div>
   <main id="main-content" class="container" style="padding-top: 3rem; padding-bottom: 5rem; min-height: 60vh;">
@@ -210,7 +211,9 @@
         
         let thumbHtml = '';
         if (post.featured_image) {
-          thumbHtml = '<div class="article-row-thumb" style="opacity: 1; background-image: url(' + post.featured_image + '); background-size: cover; background-position: center;"></div>';
+          // Two nested contexts here: an HTML attribute and a CSS url(). Quote the url so a
+          // bare ')' cannot close it early, and escape so a '"' cannot close the attribute.
+          thumbHtml = '<div class="article-row-thumb" style="opacity: 1; background-image: url(&quot;' + escapeHtml(post.featured_image) + '&quot;); background-size: cover; background-position: center;"></div>';
         } else {
           thumbHtml = '<div class="article-row-thumb" aria-hidden="true">' + emoji + '</div>';
         }
@@ -335,6 +338,7 @@
         <p class="newsletter-p" style="font-size: 14px; color: var(--ink3); line-height: 1.5; margin-bottom: 1.5rem;">Get the weekly briefing on AI and technology. Free forever, unsubscribe anytime.</p>
         <form class="newsletter-form" onsubmit="window.__qmSubscribe && window.__qmSubscribe(event, this)">
           <input class="newsletter-input" type="email" placeholder="Your email address" required aria-label="Email address" style="margin-bottom: 1rem; width: 100%; box-sizing: border-box;" />
+          <div class="qm-hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
           <button type="submit" class="newsletter-btn" style="width: 100%;">Subscribe free →</button>
         </form>
       </div>
@@ -355,6 +359,7 @@
         <p class="newsletter-p" style="font-size: 14px; color: var(--ink3); line-height: 1.5; margin-bottom: 1.5rem;">Download our exclusive AI Strategy Cheat Sheet for free! Just enter your email below to get instant access.</p>
         <form class="newsletter-form" onsubmit="window.__qmSubscribe && window.__qmSubscribe(event, this)">
           <input class="newsletter-input" type="email" placeholder="Your best email" required aria-label="Email address" style="margin-bottom: 1rem; width: 100%; box-sizing: border-box;" />
+          <div class="qm-hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
           <button type="submit" class="newsletter-btn" style="width: 100%;">Get the Free Cheat Sheet →</button>
         </form>
       </div>
@@ -482,7 +487,10 @@
     (function() {
       if (navigator.doNotTrack === '1' || window.doNotTrack === '1') return;
       if (localStorage.getItem('qm-consent') === 'no') return;
-      const apiBase = atob('aHR0cHM6Ly9lc3Ryb2dlbi1lbmRhbmdlci1jb252ZW50Lm5ncm9rLWZyZWUuZGV2');
+      const apiBase = atob('');
+      // No reachable backend is configured, so there is nowhere to report to. Returning
+      // here also cancels the 15-second heartbeat that ran for the life of every visit.
+      if (!apiBase) return;
       let sessionId = null;
       let startTime = Date.now();
 
@@ -564,6 +572,17 @@
 
   <!-- Newsletter signup Form submit script -->
   <script>
+    function showErrorEarly(form, msg) {
+      var d = document.createElement('div');
+      d.className = 'subscribe-status-msg';
+      d.style.cssText = 'color:var(--red);font-size:12px;margin-top:8px;font-family:var(--font-mono)';
+      d.textContent = msg;
+      var old = form.querySelector('.subscribe-status-msg');
+      if (old) old.remove();
+      form.appendChild(d);
+      setTimeout(function () { d.remove(); }, 4000);
+    }
+
     window.__qmSubscribe = async function(event, form) {
       event.preventDefault();
       const emailInput = form.querySelector('input[type="email"]');
@@ -573,12 +592,31 @@
       const email = emailInput.value.trim();
       if (!email) return;
 
+      // Decoy field: hidden, out of the tab order, and meaningless to a person. Anything in
+      // it came from a client that filled the form by reading its markup. Show the ordinary
+      // success state and send nothing, so the bot has no signal to correct against.
+      const decoy = form.querySelector('input[name="website"]');
+      if (decoy && decoy.value.trim()) {
+        submitBtn.textContent = "✓ You're in!";
+        return;
+      }
+
+      // Same rule as the CHECK constraint on the table. Checking here is a courtesy to the
+      // visitor, not a control: the constraint is what actually holds, because this form
+      // posts straight to PostgREST and anyone can skip the page entirely.
+      var EMAIL_RE = /^[A-Za-z0-9_%+-]+(?:.[A-Za-z0-9_%+-]+)*@[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?(?:.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)*.[A-Za-z]{2,24}$/;
+      if (!EMAIL_RE.test(email) || email.length > 254) {
+        // Nothing has touched the button yet at this point, so there is nothing to restore.
+        showErrorEarly(form, 'Please enter a valid email address.');
+        return;
+      }
+
       const originalBtnText = submitBtn.textContent;
       submitBtn.textContent = 'Joining...';
       submitBtn.disabled = true;
 
       const sbUrl = 'https://ibzoanlrduqihydokjck.supabase.co';
-      const sbKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imliem9hbmxyZHVxaWh5ZG9ramNrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NjA2NDksImV4cCI6MjA5NjMzNjY0OX0.qa4FRt6M6JkQBm-hOUEzlm3W5BCC2_9FfQz8KxDk7rQ';
+      const sbKey = '';
       const targetUrl = sbUrl + '/rest/v1/subscribers';
 
       // Helper to display error message inline
@@ -642,7 +680,18 @@
             submitBtn.disabled = false;
           }, 4000);
         } else {
-          showError(data.error || data.message || 'Subscription failed. Please try again.');
+          // PostgREST replies with the raw Postgres message — a constraint name, or the
+          // literal "rate limit exceeded". None of that is written for a reader, so map the
+          // status to our own copy rather than passing the database's words through.
+          var msg;
+          if (res.status === 400) {
+            msg = 'Please enter a valid email address.';
+          } else if (res.status === 429) {
+            msg = 'Too many signups just now. Please try again in a minute.';
+          } else {
+            msg = 'Subscription failed. Please try again.';
+          }
+          showError(msg);
           submitBtn.textContent = originalBtnText;
           submitBtn.disabled = false;
         }
@@ -888,33 +937,5 @@
     })();
   </script>
 
-  <!-- Dynamic Newsletter Stats script -->
-  <script>
-    (function() {
-      // Wait for DOM to be ready
-      document.addEventListener("DOMContentLoaded", async function() {
-        const readersEl = document.getElementById('qm-stat-readers');
-        const openRateEl = document.getElementById('qm-stat-openrate');
-        
-        if (!readersEl && !openRateEl) return;
-
-        try {
-          const targetUrl = atob('aHR0cHM6Ly9lc3Ryb2dlbi1lbmRhbmdlci1jb252ZW50Lm5ncm9rLWZyZWUuZGV2') + '/api/analytics/newsletter-stats';
-          const res = await fetch(targetUrl, { mode: 'cors' });
-          if (!res.ok) return;
-
-          const data = await res.json();
-          if (data.readers && readersEl) {
-            readersEl.textContent = data.readers;
-          }
-          if (data.openRate && openRateEl) {
-            openRateEl.textContent = data.openRate;
-          }
-        } catch (e) {
-          // Fail silently, keep the static fallback values
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
