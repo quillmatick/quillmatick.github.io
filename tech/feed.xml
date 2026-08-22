@@ -5,8 +5,53 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Fri, 21 Aug 2026 07:52:02 GMT</lastBuildDate>
+  <lastBuildDate>Sat, 22 Aug 2026 02:08:28 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Go 1.27: The Complete Guide to New Features and Updates]]></title>
+    <link>https://quillmatick.github.io/tech/go-127-the-complete-guide-to-new-features-and-updates</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/go-127-the-complete-guide-to-new-features-and-updates</guid>
+    <description><![CDATA[Master Go 1.27 new features and updates to optimize your code. Learn the latest syntax and tool improvements to boost performance. Read the full guide now.]]></description>
+    <pubDate>Sat, 22 Aug 2026 02:07:39 GMT</pubDate>
+    <category>go 127</category>
+    <category>golang</category>
+    <category>garbage collection</category>
+    <category>concurrent programming</category>
+    <category>type inference</category>
+    <category>performance optimization</category>
+    <category>cloud native</category>
+    <category>cncf</category>
+  </item>
+  <item>
+    <title><![CDATA[Felony Charges for Deleting Phone Data at the US Border]]></title>
+    <link>https://quillmatick.github.io/tech/felony-charges-for-deleting-phone-data-at-the-us-border</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/felony-charges-for-deleting-phone-data-at-the-us-border</guid>
+    <description><![CDATA[Deleting phone data at the border can lead to felony charges. Learn the legal risks and how to protect your rights to avoid prosecution. Read the full guide.]]></description>
+    <pubDate>Sat, 22 Aug 2026 02:06:54 GMT</pubDate>
+    <category>us border</category>
+    <category>cbp</category>
+    <category>digital privacy</category>
+    <category>18 usc 1030</category>
+    <category>phone seizure</category>
+    <category>legal advice</category>
+    <category>border security</category>
+    <category>data privacy</category>
+  </item>
+  <item>
+    <title><![CDATA[How to Use Kagi Added Setting for Removing Paywalled Links]]></title>
+    <link>https://quillmatick.github.io/tech/how-to-use-kagi-added-setting-for-removing-paywalled-links</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-use-kagi-added-setting-for-removing-paywalled-links</guid>
+    <description><![CDATA[Use the Kagi added setting for removing paywalled links to access hidden content instantly. Learn to configure your search for a cleaner web. Try it today.]]></description>
+    <pubDate>Sat, 22 Aug 2026 02:06:09 GMT</pubDate>
+    <category>kagi</category>
+    <category>paywall removal</category>
+    <category>search engine optimization</category>
+    <category>serp</category>
+    <category>advanced filters</category>
+    <category>enterprise search</category>
+    <category>web filtering</category>
+    <category>search settings</category>
+  </item>
   <item>
     <title><![CDATA[The Complete Guide to Malicious Rust Crate Arrayref Risks]]></title>
     <link>https://quillmatick.github.io/tech/the-complete-guide-to-malicious-rust-crate-arrayref-risks</link>
