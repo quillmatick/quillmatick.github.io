@@ -9,6 +9,7 @@
 </head>
 <body>
 
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://ibzoanlrduqihydokjck.supabase.co https://www.google-analytics.com https://region1.google-analytics.com" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5W1REQNB57"></script>
   <script>
@@ -59,8 +60,8 @@
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imliem9hbmxyZHVxaWh5ZG9ramNrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NjA2NDksImV4cCI6MjA5NjMzNjY0OX0.qa4FRt6M6JkQBm-hOUEzlm3W5BCC2_9FfQz8KxDk7rQ',
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imliem9hbmxyZHVxaWh5ZG9ramNrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NjA2NDksImV4cCI6MjA5NjMzNjY0OX0.qa4FRt6M6JkQBm-hOUEzlm3W5BCC2_9FfQz8KxDk7rQ'
+          'apikey': '',
+          'Authorization': 'Bearer '
         },
         body: JSON.stringify({ p_token: token })
       });
