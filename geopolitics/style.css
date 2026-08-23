@@ -1673,7 +1673,25 @@ img { display: block; max-width: 100%; }
 
 @media (max-width: 768px) {
   :root { --pad: 1rem; }
-  .nav-links { display: none; }
+  /* The two category links were hidden below 768px with nothing put in their place, so on a
+     phone there was no way to reach Tech or Geopolitics from the homepage at all — the whole
+     site collapsed to whatever the current page was. With only three destinations a
+     hamburger is more machinery than the problem needs; they go on their own line instead,
+     scrollable if a narrow screen cannot fit them. */
+  .nav-links {
+    display: flex;
+    order: 3;
+    width: 100%;
+    gap: 1.25rem;
+    margin-top: 0.6rem;
+    padding-bottom: 0.15rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links li { flex: 0 0 auto; }
+  .nav-links a { font-size: 14px; }
   .nav-subscribe { display: none; }
   .featured-grid { grid-template-columns: 1fr; }
   .featured-card { border-right: none !important; }
@@ -1898,4 +1916,35 @@ html[data-theme="dark"] .qm-product-card {
 @media (prefers-reduced-motion: reduce) {
   .featured-card-thumb-img { transition: none; }
   .featured-card:hover .featured-card-thumb-img { transform: none; }
+}
+
+/* ── Back to top ──────────────────────────────────────────────────────────────
+   Articles run to several thousand words, and on a phone that is a long way to scroll
+   back by hand. Hidden until the reader is far enough down to want it, so it does not
+   sit over the opening paragraphs doing nothing. */
+.qm-to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 44px;                 /* 44px is the smallest comfortable touch target */
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 60;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.28);
+}
+.qm-to-top.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.qm-to-top:hover { border-color: var(--accent); color: var(--accent); }
+.qm-to-top:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  .qm-to-top { transition: none; }
 }

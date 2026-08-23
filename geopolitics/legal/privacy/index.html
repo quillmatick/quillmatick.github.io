@@ -31,7 +31,7 @@
     <meta property="og:title" content="Privacy Policy | Quillmatick Geopolitics" />
     <meta property="og:description" content="Privacy Policy for Quillmatick Geopolitics" />
     <meta property="og:type" content="website" />
-    <link rel="stylesheet" href="/geopolitics/style.css?v=1787391636919" />
+    <link rel="stylesheet" href="/geopolitics/style.css?v=1787469213561" />
     </head><body>
       
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -84,7 +84,7 @@
         <article class="article-page" style="max-width: 720px; width: 100%;">
           <a href="/geopolitics" class="nav-back" style="margin-bottom: 2rem; font-family: var(--font-mono); font-size: 13px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg> Back to Geopolitics</a>
           <h1 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--ink); font-family: var(--font-display); font-weight: 700;">Privacy Policy</h1>
-          <p style="color: var(--ink3); font-size: 14px; font-family: var(--font-mono); margin-bottom: 3rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem;">Last Updated: August 22, 2026</p>
+          <p style="color: var(--ink3); font-size: 14px; font-family: var(--font-mono); margin-bottom: 3rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem;">Last Updated: August 23, 2026</p>
           <div class="article-body">
             
     <p>At Quillmatick Geopolitics, we take your privacy seriously. This policy describes how we collect and use data.</p>
@@ -99,6 +99,38 @@
         </article>
       </main>
       
+
+  <!-- Back to top. Articles run to several thousand words; on a phone that is a long scroll
+       to get back to the navigation. Rendered as a <button> rather than an <a href="#top">
+       so it never adds a history entry or changes the URL, and it is keyboard reachable. -->
+  <button type="button" class="qm-to-top" id="qm-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  </button>
+  <script>
+    (function () {
+      var btn = document.getElementById('qm-to-top');
+      if (!btn) return;
+      // Appear only once the reader is far enough down to want it.
+      var SHOW_AFTER = 600;
+      var ticking = false;
+      function sync() {
+        btn.classList.toggle('is-visible', window.scrollY > SHOW_AFTER);
+        ticking = false;
+      }
+      window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; window.requestAnimationFrame(sync); }
+      }, { passive: true });
+      btn.addEventListener('click', function () {
+        // Respect a reader who has asked the OS for less motion.
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+        var first = document.querySelector('a.skip-link, h1');
+        if (first && first.focus) first.focus({ preventScroll: true });
+      });
+      sync();
+    })();
+  </script>
+
   <!-- ─── FOOTER ─── -->
   <footer class="footer" role="contentinfo">
     <div class="footer-inner">
@@ -169,7 +201,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
         </div>
         <h3 id="modalTitle" class="newsletter-h" style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; font-family: var(--font-display); color: var(--ink);">Subscribe to Quillmatick</h3>
-        <p class="newsletter-p" style="font-size: 14px; color: var(--ink3); line-height: 1.5; margin-bottom: 1.5rem;">Get the weekly briefing on AI and technology. Free forever, unsubscribe anytime.</p>
+        <p class="newsletter-p" style="font-size: 14px; color: var(--ink3); line-height: 1.5; margin-bottom: 1.5rem;">Get the weekly briefing on tech and geopolitics. Free forever, unsubscribe anytime.</p>
         <form class="newsletter-form" onsubmit="window.__qmSubscribe && window.__qmSubscribe(event, this)">
           <input class="newsletter-input" type="email" placeholder="Your email address" required aria-label="Email address" style="margin-bottom: 1rem; width: 100%; box-sizing: border-box;" />
           <div class="qm-hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>

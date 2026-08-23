@@ -44,9 +44,9 @@
 <meta name="twitter:description" content="Why diplomats no longer get hardship bonus in Buenos Aires? Learn the policy shifts and economic reasons to stay informed on" />
 <meta name="twitter:image" content="/geopolitics/why-diplomats-longer-get-hardship-bonus-in-buenos-aires/featured.jpg" />
 <meta name="author" content="Quillmatick Staff" />
+  <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  
-  <link rel="stylesheet" href="/geopolitics/style.css?v=1787391613575" />
+  <link rel="stylesheet" href="/geopolitics/style.css?v=1787469192035" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick Geopolitics" href="https://quillmatick.github.io/geopolitics/feed.xml" />
   <script type="application/ld+json">
   [object Object]
@@ -147,11 +147,11 @@
       <div class="article-body" id="articleBody" itemprop="articleBody">
         <blockquote>
 <ul>
-<li><strong>Index bonuses to CPI</strong>: Tie the hardship bonus to a consumer‑price‑index (CPI) basket that reflects imported goods, ensuring inflation‑adjusted allowances keep pace with Buenos Aires’ cost spikes; this prevents real‑term erosion of diplomats’ purchasing power. </li>
-<li><strong>Adopt a tiered structure</strong>: For postings exceeding 12 months, apply a base 12 % hardship bonus plus an additional risk surcharge (0‑8 %) calibrated to quarterly security‑risk scores published by the State Department’s Overseas Security Advisory Council. </li>
-<li><strong>Synchronize treaty commitments</strong>: Align the bonus formula with Article 7 of the 1998 Treaty of Buenos Aires and the EU‑Argentina Cooperation Agreement annexes, thereby satisfying multilateral obligations and reducing diplomatic disputes over compensation. </li>
-<li><strong>Leverage bonuses for retention</strong>: Use the hardship differential as a strategic retention lever for senior envoys, linking eligibility to continuity milestones (e.g., completion of three‑year trade‑policy initiatives) to safeguard bilateral trade and security projects. </li>
-<li><strong>Implement quarterly reviews</strong>: Establish a joint monitoring committee that reviews inflation data, currency depreciation, and security incident logs every three months, automatically triggering bonus adjustments when thresholds (e.g., &gt;5 % CPI rise or &gt;2 security alerts) are breached.</li>
+<li><strong>Index bonuses to CPI</strong>: Tie the hardship bonus to a consumer-price-index (CPI) basket that reflects imported goods, ensuring inflation-adjusted allowances keep pace with Buenos Aires’ cost spikes; this prevents real-term erosion of diplomats’ purchasing power.</li>
+<li><strong>Adopt a tiered structure</strong>: For postings exceeding 12 months, apply a base 12% hardship bonus plus an additional risk surcharge (0-8%) calibrated to quarterly security-risk scores published by the State Department’s Overseas Security Advisory Council.</li>
+<li><strong>Synchronize treaty commitments</strong>: Align the bonus formula with Article 7 of the 1998 Treaty of Buenos Aires and the EU-Argentina Cooperation Agreement annexes, thereby satisfying multilateral obligations and reducing diplomatic disputes over compensation.</li>
+<li><strong>Leverage bonuses for retention</strong>: Use the hardship differential as a strategic retention lever for senior envoys, linking eligibility to continuity milestones (e.g., completion of three-year trade-policy initiatives) to safeguard bilateral trade and security projects.</li>
+<li><strong>Implement quarterly reviews</strong>: Establish a joint monitoring committee that reviews inflation data, currency depreciation, and security incident logs every three months, automatically triggering bonus adjustments when thresholds (e.g., &gt;5% CPI rise or &gt;2 security alerts) are breached.</li>
 </ul>
 </blockquote>
 <blockquote>
@@ -434,6 +434,38 @@
   </nav>
 
   
+
+  <!-- Back to top. Articles run to several thousand words; on a phone that is a long scroll
+       to get back to the navigation. Rendered as a <button> rather than an <a href="#top">
+       so it never adds a history entry or changes the URL, and it is keyboard reachable. -->
+  <button type="button" class="qm-to-top" id="qm-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  </button>
+  <script>
+    (function () {
+      var btn = document.getElementById('qm-to-top');
+      if (!btn) return;
+      // Appear only once the reader is far enough down to want it.
+      var SHOW_AFTER = 600;
+      var ticking = false;
+      function sync() {
+        btn.classList.toggle('is-visible', window.scrollY > SHOW_AFTER);
+        ticking = false;
+      }
+      window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; window.requestAnimationFrame(sync); }
+      }, { passive: true });
+      btn.addEventListener('click', function () {
+        // Respect a reader who has asked the OS for less motion.
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+        var first = document.querySelector('a.skip-link, h1');
+        if (first && first.focus) first.focus({ preventScroll: true });
+      });
+      sync();
+    })();
+  </script>
+
   <!-- ─── FOOTER ─── -->
   <footer class="footer" role="contentinfo">
     <div class="footer-inner">
@@ -504,7 +536,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
         </div>
         <h3 id="modalTitle" class="newsletter-h" style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; font-family: var(--font-display); color: var(--ink);">Subscribe to Quillmatick</h3>
-        <p class="newsletter-p" style="font-size: 14px; color: var(--ink3); line-height: 1.5; margin-bottom: 1.5rem;">Get the weekly briefing on AI and technology. Free forever, unsubscribe anytime.</p>
+        <p class="newsletter-p" style="font-size: 14px; color: var(--ink3); line-height: 1.5; margin-bottom: 1.5rem;">Get the weekly briefing on tech and geopolitics. Free forever, unsubscribe anytime.</p>
         <form class="newsletter-form" onsubmit="window.__qmSubscribe && window.__qmSubscribe(event, this)">
           <input class="newsletter-input" type="email" placeholder="Your email address" required aria-label="Email address" style="margin-bottom: 1rem; width: 100%; box-sizing: border-box;" />
           <div class="qm-hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>

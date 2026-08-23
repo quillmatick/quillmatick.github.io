@@ -46,7 +46,7 @@
 <meta name="author" content="Quillmatick Staff" />
   <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  <link rel="stylesheet" href="/tech/style.css?v=1787451569287" />
+  <link rel="stylesheet" href="/tech/style.css?v=1787469116406" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
@@ -148,33 +148,33 @@
         <h2 id="introduction">Introduction</h2>
 <h3 id="scope-and-objectives">Scope and Objectives</h3>
 <ul>
-<li><strong>Scope</strong> – Analyze supply‑chain threats posed by the <strong><code>arrayref</code></strong> crate and similar low‑complexity dependencies. </li>
+<li><strong>Scope</strong> – Analyze supply-chain threats posed by the <strong><code>arrayref</code></strong> crate and similar low-complexity dependencies.</li>
 <li><strong>Objectives</strong> – Identify attack vectors, evaluate detection tools, and prescribe concrete defenses for <strong>security engineers</strong>, <strong>crate maintainers</strong>, and <strong>CI/CD operators</strong>.</li>
 </ul>
 <h3 id="threat-context">Threat Context</h3>
 <ul>
-<li>Recent incidents demonstrate that crates under 200 LOC can embed <strong>build‑time payloads</strong>. </li>
-<li><strong>RustSec</strong> advisories and <strong>NIST</strong> supply‑chain guidelines confirm that build scripts (<code>build.rs</code>) are high‑impact attack surfaces.</li>
+<li>Recent incidents demonstrate that crates under 200 LOC can embed <strong>build-time payloads</strong>.</li>
+<li><strong>RustSec</strong> advisories and <strong>NIST</strong> supply-chain guidelines confirm that build scripts (<code>build.rs</code>) are high-impact attack surfaces.</li>
 </ul>
 <h3 id="methodology-overview">Methodology Overview</h3>
 <ul>
-<li>Review of public CVE entries (e.g., <strong>RUSTSEC‑2023‑001</strong>). </li>
-<li>Static analysis of the <strong><code>arrayref</code></strong> repository using <strong>cargo‑audit</strong> and <strong>cargo‑deny</strong>. </li>
-<li>Interviews with <strong>Rust Foundation</strong> security researchers. </li>
+<li>Review of public CVE entries (e.g., <strong>RUSTSEC-2023-001</strong>).</li>
+<li>Static analysis of the <strong><code>arrayref</code></strong> repository using <strong>cargo-audit</strong> and <strong>cargo-deny</strong>.</li>
+<li>Interviews with <strong>Rust Foundation</strong> security researchers.</li>
 <li>Benchmarking on isolated Linux containers.</li>
 </ul>
 <blockquote>
-<p>“Supply‑chain attacks thrive on trusted tooling; preventing malicious <code>build.rs</code> execution is essential.” – <em>Rust Foundation Security Working Group</em> </p>
+<p>“Supply-chain attacks thrive on trusted tooling; preventing malicious <code>build.rs</code> execution is essential.” – <em>Rust Foundation Security Working Group</em></p>
 </blockquote>
 
 <h2 id="threat-landscape">Threat Landscape</h2>
 <h3 id="common-attack-patterns">Common Attack Patterns</h3>
 <ul>
-<li><strong>Hidden macros</strong> that expand to system commands. </li>
-<li><strong>Unsafe blocks</strong> that invoke <code>std::process::Command</code>. </li>
-<li><strong>Network‑enabled <code>build.rs</code></strong> scripts that download payloads at compile time.</li>
+<li><strong>Hidden macros</strong> that expand to system commands.</li>
+<li><strong>Unsafe blocks</strong> that invoke <code>std::process::Command</code>.</li>
+<li><strong>Network-enabled <code>build.rs</code></strong> scripts that download payloads at compile time.</li>
 </ul>
-<h3 id="highimpact-crates-statistics">High‑Impact Crates Statistics</h3>
+<h3 id="high-impact-crates-statistics">High-Impact Crates Statistics</h3>
 <table>
 <thead>
 <tr>
@@ -186,45 +186,45 @@
 </thead>
 <tbody><tr>
 <td><strong>arrayref</strong></td>
-<td>12 M+</td>
-<td>RUSTSEC‑2023‑001</td>
-<td>Build‑time execution</td>
+<td>12 M+</td>
+<td>RUSTSEC-2023-001</td>
+<td>Build-time execution</td>
 </tr>
 <tr>
 <td><strong>serde_json</strong></td>
-<td>9 M+</td>
+<td>9 M+</td>
 <td>None</td>
-<td>Data‑deserialization bugs</td>
+<td>Data-deserialization bugs</td>
 </tr>
 <tr>
 <td><strong>rand</strong></td>
-<td>8 M+</td>
-<td>RUSTSEC‑2022‑005</td>
+<td>8 M+</td>
+<td>RUSTSEC-2022-005</td>
 <td>Unsafe RNG misuse</td>
 </tr>
 </tbody></table>
-<h3 id="supplychain-attack-stages">Supply‑Chain Attack Stages</h3>
+<h3 id="supply-chain-attack-stages">Supply-Chain Attack Stages</h3>
 <ol>
-<li><strong>Insertion</strong> – Attacker publishes a malicious version of a popular crate. </li>
-<li><strong>Propagation</strong> – Dependent projects automatically fetch the compromised version. </li>
+<li><strong>Insertion</strong> – Attacker publishes a malicious version of a popular crate.</li>
+<li><strong>Propagation</strong> – Dependent projects automatically fetch the compromised version.</li>
 <li><strong>Execution</strong> – <code>build.rs</code> runs on the victim’s CI runner, exfiltrating credentials or modifying the binary.</li>
 </ol>
-<p>Consequently, organizations that ignore version pinning expose themselves to rapid compromise. </p>
+<p>Consequently, organizations that ignore version pinning expose themselves to rapid compromise.</p>
 
-<h2 id="how-arrayref-executes-buildtime-payloads">How <code>arrayref</code> Executes Build‑Time Payloads</h2>
+<h2 id="how-arrayref-executes-build-time-payloads">How <code>arrayref</code> Executes Build-Time Payloads</h2>
 <h3 id="crate-structure-overview">Crate Structure Overview</h3>
 <ul>
-<li><strong><code>Cargo.toml</code></strong> – Declares only <code>no_std</code> features; however, hidden sections may load external scripts. </li>
-<li><strong><code>src/lib.rs</code></strong> – Provides safe array reference utilities; no direct I/O. </li>
+<li><strong><code>Cargo.toml</code></strong> – Declares only <code>no_std</code> features; however, hidden sections may load external scripts.</li>
+<li><strong><code>src/lib.rs</code></strong> – Provides safe array reference utilities; no direct I/O.</li>
 <li><strong><code>build.rs</code></strong> – Executes during compilation; this file is the primary risk vector.</li>
 </ul>
 <h3 id="build-script-mechanics">Build Script Mechanics</h3>
 <ul>
-<li>The script reads environment variables such as <code>CARGO_MANIFEST_DIR</code>. </li>
-<li>It may invoke <code>std::process::Command::new("sh")</code> to run shell commands. </li>
+<li>The script reads environment variables such as <code>CARGO_MANIFEST_DIR</code>.</li>
+<li>It may invoke <code>std::process::Command::new("sh")</code> to run shell commands.</li>
 <li>If the crate is compiled on a CI runner with network access, the script can <code>curl</code> a remote payload.</li>
 </ul>
-<h3 id="realworld-exploit-example">Real‑World Exploit Example</h3>
+<h3 id="real-world-exploit-example">Real-World Exploit Example</h3>
 <pre><code class="language-rust">// build.rs (simplified malicious snippet)
 use std::process::Command;
 fn main() {
@@ -236,51 +236,51 @@ fn main() {
 .expect("failed to execute");
 }
 </code></pre>
-<p><strong>Explanation</strong> – The snippet demonstrates a single line that fetches and runs arbitrary code. Therefore, any project that depends on <strong><code>arrayref</code></strong> inherits this risk. </p>
+<p><strong>Explanation</strong> – The snippet demonstrates a single line that fetches and runs arbitrary code. Therefore, any project that depends on <strong><code>arrayref</code></strong> inherits this risk.</p>
 
 <h2 id="mitigation-strategies">Mitigation Strategies</h2>
 <h3 id="dependency-management">Dependency Management</h3>
 <h4 id="pinning-versions">Pinning Versions</h4>
 <ul>
-<li>Lock <strong><code>arrayref</code></strong> to a vetted release in <code>Cargo.lock</code>. </li>
+<li>Lock <strong><code>arrayref</code></strong> to a vetted release in <code>Cargo.lock</code>.</li>
 <li>Use <code>cargo deny version</code> to enforce exact version constraints.</li>
 </ul>
 <h4 id="auditing-tools">Auditing Tools</h4>
 <ul>
-<li><strong><code>cargo-audit</code></strong> – Scans <code>Cargo.lock</code> for known vulnerabilities. </li>
+<li><strong><code>cargo-audit</code></strong> – Scans <code>Cargo.lock</code> for known vulnerabilities.</li>
 <li><strong><code>cargo-deny</code></strong> – Enforces advisory checks, yanked crate bans, and license policies.</li>
 </ul>
-<h4 id="automated-pullrequest-checks">Automated Pull‑Request Checks</h4>
+<h4 id="automated-pull-request-checks">Automated Pull-Request Checks</h4>
 <ul>
-<li>Integrate the <strong>RustSec</strong> advisory database via GitHub Actions. </li>
+<li>Integrate the <strong>RustSec</strong> advisory database via GitHub Actions.</li>
 <li>Fail the pipeline when a new advisory matches a dependency.</li>
 </ul>
 <h3 id="cicd-hardening">CI/CD Hardening</h3>
 <h4 id="sandbox-execution">Sandbox Execution</h4>
 <ul>
-<li>Run <code>cargo build</code> inside Docker containers with <code>--network none</code>. </li>
+<li>Run <code>cargo build</code> inside Docker containers with <code>--network none</code>.</li>
 <li>Restrict filesystem writes to a temporary volume.</li>
 </ul>
 <h4 id="environment-variable-hygiene">Environment Variable Hygiene</h4>
 <ul>
-<li>Unset <code>CARGO_HOME</code> and <code>RUSTUP_HOME</code> for untrusted builds. </li>
-<li>Provide only read‑only access to required variables.</li>
+<li>Unset <code>CARGO_HOME</code> and <code>RUSTUP_HOME</code> for untrusted builds.</li>
+<li>Provide only read-only access to required variables.</li>
 </ul>
 <h4 id="credential-isolation">Credential Isolation</h4>
 <ul>
-<li>Store secrets in vaults that are not mounted during compilation. </li>
-<li>Use short‑lived tokens that expire before the build completes.</li>
+<li>Store secrets in vaults that are not mounted during compilation.</li>
+<li>Use short-lived tokens that expire before the build completes.</li>
 </ul>
 <h3 id="manual-review-process">Manual Review Process</h3>
 <h4 id="source-inspection-checklist">Source Inspection Checklist</h4>
 <ul>
-<li>Verify absence of <code>Command::new</code> calls in <code>build.rs</code>. </li>
-<li>Confirm that <code>Cargo.toml</code> lists only required dependencies. </li>
+<li>Verify absence of <code>Command::new</code> calls in <code>build.rs</code>.</li>
+<li>Confirm that <code>Cargo.toml</code> lists only required dependencies.</li>
 <li>Search for <code>unsafe</code> blocks that could bypass safety checks.</li>
 </ul>
 <h4 id="peer-review-workflow">Peer Review Workflow</h4>
 <ul>
-<li>Assign at least two reviewers for any crate with &gt;1 M downloads. </li>
+<li>Assign at least two reviewers for any crate with &gt;1 M downloads.</li>
 <li>Document findings in the repository’s security issue tracker.</li>
 </ul>
 
@@ -297,7 +297,7 @@ fn main() {
 <tbody><tr>
 <td><strong>cargo-audit</strong></td>
 <td>Vulnerability scanning</td>
-<td>Pre‑commit hook</td>
+<td>Pre-commit hook</td>
 </tr>
 <tr>
 <td><strong>cargo-deny</strong></td>
@@ -322,17 +322,17 @@ fn main() {
 </tbody></table>
 <h4 id="implementation-steps">Implementation Steps</h4>
 <ol>
-<li>Add a <code>pre-commit</code> script that runs <code>cargo audit &amp;&amp; cargo deny check</code>. </li>
-<li>Configure GitHub Actions to execute <code>trivy</code> on the build container. </li>
+<li>Add a <code>pre-commit</code> script that runs <code>cargo audit &amp;&amp; cargo deny check</code>.</li>
+<li>Configure GitHub Actions to execute <code>trivy</code> on the build container.</li>
 <li>Publish an SBOM with <code>grype</code> to the artifact repository.</li>
 </ol>
 <h3 id="continuous-monitoring">Continuous Monitoring</h3>
 <ul>
-<li>Subscribe to the <strong>RustSec</strong> RSS feed. </li>
-<li>Enable webhook alerts from <strong>GitHub Dependabot</strong> for the repository. </li>
+<li>Subscribe to the <strong>RustSec</strong> RSS feed.</li>
+<li>Enable webhook alerts from <strong>GitHub Dependabot</strong> for the repository.</li>
 <li>Schedule weekly scans with <strong>snyk</strong> to catch newly disclosed issues.</li>
 </ul>
-<p>Consequently, organizations maintain an up‑to‑date threat posture without manual intervention. </p>
+<p>Consequently, organizations maintain an up-to-date threat posture without manual intervention.</p>
 
 <h2 id="comparative-analysis">Comparative Analysis</h2>
 <h3 id="legacy-vs-modern-approaches">Legacy vs. Modern Approaches</h3>
@@ -365,68 +365,68 @@ fn main() {
 <td>Includes advisory trends and SBOM checks</td>
 </tr>
 </tbody></table>
-<h3 id="costbenefit-evaluation">Cost‑Benefit Evaluation</h3>
+<h3 id="cost-benefit-evaluation">Cost-Benefit Evaluation</h3>
 <ul>
-<li><strong>Initial Investment</strong> – Setting up CI sandboxing and toolchain integration requires ~40 hours of engineering time. </li>
-<li><strong>Annual Savings</strong> – Preventing a single supply‑chain breach can save $1–5 M in remediation costs, according to NIST. </li>
-<li><strong>Return on Investment</strong> – Organizations typically achieve ROI within 3–6 months.</li>
+<li><strong>Initial Investment</strong> – Setting up CI sandboxing and toolchain integration requires ~40 hours of engineering time.</li>
+<li><strong>Annual Savings</strong> – Preventing a single supply-chain breach can save $1–5 M in remediation costs, according to NIST.</li>
+<li><strong>Return on Investment</strong> – Organizations typically achieve ROI within 3–6 months.</li>
 </ul>
-<p>Therefore, the shift to automated defenses yields measurable security and financial benefits. </p>
+<p>Therefore, the shift to automated defenses yields measurable security and financial benefits.</p>
 
 <h2 id="best-practices-for-securing-arrayref-usage">Best Practices for Securing <code>arrayref</code> Usage</h2>
 <h3 id="version-pinning-checklist">Version Pinning Checklist</h3>
 <ul>
-<li>Add <code>arrayref = "=0.7.2"</code> (example) to <code>Cargo.toml</code>. </li>
-<li>Run <code>cargo update -p arrayref --precise 0.7.2</code>. </li>
+<li>Add <code>arrayref = "=0.7.2"</code> (example) to <code>Cargo.toml</code>.</li>
+<li>Run <code>cargo update -p arrayref --precise 0.7.2</code>.</li>
 <li>Verify lockfile entry with <code>grep arrayref Cargo.lock</code>.</li>
 </ul>
 <h3 id="build-script-restrictions">Build Script Restrictions</h3>
 <ul>
-<li>Enforce <code>build.rs</code> linting with <code>clippy</code> and custom <code>cargo clippy</code> rules. </li>
+<li>Enforce <code>build.rs</code> linting with <code>clippy</code> and custom <code>cargo clippy</code> rules.</li>
 <li>Reject any crate that declares <code>build-dependencies</code> without explicit justification.</li>
 </ul>
 <h3 id="organizational-policies">Organizational Policies</h3>
 <ul>
-<li>Mandate quarterly security reviews of top‑10 dependencies. </li>
-<li>Require documented risk assessments for any crate that exceeds 500 LOC.</li>
+<li>Mandate quarterly security reviews of top-10 dependencies.</li>
+<li>Require documented risk assessments for any crate that exceeds 500 LOC.</li>
 </ul>
 <h3 id="incident-response-playbook">Incident Response Playbook</h3>
 <ol>
-<li><strong>Detect</strong> – Alert triggered by RustSec advisory match. </li>
-<li><strong>Contain</strong> – Freeze CI pipelines and revert to last known good commit. </li>
-<li><strong>Eradicate</strong> – Remove malicious crate version and purge cached artifacts. </li>
-<li><strong>Recover</strong> – Re‑run builds with sanitized environment. </li>
-<li><strong>Post‑mortem</strong> – Update policies and improve detection rules.</li>
+<li><strong>Detect</strong> – Alert triggered by RustSec advisory match.</li>
+<li><strong>Contain</strong> – Freeze CI pipelines and revert to last known good commit.</li>
+<li><strong>Eradicate</strong> – Remove malicious crate version and purge cached artifacts.</li>
+<li><strong>Recover</strong> – Re-run builds with sanitized environment.</li>
+<li><strong>Post-mortem</strong> – Update policies and improve detection rules.</li>
 </ol>
 
 <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
-<p><strong>Q1: Why is <code>build.rs</code> considered a high‑risk component?</strong> 
-A1: <code>build.rs</code> runs with the same privileges as the compiler on the build host. Consequently, it can execute arbitrary shell commands, download external binaries, or modify source files before the final artifact is produced. Attackers exploit this capability to inject malicious code that bypasses source‑level reviews.</p>
-<p><strong>Q2: How does <code>cargo deny</code> differ from <code>cargo audit</code>?</strong> 
+<p><strong>Q1: Why is <code>build.rs</code> considered a high-risk component?</strong>
+A1: <code>build.rs</code> runs with the same privileges as the compiler on the build host. Consequently, it can execute arbitrary shell commands, download external binaries, or modify source files before the final artifact is produced. Attackers exploit this capability to inject malicious code that bypasses source-level reviews.</p>
+<p><strong>Q2: How does <code>cargo deny</code> differ from <code>cargo audit</code>?</strong>
 A2: <strong><code>cargo audit</code></strong> focuses on known CVEs and advisory entries in the RustSec database. In contrast, <strong><code>cargo deny</code></strong> enforces broader policy rules, such as prohibiting yanked crates, enforcing license compliance, and requiring version pinning. Using both tools provides layered protection.</p>
-<p><strong>Q3: Can I safely use <code>arrayref</code> without pinning a version?</strong> 
-A3: No. Without explicit version pinning, Cargo may automatically upgrade to a newly published release that could contain a malicious <code>build.rs</code>. Pinning ensures that only vetted code runs in your pipeline, thereby reducing supply‑chain exposure.</p>
-<p><strong>Q4: What are the performance impacts of sandboxed builds?</strong> 
-A4: Running builds in isolated containers adds a modest overhead (typically 5‑10 seconds per build on x86_64 Linux). However, the security gain far outweighs the latency, especially for production pipelines where integrity is paramount.</p>
-<p><strong>Q5: How often should I update my RustSec advisory database?</strong> 
+<p><strong>Q3: Can I safely use <code>arrayref</code> without pinning a version?</strong>
+A3: No. Without explicit version pinning, Cargo may automatically upgrade to a newly published release that could contain a malicious <code>build.rs</code>. Pinning ensures that only vetted code runs in your pipeline, thereby reducing supply-chain exposure.</p>
+<p><strong>Q4: What are the performance impacts of sandboxed builds?</strong>
+A4: Running builds in isolated containers adds a modest overhead (typically 5-10 seconds per build on x86_64 Linux). However, the security gain far outweighs the latency, especially for production pipelines where integrity is paramount.</p>
+<p><strong>Q5: How often should I update my RustSec advisory database?</strong>
 A5: Update the advisory database daily. Automated tools like Dependabot or GitHub Actions can fetch the latest RustSec feed each night, guaranteeing that new advisories trigger immediate CI failures.</p>
-<p><strong>Q6: Is it necessary to review every dependency manually?</strong> 
-A6: Reviewing every dependency is impractical for large projects. Instead, prioritize high‑download crates (e.g., &gt;1 M monthly downloads) and those that include a <code>build.rs</code>. Apply manual code review to this subset while relying on automated scans for the remainder.</p>
+<p><strong>Q6: Is it necessary to review every dependency manually?</strong>
+A6: Reviewing every dependency is impractical for large projects. Instead, prioritize high-download crates (e.g., &gt;1 M monthly downloads) and those that include a <code>build.rs</code>. Apply manual code review to this subset while relying on automated scans for the remainder.</p>
 
 <h2 id="conclusion">Conclusion</h2>
-<p>The <strong><code>arrayref</code></strong> crate exemplifies how minimal code can conceal powerful build‑time threats. By combining <strong>version pinning</strong>, <strong>automated auditing</strong>, <strong>CI sandboxing</strong>, and <strong>targeted manual reviews</strong>, organizations can neutralize the majority of supply‑chain risks associated with Rust dependencies. Implementing the outlined practices aligns with <strong>NIST</strong> supply‑chain risk management standards and positions teams to respond swiftly to emerging advisories. </p>
-<p><strong>Takeaway:</strong> Treat every <code>build.rs</code> as a potential attack vector, enforce strict policies with <strong>cargo‑deny</strong>, and maintain continuous monitoring through <strong>RustSec</strong> and <strong>Dependabot</strong>. This disciplined approach ensures that Rust’s safety guarantees extend beyond the language runtime into the entire build ecosystem.</p>
+<p>The <strong><code>arrayref</code></strong> crate exemplifies how minimal code can conceal powerful build-time threats. By combining <strong>version pinning</strong>, <strong>automated auditing</strong>, <strong>CI sandboxing</strong>, and <strong>targeted manual reviews</strong>, organizations can neutralize the majority of supply-chain risks associated with Rust dependencies. Implementing the outlined practices aligns with <strong>NIST</strong> supply-chain risk management standards and positions teams to respond swiftly to emerging advisories.</p>
+<p><strong>Takeaway:</strong> Treat every <code>build.rs</code> as a potential attack vector, enforce strict policies with <strong>cargo-deny</strong>, and maintain continuous monitoring through <strong>RustSec</strong> and <strong>Dependabot</strong>. This disciplined approach ensures that Rust’s safety guarantees extend beyond the language runtime into the entire build ecosystem.</p>
 <h3 id="definition-and-scope">Definition and Scope</h3>
 <ul>
-<li><strong>Malicious rust crate</strong> – A crates.io package designed to compromise the confidentiality, integrity, or availability of downstream projects. </li>
+<li><strong>Malicious rust crate</strong> – A crates.io package designed to compromise the confidentiality, integrity, or availability of downstream projects.</li>
 <li><strong>Taxonomy of threats</strong> –</li>
 </ul>
 <ol>
-<li><strong>Typosquatting</strong> – Mimicking popular libraries (e.g., <code>arrayref</code> vs. <code>arrayref-plus</code>). </li>
-<li><strong>Dependency confusion</strong> – Registering a public crate with the same name as a private internal package. </li>
+<li><strong>Typosquatting</strong> – Mimicking popular libraries (e.g., <code>arrayref</code> vs. <code>arrayref-plus</code>).</li>
+<li><strong>Dependency confusion</strong> – Registering a public crate with the same name as a private internal package.</li>
 <li><strong>Build-time execution</strong> – Using a <code>build.rs</code> script to run arbitrary commands on a developer’s machine or CI runner.</li>
 </ol>
-<p>Intentional payloads differ from bugs. They evade detection using innocuous APIs like <code>std::process::Command</code>. <strong>NIST</strong> reports that build-time attacks constituted 18% of all software supply-chain incidents in 2022. </p>
+<p>Intentional payloads differ from bugs. They evade detection using innocuous APIs like <code>std::process::Command</code>. <strong>NIST</strong> reports that build-time attacks constituted 18% of all software supply-chain incidents in 2022.</p>
 <h3 id="historical-incidents-involving-crates">Historical Incidents Involving Crates</h3>
 <table>
 <thead>
@@ -439,48 +439,48 @@ A6: Reviewing every dependency is impractical for large projects. Instead, prior
 </tr>
 </thead>
 <tbody><tr>
-<td>2020‑06‑15</td>
+<td>2020-06-15</td>
 <td><code>event-store</code></td>
-<td>CVE‑2020‑1234</td>
+<td>CVE-2020-1234</td>
 <td>RCE in CI pipelines</td>
 <td>Crate yanked; RustSec advisory issued</td>
 </tr>
 <tr>
-<td>2021‑11‑02</td>
+<td>2021-11-02</td>
 <td><code>serde-json</code> (v1.0.64)</td>
-<td>CVE‑2021‑5678</td>
+<td>CVE-2021-5678</td>
 <td>Data exfiltration via <code>build.rs</code></td>
 <td>Patch released within 48h</td>
 </tr>
 <tr>
-<td>2023‑03‑19</td>
+<td>2023-03-19</td>
 <td><code>chrono‑proc‑macro</code></td>
-<td>RUSTSEC‑2023‑001</td>
+<td>RUSTSEC-2023-001</td>
 <td>Credential leakage via env vars</td>
 <td>Version freeze and audit recommended</td>
 </tr>
 </tbody></table>
-<p>These breaches forced the community to evolve. After the <code>serde-json</code> incident, <strong>cargo-audit</strong> began flagging crates that ship a <code>build.rs</code> without an explicit <code>build-dependencies</code> declaration. </p>
+<p>These breaches forced the community to evolve. After the <code>serde-json</code> incident, <strong>cargo-audit</strong> began flagging crates that ship a <code>build.rs</code> without an explicit <code>build-dependencies</code> declaration.</p>
 <h3 id="why-arrayref-attracts-attention">Why <code>arrayref</code> Attracts Attention</h3>
 <ul>
-<li><strong>Download volume</strong> – As of July 2024, <code>arrayref</code> averages <strong>12.4 million</strong> monthly downloads. It sits in the top 2% of all crates. </li>
-<li><strong>Minimal code size</strong> – The source is a single <code>lib.rs</code> (~120 lines). This simplicity tricks reviewers into assuming low risk. </li>
+<li><strong>Download volume</strong> – As of July 2024, <code>arrayref</code> averages <strong>12.4 million</strong> monthly downloads. It sits in the top 2% of all crates.</li>
+<li><strong>Minimal code size</strong> – The source is a single <code>lib.rs</code> (~120 lines). This simplicity tricks reviewers into assuming low risk.</li>
 <li><strong>Transitive reach</strong> – Over 4,500 crates pull <code>arrayref</code> indirectly, including <strong>Actix-web</strong> and <strong>Tide</strong>. One compromised release ripples across the entire ecosystem.</li>
 </ul>
-<p>&gt; “Small crates slip through manual review, yet they execute arbitrary code as effectively as larger packages.” – <em>Rust Foundation Security Working Group</em> </p>
+<p>&gt; “Small crates slip through manual review, yet they execute arbitrary code as effectively as larger packages.” – <em>Rust Foundation Security Working Group</em></p>
 <p>If a crate is this small and this popular, why isn't it audited daily? The answer lies in the mechanics of the build process.</p>
 
 <h2 id="how-the-arrayref-crate-executes-build-time-payloads">How the <code>arrayref</code> Crate Executes Build-Time Payloads</h2>
 <h3 id="cargo-build-scripts-and-buildrs">Cargo Build Scripts and <code>build.rs</code></h3>
-<p>Cargo invokes a <strong>build script</strong> (<code>build.rs</code>) before compiling the main library. This script can: </p>
+<p>Cargo invokes a <strong>build script</strong> (<code>build.rs</code>) before compiling the main library. This script can:</p>
 <ol>
-<li>Emit <code>cargo:</code> directives to set environment variables. </li>
-<li>Print <code>cargo:warning=</code> messages to the compiler output. </li>
+<li>Emit <code>cargo:</code> directives to set environment variables.</li>
+<li>Print <code>cargo:warning=</code> messages to the compiler output.</li>
 <li>Execute external binaries via <code>std::process::Command</code>.</li>
 </ol>
-<p>Because the script runs on the host, any privileged command can compromise the <a href="/tech/claude-system-prompts-the-complete-guide-to-better-output">system</a>. Most crates omit <code>build.rs</code>, creating a dangerous false sense of security. </p>
+<p>Because the script runs on the host, any privileged command can compromise the <a href="/tech/claude-system-prompts-the-complete-guide-to-better-output">system</a>. Most crates omit <code>build.rs</code>, creating a dangerous false sense of security.</p>
 <h3 id="the-mechanism-of-runs-buildtime-in-arrayref">The Mechanism of “runs buildtime” in <code>arrayref</code></h3>
-<p>Compromised version <code>0.6.1</code> introduced this snippet inside <code>build.rs</code>: </p>
+<p>Compromised version <code>0.6.1</code> introduced this snippet inside <code>build.rs</code>:</p>
 <pre><code class="language-rust">use std::env;
 use std::process::Command;
 use std::process::Stdio;
@@ -559,20 +559,20 @@ fn main() {
  }
 }
 </code></pre>
-<p>The <code>cargo:warning</code> line ensures activity appears in the log, but developers routinely ignore warnings. The <strong>build-time payload</strong> proceeds unnoticed. </p>
+<p>The <code>cargo:warning</code> line ensures activity appears in the log, but developers routinely ignore warnings. The <strong>build-time payload</strong> proceeds unnoticed.</p>
 <h3 id="example-of-a-malicious-payload-injection">Example of a Malicious Payload Injection</h3>
 <ol>
-<li><strong>Injection</strong> – An attacker forks <code>arrayref</code>, adds the <code>build.rs</code>, and publishes version <code>0.6.1</code>. </li>
-<li><strong>Distribution</strong> – CI pipelines using <code>cargo update</code> fetch the version because it satisfies the semver range <code>^0.5</code>. </li>
+<li><strong>Injection</strong> – An attacker forks <code>arrayref</code>, adds the <code>build.rs</code>, and publishes version <code>0.6.1</code>.</li>
+<li><strong>Distribution</strong> – CI pipelines using <code>cargo update</code> fetch the version because it satisfies the semver range <code>^0.5</code>.</li>
 <li><strong>Exfiltration</strong> – The payload reads <code>$HOME/.ssh/id_rsa</code> and posts it to a remote endpoint.</li>
 </ol>
-<p>The process completes in <strong>under 2 seconds</strong> on a GitHub Actions runner. Timing analysis cannot catch it. </p>
+<p>The process completes in <strong>under 2 seconds</strong> on a GitHub Actions runner. Timing analysis cannot catch it.</p>
 <p>Hardening the supply chain isn't just about stopping attacks; it's about optimizing the build.</p>
 
 <h2 id="key-benefits-real-world-applications-of-safe-crate-practices">Key Benefits &amp; Real-World Applications of Safe Crate Practices</h2>
 <h3 id="security-auditing-benefits">Security Auditing Benefits</h3>
 <ul>
-<li><strong>Detection rates</strong> – Organizations using <code>cargo-audit</code> with custom <strong>build-script rules</strong> saw a <strong>42%</strong> increase in early detection. </li>
+<li><strong>Detection rates</strong> – Organizations using <code>cargo-audit</code> with custom <strong>build-script rules</strong> saw a <strong>42%</strong> increase in early detection.</li>
 <li><strong>Response time</strong> – The <strong>Rust Security Working Group</strong> found that systematic audits dropped average containment time from 14 days to 4 days.</li>
 </ul>
 <h3 id="performance-and-memory-safety-gains">Performance and Memory Safety Gains</h3>
@@ -600,11 +600,11 @@ fn main() {
 <td>46 (↑2%)</td>
 </tr>
 </tbody></table>
-<p>Removing unnecessary build-time actions <strong>cut compile times by 15%</strong> across 30 open-source projects. Eliminating hidden scripts also reduces the attack surface for memory-unsafe exploits, aligning with <strong>ISO/IEC 27001</strong> control A.12.6.1. </p>
+<p>Removing unnecessary build-time actions <strong>cut compile times by 15%</strong> across 30 open-source projects. Eliminating hidden scripts also reduces the attack surface for memory-unsafe exploits, aligning with <strong>ISO/IEC 27001</strong> control A.12.6.1.</p>
 <h3 id="case-studies-hardened-supply-chains">Case Studies: Hardened Supply Chains</h3>
 <ol>
-<li><strong>FinTechCo</strong> – Mandated "no <code>build.rs</code> without explicit review." They recorded <strong>zero supply-chain incidents</strong> across 1,200 repositories over three months. </li>
-<li><strong>IoT-Systems Ltd.</strong> – Used <code>cargo-deny</code> to block crates emitting <code>cargo:warning</code>. They prevented a simulated <code>arrayref</code> attack with only a <strong>3%</strong> increase in CI latency. </li>
+<li><strong>FinTechCo</strong> – Mandated "no <code>build.rs</code> without explicit review." They recorded <strong>zero supply-chain incidents</strong> across 1,200 repositories over three months.</li>
+<li><strong>IoT-Systems Ltd.</strong> – Used <code>cargo-deny</code> to block crates emitting <code>cargo:warning</code>. They prevented a simulated <code>arrayref</code> attack with only a <strong>3%</strong> increase in CI latency.</li>
 <li><strong>CloudNative Labs</strong> – Implemented nightly SBOM generation via <code>cargo provenance</code>. This revealed that 27% of dependencies were transitive, leading to a <strong>15%</strong> reduction in direct dependencies.</li>
 </ol>
 <p>Proactive vetting yields measurable security without killing developer velocity. But detection remains difficult when attackers obfuscate their intent.</p>
@@ -612,16 +612,16 @@ fn main() {
 <h2 id="challenges-risks-how-to-overcome-them">Challenges, Risks &amp; How to Overcome Them</h2>
 <h3 id="detecting-obfuscated-code-in-arrayref">Detecting Obfuscated Code in <code>arrayref</code></h3>
 <ul>
-<li><strong>Macro expansion analysis</strong> – Attackers hide calls inside macros. Running <code>cargo expand</code> reveals the full source, exposing hidden <code>Command::new</code> calls. </li>
+<li><strong>Macro expansion analysis</strong> – Attackers hide calls inside macros. Running <code>cargo expand</code> reveals the full source, exposing hidden <code>Command::new</code> calls.</li>
 <li><strong>Pattern matching</strong> – Regex that flags <code>std::process::Command</code> alongside network strings (<code>curl</code>, <code>wget</code>, <code>http</code>) catches most suspicious scripts.</li>
 </ul>
-<p>A layered approach—static analysis plus macro expansion—provides the highest confidence. </p>
+<p>A layered approach—static analysis plus macro expansion—provides the highest confidence.</p>
 <h3 id="dependency-hell-and-transitive-risks">Dependency Hell and Transitive Risks</h3>
-<p>Projects often inherit <code>arrayref</code> several levels deep: 
-<code>my-app → serde → actix-web → arrayref</code> </p>
-<p>The top-level project inherits the risk without direct awareness. </p>
+<p>Projects often inherit <code>arrayref</code> several levels deep:
+<code>my-app → serde → actix-web → arrayref</code></p>
+<p>The top-level project inherits the risk without direct awareness.</p>
 <ul>
-<li><strong>Version pinning</strong> – Locking to a safe version (e.g., <code>arrayref = "=0.5.0"</code>) prevents accidental upgrades. </li>
+<li><strong>Version pinning</strong> – Locking to a safe version (e.g., <code>arrayref = "=0.5.0"</code>) prevents accidental upgrades.</li>
 <li><strong>Allow-yanked</strong> – Disable <code>allow-yanked = true</code> to avoid fetching potentially malicious releases.</li>
 </ul>
 <h3 id="mitigation-strategies-and-tooling">Mitigation Strategies and Tooling</h3>
@@ -675,32 +675,32 @@ fn main() {
 </thead>
 <tbody><tr>
 <td>0.5.0</td>
-<td>2020‑03‑15</td>
+<td>2020-03-15</td>
 <td>None</td>
 <td>No custom <code>build.rs</code></td>
 <td>✅ Fully vetted</td>
 </tr>
 <tr>
 <td>0.6.1</td>
-<td>2021‑07‑22</td>
-<td>CVE‑2022‑xxxx</td>
+<td>2021-07-22</td>
+<td>CVE-2022-xxxx</td>
 <td>Executes external script</td>
 <td>❌ Requires patch</td>
 </tr>
 <tr>
 <td>0.7.0-beta</td>
-<td>2023‑11‑01</td>
+<td>2023-11-01</td>
 <td>Suspicious macros</td>
 <td>Emits <code>cargo:warning</code></td>
 <td>⚠️ Under review</td>
 </tr>
 </tbody></table>
-<p>One minor version bump can turn a benign library into a <strong>build-time payload</strong> carrier. </p>
+<p>One minor version bump can turn a benign library into a <strong>build-time payload</strong> carrier.</p>
 <h3 id="statistical-overview-of-crate-compromise-frequency">Statistical Overview of Crate Compromise Frequency</h3>
 <ul>
-<li><strong>2020</strong> – 1.2% of crates contained a <code>build.rs</code>. </li>
-<li><strong>2021</strong> – 1.4% of those scripts were flagged as suspicious by <code>cargo-audit</code>. </li>
-<li><strong>2022</strong> – Build-time attacks rose <strong>27% YoY</strong> (<strong>NIST 2022 Report</strong>). </li>
+<li><strong>2020</strong> – 1.2% of crates contained a <code>build.rs</code>.</li>
+<li><strong>2021</strong> – 1.4% of those scripts were flagged as suspicious by <code>cargo-audit</code>.</li>
+<li><strong>2022</strong> – Build-time attacks rose <strong>27% YoY</strong> (<strong>NIST 2022 Report</strong>).</li>
 <li><strong>2023</strong> – Compromised crates fell to <strong>0.8%</strong>, but the absolute number of affected projects remained high due to transitive dependencies.</li>
 </ul>
 <h3 id="comparative-review-of-detection-tools">Comparative Review of Detection Tools</h3>
@@ -747,22 +747,22 @@ fn main() {
 
 <h2 id="expert-insights-industry-trends">Expert Insights &amp; Industry Trends</h2>
 <h3 id="interviews-with-rust-security-researchers">Interviews with Rust Security Researchers</h3>
-<p>The Rust Foundation’s <strong>Security Working Group</strong> shared these observations in March 2024: </p>
+<p>The Rust Foundation’s <strong>Security Working Group</strong> shared these observations in March 2024:</p>
 <ul>
-<li><em>“Detecting a build-time payload is like hunting a phantom; the code only exists during compilation, leaving no runtime artifact.”</em> </li>
+<li><em>“Detecting a build-time payload is like hunting a phantom; the code only exists during compilation, leaving no runtime artifact.”</em></li>
 <li><em>“Macro-based obfuscation is the next frontier. Attackers can wrap <code>Command::new</code> in macros that expand to innocuous code, bypassing naive scanners.”</em></li>
 </ul>
-<p>These insights mandate <strong>macro expansion</strong> and <strong>runtime sandboxing</strong> in every security pipeline. </p>
+<p>These insights mandate <strong>macro expansion</strong> and <strong>runtime sandboxing</strong> in every security pipeline.</p>
 <h3 id="emerging-trends-in-mitigation">Emerging Trends in Mitigation</h3>
 <ol>
-<li><strong>SBOM for Rust</strong> – <strong>OpenSSF</strong> recommends <code>cargo provenance</code> for every release to enable rapid impact assessment. </li>
-<li><strong>Reproducible builds</strong> – Upcoming Cargo features will lock compiler versions and environment variables, limiting a <code>build.rs</code> script's ability to access the network. </li>
+<li><strong>SBOM for Rust</strong> – <strong>OpenSSF</strong> recommends <code>cargo provenance</code> for every release to enable rapid impact assessment.</li>
+<li><strong>Reproducible builds</strong> – Upcoming Cargo features will lock compiler versions and environment variables, limiting a <code>build.rs</code> script's ability to access the network.</li>
 <li><strong>Provenance signatures</strong> – <strong>RustSec</strong> is piloting GPG-signed releases to ensure source integrity after publication.</li>
 </ol>
-<p>Adopting these tools helps organizations meet <strong>NIST SP 800-161</strong> requirements. </p>
+<p>Adopting these tools helps organizations meet <strong>NIST SP 800-161</strong> requirements.</p>
 <h3 id="future-cargo-features">Future Cargo Features</h3>
 <ul>
-<li><strong><code>cargo verify</code></strong> – Will validate that <code>Cargo.lock</code> matches a recorded hash, preventing <a href="/tech/how-aliexpress-runs-silent-webaudio-fingerprinting">silent</a> upgrades. </li>
+<li><strong><code>cargo verify</code></strong> – Will validate that <code>Cargo.lock</code> matches a recorded hash, preventing <a href="/tech/how-aliexpress-runs-silent-webaudio-fingerprinting">silent</a> upgrades.</li>
 <li><strong><code>cargo deny-build</code></strong> – An extension to abort builds if <code>build.rs</code> invokes network calls outside a whitelist.</li>
 </ul>
 <p>These features will directly kill the <strong>arrayref build-time</strong> attack vector.</p>
@@ -770,66 +770,66 @@ fn main() {
 <h2 id="practical-tips-best-practices-for-securing-arrayref-usage">Practical Tips &amp; Best Practices for Securing <code>arrayref</code> Usage</h2>
 <h3 id="step-1-verify-crate-provenance">Step 1: Verify Crate Provenance</h3>
 <ol>
-<li><strong>Check author signatures</strong> – Use <code>cargo provenance</code> to compare hashes against GitHub release pages. </li>
-<li><strong>Inspect repository history</strong> – Watch for sudden spikes in activity or new contributors during version bumps. </li>
+<li><strong>Check author signatures</strong> – Use <code>cargo provenance</code> to compare hashes against GitHub release pages.</li>
+<li><strong>Inspect repository history</strong> – Watch for sudden spikes in activity or new contributors during version bumps.</li>
 <li><strong>Cross-reference with SBOM</strong> – Confirm <code>arrayref</code> matches a known safe version.</li>
 </ol>
-<p>&gt; “A clean provenance chain is the first line of defense.” – <em>Rust Foundation</em> </p>
+<p>&gt; “A clean provenance chain is the first line of defense.” – <em>Rust Foundation</em></p>
 <h3 id="step-2-enforce-build-time-audits">Step 2: Enforce Build-Time Audits</h3>
 <ul>
-<li><strong>Integrate <code>cargo-audit</code></strong> into every PR pipeline. </li>
-<li><strong>Add a custom lint</strong> to flag <code>println!("cargo:warning=")</code> statements in <a href="/tech/third-world-engineer-responds-risc-v-and-global-design">third</a>-party crates. </li>
+<li><strong>Integrate <code>cargo-audit</code></strong> into every PR pipeline.</li>
+<li><strong>Add a custom lint</strong> to flag <code>println!("cargo:warning=")</code> statements in <a href="/tech/third-world-engineer-responds-risc-v-and-global-design">third</a>-party crates.</li>
 <li><strong>Run <code>cargo expand</code></strong> on all dependencies with a <code>build.rs</code> and diff the output against a baseline.</li>
 </ul>
-<p>Any deviation should trigger an immediate pipeline failure. </p>
+<p>Any deviation should trigger an immediate pipeline failure.</p>
 <h3 id="step-3-implement-runtime-guardrails">Step 3: Implement Runtime Guardrails</h3>
 <ol>
-<li><strong>Sandbox binaries</strong> – Use Docker containers with seccomp profiles that deny outbound network connections. </li>
-<li><strong>Monitor traffic</strong> – Use a network IDS (e.g., Zeek) to alert on unexpected connections from build agents. </li>
+<li><strong>Sandbox binaries</strong> – Use Docker containers with seccomp profiles that deny outbound network connections.</li>
+<li><strong>Monitor traffic</strong> – Use a network IDS (e.g., Zeek) to alert on unexpected connections from build agents.</li>
 <li><strong>Rotate credentials</strong> – Use short-lived tokens to limit the window of opportunity if exfiltration succeeds.</li>
 </ol>
 <h4 id="quick-start-checklist">Quick-Start Checklist</h4>
 <ul>
-<li> Enable <code>cargo audit</code> with <code>--deny warnings</code>. </li>
-<li> Pin <code>arrayref</code> to a vetted version (<code>=0.5.0</code>). </li>
-<li> Add <code>cargo-deny</code> rule to reject <code>build.rs</code> calling <code>std::process::Command</code>. </li>
-<li> Generate an SBOM for each release. </li>
+<li> Enable <code>cargo audit</code> with <code>--deny warnings</code>.</li>
+<li> Pin <code>arrayref</code> to a vetted version (<code>=0.5.0</code>).</li>
+<li> Add <code>cargo-deny</code> rule to reject <code>build.rs</code> calling <code>std::process::Command</code>.</li>
+<li> Generate an SBOM for each release.</li>
 <li> Run nightly <code>cargo provenance</code> verification.</li>
 </ul>
 
 <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 <ol>
-<li><p><strong>What makes <code>arrayref</code> a target?</strong> 
- Its <strong>tiny size</strong> and <strong>massive download count</strong> create a low-visibility, high-impact vector. Because it is a common transitive dependency, one compromise affects thousands of apps. </p>
+<li><p><strong>What makes <code>arrayref</code> a target?</strong>
+ Its <strong>tiny size</strong> and <strong>massive download count</strong> create a low-visibility, high-impact vector. Because it is a common transitive dependency, one compromise affects thousands of apps.</p>
 </li>
-<li><p><strong>Can a lockfile prevent a compromised crate?</strong> 
- No. A lockfile freezes the version, but if that version is malicious, the lockfile simply ensures you always fetch the malicious code. </p>
+<li><p><strong>Can a lockfile prevent a compromised crate?</strong>
+ No. A lockfile freezes the version, but if that version is malicious, the lockfile simply ensures you always fetch the malicious code.</p>
 </li>
-<li><p><strong>How do I detect hidden build-time payloads?</strong> 
- Combine <code>cargo-audit</code> and <code>rustsec</code> with manual <code>build.rs</code> inspection. Use <code>cargo expand</code> for macros and run builds in a sandbox that logs system calls. </p>
+<li><p><strong>How do I detect hidden build-time payloads?</strong>
+ Combine <code>cargo-audit</code> and <code>rustsec</code> with manual <code>build.rs</code> inspection. Use <code>cargo expand</code> for macros and run builds in a sandbox that logs system calls.</p>
 </li>
-<li><p><strong>Is <code>arrayref</code> safe in production after an audit?</strong> 
- Yes, if the audit confirms no <code>build.rs</code> and the version is a known clean release (e.g., <code>0.5.0</code>). Continuous monitoring remains necessary. </p>
+<li><p><strong>Is <code>arrayref</code> safe in production after an audit?</strong>
+ Yes, if the audit confirms no <code>build.rs</code> and the version is a known clean release (e.g., <code>0.5.0</code>). Continuous monitoring remains necessary.</p>
 </li>
-<li><p><strong>What tools automate detection?</strong> 
- <strong>cargo-audit</strong>, <strong>cargo-deny</strong>, and the <strong>rustsec</strong> database are the industry standards. </p>
+<li><p><strong>What tools automate detection?</strong>
+ <strong>cargo-audit</strong>, <strong>cargo-deny</strong>, and the <strong>rustsec</strong> database are the industry standards.</p>
 </li>
-<li><p><strong>How does the community respond to malicious crates?</strong> 
+<li><p><strong>How does the community respond to malicious crates?</strong>
  The community <strong>yanks</strong> the version from crates.io, issues a <strong>RustSec</strong> advisory, and updates review guidelines.</p>
 </li>
 </ol>
 
 <h2 id="conclusion">Conclusion</h2>
-<p>We have covered: </p>
+<p>We have covered:</p>
 <ul>
-<li>The <strong>malicious rust crate</strong> threat model and the distinction between payloads and bugs. </li>
-<li>How <code>arrayref</code> executes <strong>build-time payloads</strong> via <code>build.rs</code>. </li>
-<li>The security and performance gains of rigorous crate vetting. </li>
-<li>Strategies to overcome obfuscation and transitive dependency risks. </li>
-<li>Data-driven comparisons and the shift toward SBOMs and reproducible builds. </li>
+<li>The <strong>malicious rust crate</strong> threat model and the distinction between payloads and bugs.</li>
+<li>How <code>arrayref</code> executes <strong>build-time payloads</strong> via <code>build.rs</code>.</li>
+<li>The security and performance gains of rigorous crate vetting.</li>
+<li>Strategies to overcome obfuscation and transitive dependency risks.</li>
+<li>Data-driven comparisons and the shift toward SBOMs and reproducible builds.</li>
 <li>A practical three-step checklist for immediate implementation.</li>
 </ul>
-<p>Continuous provenance verification, build-time auditing, and runtime sandboxing form a resilient defense. Organizations that ignore these steps leave their front door open to the smallest, most invisible dependencies. </p>
+<p>Continuous provenance verification, build-time auditing, and runtime sandboxing form a resilient defense. Organizations that ignore these steps leave their front door open to the smallest, most invisible dependencies.</p>
 
 
       </div>
@@ -887,7 +887,7 @@ fn main() {
     <div class="toc-dot active" data-target="articleTop" title="Top"></div>
     <div class="toc-dot" data-target="introduction" title="Introduction"></div>
 <div class="toc-dot" data-target="threat-landscape" title="Threat Landscape"></div>
-<div class="toc-dot" data-target="how-arrayref-executes-buildtime-payloads" title="How arrayref Executes Bui..."></div>
+<div class="toc-dot" data-target="how-arrayref-executes-build-time-payloads" title="How arrayref Executes Bui..."></div>
 <div class="toc-dot" data-target="mitigation-strategies" title="Mitigation Strategies"></div>
 <div class="toc-dot" data-target="tooling-automation" title="Tooling &amp;amp; Automation"></div>
 <div class="toc-dot" data-target="comparative-analysis" title="Comparative Analysis"></div>
@@ -905,6 +905,38 @@ fn main() {
   </nav>
 
   
+
+  <!-- Back to top. Articles run to several thousand words; on a phone that is a long scroll
+       to get back to the navigation. Rendered as a <button> rather than an <a href="#top">
+       so it never adds a history entry or changes the URL, and it is keyboard reachable. -->
+  <button type="button" class="qm-to-top" id="qm-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  </button>
+  <script>
+    (function () {
+      var btn = document.getElementById('qm-to-top');
+      if (!btn) return;
+      // Appear only once the reader is far enough down to want it.
+      var SHOW_AFTER = 600;
+      var ticking = false;
+      function sync() {
+        btn.classList.toggle('is-visible', window.scrollY > SHOW_AFTER);
+        ticking = false;
+      }
+      window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; window.requestAnimationFrame(sync); }
+      }, { passive: true });
+      btn.addEventListener('click', function () {
+        // Respect a reader who has asked the OS for less motion.
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+        var first = document.querySelector('a.skip-link, h1');
+        if (first && first.focus) first.focus({ preventScroll: true });
+      });
+      sync();
+    })();
+  </script>
+
   <!-- ─── FOOTER ─── -->
   <footer class="footer" role="contentinfo">
     <div class="footer-inner">
@@ -920,7 +952,7 @@ fn main() {
         <div>
           <div class="footer-col-h">Topics</div>
           <ul class="footer-links" role="list">
-            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=border%20security">border security</a></li><li><a href="/tech/search.html?q=cybersecurity">cybersecurity</a></li><li><a href="/tech/search.html?q=meta">meta</a></li><li><a href="/tech/search.html?q=cicd">cicd</a></li>
+            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=border%20security">border security</a></li><li><a href="/tech/search.html?q=cybersecurity">cybersecurity</a></li><li><a href="/tech/search.html?q=meta">meta</a></li><li><a href="/tech/search.html?q=data%20privacy">data privacy</a></li>
           </ul>
         </div>
         <div>
@@ -975,7 +1007,7 @@ fn main() {
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
         </div>
         <h3 id="modalTitle" class="newsletter-h" style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; font-family: var(--font-display); color: var(--ink);">Subscribe to Quillmatick</h3>
-        <p class="newsletter-p" style="font-size: 14px; color: var(--ink3); line-height: 1.5; margin-bottom: 1.5rem;">Get the weekly briefing on AI and technology. Free forever, unsubscribe anytime.</p>
+        <p class="newsletter-p" style="font-size: 14px; color: var(--ink3); line-height: 1.5; margin-bottom: 1.5rem;">Get the weekly briefing on tech and geopolitics. Free forever, unsubscribe anytime.</p>
         <form class="newsletter-form" onsubmit="window.__qmSubscribe && window.__qmSubscribe(event, this)">
           <input class="newsletter-input" type="email" placeholder="Your email address" required aria-label="Email address" style="margin-bottom: 1rem; width: 100%; box-sizing: border-box;" />
           <div class="qm-hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
@@ -1603,7 +1635,7 @@ fn main() {
     });
 
     /* Highlight active dot based on scroll */
-    const sections = ['articleTop', 'introduction', 'threat-landscape', 'how-arrayref-executes-buildtime-payloads', 'mitigation-strategies', 'tooling-automation', 'comparative-analysis', 'best-practices-for-securing-arrayref-usage', 'frequently-asked-questions', 'conclusion', 'how-the-arrayref-crate-executes-build-time-payloads', 'key-benefits-real-world-applications-of-safe-crate-practices', 'challenges-risks-how-to-overcome-them', 'detailed-analysis-comparative-data', 'expert-insights-industry-trends', 'practical-tips-best-practices-for-securing-arrayref-usage', 'frequently-asked-questions', 'conclusion'];
+    const sections = ['articleTop', 'introduction', 'threat-landscape', 'how-arrayref-executes-build-time-payloads', 'mitigation-strategies', 'tooling-automation', 'comparative-analysis', 'best-practices-for-securing-arrayref-usage', 'frequently-asked-questions', 'conclusion', 'how-the-arrayref-crate-executes-build-time-payloads', 'key-benefits-real-world-applications-of-safe-crate-practices', 'challenges-risks-how-to-overcome-them', 'detailed-analysis-comparative-data', 'expert-insights-industry-trends', 'practical-tips-best-practices-for-securing-arrayref-usage', 'frequently-asked-questions', 'conclusion'];
     window.addEventListener('scroll', () => {
       let active = 0;
       sections.forEach((id, i) => {

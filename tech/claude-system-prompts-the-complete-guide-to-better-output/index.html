@@ -46,7 +46,7 @@
 <meta name="author" content="Quillmatick Staff" />
   <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  <link rel="stylesheet" href="/tech/style.css?v=1787451556670" />
+  <link rel="stylesheet" href="/tech/style.css?v=1787469178211" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
@@ -148,46 +148,46 @@
         <h2 id="introduction-to-system-prompts">Introduction to System Prompts</h2>
 <h3 id="why-system-prompts-matter">Why System Prompts Matter</h3>
 <ul>
-<li><strong>Claude</strong> processes a <em>system prompt</em> before any user message, establishing persona, constraints, and output format. </li>
-<li>Consequently, the system prompt determines the baseline quality of every response. </li>
-<li><strong>Research</strong> from Anthropic shows that well‑crafted prompts lift BLEU and ROUGE‑L scores by up to <strong>27 %</strong> across thousands of multi‑turn dialogs.</li>
+<li><strong>Claude</strong> processes a <em>system prompt</em> before any user message, establishing persona, constraints, and output format.</li>
+<li>Consequently, the system prompt determines the baseline quality of every response.</li>
+<li><strong>Research</strong> from Anthropic shows that well-crafted prompts lift BLEU and ROUGE-L scores by up to <strong>27%</strong> across thousands of multi-turn dialogs.</li>
 </ul>
 <h3 id="core-components-of-a-prompt">Core Components of a Prompt</h3>
 <ol>
-<li><strong>Persona definition</strong> – a concise sentence that tells Claude <em>who</em> it is acting as. </li>
-<li><strong>Behavioral constraints</strong> – explicit rules that prevent disallowed content (e.g., “Never share personal health data”). </li>
-<li><strong>Output schema</strong> – a machine‑readable format such as JSON that downstream services can parse without error.</li>
+<li><strong>Persona definition</strong> – a concise sentence that tells Claude <em>who</em> it is acting as.</li>
+<li><strong>Behavioral constraints</strong> – explicit rules that prevent disallowed content (e.g., “Never share personal health data”).</li>
+<li><strong>Output schema</strong> – a machine-readable format such as JSON that downstream services can parse without error.</li>
 </ol>
 <blockquote>
-<p><strong>Tip:</strong> Keep the entire system prompt between <strong>30‑45 tokens</strong>; this range balances specificity with latency. </p>
+<p><strong>Tip:</strong> Keep the entire system prompt between <strong>30-45 tokens</strong>; this range balances specificity with latency.</p>
 </blockquote>
 <h2 id="architecture-of-claudes-prompt-processing">Architecture of Claude’s Prompt Processing</h2>
 <h3 id="token-flow-and-persistence">Token Flow and Persistence</h3>
 <ul>
-<li>When an API call starts, Claude receives the system prompt as the first token block. </li>
-<li>The prompt <strong>persists</strong> for the entire session unless the developer sends a replacement via the <code>system</code> field. </li>
-<li>Therefore, reusing the same prompt across turns reduces token overhead by roughly <strong>15 %</strong>.</li>
+<li>When an API call starts, Claude receives the system prompt as the first token block.</li>
+<li>The prompt <strong>persists</strong> for the entire session unless the developer sends a replacement via the <code>system</code> field.</li>
+<li>Therefore, reusing the same prompt across turns reduces token overhead by roughly <strong>15%</strong>.</li>
 </ul>
 <h3 id="safety-layer-integration">Safety Layer Integration</h3>
 <ul>
-<li>Claude’s safety module scans every generated token against the constraints defined in the system prompt. </li>
-<li>Embedding constraints early cuts the need for post‑generation filters by about <strong>35 %</strong>. </li>
+<li>Claude’s safety module scans every generated token against the constraints defined in the system prompt.</li>
+<li>Embedding constraints early cuts the need for post-generation filters by about <strong>35%</strong>.</li>
 <li>Additionally, the safety layer logs violations, enabling rapid remediation.</li>
 </ul>
 <h3 id="contextual-memory-management">Contextual Memory Management</h3>
 <ul>
-<li>Claude stores the system prompt in a dedicated memory slot that is never overwritten by user content. </li>
+<li>Claude stores the system prompt in a dedicated memory slot that is never overwritten by user content.</li>
 <li>Consequently, the model retains a stable persona even when user messages shift topics.</li>
 </ul>
-<h2 id="designing-highimpact-system-prompts">Designing High‑Impact System Prompts</h2>
+<h2 id="designing-high-impact-system-prompts">Designing High-Impact System Prompts</h2>
 <h3 id="persona-definition">Persona Definition</h3>
 <ul>
-<li>Write a single, vivid sentence that captures the role (e.g., “You are a <strong>technical writer</strong> specializing in AI safety”). </li>
+<li>Write a single, vivid sentence that captures the role (e.g., “You are a <strong>technical writer</strong> specializing in AI safety”).</li>
 <li><strong>Avoid</strong> vague adjectives; specificity guides Claude’s tone and vocabulary.</li>
 </ul>
 <h3 id="output-formatting-rules">Output Formatting Rules</h3>
 <ul>
-<li>Use <strong>JSON‑style</strong> directives to guarantee machine‑readable results. </li>
+<li>Use <strong>JSON-style</strong> directives to guarantee machine-readable results.</li>
 <li>Example:</li>
 </ul>
 <pre><code class="language-json">{
@@ -201,10 +201,10 @@
 </ul>
 <h3 id="constraint-embedding">Constraint Embedding</h3>
 <ul>
-<li>List prohibitions as short imperatives: </li>
-<li>“Never disclose personal health information.” </li>
-<li>“Refuse GDPR‑violating requests politely.” </li>
-<li><strong>Do not</strong> embed constraints in user‑level instructions; place them only in the system prompt.</li>
+<li>List prohibitions as short imperatives:</li>
+<li>“Never disclose personal health information.”</li>
+<li>“Refuse GDPR-violating requests politely.”</li>
+<li><strong>Do not</strong> embed constraints in user-level instructions; place them only in the system prompt.</li>
 </ul>
 <h3 id="consolidated-prompt-template">Consolidated Prompt Template</h3>
 <table>
@@ -217,130 +217,130 @@
 </thead>
 <tbody><tr>
 <td>Persona</td>
-<td>5‑10 tokens</td>
+<td>5-10 tokens</td>
 <td><em>You are a senior AI ethics consultant.</em></td>
 </tr>
 <tr>
 <td>Constraints</td>
-<td>10‑15 tokens</td>
+<td>10-15 tokens</td>
 <td><em>Never share private data; refuse illegal requests.</em></td>
 </tr>
 <tr>
 <td>Output schema</td>
-<td>5‑8 tokens</td>
+<td>5-8 tokens</td>
 <td><em>Return JSON with fields <code>status</code>, <code>payload</code>, <code>error</code>.</em></td>
 </tr>
 <tr>
 <td>Tone</td>
-<td>3‑5 tokens</td>
+<td>3-5 tokens</td>
 <td><em>Use formal, concise language.</em></td>
 </tr>
 </tbody></table>
 <ul>
-<li><strong>Result:</strong> A 30‑45 token prompt that maximizes relevance while minimizing compute.</li>
+<li><strong>Result:</strong> A 30-45 token prompt that maximizes relevance while minimizing compute.</li>
 </ul>
 <h2 id="quantitative-benefits-and-benchmarks">Quantitative Benefits and Benchmarks</h2>
 <h3 id="performance-metrics-overview">Performance Metrics Overview</h3>
 <ul>
-<li><strong>BLEU</strong> improvement: <strong>+22 %</strong> when using JSON output rules. </li>
-<li><strong>ROUGE‑L</strong> improvement: <strong>+19 %</strong> with explicit persona. </li>
-<li><strong>Human satisfaction</strong>: <strong>+27 %</strong> after embedding safety constraints.</li>
+<li><strong>BLEU</strong> improvement: <strong>+22%</strong> when using JSON output rules.</li>
+<li><strong>ROUGE-L</strong> improvement: <strong>+19%</strong> with explicit persona.</li>
+<li><strong>Human satisfaction</strong>: <strong>+27%</strong> after embedding safety constraints.</li>
 </ul>
-<h3 id="realworld-case-studies">Real‑World Case Studies</h3>
+<h3 id="real-world-case-studies">Real-World Case Studies</h3>
 <ol>
 <li><strong>Customer support bot</strong></li>
 </ol>
 <ul>
-<li>Baseline: 1.2 s latency, 68 % resolution rate. </li>
-<li>After prompt overhaul: 0.9 s latency, 84 % resolution rate.</li>
+<li>Baseline: 1.2 s latency, 68% resolution rate.</li>
+<li>After prompt overhaul: 0.9 s latency, 84% resolution rate.</li>
 </ul>
 <ol>
 <li><strong>Data extraction pipeline</strong></li>
 </ol>
 <ul>
-<li>Baseline parsing errors: 42 % per batch. </li>
-<li>With JSON schema prompt: <strong>0 %</strong> parsing errors, 30 % faster throughput.</li>
+<li>Baseline parsing errors: 42% per batch.</li>
+<li>With JSON schema prompt: <strong>0%</strong> parsing errors, 30% faster throughput.</li>
 </ul>
 <h3 id="economic-impact">Economic Impact</h3>
 <ul>
-<li>Reducing token waste saves <strong>$0.0004 per 1 K tokens</strong> on Anthropic’s pricing tier. </li>
-<li>A 15 % token reduction translates to <strong>$12 k</strong> annual savings for a high‑volume SaaS product.</li>
+<li>Reducing token waste saves <strong>$0.0004 per 1 K tokens</strong> on Anthropic’s pricing tier.</li>
+<li>A 15% token reduction translates to <strong>$12 k</strong> annual savings for a high-volume SaaS product.</li>
 </ul>
 <h2 id="testing-validation-and-optimization">Testing, Validation, and Optimization</h2>
 <h3 id="ab-testing-framework">A/B Testing Framework</h3>
 <ul>
-<li>Split traffic 50/50 between <strong>Prompt A</strong> (baseline) and <strong>Prompt B</strong> (optimized). </li>
-<li>Track BLEU, ROUGE‑L, latency, and user satisfaction in real time. </li>
-<li><strong>Decision rule:</strong> Adopt Prompt B if it exceeds baseline by <strong>≥5 %</strong> on any metric.</li>
+<li>Split traffic 50/50 between <strong>Prompt A</strong> (baseline) and <strong>Prompt B</strong> (optimized).</li>
+<li>Track BLEU, ROUGE-L, latency, and user satisfaction in real time.</li>
+<li><strong>Decision rule:</strong> Adopt Prompt B if it exceeds baseline by <strong>≥5%</strong> on any metric.</li>
 </ul>
 <h3 id="prompt-length-tuning">Prompt Length Tuning</h3>
 <ul>
-<li>Conduct a token sweep from <strong>20</strong> to <strong>60</strong> tokens. </li>
-<li>Plot quality vs. latency; the sweet spot consistently appears at <strong>30‑45 tokens</strong>. </li>
+<li>Conduct a token sweep from <strong>20</strong> to <strong>60</strong> tokens.</li>
+<li>Plot quality vs. latency; the sweet spot consistently appears at <strong>30-45 tokens</strong>.</li>
 <li>Therefore, enforce a length guard in your CI pipeline.</li>
 </ul>
 <h3 id="monitoring-and-iteration">Monitoring and Iteration</h3>
 <ul>
-<li>Log each response’s <strong>token count</strong>, <strong>JSON validity</strong>, and <strong>safety flag</strong>. </li>
-<li>Set alerts for spikes in parsing errors or safety violations. </li>
+<li>Log each response’s <strong>token count</strong>, <strong>JSON validity</strong>, and <strong>safety flag</strong>.</li>
+<li>Set alerts for spikes in parsing errors or safety violations.</li>
 <li>Iterate prompts monthly based on aggregated metrics.</li>
 </ul>
 <h2 id="common-pitfalls-and-mitigation-strategies">Common Pitfalls and Mitigation Strategies</h2>
-<h3 id="overspecification-risks">Over‑Specification Risks</h3>
+<h3 id="over-specification-risks">Over-Specification Risks</h3>
 <ul>
-<li>Adding too many constraints can confuse Claude, leading to <strong>fallback responses</strong>. </li>
+<li>Adding too many constraints can confuse Claude, leading to <strong>fallback responses</strong>.</li>
 <li><strong>Solution:</strong> Prioritize constraints; keep the list under <strong>four</strong> items.</li>
 </ul>
 <h3 id="safety-bypass-scenarios">Safety Bypass Scenarios</h3>
 <ul>
-<li>Users may attempt to trick Claude into violating rules via indirect phrasing. </li>
+<li>Users may attempt to trick Claude into violating rules via indirect phrasing.</li>
 <li><strong>Mitigation:</strong> Include a generic “Refuse any request that could lead to illegal or unsafe outcomes.” clause.</li>
 </ul>
 <h3 id="token-inflation">Token Inflation</h3>
 <ul>
-<li>Re‑injecting the system prompt each turn doubles token usage. </li>
+<li>Re-injecting the system prompt each turn doubles token usage.</li>
 <li><strong>Best practice:</strong> Store the prompt once per session and reference it implicitly.</li>
 </ul>
 <h2 id="toolkits-templates-and-resources">Toolkits, Templates, and Resources</h2>
-<h3 id="readymade-prompt-templates">Ready‑Made Prompt Templates</h3>
+<h3 id="ready-made-prompt-templates">Ready-Made Prompt Templates</h3>
 <ul>
-<li><strong>Technical Writer:</strong> “You are a <strong>technical writer</strong>; return JSON with <code>section</code>, <code>content</code>, <code>references</code>.” </li>
+<li><strong>Technical Writer:</strong> “You are a <strong>technical writer</strong>; return JSON with <code>section</code>, <code>content</code>, <code>references</code>.”</li>
 <li><strong>Data Analyst:</strong> “You are a <strong>data analyst</strong>; output CSV rows inside a JSON <code>data</code> array.”</li>
 </ul>
 <h3 id="monitoring-dashboards">Monitoring Dashboards</h3>
 <ul>
-<li>Use Grafana or Datadog to visualize: </li>
-<li><strong>Average token count</strong> per session. </li>
-<li><strong>Parsing error rate</strong> (target &lt; 0.5 %). </li>
-<li><strong>Safety violation count</strong> (target = 0).</li>
+<li>Use Grafana or Datadog to visualize:</li>
+<li><strong>Average token count</strong> per session.</li>
+<li><strong>Parsing error rate</strong> (target &lt; 0.5%).</li>
+<li><strong>Safety violation count</strong> (target = 0).</li>
 </ul>
 <h3 id="further-reading">Further Reading</h3>
 <ul>
-<li>For deeper insight into prompt engineering, see. </li>
+<li>For deeper insight into prompt engineering, see.</li>
 <li>According to <strong>NIST guidance</strong>, structured output reduces downstream validation costs.</li>
 </ul>
 <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
-<p><strong>1. How many tokens should a system prompt contain?</strong> 
-A well‑balanced system prompt occupies <strong>30‑45 tokens</strong>. This range provides enough detail to define persona, constraints, and output format while keeping latency low. Shorter prompts risk ambiguity; longer prompts increase compute without measurable quality gains. </p>
-<p><strong>2. Can I change the system prompt mid‑conversation?</strong> 
-Yes, you can replace the prompt using the API’s <code>system</code> field. However, doing so discards the existing persona and may cause a temporary dip in response quality. Therefore, limit replacements to major domain shifts. </p>
-<p><strong>3. Why is JSON the preferred output format?</strong> 
-JSON offers a <strong>strict schema</strong>, enabling deterministic parsing. When Claude returns JSON with predefined fields (<code>status</code>, <code>payload</code>, <code>error</code>), downstream services experience <strong>zero</strong> syntax errors, which translates to faster pipelines and lower operational costs. </p>
-<p><strong>4. How do safety constraints affect model performance?</strong> 
-Embedding constraints directly in the system prompt reduces the need for post‑generation filters by <strong>≈35 %</strong>. Consequently, the model spends less compute on safety checks, improving overall latency and preserving token budget. </p>
-<p><strong>5. What metrics should I monitor after deploying a new prompt?</strong> 
-Track <strong>BLEU</strong>, <strong>ROUGE‑L</strong>, <strong>average token count</strong>, <strong>JSON validation rate</strong>, and <strong>safety violation count</strong>. A holistic view of these metrics reveals both linguistic quality and operational stability. </p>
-<p><strong>6. How often should I iterate on my system prompts?</strong> 
-Adopt a <strong>monthly</strong> review cycle. Collect performance data, run A/B tests on any proposed changes, and promote prompts that meet the ≥5 % improvement threshold on at least one key metric. Regular iteration ensures the prompt stays aligned with evolving user needs and model updates.</p>
+<p><strong>1. How many tokens should a system prompt contain?</strong>
+A well-balanced system prompt occupies <strong>30-45 tokens</strong>. This range provides enough detail to define persona, constraints, and output format while keeping latency low. Shorter prompts risk ambiguity; longer prompts increase compute without measurable quality gains.</p>
+<p><strong>2. Can I change the system prompt mid-conversation?</strong>
+Yes, you can replace the prompt using the API’s <code>system</code> field. However, doing so discards the existing persona and may cause a temporary dip in response quality. Therefore, limit replacements to major domain shifts.</p>
+<p><strong>3. Why is JSON the preferred output format?</strong>
+JSON offers a <strong>strict schema</strong>, enabling deterministic parsing. When Claude returns JSON with predefined fields (<code>status</code>, <code>payload</code>, <code>error</code>), downstream services experience <strong>zero</strong> syntax errors, which translates to faster pipelines and lower operational costs.</p>
+<p><strong>4. How do safety constraints affect model performance?</strong>
+Embedding constraints directly in the system prompt reduces the need for post-generation filters by <strong>≈35%</strong>. Consequently, the model spends less compute on safety checks, improving overall latency and preserving token budget.</p>
+<p><strong>5. What metrics should I monitor after deploying a new prompt?</strong>
+Track <strong>BLEU</strong>, <strong>ROUGE-L</strong>, <strong>average token count</strong>, <strong>JSON validation rate</strong>, and <strong>safety violation count</strong>. A holistic view of these metrics reveals both linguistic quality and operational stability.</p>
+<p><strong>6. How often should I iterate on my system prompts?</strong>
+Adopt a <strong>monthly</strong> review cycle. Collect performance data, run A/B tests on any proposed changes, and promote prompts that meet the ≥5% improvement threshold on at least one key metric. Regular iteration ensures the prompt stays aligned with evolving user needs and model updates.</p>
 <ul>
-<li><strong>Definition</strong>: A system prompt is a pre‑emptive instruction that sets the tone, constraints, and output expectations for the model before any user query is processed. </li>
-<li><strong>Persistence</strong>: It remains active for the entire session unless explicitly overwritten, ensuring consistent behavior across multi‑turn dialogues. </li>
+<li><strong>Definition</strong>: A system prompt is a pre-emptive instruction that sets the tone, constraints, and output expectations for the model before any user query is processed.</li>
+<li><strong>Persistence</strong>: It remains active for the entire session unless explicitly overwritten, ensuring consistent behavior across multi-turn dialogues.</li>
 <li><strong>Scope</strong>: It can define persona (e.g., “You are a helpful technical writer”), safety limits (e.g., “Never provide medical advice”), and formatting rules (e.g., “Respond in JSON”).</li>
 </ul>
 <h3 id="why-system-prompts-matter">Why System Prompts Matter</h3>
 <ul>
-<li><strong>Definition</strong>: A pre-session instruction the model treats as immutable context. It differs from <em>user messages</em> (the task) and <em>assistant messages</em> (the replies). </li>
-<li><strong>Historical Evolution</strong>: Early LLMs relied on instruction tuning—fine-tuning on "follow the instruction" pairs. Later, researchers at OpenAI and Anthropic proved that <strong>in-context conditioning</strong> via a dedicated system message achieves similar alignment with far less compute. The 2022 University of Washington paper “Learning to Prompt” formalized this shift. </li>
+<li><strong>Definition</strong>: A pre-session instruction the model treats as immutable context. It differs from <em>user messages</em> (the task) and <em>assistant messages</em> (the replies).</li>
+<li><strong>Historical Evolution</strong>: Early LLMs relied on instruction tuning—fine-tuning on "follow the instruction" pairs. Later, researchers at OpenAI and Anthropic proved that <strong>in-context conditioning</strong> via a dedicated system message achieves similar alignment with far less compute. The 2022 University of Washington paper “Learning to Prompt” formalized this shift.</li>
 <li><strong>Operational Role</strong>: The system prompt seeds the model’s internal state. It biases token probabilities from the very first generation step.</li>
 </ul>
 <h3 id="core-components-of-a-claude-system-prompt">Core Components of a Claude System Prompt</h3>
@@ -375,11 +375,11 @@ Adopt a <strong>monthly</strong> review cycle. Collect performance data, run A/B
 "system": "You are Claude, an AI assistant specialized in technical writing. Use markdown for all responses. Cite sources using APA style."
 }
 </code></pre>
-<p> This snippet combines persona, style, and citation rules into a token-efficient package. </p>
+<p> This snippet combines persona, style, and citation rules into a token-efficient package.</p>
 <h3 id="why-system-prompts-influence-output-quality">Why System Prompts Influence Output Quality</h3>
 <ol>
-<li><strong>Prompt Conditioning</strong> – Inserting the system message at token position zero creates a high-weight prior. <em>ACL 2023</em> research (“Prompt Conditioning in Large Language Models”) shows that early-position tokens receive up to <strong>1.8×</strong> the attention score of later tokens. </li>
-<li><strong>Token Weighting</strong> – The transformer’s self-attention matrix prioritizes the first N tokens. A well-crafted system prompt steers the model more reliably than repeated user instructions. </li>
+<li><strong>Prompt Conditioning</strong> – Inserting the system message at token position zero creates a high-weight prior. <em>ACL 2023</em> research (“Prompt Conditioning in Large Language Models”) shows that early-position tokens receive up to <strong>1.8×</strong> the attention score of later tokens.</li>
+<li><strong>Token Weighting</strong> – The transformer’s self-attention matrix prioritizes the first N tokens. A well-crafted system prompt steers the model more reliably than repeated user instructions.</li>
 <li><strong>Context Window Management</strong> – Claude 3.5 offers a 100k token window. The system prompt occupies a fixed slice. Efficient prompts preserve space for user data and reduce truncation risk.</li>
 </ol>
 <p>Knowing <em>what</em> a prompt is matters less than knowing <em>how</em> the machine processes it. To optimize, we must look at the silicon.</p>
@@ -387,35 +387,35 @@ Adopt a <strong>monthly</strong> review cycle. Collect performance data, run A/B
 <h2 id="how-claude-system-prompts-work-a-deep-dive">How Claude System Prompts Work: A Deep Dive</h2>
 <h3 id="architecture-level-interaction">Architecture-Level Interaction</h3>
 <ul>
-<li><strong>Embedding Separation</strong>: Claude maintains two parallel embedding streams: <em>system</em> and <em>user/assistant</em>. The system embeddings enter the first transformer block via a dedicated <em>system-bias</em> addition. Anthropic’s 2023 technical blog confirms this design ensures system instructions influence every layer without user tokens overwriting them. </li>
+<li><strong>Embedding Separation</strong>: Claude maintains two parallel embedding streams: <em>system</em> and <em>user/assistant</em>. The system embeddings enter the first transformer block via a dedicated <em>system-bias</em> addition. Anthropic’s 2023 technical blog confirms this design ensures system instructions influence every layer without user tokens overwriting them.</li>
 <li><strong>Layer-wise Influence</strong>: Stanford AI Lab (2023) found that layers 1-4 exhibit the highest gradient magnitude regarding system tokens. Later layers focus on content generation.</li>
 </ul>
 <h3 id="prompt-parsing-and-token-prioritization">Prompt Parsing and Token Prioritization</h3>
-<p>Claude processes a request through this sequence: </p>
+<p>Claude processes a request through this sequence:</p>
 <ol>
-<li><strong>Receive API payload</strong> containing <code>system</code>, <code>user</code>, and optional <code>assistant</code> fields. </li>
-<li><strong>Tokenize</strong> each field using the byte-pair encoding (BPE) tokenizer. </li>
-<li><strong>Assign positional IDs</strong> – system tokens take positions 0-N for earliest attention. </li>
-<li><strong>Apply temperature</strong> – the model scales logits; however, system-prompt logits remain unscaled to preserve determinism. </li>
-<li><strong>Execute top-p sampling</strong> – the model filters probabilities, but fixed system tokens are exempt. </li>
+<li><strong>Receive API payload</strong> containing <code>system</code>, <code>user</code>, and optional <code>assistant</code> fields.</li>
+<li><strong>Tokenize</strong> each field using the byte-pair encoding (BPE) tokenizer.</li>
+<li><strong>Assign positional IDs</strong> – system tokens take positions 0-N for earliest attention.</li>
+<li><strong>Apply temperature</strong> – the model scales logits; however, system-prompt logits remain unscaled to preserve determinism.</li>
+<li><strong>Execute top-p sampling</strong> – the model filters probabilities, but fixed system tokens are exempt.</li>
 <li><strong>Generate output</strong> – the decoder starts from the last user token, guided by the system-induced bias.</li>
 </ol>
-<p><strong>Interaction with Generation Parameters</strong> </p>
+<p><strong>Interaction with Generation Parameters</strong></p>
 <ul>
-<li><strong>Temperature</strong>: Low settings (e.g., 0.2) make output deterministic, reinforcing system constraints. </li>
-<li><strong>Top-p</strong>: A narrow nucleus (e.g., 0.85) reduces variance, which is vital for strict formatting. </li>
+<li><strong>Temperature</strong>: Low settings (e.g., 0.2) make output deterministic, reinforcing system constraints.</li>
+<li><strong>Top-p</strong>: A narrow nucleus (e.g., 0.85) reduces variance, which is vital for strict formatting.</li>
 <li><strong>Max-tokens</strong>: High limits prevent the model from cutting off complex formatting rules.</li>
 </ul>
 <h3 id="runtime-adjustments-and-dynamic-prompting">Runtime Adjustments and Dynamic Prompting</h3>
-<p>Developers can mutate system prompts mid-conversation by sending a new <code>system</code> field. </p>
+<p>Developers can mutate system prompts mid-conversation by sending a new <code>system</code> field.</p>
 <ul>
-<li><strong>Step 1</strong> – Issue a <code>PATCH</code> request with updated system text. </li>
-<li><strong>Step 2</strong> – Claude re-initializes the system embedding stream while keeping conversation history. </li>
+<li><strong>Step 1</strong> – Issue a <code>PATCH</code> request with updated system text.</li>
+<li><strong>Step 2</strong> – Claude re-initializes the system embedding stream while keeping conversation history.</li>
 <li><strong>Step 3</strong> – The model recomputes attention scores based on the new constraints.</li>
 </ul>
-<p><strong>API Parameters for Real-Time Updates</strong> </p>
+<p><strong>API Parameters for Real-Time Updates</strong></p>
 <ul>
-<li><code>system_prompt</code>: New prompt string (max 512 tokens). </li>
+<li><code>system_prompt</code>: New prompt string (max 512 tokens).</li>
 <li><code>reset_context</code>: Boolean flag; when true, the model wipes prior user messages to free space.</li>
 </ul>
 <p>Dynamic prompting enables <em>progressive task refinement</em>—switching from data extraction to summarization in one session.</p>
@@ -424,19 +424,19 @@ Adopt a <strong>monthly</strong> review cycle. Collect performance data, run A/B
 <h2 id="key-benefits-real-world-applications">Key Benefits &amp; Real-World Applications</h2>
 <h3 id="improved-consistency-and-brand-voice">Improved Consistency and Brand Voice</h3>
 <ul>
-<li><strong>Case Study</strong>: A fintech startup used Claude for a virtual advisor handling 10k daily interactions. A system prompt mandating “regulatory-approved terminology and a formal tone” led to a <strong>42% reduction in tone variance</strong>. </li>
-<li><strong>Metrics</strong>: </li>
-<li><strong>Sentiment drift</strong> dropped from a standard deviation of 0.31 to 0.18 (via VADER). </li>
+<li><strong>Case Study</strong>: A fintech startup used Claude for a virtual advisor handling 10k daily interactions. A system prompt mandating “regulatory-approved terminology and a formal tone” led to a <strong>42% reduction in tone variance</strong>.</li>
+<li><strong>Metrics</strong>:</li>
+<li><strong>Sentiment drift</strong> dropped from a standard deviation of 0.31 to 0.18 (via VADER).</li>
 <li><strong>Brand compliance score</strong> rose from 3.2 to 4.6 out of 5.</li>
 </ul>
 <h3 id="enhanced-safety-and-compliance">Enhanced Safety and Compliance</h3>
 <ul>
-<li><strong>GDPR Enforcement</strong>: A healthcare provider built a symptom-triage bot. The system prompt forbade storing or repeating personally identifiable health information. EU Data Protection Board audits recorded a <strong>0.3% safety violation rate</strong>, far below the 1.4% industry average. </li>
+<li><strong>GDPR Enforcement</strong>: A healthcare provider built a symptom-triage bot. The system prompt forbade storing or repeating personally identifiable health information. EU Data Protection Board audits recorded a <strong>0.3% safety violation rate</strong>, far below the 1.4% industry average.</li>
 <li><strong>Content Filtering</strong>: Coupling system constraints with Anthropic’s safety classifier blocked disallowed content in 99.7% of test cases.</li>
 </ul>
 <h3 id="productivity-gains-for-developers">Productivity Gains for Developers</h3>
 <ul>
-<li><strong>Reusable Prompt Libraries</strong>: Teams using modular system prompt libraries reduced iterative tuning cycles by <strong>30%</strong>. </li>
+<li><strong>Reusable Prompt Libraries</strong>: Teams using modular system prompt libraries reduced iterative tuning cycles by <strong>30%</strong>.</li>
 <li><strong>Time Savings</strong>: One SaaS platform reported that developers spent 12 hours per month on prompt tweaking before adopting a systematic approach; that effort fell to 8 hours.</li>
 </ul>
 <p>Even the best systems fail. The goal is to predict the failure before the user sees it.</p>
@@ -444,25 +444,25 @@ Adopt a <strong>monthly</strong> review cycle. Collect performance data, run A/B
 <h2 id="challenges-risks-how-to-overcome-them">Challenges, Risks &amp; How to Overcome Them</h2>
 <h3 id="prompt-over-specification">Prompt Over-Specification</h3>
 <ul>
-<li><strong>Symptoms</strong>: Rigid rules (e.g., “never use synonyms”) make Claude terse or repetitive. Creativity dies. </li>
+<li><strong>Symptoms</strong>: Rigid rules (e.g., “never use synonyms”) make Claude terse or repetitive. Creativity dies.</li>
 <li><strong>Mitigation Strategies</strong>:</li>
 </ul>
 <ol>
-<li><strong>Soft Constraints</strong> – Use: “Prefer formal language, but adapt when necessary.” </li>
+<li><strong>Soft Constraints</strong> – Use: “Prefer formal language, but adapt when necessary.”</li>
 <li><strong>Hierarchical Prompting</strong> – Put high-level goals in the system prompt; delegate style to user instructions.</li>
 </ol>
 <h3 id="token-budget-constraints">Token Budget Constraints</h3>
 <ul>
-<li><strong>Issue</strong>: System prompts eat into the 100k token window. A 300-token prompt leaves less room for data, risking truncation. </li>
-<li><strong>Solution</strong>: </li>
-<li><strong>Concise Design Patterns</strong>: Limit personas to 2-3 sentences. Use programmatic placeholders like <code>{DOMAIN}</code>. </li>
+<li><strong>Issue</strong>: System prompts eat into the 100k token window. A 300-token prompt leaves less room for data, risking truncation.</li>
+<li><strong>Solution</strong>:</li>
+<li><strong>Concise Design Patterns</strong>: Limit personas to 2-3 sentences. Use programmatic placeholders like <code>{DOMAIN}</code>.</li>
 <li><strong>Token-Budget Calculator</strong>: Use <code>prompt-budget-cli</code> (GitHub, 2024) to forecast remaining tokens.</li>
 </ul>
 <h3 id="unintended-bias-propagation">Unintended Bias Propagation</h3>
 <ul>
-<li><strong>Risk</strong>: Assumptions like “assume all users are tech-savvy” alienate non-technical audiences. </li>
-<li><strong>Countermeasures</strong>: </li>
-<li><strong>Bias-Audit Checklist</strong>: Ensure prompts avoid stereotypes and use neutral sources. </li>
+<li><strong>Risk</strong>: Assumptions like “assume all users are tech-savvy” alienate non-technical audiences.</li>
+<li><strong>Countermeasures</strong>:</li>
+<li><strong>Bias-Audit Checklist</strong>: Ensure prompts avoid stereotypes and use neutral sources.</li>
 <li><strong>Iterative Testing</strong>: Run 500 synthetic queries across diverse demographics and track disparity metrics.</li>
 </ul>
 <p>How does Claude actually stack up against the competition when optimized?</p>
@@ -510,38 +510,38 @@ Adopt a <strong>monthly</strong> review cycle. Collect performance data, run A/B
 </tbody></table>
 <h3 id="performance-metrics-interpretation">Performance Metrics Interpretation</h3>
 <ul>
-<li><strong>Higher BLEU</strong> means the optimized prompt guides Claude toward reference-aligned output. </li>
-<li><strong>Latency Increase</strong> (210ms vs. 185ms) occurs because longer prompts require more attention calculations. The <a href="/geopolitics/how-dozens-countries-helped-china-dodge-trumps-tariffs">trade</a>-off is worth it for a <strong>four-fold decrease</strong> in safety violations. </li>
+<li><strong>Higher BLEU</strong> means the optimized prompt guides Claude toward reference-aligned output.</li>
+<li><strong>Latency Increase</strong> (210ms vs. 185ms) occurs because longer prompts require more attention calculations. The <a href="/geopolitics/how-dozens-countries-helped-china-dodge-trumps-tariffs">trade</a>-off is worth it for a <strong>four-fold decrease</strong> in safety violations.</li>
 <li><strong>User Satisfaction</strong> climbs by 0.7 points, reflecting better consistency and formatting.</li>
 </ul>
 <h3 id="trade-off-discussion">Trade-off Discussion</h3>
 <ul>
-<li><strong>Length vs. Responsiveness</strong>: Concise prompts save tokens and time but may fail to enforce complex policies. A 12% token allocation is the "sweet spot" for safety and satisfaction. </li>
+<li><strong>Length vs. Responsiveness</strong>: Concise prompts save tokens and time but may fail to enforce complex policies. A 12% token allocation is the "sweet spot" for safety and satisfaction.</li>
 <li><strong>Scalability</strong>: For high-throughput environments (10k QPS), mitigate latency by batching requests and pre-warming instances.</li>
 </ul>
 <h3 id="recommendations">Recommendations</h3>
 <ol>
-<li><strong>Start with a 120-token baseline</strong>. Measure safety and BLEU. Iterate upward only if compliance gaps persist. </li>
-<li><strong>Use dynamic prompt swapping</strong> for multi-stage workflows to keep prompts short. </li>
+<li><strong>Start with a 120-token baseline</strong>. Measure safety and BLEU. Iterate upward only if compliance gaps persist.</li>
+<li><strong>Use dynamic prompt swapping</strong> for multi-stage workflows to keep prompts short.</li>
 <li><strong>Monitor latency</strong> via APM tools; set an SLA of ≤250ms per response.</li>
 </ol>
 <p>The current state of the art is impressive, but the industry is moving toward adaptive systems.</p>
 
 <h2 id="expert-insights-industry-trends">Expert Insights &amp; Industry Trends</h2>
 <h3 id="interviews-with-anthropic-engineers">Interviews with Anthropic Engineers</h3>
-<p>During the June 2024 “Prompt Engineering for Enterprise” webinar, Anthropic’s research lead highlighted three best practices: </p>
+<p>During the June 2024 “Prompt Engineering for Enterprise” webinar, Anthropic’s research lead highlighted three best practices:</p>
 <ul>
-<li><strong>Prompt Chaining</strong> – Feed system prompts sequentially. The model adopts new roles without losing context. </li>
-<li><strong>Meta-Prompting</strong> – Instruct Claude to “self-audit its responses against system constraints.” This improves adherence by <strong>15%</strong>. </li>
+<li><strong>Prompt Chaining</strong> – Feed system prompts sequentially. The model adopts new roles without losing context.</li>
+<li><strong>Meta-Prompting</strong> – Instruct Claude to “self-audit its responses against system constraints.” This improves adherence by <strong>15%</strong>.</li>
 <li><strong>Token-Weighted Constraints</strong> – Use the <code>token_weight</code> API flag (beta) to assign higher attention to critical rules.</li>
 </ul>
 <h3 id="market-adoption-forecast-2024-2028">Market Adoption Forecast (2024-2028)</h3>
-<p>Gartner (2024) estimates enterprise adoption of system-prompt-driven LLMs will jump from 12% in 2024 to 48% by 2028. </p>
-<p>&gt; <em>“Enterprises that embed system prompts early will achieve a competitive edge in compliance and brand consistency.”</em> </p>
-<p>Finance, healthcare, and legal sectors will drive this growth, accounting for <strong>65%</strong> of the market. </p>
+<p>Gartner (2024) estimates enterprise adoption of system-prompt-driven LLMs will jump from 12% in 2024 to 48% by 2028.</p>
+<p>&gt; <em>“Enterprises that embed system prompts early will achieve a competitive edge in compliance and brand consistency.”</em></p>
+<p>Finance, healthcare, and legal sectors will drive this growth, accounting for <strong>65%</strong> of the market.</p>
 <h3 id="emerging-best-practices">Emerging Best Practices</h3>
 <ul>
-<li><strong>Versioned Prompt Repositories</strong> – Store prompts in Git with semantic versioning. Automate rollout via CI/CD. </li>
+<li><strong>Versioned Prompt Repositories</strong> – Store prompts in Git with semantic versioning. Automate rollout via CI/CD.</li>
 <li><strong>Observability Layers</strong> – Log token usage and correlate it with KPI drift. Trigger alerts when safety violations spike.</li>
 </ul>
 <p>Theory is useless without execution. Here is how to build.</p>
@@ -552,8 +552,8 @@ Adopt a <strong>monthly</strong> review cycle. Collect performance data, run A/B
 <li><strong>Identify Core Attributes</strong></li>
 </ol>
 <ul>
-<li><strong>Tone</strong>: Formal, conversational, technical. </li>
-<li><strong>Expertise</strong>: Years of experience, certifications. </li>
+<li><strong>Tone</strong>: Formal, conversational, technical.</li>
+<li><strong>Expertise</strong>: Years of experience, certifications.</li>
 <li><strong>Vocabulary</strong>: Jargon, acronyms, style guides.</li>
 </ul>
 <ol>
@@ -590,9 +590,9 @@ Cite sources in {CITATION_STYLE}.
 <ul>
 <li><strong>Custom Delimiters</strong>: Use <code>&amp;lt;&amp;lt;&amp;lt;</code> and <code>&amp;gt;&amp;gt;&amp;gt;</code> to isolate sections for parsers.</li>
 </ul>
-<p><strong>Validation Strategies</strong> </p>
+<p><strong>Validation Strategies</strong></p>
 <ul>
-<li><strong>Schema-aware Parsers</strong>: Use <code>jsonschema</code> to validate JSON in real time. </li>
+<li><strong>Schema-aware Parsers</strong>: Use <code>jsonschema</code> to validate JSON in real time.</li>
 <li><strong>Round-Trip Tests</strong>: Serialize the response, deserialize it, and check field types.</li>
 </ul>
 <h3 id="testing-monitoring-and-iteration">Testing, Monitoring, and Iteration</h3>
@@ -600,42 +600,42 @@ Cite sources in {CITATION_STYLE}.
 <li><strong>Automated A/B Testing</strong></li>
 </ol>
 <ul>
-<li>Deploy two variants (A = baseline, B = optimized). </li>
-<li>Route 5% of traffic to B. </li>
+<li>Deploy two variants (A = baseline, B = optimized).</li>
+<li>Route 5% of traffic to B.</li>
 <li>Track BLEU, safety violations, latency, and satisfaction.</li>
 </ul>
 <ol>
 <li><strong>Dashboard Metrics</strong></li>
 </ol>
 <ul>
-<li><strong>Quality Drift</strong>: Alert if BLEU falls &gt;5% from baseline. </li>
-<li><strong>Token Utilization</strong>: Track the percentage of context used by system prompts. </li>
+<li><strong>Quality Drift</strong>: Alert if BLEU falls &gt;5% from baseline.</li>
+<li><strong>Token Utilization</strong>: Track the percentage of context used by system prompts.</li>
 <li><strong>Safety Heatmap</strong>: Map violation types to specific prompt sections.</li>
 </ul>
 <ol>
 <li><strong>Iterative Loop</strong></li>
 </ol>
 <ul>
-<li><strong>Collect</strong> → <strong>Analyze</strong> → <strong>Refine</strong> → <strong>Redeploy</strong>. </li>
+<li><strong>Collect</strong> → <strong>Analyze</strong> → <strong>Refine</strong> → <strong>Redeploy</strong>.</li>
 <li>Review prompts quarterly to align with new regulations.</li>
 </ul>
 
 <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
-<p><strong>1. How do system prompts differ from instruction prompts in Claude?</strong> 
-System prompts set the baseline behavior before any input arrives. Instruction prompts handle a single turn. System prompts provide a consistent foundation that single-turn instructions cannot match. </p>
-<p><strong>2. Can I change a system prompt mid-conversation?</strong> 
-Yes. Send a new <code>system_prompt</code> field with the next request. This consumes tokens, so keep replacements concise and use <code>reset_context</code> if history is too large. </p>
-<p><strong>3. What is the optimal length for a Claude system prompt?</strong> 
-Anthropic (2024) recommends staying under <strong>150 tokens</strong>. This balances control with efficiency and keeps latency low. </p>
-<p><strong>4. Are there security concerns when embedding proprietary data in system prompts?</strong> 
-Yes. Sensitive data can leak or be echoed. Use placeholders (e.g., <code>{API_KEY}</code>) and retrieve values at runtime via encrypted APIs. </p>
-<p><strong>5. How do I measure the <a href="/geopolitics/how-conditions-on-aircraft-carrier-impact-long-sea-tours">impact</a> of a new system prompt?</strong> 
-Build a KPI dashboard for BLEU, safety, latency, and satisfaction. Use A/B testing and statistical analysis (chi-square for safety, t-tests for satisfaction). </p>
-<p><strong>6. Do system prompts work the same across different Claude versions?</strong> 
-The core mechanism is the same. However, Claude 3.5 adds <strong>token-weighting</strong> and <strong>hierarchical prompting</strong>. Update your prompts when upgrading models. </p>
+<p><strong>1. How do system prompts differ from instruction prompts in Claude?</strong>
+System prompts set the baseline behavior before any input arrives. Instruction prompts handle a single turn. System prompts provide a consistent foundation that single-turn instructions cannot match.</p>
+<p><strong>2. Can I change a system prompt mid-conversation?</strong>
+Yes. Send a new <code>system_prompt</code> field with the next request. This consumes tokens, so keep replacements concise and use <code>reset_context</code> if history is too large.</p>
+<p><strong>3. What is the optimal length for a Claude system prompt?</strong>
+Anthropic (2024) recommends staying under <strong>150 tokens</strong>. This balances control with efficiency and keeps latency low.</p>
+<p><strong>4. Are there security concerns when embedding proprietary data in system prompts?</strong>
+Yes. Sensitive data can leak or be echoed. Use placeholders (e.g., <code>{API_KEY}</code>) and retrieve values at runtime via encrypted APIs.</p>
+<p><strong>5. How do I measure the <a href="/geopolitics/how-conditions-on-aircraft-carrier-impact-long-sea-tours">impact</a> of a new system prompt?</strong>
+Build a KPI dashboard for BLEU, safety, latency, and satisfaction. Use A/B testing and statistical analysis (chi-square for safety, t-tests for satisfaction).</p>
+<p><strong>6. Do system prompts work the same across different Claude versions?</strong>
+The core mechanism is the same. However, Claude 3.5 adds <strong>token-weighting</strong> and <strong>hierarchical prompting</strong>. Update your prompts when upgrading models.</p>
 
 <h2 id="conclusion">Conclusion</h2>
-<p>Mastering <strong>Claude system prompts</strong> delivers a measurable boost in quality, safety, and brand alignment. A 27% quality lift and a 42% reduction in tone variance prove that systematic prompt engineering is a strategic imperative. By aligning your design with Claude's architecture and instituting rigorous monitoring, you can maximize output while eliminating risks like bias and token overrun. </p>
+<p>Mastering <strong>Claude system prompts</strong> delivers a measurable boost in quality, safety, and brand alignment. A 27% quality lift and a 42% reduction in tone variance prove that systematic prompt engineering is a strategic imperative. By aligning your design with Claude's architecture and instituting rigorous monitoring, you can maximize output while eliminating risks like bias and token overrun.</p>
 <p><strong>Call to Action</strong>: Download the “System Prompt Blueprint” checklist, integrate these templates into your CI/CD pipeline, and optimize your Claude deployments today.</p>
 
       </div>
@@ -693,7 +693,7 @@ The core mechanism is the same. However, Claude 3.5 adds <strong>token-weighting
     <div class="toc-dot active" data-target="articleTop" title="Top"></div>
     <div class="toc-dot" data-target="introduction-to-system-prompts" title="Introduction to System Pr..."></div>
 <div class="toc-dot" data-target="architecture-of-claudes-prompt-processing" title="Architecture of Claude’s ..."></div>
-<div class="toc-dot" data-target="designing-highimpact-system-prompts" title="Designing High‑Impact Sys..."></div>
+<div class="toc-dot" data-target="designing-high-impact-system-prompts" title="Designing High-Impact Sys..."></div>
 <div class="toc-dot" data-target="quantitative-benefits-and-benchmarks" title="Quantitative Benefits and..."></div>
 <div class="toc-dot" data-target="testing-validation-and-optimization" title="Testing, Validation, and ..."></div>
 <div class="toc-dot" data-target="common-pitfalls-and-mitigation-strategies" title="Common Pitfalls and Mitig..."></div>
@@ -710,6 +710,38 @@ The core mechanism is the same. However, Claude 3.5 adds <strong>token-weighting
   </nav>
 
   
+
+  <!-- Back to top. Articles run to several thousand words; on a phone that is a long scroll
+       to get back to the navigation. Rendered as a <button> rather than an <a href="#top">
+       so it never adds a history entry or changes the URL, and it is keyboard reachable. -->
+  <button type="button" class="qm-to-top" id="qm-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  </button>
+  <script>
+    (function () {
+      var btn = document.getElementById('qm-to-top');
+      if (!btn) return;
+      // Appear only once the reader is far enough down to want it.
+      var SHOW_AFTER = 600;
+      var ticking = false;
+      function sync() {
+        btn.classList.toggle('is-visible', window.scrollY > SHOW_AFTER);
+        ticking = false;
+      }
+      window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; window.requestAnimationFrame(sync); }
+      }, { passive: true });
+      btn.addEventListener('click', function () {
+        // Respect a reader who has asked the OS for less motion.
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+        var first = document.querySelector('a.skip-link, h1');
+        if (first && first.focus) first.focus({ preventScroll: true });
+      });
+      sync();
+    })();
+  </script>
+
   <!-- ─── FOOTER ─── -->
   <footer class="footer" role="contentinfo">
     <div class="footer-inner">
@@ -725,7 +757,7 @@ The core mechanism is the same. However, Claude 3.5 adds <strong>token-weighting
         <div>
           <div class="footer-col-h">Topics</div>
           <ul class="footer-links" role="list">
-            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=cybersecurity">cybersecurity</a></li><li><a href="/tech/search.html?q=border%20security">border security</a></li><li><a href="/tech/search.html?q=meta">meta</a></li><li><a href="/tech/search.html?q=cicd">cicd</a></li>
+            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=cybersecurity">cybersecurity</a></li><li><a href="/tech/search.html?q=border%20security">border security</a></li><li><a href="/tech/search.html?q=meta">meta</a></li><li><a href="/tech/search.html?q=data%20privacy">data privacy</a></li>
           </ul>
         </div>
         <div>
@@ -780,7 +812,7 @@ The core mechanism is the same. However, Claude 3.5 adds <strong>token-weighting
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
         </div>
         <h3 id="modalTitle" class="newsletter-h" style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; font-family: var(--font-display); color: var(--ink);">Subscribe to Quillmatick</h3>
-        <p class="newsletter-p" style="font-size: 14px; color: var(--ink3); line-height: 1.5; margin-bottom: 1.5rem;">Get the weekly briefing on AI and technology. Free forever, unsubscribe anytime.</p>
+        <p class="newsletter-p" style="font-size: 14px; color: var(--ink3); line-height: 1.5; margin-bottom: 1.5rem;">Get the weekly briefing on tech and geopolitics. Free forever, unsubscribe anytime.</p>
         <form class="newsletter-form" onsubmit="window.__qmSubscribe && window.__qmSubscribe(event, this)">
           <input class="newsletter-input" type="email" placeholder="Your email address" required aria-label="Email address" style="margin-bottom: 1rem; width: 100%; box-sizing: border-box;" />
           <div class="qm-hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
@@ -1408,7 +1440,7 @@ The core mechanism is the same. However, Claude 3.5 adds <strong>token-weighting
     });
 
     /* Highlight active dot based on scroll */
-    const sections = ['articleTop', 'introduction-to-system-prompts', 'architecture-of-claudes-prompt-processing', 'designing-highimpact-system-prompts', 'quantitative-benefits-and-benchmarks', 'testing-validation-and-optimization', 'common-pitfalls-and-mitigation-strategies', 'toolkits-templates-and-resources', 'frequently-asked-questions', 'how-claude-system-prompts-work-a-deep-dive', 'key-benefits-real-world-applications', 'challenges-risks-how-to-overcome-them', 'detailed-analysis-comparative-data', 'expert-insights-industry-trends', 'practical-tips-best-practices', 'frequently-asked-questions', 'conclusion'];
+    const sections = ['articleTop', 'introduction-to-system-prompts', 'architecture-of-claudes-prompt-processing', 'designing-high-impact-system-prompts', 'quantitative-benefits-and-benchmarks', 'testing-validation-and-optimization', 'common-pitfalls-and-mitigation-strategies', 'toolkits-templates-and-resources', 'frequently-asked-questions', 'how-claude-system-prompts-work-a-deep-dive', 'key-benefits-real-world-applications', 'challenges-risks-how-to-overcome-them', 'detailed-analysis-comparative-data', 'expert-insights-industry-trends', 'practical-tips-best-practices', 'frequently-asked-questions', 'conclusion'];
     window.addEventListener('scroll', () => {
       let active = 0;
       sections.forEach((id, i) => {

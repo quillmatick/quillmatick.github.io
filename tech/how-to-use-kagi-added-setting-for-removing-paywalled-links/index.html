@@ -46,7 +46,7 @@
 <meta name="author" content="Quillmatick Staff" />
   <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  <link rel="stylesheet" href="/tech/style.css?v=1787451576335" />
+  <link rel="stylesheet" href="/tech/style.css?v=1787469101870" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
@@ -148,66 +148,66 @@
         <h2 id="introduction-to-paywall-challenges">Introduction to Paywall Challenges</h2>
 <h3 id="market-landscape">Market Landscape</h3>
 <ul>
-<li><strong>Statista</strong> reports that <strong>45 %</strong> of the top‑10 organic results on major search engines sit behind paywalls. </li>
-<li><strong>Nielsen Norman Group</strong> finds that paywalls cut click‑through rates (CTR) by <strong>28 %</strong> and increase search abandonment by <strong>17 %</strong>. </li>
-<li>Consequently, users encounter “sign‑up required” screens at least three times per session on average.</li>
+<li><strong>Statista</strong> reports that <strong>45%</strong> of the top-10 organic results on major search engines sit behind paywalls.</li>
+<li><strong>Nielsen Norman Group</strong> finds that paywalls cut click-through rates (CTR) by <strong>28%</strong> and increase search abandonment by <strong>17%</strong>.</li>
+<li>Consequently, users encounter “sign-up required” screens at least three times per session on average.</li>
 </ul>
 <h3 id="impact-on-user-experience">Impact on User Experience</h3>
 <ul>
-<li>Users lose trust when they cannot access promised content. </li>
-<li>Therefore, bounce rates climb and dwell time shrinks. </li>
+<li>Users lose trust when they cannot access promised content.</li>
+<li>Therefore, bounce rates climb and dwell time shrinks.</li>
 <li>Moreover, institutional subscribers experience no benefit, while casual browsers face dead ends.</li>
 </ul>
 <h3 id="seo-implications">SEO Implications</h3>
 <ul>
-<li>Google’s Search Quality Evaluator Guidelines label inaccessible results as low relevance. </li>
-<li>Hence, sites that appear behind paywalls dilute overall SERP quality. </li>
-<li>Additionally, open‑access pages gain higher rankings because they satisfy user intent faster.</li>
+<li>Google’s Search Quality Evaluator Guidelines label inaccessible results as low relevance.</li>
+<li>Hence, sites that appear behind paywalls dilute overall SERP quality.</li>
+<li>Additionally, open-access pages gain higher rankings because they satisfy user intent faster.</li>
 </ul>
 <h2 id="understanding-kagis-paywall-removal-setting">Understanding Kagi’s Paywall Removal Setting</h2>
 <h3 id="core-functionality">Core Functionality</h3>
 <ul>
-<li><strong>Kagi</strong> activates a server‑side filter that flags URLs identified as paywalled. </li>
-<li>The filter removes flagged results before SERPs are rendered. </li>
+<li><strong>Kagi</strong> activates a server-side filter that flags URLs identified as paywalled.</li>
+<li>The filter removes flagged results before SERPs are rendered.</li>
 <li>As a result, users see only freely accessible links, improving perceived relevance instantly.</li>
 </ul>
-<h3 id="serverside-detection-pipeline">Server‑Side Detection Pipeline</h3>
+<h3 id="server-side-detection-pipeline">Server-Side Detection Pipeline</h3>
 <ul>
-<li>The pipeline intercepts each query at the edge node. </li>
-<li>It forwards the URL list to a <strong>machine‑learning (ML) classifier</strong> trained on millions of paywall patterns. </li>
+<li>The pipeline intercepts each query at the edge node.</li>
+<li>It forwards the URL list to a <strong>machine-learning (ML) classifier</strong> trained on millions of paywall patterns.</li>
 <li>The classifier returns a binary label; Kagi then excludes positive matches from the final response.</li>
 </ul>
 <h3 id="integration-with-advanced-filters">Integration with Advanced Filters</h3>
 <ul>
-<li>Users enable the feature via <strong>Advanced Filters → Added Setting</strong> in the Kagi dashboard. </li>
-<li>The setting works in tandem with existing safe‑search and language filters. </li>
+<li>Users enable the feature via <strong>Advanced Filters → Added Setting</strong> in the Kagi dashboard.</li>
+<li>The setting works in tandem with existing safe-search and language filters.</li>
 <li>Therefore, administrators can stack multiple filters without performance degradation.</li>
 </ul>
 <h2 id="technical-architecture-and-data-flow">Technical Architecture and Data Flow</h2>
 <h3 id="query-lifecycle">Query Lifecycle</h3>
 <ol>
-<li><strong>User submits query</strong> → edge node receives request. </li>
-<li><strong>Pre‑filter stage</strong> applies language, location, and safe‑search rules. </li>
-<li><strong>Paywall detection stage</strong> runs the ML classifier on each candidate URL. </li>
-<li><strong>Post‑filter stage</strong> removes flagged URLs and assembles the final SERP.</li>
+<li><strong>User submits query</strong> → edge node receives request.</li>
+<li><strong>Pre-filter stage</strong> applies language, location, and safe-search rules.</li>
+<li><strong>Paywall detection stage</strong> runs the ML classifier on each candidate URL.</li>
+<li><strong>Post-filter stage</strong> removes flagged URLs and assembles the final SERP.</li>
 </ol>
-<h3 id="machinelearning-classifier">Machine‑Learning Classifier</h3>
+<h3 id="machine-learning-classifier">Machine-Learning Classifier</h3>
 <ul>
-<li>The classifier uses a <strong>hybrid model</strong>: a convolutional neural network for HTML pattern recognition plus a gradient‑boosted tree for domain reputation scoring. </li>
-<li>Training data includes over <strong>12 M</strong> labeled URLs from news, academic, and niche publishers. </li>
-<li>Consequently, false‑positive rates stay below <strong>2 %</strong> when default thresholds are applied.</li>
+<li>The classifier uses a <strong>hybrid model</strong>: a convolutional neural network for HTML pattern recognition plus a gradient-boosted tree for domain reputation scoring.</li>
+<li>Training data includes over <strong>12 M</strong> labeled URLs from news, academic, and niche publishers.</li>
+<li>Consequently, false-positive rates stay below <strong>2%</strong> when default thresholds are applied.</li>
 </ul>
 <h3 id="api-exportimport-mechanics">API Export/Import Mechanics</h3>
 <ul>
-<li>Kagi provides a <strong>RESTful endpoint</strong> (<code>/v1/paywall/filters</code>) that returns whitelist and blacklist JSON objects. </li>
-<li>The API supports <strong>GET</strong> for retrieval and <strong>POST</strong> for bulk updates. </li>
+<li>Kagi provides a <strong>RESTful endpoint</strong> (<code>/v1/paywall/filters</code>) that returns whitelist and blacklist JSON objects.</li>
+<li>The API supports <strong>GET</strong> for retrieval and <strong>POST</strong> for bulk updates.</li>
 <li>Therefore, organizations can synchronize filter lists across multiple environments automatically.</li>
 </ul>
 <h2 id="configuring-whitelists-and-blacklists">Configuring Whitelists and Blacklists</h2>
-<h3 id="bestpractice-domain-selection">Best‑Practice Domain Selection</h3>
+<h3 id="best-practice-domain-selection">Best-Practice Domain Selection</h3>
 <ul>
-<li><strong>Whitelist</strong> domains you intentionally want to keep, such as institutional subscriptions (e.g., <code>nytimes.com</code>, <code>medium.com</code>). </li>
-<li><strong>Blacklist</strong> domains that consistently block content without offering a free preview. </li>
+<li><strong>Whitelist</strong> domains you intentionally want to keep, such as institutional subscriptions (e.g., <code>nytimes.com</code>, <code>medium.com</code>).</li>
+<li><strong>Blacklist</strong> domains that consistently block content without offering a free preview.</li>
 <li>Additionally, review domain lists quarterly to capture new paywall entrants.</li>
 </ul>
 <h3 id="json-structure-example">JSON Structure Example</h3>
@@ -225,26 +225,26 @@
 }
 </code></pre>
 <ul>
-<li>The JSON file can be stored in a version‑controlled repository. </li>
+<li>The JSON file can be stored in a version-controlled repository.</li>
 <li>Consequently, any change triggers a CI/CD pipeline that pushes updates to Kagi via the API.</li>
 </ul>
 <h3 id="automation-via-configuration-management">Automation via Configuration Management</h3>
 <ul>
-<li><strong>Ansible</strong>: use the <code>uri</code> module to POST the JSON to Kagi’s endpoint. </li>
-<li><strong>Terraform</strong>: define a <code>kagi_paywall_filter</code> resource that references a remote file. </li>
+<li><strong>Ansible</strong>: use the <code>uri</code> module to POST the JSON to Kagi’s endpoint.</li>
+<li><strong>Terraform</strong>: define a <code>kagi_paywall_filter</code> resource that references a remote file.</li>
 <li>Therefore, all employee devices inherit identical filter settings without manual intervention.</li>
 </ul>
 <h2 id="monitoring-performance-and-accuracy">Monitoring Performance and Accuracy</h2>
-<h3 id="realtime-analytics-dashboard">Real‑Time Analytics Dashboard</h3>
+<h3 id="real-time-analytics-dashboard">Real-Time Analytics Dashboard</h3>
 <ul>
-<li>The dashboard displays <strong>total queries</strong>, <strong>filtered results</strong>, and <strong>false‑positive ratio</strong> per hour. </li>
-<li>Alerts trigger when the false‑positive ratio exceeds <strong>2 %</strong> of total filtered results. </li>
+<li>The dashboard displays <strong>total queries</strong>, <strong>filtered results</strong>, and <strong>false-positive ratio</strong> per hour.</li>
+<li>Alerts trigger when the false-positive ratio exceeds <strong>2%</strong> of total filtered results.</li>
 <li>Consequently, teams can react before user experience degrades.</li>
 </ul>
 <h3 id="alert-thresholds-and-tuning">Alert Thresholds and Tuning</h3>
 <ul>
-<li>Set a <strong>warning threshold</strong> at 1.5 % and a <strong>critical threshold</strong> at 2 %. </li>
-<li>When warnings fire, adjust the ML classifier’s confidence threshold by <strong>+0.05</strong> increments. </li>
+<li>Set a <strong>warning threshold</strong> at 1.5% and a <strong>critical threshold</strong> at 2%.</li>
+<li>When warnings fire, adjust the ML classifier’s confidence threshold by <strong>+0.05</strong> increments.</li>
 <li>Additionally, refine domain lists to address outliers identified in the alert log.</li>
 </ul>
 <h3 id="kpi-dashboard-sample">KPI Dashboard Sample</h3>
@@ -258,34 +258,34 @@
 </thead>
 <tbody><tr>
 <td>Filtered Queries %</td>
-<td>18 %</td>
-<td>≤ 20 %</td>
+<td>18%</td>
+<td>≤ 20%</td>
 </tr>
 <tr>
-<td>False‑Positive Rate %</td>
-<td>1.3 %</td>
-<td>≤ 2 %</td>
+<td>False-Positive Rate %</td>
+<td>1.3%</td>
+<td>≤ 2%</td>
 </tr>
 <tr>
-<td>Bounce‑Rate Reduction %</td>
-<td>12 %</td>
-<td>≥ 10 %</td>
+<td>Bounce-Rate Reduction %</td>
+<td>12%</td>
+<td>≥ 10%</td>
 </tr>
 <tr>
 <td>CTR Increase %</td>
-<td>9 %</td>
-<td>≥ 8 %</td>
+<td>9%</td>
+<td>≥ 8%</td>
 </tr>
 </tbody></table>
 <ul>
-<li>The table helps stakeholders visualize impact quickly. </li>
+<li>The table helps stakeholders visualize impact quickly.</li>
 <li>Therefore, marketing, product, and compliance teams can align on shared goals.</li>
 </ul>
 <h2 id="enterprise-deployment-strategies">Enterprise Deployment Strategies</h2>
 <h3 id="centralized-policy-enforcement">Centralized Policy Enforcement</h3>
 <ul>
-<li>Export the JSON filter file from a <strong>master Kagi instance</strong>. </li>
-<li>Distribute it via a <strong>configuration management database (CMDB)</strong>. </li>
+<li>Export the JSON filter file from a <strong>master Kagi instance</strong>.</li>
+<li>Distribute it via a <strong>configuration management database (CMDB)</strong>.</li>
 <li>Consequently, every branch office receives identical policies without drift.</li>
 </ul>
 <h3 id="integration-with-ansible-and-terraform">Integration with Ansible and Terraform</h3>
@@ -311,44 +311,44 @@
 <ul>
 <li>Both tools ensure <strong>idempotent</strong> deployments, reducing manual error.</li>
 </ul>
-<h3 id="crossdevice-consistency">Cross‑Device Consistency</h3>
+<h3 id="cross-device-consistency">Cross-Device Consistency</h3>
 <ul>
-<li>Deploy the filter list to <strong>desktop browsers</strong>, <strong>mobile apps</strong>, and <strong>internal search portals</strong>. </li>
-<li>Therefore, users experience uniform SERPs regardless of device. </li>
-<li>Additionally, log device‑specific metrics to detect platform‑specific anomalies.</li>
+<li>Deploy the filter list to <strong>desktop browsers</strong>, <strong>mobile apps</strong>, and <strong>internal search portals</strong>.</li>
+<li>Therefore, users experience uniform SERPs regardless of device.</li>
+<li>Additionally, log device-specific metrics to detect platform-specific anomalies.</li>
 </ul>
 <h2 id="seo-benefits-and-business-impact">SEO Benefits and Business Impact</h2>
-<h3 id="bouncerate-reduction">Bounce‑Rate Reduction</h3>
+<h3 id="bounce-rate-reduction">Bounce-Rate Reduction</h3>
 <ul>
-<li>Removing paywalled links lowers the chance that users encounter a dead end. </li>
-<li>Consequently, average session duration rises by <strong>15 %</strong> in pilot studies.</li>
+<li>Removing paywalled links lowers the chance that users encounter a dead end.</li>
+<li>Consequently, average session duration rises by <strong>15%</strong> in pilot studies.</li>
 </ul>
-<h3 id="clickthrough-rate-gains">Click‑Through Rate Gains</h3>
+<h3 id="click-through-rate-gains">Click-Through Rate Gains</h3>
 <ul>
-<li>Freely accessible results receive higher organic CTR. </li>
-<li>In a controlled experiment, CTR improved from <strong>3.2 %</strong> to <strong>4.5 %</strong> after enabling the filter.</li>
+<li>Freely accessible results receive higher organic CTR.</li>
+<li>In a controlled experiment, CTR improved from <strong>3.2%</strong> to <strong>4.5%</strong> after enabling the filter.</li>
 </ul>
 <h3 id="content-strategy-alignment">Content Strategy Alignment</h3>
 <ul>
-<li>Analytics reveal which topics generate the most unfiltered traffic. </li>
-<li>Therefore, editorial teams can prioritize open‑access content in those areas. </li>
-<li>Moreover, the data informs link‑building outreach by highlighting high‑performing domains.</li>
+<li>Analytics reveal which topics generate the most unfiltered traffic.</li>
+<li>Therefore, editorial teams can prioritize open-access content in those areas.</li>
+<li>Moreover, the data informs link-building outreach by highlighting high-performing domains.</li>
 </ul>
 <h2 id="legal-ethical-and-compliance-considerations">Legal, Ethical, and Compliance Considerations</h2>
 <h3 id="regional-regulations-overview">Regional Regulations Overview</h3>
 <ul>
-<li>The <strong>EU Digital Services Act</strong> requires transparent content moderation. </li>
+<li>The <strong>EU Digital Services Act</strong> requires transparent content moderation.</li>
 <li>Consequently, organizations must document filtering criteria and provide appeal mechanisms.</li>
 </ul>
 <h3 id="copyright-risks">Copyright Risks</h3>
 <ul>
-<li>Filtering does not alter the underlying copyrighted material; it merely omits it from the SERP. </li>
-<li>However, indiscriminate blacklisting may violate fair‑use provisions in some jurisdictions.</li>
+<li>Filtering does not alter the underlying copyrighted material; it merely omits it from the SERP.</li>
+<li>However, indiscriminate blacklisting may violate fair-use provisions in some jurisdictions.</li>
 </ul>
 <h3 id="ongoing-review-process">Ongoing Review Process</h3>
 <ul>
-<li>Schedule a <strong>quarterly compliance audit</strong> that cross‑checks filter lists against regional law updates. </li>
-<li>Use a <strong>change‑log</strong> to record additions, removals, and rationale. </li>
+<li>Schedule a <strong>quarterly compliance audit</strong> that cross-checks filter lists against regional law updates.</li>
+<li>Use a <strong>change-log</strong> to record additions, removals, and rationale.</li>
 <li>Therefore, legal teams maintain a defensible position if challenges arise.</li>
 </ul>
 <h2 id="comparative-analysis-kagi-vs-competitors">Comparative Analysis: Kagi vs. Competitors</h2>
@@ -363,13 +363,13 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>Server‑Side Paywall Filter</td>
+<td>Server-Side Paywall Filter</td>
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
-<td>Real‑Time Analytics</td>
+<td>Real-Time Analytics</td>
 <td>✅</td>
 <td>✅*</td>
 <td>❌</td>
@@ -381,7 +381,7 @@
 <td>❌</td>
 </tr>
 <tr>
-<td>Open‑Source ML Model</td>
+<td>Open-Source ML Model</td>
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
@@ -393,80 +393,80 @@
 <td>❌</td>
 </tr>
 </tbody></table>
-<p>* Available only to enterprise customers. </p>
+<p>* Available only to enterprise customers.</p>
 <h3 id="performance-benchmarks">Performance Benchmarks</h3>
 <ul>
-<li><strong>Latency</strong>: Kagi adds <strong>≈ 45 ms</strong> per query, while client‑side extensions add <strong>≈ 120 ms</strong>. </li>
-<li><strong>Accuracy</strong>: Kagi’s classifier achieves <strong>98 %</strong> precision versus <strong>85 %</strong> for heuristic‑based filters used by competitors.</li>
+<li><strong>Latency</strong>: Kagi adds <strong>≈ 45 ms</strong> per query, while client-side extensions add <strong>≈ 120 ms</strong>.</li>
+<li><strong>Accuracy</strong>: Kagi’s classifier achieves <strong>98%</strong> precision versus <strong>85%</strong> for heuristic-based filters used by competitors.</li>
 </ul>
 <h3 id="cost-efficiency">Cost Efficiency</h3>
 <ul>
-<li>Kagi charges a flat <strong>$9 / month</strong> per user, inclusive of the paywall filter. </li>
-<li>Google Cloud’s custom solution averages <strong>$0.02 / 1,000 queries</strong> plus engineering overhead. </li>
-<li>Consequently, mid‑size firms save up to <strong>30 %</strong> annually by adopting Kagi.</li>
+<li>Kagi charges a flat <strong>$9 / month</strong> per user, inclusive of the paywall filter.</li>
+<li>Google Cloud’s custom solution averages <strong>$0.02 / 1,000 queries</strong> plus engineering overhead.</li>
+<li>Consequently, mid-size firms save up to <strong>30%</strong> annually by adopting Kagi.</li>
 </ul>
-<h2 id="future-trends-in-openaccess-search">Future Trends in Open‑Access Search</h2>
-<h3 id="aidriven-content-classification">AI‑Driven Content Classification</h3>
+<h2 id="future-trends-in-open-access-search">Future Trends in Open-Access Search</h2>
+<h3 id="ai-driven-content-classification">AI-Driven Content Classification</h3>
 <ul>
-<li>Emerging models can detect paywalls from <strong>visual cues</strong> (e.g., overlay dialogs) without parsing HTML. </li>
-<li>Therefore, next‑generation filters will reduce false positives further.</li>
+<li>Emerging models can detect paywalls from <strong>visual cues</strong> (e.g., overlay dialogs) without parsing HTML.</li>
+<li>Therefore, next-generation filters will reduce false positives further.</li>
 </ul>
 <h3 id="industry-initiatives">Industry Initiatives</h3>
 <ul>
-<li>The <strong>Open Access Alliance</strong> advocates for mandatory open‑access metadata in search APIs. </li>
+<li>The <strong>Open Access Alliance</strong> advocates for mandatory open-access metadata in search APIs.</li>
 <li>Kagi participates as a founding member, influencing standards that favor transparent filtering.</li>
 </ul>
 <h3 id="anticipated-regulatory-shifts">Anticipated Regulatory Shifts</h3>
 <ul>
-<li>The <strong>U.S. Senate</strong> is reviewing a bill that would require search engines to label paywalled results explicitly. </li>
-<li>Consequently, early adopters of server‑side removal will enjoy a competitive edge when regulations tighten.</li>
+<li>The <strong>U.S. Senate</strong> is reviewing a bill that would require search engines to label paywalled results explicitly.</li>
+<li>Consequently, early adopters of server-side removal will enjoy a competitive edge when regulations tighten.</li>
 </ul>
-<h2 id="stepbystep-implementation-guide">Step‑By‑Step Implementation Guide</h2>
+<h2 id="step-by-step-implementation-guide">Step-By-Step Implementation Guide</h2>
 <h3 id="activation-checklist">Activation Checklist</h3>
 <ul>
-<li>☐ Log into the Kagi dashboard. </li>
-<li>☐ Navigate to <strong>Advanced Filters → Added Setting</strong>. </li>
-<li>☐ Toggle the <strong>Paywall Removal</strong> switch to <strong>On</strong>. </li>
+<li>☐ Log into the Kagi dashboard.</li>
+<li>☐ Navigate to <strong>Advanced Filters → Added Setting</strong>.</li>
+<li>☐ Toggle the <strong>Paywall Removal</strong> switch to <strong>On</strong>.</li>
 <li>☐ Save changes and verify status indicator turns green.</li>
 </ul>
 <h3 id="customization-workflow">Customization Workflow</h3>
 <ol>
-<li><strong>Export</strong> the default whitelist/blacklist via the API. </li>
-<li><strong>Edit</strong> the JSON file to reflect organizational needs. </li>
-<li><strong>Validate</strong> the JSON schema using the provided validator endpoint. </li>
-<li><strong>Import</strong> the updated file back into Kagi. </li>
+<li><strong>Export</strong> the default whitelist/blacklist via the API.</li>
+<li><strong>Edit</strong> the JSON file to reflect organizational needs.</li>
+<li><strong>Validate</strong> the JSON schema using the provided validator endpoint.</li>
+<li><strong>Import</strong> the updated file back into Kagi.</li>
 <li><strong>Run</strong> a test query set and review the analytics dashboard for anomalies.</li>
 </ol>
 <h3 id="maintenance-routine">Maintenance Routine</h3>
 <ul>
-<li>Weekly: Review alert logs and adjust classifier thresholds if needed. </li>
-<li>Monthly: Sync filter lists with the central CMDB. </li>
+<li>Weekly: Review alert logs and adjust classifier thresholds if needed.</li>
+<li>Monthly: Sync filter lists with the central CMDB.</li>
 <li>Quarterly: Conduct a compliance audit and update legal documentation.</li>
 </ul>
 <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
-<p><strong>1. Does the paywall removal setting affect search relevance?</strong> 
-Yes. By eliminating inaccessible results, Kagi surfaces alternatives that satisfy user intent, thereby improving relevance scores. However, the algorithm still respects topical relevance, so overall SERP quality remains high. </p>
-<p><strong>2. Can I whitelist a paywalled domain for specific users?</strong> 
-Absolutely. The whitelist accepts domain entries on a per‑user or per‑group basis via the API. Consequently, you can grant researchers access while keeping the filter active for the broader audience. </p>
-<p><strong>3. How does Kagi handle dynamic paywalls that appear after JavaScript execution?</strong> 
-Kagi’s server‑side pipeline renders pages with a headless browser before classification. Therefore, it detects JavaScript‑generated paywalls with the same accuracy as static HTML patterns. </p>
-<p><strong>4. What is the impact on query latency?</strong> 
-The additional processing adds roughly <strong>45 ms</strong> per query, which is negligible compared to typical network latency. Moreover, the latency reduction from fewer page loads often offsets this overhead. </p>
-<p><strong>5. Is the ML classifier continuously updated?</strong> 
-Yes. Kagi retrains the model weekly using fresh labeled data from global traffic. Consequently, the system adapts to new paywall tactics without manual intervention. </p>
-<p><strong>6. How do I ensure compliance with the EU Digital Services Act?</strong> 
-Maintain a transparent change‑log for all whitelist/blacklist modifications, provide an opt‑out mechanism for affected users, and conduct quarterly legal reviews. Following these steps satisfies the Act’s transparency and accountability requirements.</p>
-<p>By the end of this guide, you will have a data-driven framework for deploying this setting across your personal and professional workflows. </p>
+<p><strong>1. Does the paywall removal setting affect search relevance?</strong>
+Yes. By eliminating inaccessible results, Kagi surfaces alternatives that satisfy user intent, thereby improving relevance scores. However, the algorithm still respects topical relevance, so overall SERP quality remains high.</p>
+<p><strong>2. Can I whitelist a paywalled domain for specific users?</strong>
+Absolutely. The whitelist accepts domain entries on a per-user or per-group basis via the API. Consequently, you can grant researchers access while keeping the filter active for the broader audience.</p>
+<p><strong>3. How does Kagi handle dynamic paywalls that appear after JavaScript execution?</strong>
+Kagi’s server-side pipeline renders pages with a headless browser before classification. Therefore, it detects JavaScript-generated paywalls with the same accuracy as static HTML patterns.</p>
+<p><strong>4. What is the impact on query latency?</strong>
+The additional processing adds roughly <strong>45 ms</strong> per query, which is negligible compared to typical network latency. Moreover, the latency reduction from fewer page loads often offsets this overhead.</p>
+<p><strong>5. Is the ML classifier continuously updated?</strong>
+Yes. Kagi retrains the model weekly using fresh labeled data from global traffic. Consequently, the system adapts to new paywall tactics without manual intervention.</p>
+<p><strong>6. How do I ensure compliance with the EU Digital Services Act?</strong>
+Maintain a transparent change-log for all whitelist/blacklist modifications, provide an opt-out mechanism for affected users, and conduct quarterly legal reviews. Following these steps satisfies the Act’s transparency and accountability requirements.</p>
+<p>By the end of this guide, you will have a data-driven framework for deploying this setting across your personal and professional workflows.</p>
 
 <h2 id="understanding-the-kagi-added-setting">Understanding the Kagi Added Setting</h2>
 <h3 id="what-is-the-added-setting-in-kagi">What Is the “Added Setting” in Kagi?</h3>
-<p>Located in the Advanced Filters panel, this toggle activates a backend <strong>paywall-detection pipeline</strong>. While standard filters block malware or adult content, this setting employs a <strong>machine-learning classifier</strong> trained on millions of labeled URLs. </p>
+<p>Located in the Advanced Filters panel, this toggle activates a backend <strong>paywall-detection pipeline</strong>. While standard filters block malware or adult content, this setting employs a <strong>machine-learning classifier</strong> trained on millions of labeled URLs.</p>
 <ul>
-<li><strong>Server-side execution</strong> ensures consistency across all your devices. </li>
-<li><strong>Real-time classification</strong> catches new paywalled domains seconds after discovery. </li>
+<li><strong>Server-side execution</strong> ensures consistency across all your devices.</li>
+<li><strong>Real-time classification</strong> catches new paywalled domains seconds after discovery.</li>
 <li><strong>Granular control</strong> lets you whitelist your paid subscriptions while blocking everything else.</li>
 </ul>
-<p><strong>Kagi’s 2023 technical whitepaper</strong> notes that the <a href="/tech/why-does-opus-feel-worse-to-work-with-a-complete-guide">system</a> processes roughly <strong>1.2 billion queries per month</strong>. The infrastructure scales without lagging. </p>
+<p><strong>Kagi’s 2023 technical whitepaper</strong> notes that the <a href="/tech/why-does-opus-feel-worse-to-work-with-a-complete-guide">system</a> processes roughly <strong>1.2 billion queries per month</strong>. The infrastructure scales without lagging.</p>
 <h3 id="core-terminology">Core Terminology</h3>
 <table>
 <thead>
@@ -497,53 +497,53 @@ Maintain a transparent change‑log for all whitelist/blacklist modifications, p
 </tr>
 </tbody></table>
 <h3 id="why-paywalls-matter-for-seo">Why Paywalls Matter for SEO</h3>
-<p>Paywalls tank core SEO metrics. </p>
+<p>Paywalls tank core SEO metrics.</p>
 <ol>
-<li><strong>Click-through rate (CTR)</strong> – Users ignore results with lock icons. <strong>Search Engine Journal</strong> notes CTR drops of <strong>15-30%</strong> for paywalled entries. </li>
-<li><strong>Bounce rate</strong> – A user hitting a paywall bounces immediately. Google may interpret this as a lack of relevance. </li>
+<li><strong>Click-through rate (CTR)</strong> – Users ignore results with lock icons. <strong>Search Engine Journal</strong> notes CTR drops of <strong>15-30%</strong> for paywalled entries.</li>
+<li><strong>Bounce rate</strong> – A user hitting a paywall bounces immediately. Google may interpret this as a lack of relevance.</li>
 <li><strong>Dwell time</strong> – Time on site plummets when the content is locked.</li>
 </ol>
-<p>Removing these links doesn't just clean up your screen; it highlights the sites that actually provide value. </p>
+<p>Removing these links doesn't just clean up your screen; it highlights the sites that actually provide value.</p>
 
 <h2 id="how-the-setting-works-a-deep-dive">How the Setting Works: A Deep Dive</h2>
-<p>If the user experience is the "what," the architecture is the "how." Kagi doesn't guess; it calculates. </p>
+<p>If the user experience is the "what," the architecture is the "how." Kagi doesn't guess; it calculates.</p>
 <h3 id="underlying-algorithms">Underlying Algorithms</h3>
-<p>The system uses a <strong>two-stage ensemble model</strong>: </p>
+<p>The system uses a <strong>two-stage ensemble model</strong>:</p>
 <ul>
-<li><strong>Stage 1: URL pattern classifier</strong> – An XGBoost (gradient-boosted tree) model evaluates lexical markers like “/subscribe” or “/paywall.” </li>
+<li><strong>Stage 1: URL pattern classifier</strong> – An XGBoost (gradient-boosted tree) model evaluates lexical markers like “/subscribe” or “/paywall.”</li>
 <li><strong>Stage 2: Content-signal analyzer</strong> – A BERT-lite transformer scans the first 500 bytes of HTML for paywall-specific meta tags and JavaScript modals.</li>
 </ul>
-<p>Kagi uses a confidence threshold of <strong>0.78</strong> to balance precision and recall. The model retrains weekly using the <strong>MIT Media Lab’s “Open Web Paywall Study” (2022)</strong> dataset of <strong>10,000+</strong> labeled URLs. </p>
+<p>Kagi uses a confidence threshold of <strong>0.78</strong> to balance precision and recall. The model retrains weekly using the <strong>MIT Media Lab’s “Open Web Paywall Study” (2022)</strong> dataset of <strong>10,000+</strong> labeled URLs.</p>
 <h3 id="data-sources-signals">Data Sources &amp; Signals</h3>
-<p>The pipeline aggregates several high-intent signals: </p>
+<p>The pipeline aggregates several high-intent signals:</p>
 <ul>
-<li><strong>Robots.txt directives</strong> – Many paywalled sites use <code>Disallow: /</code> to hide from crawlers. </li>
-<li><strong>HTTP response codes</strong> – The rare but definitive 402 “Payment Required” status. </li>
-<li><strong>Schema.org markup</strong> – The <code>isAccessibleForFree: false</code> tag. </li>
+<li><strong>Robots.txt directives</strong> – Many paywalled sites use <code>Disallow: /</code> to hide from crawlers.</li>
+<li><strong>HTTP response codes</strong> – The rare but definitive 402 “Payment Required” status.</li>
+<li><strong>Schema.org markup</strong> – The <code>isAccessibleForFree: false</code> tag.</li>
 <li><strong>Public databases</strong> – Integration with the <strong>Paywall-API</strong> (Open Access Initiative).</li>
 </ul>
-<p>This multi-layered approach yields a <strong>93% detection accuracy</strong>. </p>
+<p>This multi-layered approach yields a <strong>93% detection accuracy</strong>.</p>
 <h3 id="interaction-with-user-queries">Interaction with User Queries</h3>
-<p>When you search, Kagi executes this sequence: </p>
+<p>When you search, Kagi executes this sequence:</p>
 <ol>
-<li><strong>Query parsing</strong> – The engine extracts intent. </li>
-<li><strong>Initial generation</strong> – A raw list of candidate URLs is retrieved. </li>
-<li><strong>Filter activation</strong> – The pipeline evaluates each URL against the classifier. </li>
-<li><strong>Sanitization</strong> – Paywalled links vanish; whitelisted domains return. </li>
+<li><strong>Query parsing</strong> – The engine extracts intent.</li>
+<li><strong>Initial generation</strong> – A raw list of candidate URLs is retrieved.</li>
+<li><strong>Filter activation</strong> – The pipeline evaluates each URL against the classifier.</li>
+<li><strong>Sanitization</strong> – Paywalled links vanish; whitelisted domains return.</li>
 <li><strong>Rendering</strong> – The cleaned SERP reaches your browser.</li>
 </ol>
-<p><strong>Example:</strong> Search “latest AI research.” Without the setting, you get a mix of open arXiv papers and locked IEEE articles. With it, you see only the pre-prints. Efficiency wins. </p>
+<p><strong>Example:</strong> Search “latest AI research.” Without the setting, you get a mix of open arXiv papers and locked IEEE articles. With it, you see only the pre-prints. Efficiency wins.</p>
 
 <h2 id="key-benefits-real-world-applications">Key Benefits &amp; Real-World Applications</h2>
-<p>Clean results lead to faster workflows. </p>
+<p>Clean results lead to faster workflows.</p>
 <h3 id="improved-user-experience">Improved User Experience</h3>
 <ul>
-<li><strong>Zero friction</strong> – No more "sign-up" walls on the first click. Internal A/B tests show search abandonment dropping from 17% to <strong>9%</strong>. </li>
-<li><strong>Rapid decision-making</strong> – Users evaluate options in <strong>2-3 seconds</strong> instead of waiting for a modal to load. </li>
+<li><strong>Zero friction</strong> – No more "sign-up" walls on the first click. Internal A/B tests show search abandonment dropping from 17% to <strong>9%</strong>.</li>
+<li><strong>Rapid decision-making</strong> – Users evaluate options in <strong>2-3 seconds</strong> instead of waiting for a modal to load.</li>
 <li><strong>Higher satisfaction</strong> – User ratings jumped from <strong>3.6/5</strong> to <strong>4.3/5</strong> post-implementation.</li>
 </ul>
 <h3 id="seo-performance-gains">SEO Performance Gains</h3>
-<p>Data from <strong>Kagi’s SEO Lab (Q3 2023)</strong> proves the impact: </p>
+<p>Data from <strong>Kagi’s SEO Lab (Q3 2023)</strong> proves the impact:</p>
 <table>
 <thead>
 <tr>
@@ -573,39 +573,39 @@ Maintain a transparent change‑log for all whitelist/blacklist modifications, p
 <td>3.0%</td>
 </tr>
 </tbody></table>
-<p>Cleaner SERPs reinforce positive user-behavior signals, which eventually boosts organic rankings. </p>
+<p>Cleaner SERPs reinforce positive user-behavior signals, which eventually boosts organic rankings.</p>
 <h3 id="enterprise-use-cases">Enterprise Use Cases</h3>
 <h4 id="newsrooms">Newsrooms</h4>
-<p>Journalists need open-source references for breaking stories. They activate the filter on shared accounts, whitelist their own subscriptions (e.g., NYT), and blacklist competitors. </p>
+<p>Journalists need open-source references for breaking stories. They activate the filter on shared accounts, whitelist their own subscriptions (e.g., NYT), and blacklist competitors.</p>
 <h4 id="academic-researchers">Academic Researchers</h4>
-<p>Researchers avoid the "institutional login" loop. They pair the filter with a whitelist of open-access repositories like <strong>PubMed Central</strong> and <strong>arXiv</strong>. </p>
+<p>Researchers avoid the "institutional login" loop. They pair the filter with a whitelist of open-access repositories like <strong>PubMed Central</strong> and <strong>arXiv</strong>.</p>
 <h4 id="marketing-teams">Marketing Teams</h4>
-<p>Teams curate competitor analysis without subscription walls skewing sentiment data. They generate clean SERPs and feed them directly into analysis pipelines. </p>
+<p>Teams curate competitor analysis without subscription walls skewing sentiment data. They generate clean SERPs and feed them directly into analysis pipelines.</p>
 
 <h2 id="challenges-risks-mitigation">Challenges, Risks &amp; Mitigation</h2>
-<p>No classifier is perfect. The question is how you handle the errors. </p>
+<p>No classifier is perfect. The question is how you handle the errors.</p>
 <h3 id="false-positives-negatives">False Positives &amp; Negatives</h3>
-<p>A <strong>false positive</strong> hides a free article. A <strong>false negative</strong> lets a paywall slip through. </p>
+<p>A <strong>false positive</strong> hides a free article. A <strong>false negative</strong> lets a paywall slip through.</p>
 <ul>
-<li><strong>Manual whitelisting:</strong> Users can override the filter via the dashboard. </li>
+<li><strong>Manual whitelisting:</strong> Users can override the filter via the dashboard.</li>
 <li><strong>Periodic audits:</strong> Sample <strong>500</strong> results monthly. If the false-positive rate exceeds <strong>2%</strong>, adjust the confidence threshold.</li>
 </ul>
-<p><strong>NIST’s 2022 Guidelines</strong> confirm that combining automation with human review is the gold standard for content classification. </p>
+<p><strong>NIST’s 2022 Guidelines</strong> confirm that combining automation with human review is the gold standard for content classification.</p>
 <h3 id="compatibility-issues">Compatibility Issues</h3>
-<p>Server-side filters rarely clash, but client-side extensions can interfere. </p>
+<p>Server-side filters rarely clash, but client-side extensions can interfere.</p>
 <ul>
-<li><strong>Browser Testing:</strong> Test across Chrome, Firefox, and Safari to ensure the “Remove Paywall” badge renders correctly. </li>
+<li><strong>Browser Testing:</strong> Test across Chrome, Firefox, and Safari to ensure the “Remove Paywall” badge renders correctly.</li>
 <li><strong>Ad-blockers:</strong> Some blockers stop the Kagi script that manages the whitelist UI. Whitelist <code>kagi.com</code> to fix this.</li>
 </ul>
 <h3 id="legal-ethical-considerations">Legal &amp; Ethical Considerations</h3>
-<p>Kagi does not bypass paywalls; it hides the links. It doesn't steal content; it manages visibility. </p>
+<p>Kagi does not bypass paywalls; it hides the links. It doesn't steal content; it manages visibility.</p>
 <ul>
-<li><strong>Compliance:</strong> The system follows the <strong>EU Digital Services Act</strong> by providing transparent filtering info. </li>
+<li><strong>Compliance:</strong> The system follows the <strong>EU Digital Services Act</strong> by providing transparent filtering info.</li>
 <li><strong>Notification:</strong> A subtle banner—“Filtered by Kagi – paywalled content hidden”—keeps the user informed.</li>
 </ul>
 
 <h2 id="detailed-analysis-comparative-data">Detailed Analysis &amp; Comparative Data</h2>
-<p>How does Kagi stack up against the giants? </p>
+<p>How does Kagi stack up against the giants?</p>
 <table>
 <thead>
 <tr>
@@ -646,63 +646,63 @@ Maintain a transparent change‑log for all whitelist/blacklist modifications, p
 <td>Partial</td>
 </tr>
 </tbody></table>
-<p>Kagi wins on accuracy. The <strong>45ms</strong> latency increase is negligible—well under the <strong>200ms</strong> threshold the <strong>W3C</strong> defines as tolerable for interactive apps. </p>
-<p>The <strong>MIT Media Lab (2023)</strong> study of 10,000 queries concluded that Kagi’s filter had the lowest <strong>Mean Average Precision (MAP)</strong> loss. It is the most reliable tool for search hygiene. </p>
+<p>Kagi wins on accuracy. The <strong>45ms</strong> latency increase is negligible—well under the <strong>200ms</strong> threshold the <strong>W3C</strong> defines as tolerable for interactive apps.</p>
+<p>The <strong>MIT Media Lab (2023)</strong> study of 10,000 queries concluded that Kagi’s filter had the lowest <strong>Mean Average Precision (MAP)</strong> loss. It is the most reliable tool for search hygiene.</p>
 
 <h2 id="expert-insights-industry-trends">Expert Insights &amp; Industry Trends</h2>
 <h3 id="the-engineers-view">The Engineer's View</h3>
-<p>Kagi’s lead search <a href="/tech/third-world-engineer-responds-risc-v-and-global-design">engineer</a>, <strong>Dr. Elena García</strong>, told <strong>TechCrunch</strong> that the roadmap includes “integrating blockchain-based provenance data to verify open-access status.” This move aims to future-proof the filter against "stealth" paywalls. </p>
+<p>Kagi’s lead search <a href="/tech/third-world-engineer-responds-risc-v-and-global-design">engineer</a>, <strong>Dr. Elena García</strong>, told <strong>TechCrunch</strong> that the roadmap includes “integrating blockchain-based provenance data to verify open-access status.” This move aims to future-proof the filter against "stealth" paywalls.</p>
 <h3 id="emerging-trends">Emerging Trends</h3>
 <ol>
-<li><strong>AI-driven summaries</strong> – Generative models are rewriting paywalled content into summaries. This may force search engines to adopt even stricter filters to avoid copyright disputes. </li>
-<li><strong>Regulatory pressure</strong> – The <strong>EU Digital Services Act</strong> demands transparent moderation. Kagi’s filter banner and user-controlled whitelists make it a compliant leader. </li>
+<li><strong>AI-driven summaries</strong> – Generative models are rewriting paywalled content into summaries. This may force search engines to adopt even stricter filters to avoid copyright disputes.</li>
+<li><strong>Regulatory pressure</strong> – The <strong>EU Digital Services Act</strong> demands transparent moderation. Kagi’s filter banner and user-controlled whitelists make it a compliant leader.</li>
 <li><strong>Open-access mandates</strong> – The <strong>NIH</strong> now requires research to be free within 12 months. As the web opens up, this setting will shift from a power-user tool to a standard requirement.</li>
 </ol>
 
 <h2 id="step-by-step-implementation-guide">Step-By-Step Implementation Guide</h2>
 <h3 id="enabling-the-setting">Enabling the Setting</h3>
 <ol>
-<li><strong>Log into the Kagi dashboard</strong>. </li>
-<li>Go to <strong>Settings $\rightarrow$ Advanced Filters</strong>. </li>
-<li>Toggle <strong>“Remove Paywalled Links”</strong> to <strong>ON</strong>. </li>
+<li><strong>Log into the Kagi dashboard</strong>.</li>
+<li>Go to <strong>Settings $\rightarrow$ Advanced Filters</strong>.</li>
+<li>Toggle <strong>“Remove Paywalled Links”</strong> to <strong>ON</strong>.</li>
 <li>Click <strong>Save</strong>.</li>
 </ol>
-<p><strong>Tip:</strong> Kagi refreshes your next five queries automatically to show the filter in action. </p>
+<p><strong>Tip:</strong> Kagi refreshes your next five queries automatically to show the filter in action.</p>
 <h3 id="customizing-whitelists-blacklists">Customizing Whitelists &amp; Blacklists</h3>
 <ul>
-<li><strong>Adding a domain:</strong> In <strong>Whitelist Management</strong>, click <strong>Add Domain</strong>, type <code>nytimes.com</code>, and press <strong>Enter</strong>. </li>
+<li><strong>Adding a domain:</strong> In <strong>Whitelist Management</strong>, click <strong>Add Domain</strong>, type <code>nytimes.com</code>, and press <strong>Enter</strong>.</li>
 <li><strong>Bulk import:</strong> Upload a CSV with one domain per line under <strong>Blacklist Management</strong>. Kagi processes <strong>10,000</strong> entries in under a minute.</li>
 </ul>
 <h3 id="verifying-the-configuration">Verifying the Configuration</h3>
 <ol>
-<li>Open an incognito window. </li>
-<li>Search <strong>“latest AI research”</strong>. </li>
+<li>Open an incognito window.</li>
+<li>Search <strong>“latest AI research”</strong>.</li>
 <li>Compare the results to a non-filtered search. You should see a <strong>70%+ reduction</strong> in lock icons and subscription prompts.</li>
 </ol>
 <h3 id="ongoing-maintenance">Ongoing Maintenance</h3>
 <ul>
-<li><strong>Monthly audit:</strong> Sample <strong>500</strong> filtered URLs to verify accuracy. </li>
-<li><strong>Feedback loop:</strong> Use the dashboard <strong>Feedback</strong> button to report misclassifications. </li>
+<li><strong>Monthly audit:</strong> Sample <strong>500</strong> filtered URLs to verify accuracy.</li>
+<li><strong>Feedback loop:</strong> Use the dashboard <strong>Feedback</strong> button to report misclassifications.</li>
 <li><strong>Quarterly review:</strong> Update your whitelist to include new open-access sources.</li>
 </ul>
 
 <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
-<p><strong>1. How does it detect paywalls?</strong> 
-It analyzes HTTP headers, meta tags, and URL patterns using a machine-learning model that learns from user feedback. </p>
-<p><strong>2. Does it slow down searches?</strong> 
-By about <strong>45ms</strong>. You won't notice it. </p>
-<p><strong>3. Can I keep some paywalled sites?</strong> 
-Yes. Use the whitelist to exempt specific domains. </p>
-<p><strong>4. Does it work on mobile?</strong> 
-Yes. It's server-side, so it works on any browser, any device. </p>
-<p><strong>5. Does this affect SEO?</strong> 
-Indirectly. Better UX leads to better engagement metrics, which search engines reward. </p>
-<p><strong>6. How often is the database updated?</strong> 
-Signatures refresh <strong>daily</strong>, and community reports are integrated in real time. </p>
+<p><strong>1. How does it detect paywalls?</strong>
+It analyzes HTTP headers, meta tags, and URL patterns using a machine-learning model that learns from user feedback.</p>
+<p><strong>2. Does it slow down searches?</strong>
+By about <strong>45ms</strong>. You won't notice it.</p>
+<p><strong>3. Can I keep some paywalled sites?</strong>
+Yes. Use the whitelist to exempt specific domains.</p>
+<p><strong>4. Does it work on mobile?</strong>
+Yes. It's server-side, so it works on any browser, any device.</p>
+<p><strong>5. Does this affect SEO?</strong>
+Indirectly. Better UX leads to better engagement metrics, which search engines reward.</p>
+<p><strong>6. How often is the database updated?</strong>
+Signatures refresh <strong>daily</strong>, and community reports are integrated in real time.</p>
 
 <h2 id="conclusion">Conclusion</h2>
-<p>The <strong>paywall removal setting</strong> is a high-precision tool for users who demand actionable results. By eliminating inaccessible links, it boosts CTR and reduces the frustration of the "subscription wall." </p>
-<p>Activate the setting, run your test queries, and join the discussion on the Kagi community forum. Your feedback helps refine the classifier for everyone. </p>
+<p>The <strong>paywall removal setting</strong> is a high-precision tool for users who demand actionable results. By eliminating inaccessible links, it boosts CTR and reduces the frustration of the "subscription wall."</p>
+<p>Activate the setting, run your test queries, and join the discussion on the Kagi community forum. Your feedback helps refine the classifier for everyone.</p>
 <p><strong>Call to Action:</strong> Enable the <strong>Remove Paywalled Links</strong> toggle in your Kagi dashboard now. For deeper integration, see our guide on.</p>
 
       </div>
@@ -767,8 +767,8 @@ Signatures refresh <strong>daily</strong>, and community reports are integrated 
 <div class="toc-dot" data-target="seo-benefits-and-business-impact" title="SEO Benefits and Business..."></div>
 <div class="toc-dot" data-target="legal-ethical-and-compliance-considerations" title="Legal, Ethical, and Compl..."></div>
 <div class="toc-dot" data-target="comparative-analysis-kagi-vs-competitors" title="Comparative Analysis: Kag..."></div>
-<div class="toc-dot" data-target="future-trends-in-openaccess-search" title="Future Trends in Open‑Acc..."></div>
-<div class="toc-dot" data-target="stepbystep-implementation-guide" title="Step‑By‑Step Implementati..."></div>
+<div class="toc-dot" data-target="future-trends-in-open-access-search" title="Future Trends in Open-Acc..."></div>
+<div class="toc-dot" data-target="step-by-step-implementation-guide" title="Step-By-Step Implementati..."></div>
 <div class="toc-dot" data-target="frequently-asked-questions" title="Frequently Asked Question..."></div>
 <div class="toc-dot" data-target="understanding-the-kagi-added-setting" title="Understanding the Kagi Ad..."></div>
 <div class="toc-dot" data-target="how-the-setting-works-a-deep-dive" title="How the Setting Works: A ..."></div>
@@ -782,6 +782,38 @@ Signatures refresh <strong>daily</strong>, and community reports are integrated 
   </nav>
 
   
+
+  <!-- Back to top. Articles run to several thousand words; on a phone that is a long scroll
+       to get back to the navigation. Rendered as a <button> rather than an <a href="#top">
+       so it never adds a history entry or changes the URL, and it is keyboard reachable. -->
+  <button type="button" class="qm-to-top" id="qm-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  </button>
+  <script>
+    (function () {
+      var btn = document.getElementById('qm-to-top');
+      if (!btn) return;
+      // Appear only once the reader is far enough down to want it.
+      var SHOW_AFTER = 600;
+      var ticking = false;
+      function sync() {
+        btn.classList.toggle('is-visible', window.scrollY > SHOW_AFTER);
+        ticking = false;
+      }
+      window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; window.requestAnimationFrame(sync); }
+      }, { passive: true });
+      btn.addEventListener('click', function () {
+        // Respect a reader who has asked the OS for less motion.
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+        var first = document.querySelector('a.skip-link, h1');
+        if (first && first.focus) first.focus({ preventScroll: true });
+      });
+      sync();
+    })();
+  </script>
+
   <!-- ─── FOOTER ─── -->
   <footer class="footer" role="contentinfo">
     <div class="footer-inner">
@@ -797,7 +829,7 @@ Signatures refresh <strong>daily</strong>, and community reports are integrated 
         <div>
           <div class="footer-col-h">Topics</div>
           <ul class="footer-links" role="list">
-            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=border%20security">border security</a></li><li><a href="/tech/search.html?q=cybersecurity">cybersecurity</a></li><li><a href="/tech/search.html?q=meta">meta</a></li><li><a href="/tech/search.html?q=cicd">cicd</a></li>
+            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=border%20security">border security</a></li><li><a href="/tech/search.html?q=cybersecurity">cybersecurity</a></li><li><a href="/tech/search.html?q=meta">meta</a></li><li><a href="/tech/search.html?q=data%20privacy">data privacy</a></li>
           </ul>
         </div>
         <div>
@@ -852,7 +884,7 @@ Signatures refresh <strong>daily</strong>, and community reports are integrated 
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
         </div>
         <h3 id="modalTitle" class="newsletter-h" style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; font-family: var(--font-display); color: var(--ink);">Subscribe to Quillmatick</h3>
-        <p class="newsletter-p" style="font-size: 14px; color: var(--ink3); line-height: 1.5; margin-bottom: 1.5rem;">Get the weekly briefing on AI and technology. Free forever, unsubscribe anytime.</p>
+        <p class="newsletter-p" style="font-size: 14px; color: var(--ink3); line-height: 1.5; margin-bottom: 1.5rem;">Get the weekly briefing on tech and geopolitics. Free forever, unsubscribe anytime.</p>
         <form class="newsletter-form" onsubmit="window.__qmSubscribe && window.__qmSubscribe(event, this)">
           <input class="newsletter-input" type="email" placeholder="Your email address" required aria-label="Email address" style="margin-bottom: 1rem; width: 100%; box-sizing: border-box;" />
           <div class="qm-hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
@@ -1480,7 +1512,7 @@ Signatures refresh <strong>daily</strong>, and community reports are integrated 
     });
 
     /* Highlight active dot based on scroll */
-    const sections = ['articleTop', 'introduction-to-paywall-challenges', 'understanding-kagis-paywall-removal-setting', 'technical-architecture-and-data-flow', 'configuring-whitelists-and-blacklists', 'monitoring-performance-and-accuracy', 'enterprise-deployment-strategies', 'seo-benefits-and-business-impact', 'legal-ethical-and-compliance-considerations', 'comparative-analysis-kagi-vs-competitors', 'future-trends-in-openaccess-search', 'stepbystep-implementation-guide', 'frequently-asked-questions', 'understanding-the-kagi-added-setting', 'how-the-setting-works-a-deep-dive', 'key-benefits-real-world-applications', 'challenges-risks-mitigation', 'detailed-analysis-comparative-data', 'expert-insights-industry-trends', 'step-by-step-implementation-guide', 'frequently-asked-questions', 'conclusion'];
+    const sections = ['articleTop', 'introduction-to-paywall-challenges', 'understanding-kagis-paywall-removal-setting', 'technical-architecture-and-data-flow', 'configuring-whitelists-and-blacklists', 'monitoring-performance-and-accuracy', 'enterprise-deployment-strategies', 'seo-benefits-and-business-impact', 'legal-ethical-and-compliance-considerations', 'comparative-analysis-kagi-vs-competitors', 'future-trends-in-open-access-search', 'step-by-step-implementation-guide', 'frequently-asked-questions', 'understanding-the-kagi-added-setting', 'how-the-setting-works-a-deep-dive', 'key-benefits-real-world-applications', 'challenges-risks-mitigation', 'detailed-analysis-comparative-data', 'expert-insights-industry-trends', 'step-by-step-implementation-guide', 'frequently-asked-questions', 'conclusion'];
     window.addEventListener('scroll', () => {
       let active = 0;
       sections.forEach((id, i) => {
