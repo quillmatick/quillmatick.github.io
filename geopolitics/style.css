@@ -1673,6 +1673,11 @@ img { display: block; max-width: 100%; }
 
 @media (max-width: 768px) {
   :root { --pad: 1rem; }
+  /* .navbar-inner is a flex ROW with no wrap, so a child asking for width:100% cannot move
+     to a new line — it just overflows and gets clipped, which is what "Tech" did on a phone
+     when the links were first un-hidden. The wrap is what makes the rule below work. */
+  .navbar-inner { flex-wrap: wrap; }
+
   /* The two category links were hidden below 768px with nothing put in their place, so on a
      phone there was no way to reach Tech or Geopolitics from the homepage at all — the whole
      site collapsed to whatever the current page was. With only three destinations a
