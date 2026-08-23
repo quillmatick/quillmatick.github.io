@@ -1944,7 +1944,10 @@ html[data-theme="dark"] .qm-product-card {
   visibility: hidden;
   transform: translateY(8px);
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
-  z-index: 60;
+  /* Above anything else that pins itself to the bottom of the viewport. The removed
+     "Premium Guide" bar sat at z-index 1000 in this exact corner, which is the most likely
+     reason this button was never visible in practice. */
+  z-index: 1200;
   box-shadow: 0 4px 16px rgba(0,0,0,0.28);
 }
 .qm-to-top.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
