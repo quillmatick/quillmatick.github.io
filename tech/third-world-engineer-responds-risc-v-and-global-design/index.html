@@ -46,7 +46,7 @@
 <meta name="author" content="Quillmatick Staff" />
   <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  <link rel="stylesheet" href="/tech/style.css?v=1787472403611" />
+  <link rel="stylesheet" href="/tech/style.css?v=1787476936578" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
@@ -831,11 +831,34 @@ ARM is more mature (9/10 vs 7/10), but RISC-V is growing at 28% annually. The ga
     (function () {
       var btn = document.getElementById('qm-to-top');
       if (!btn) return;
-      // Appear only once the reader is far enough down to want it.
       var SHOW_AFTER = 600;
+
+      // Two independent triggers, because relying on one was not good enough.
+      //
+      // An IntersectionObserver watching a sentinel at the top of the document is the
+      // primary: it fires from layout rather than from scroll events, so it works whatever
+      // element is actually scrolling and does not care whether window.scrollY is the right
+      // number to be reading. The scroll listener stays as a fallback for anything that does
+      // not support the observer.
+      function show(on) { btn.classList.toggle('is-visible', !!on); }
+
+      var sentinel = document.createElement('div');
+      sentinel.setAttribute('aria-hidden', 'true');
+      sentinel.style.cssText = 'position:absolute;top:' + SHOW_AFTER + 'px;left:0;width:1px;height:1px;pointer-events:none;';
+      document.body.appendChild(sentinel);
+
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+          // Once the sentinel has scrolled off the top, the reader is far enough down.
+          show(!entries[0].isIntersecting && entries[0].boundingClientRect.top < 0);
+        }).observe(sentinel);
+      }
+
       var ticking = false;
       function sync() {
-        btn.classList.toggle('is-visible', window.scrollY > SHOW_AFTER);
+        var y = window.scrollY || window.pageYOffset ||
+                (document.documentElement && document.documentElement.scrollTop) || 0;
+        if (y > SHOW_AFTER) show(true);
         ticking = false;
       }
       window.addEventListener('scroll', function () {
@@ -867,7 +890,7 @@ ARM is more mature (9/10 vs 7/10), but RISC-V is growing at 28% annually. The ga
         <div>
           <div class="footer-col-h">Topics</div>
           <ul class="footer-links" role="list">
-            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=cybersecurity">cybersecurity</a></li><li><a href="/tech/search.html?q=border%20security">border security</a></li><li><a href="/tech/search.html?q=meta">meta</a></li><li><a href="/tech/search.html?q=data%20privacy">data privacy</a></li>
+            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=border%20security">border security</a></li><li><a href="/tech/search.html?q=cybersecurity">cybersecurity</a></li><li><a href="/tech/search.html?q=meta">meta</a></li><li><a href="/tech/search.html?q=cicd">cicd</a></li>
           </ul>
         </div>
         <div>
@@ -1203,7 +1226,7 @@ ARM is more mature (9/10 vs 7/10), but RISC-V is growing at 28% annually. The ga
       submitBtn.disabled = true;
 
       const sbUrl = 'https://ibzoanlrduqihydokjck.supabase.co';
-      const sbKey = '';
+      const sbKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imliem9hbmxyZHVxaWh5ZG9ramNrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NjA2NDksImV4cCI6MjA5NjMzNjY0OX0.qa4FRt6M6JkQBm-hOUEzlm3W5BCC2_9FfQz8KxDk7rQ';
       const targetUrl = sbUrl + '/rest/v1/subscribers';
 
       // Helper to display error message inline
