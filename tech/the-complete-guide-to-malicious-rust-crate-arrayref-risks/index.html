@@ -46,7 +46,7 @@
 <meta name="author" content="Quillmatick Staff" />
   <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  <link rel="stylesheet" href="/tech/style.css?v=1787469116406" />
+  <link rel="stylesheet" href="/tech/style.css?v=1787471444482" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
@@ -454,7 +454,7 @@ A6: Reviewing every dependency is impractical for large projects. Instead, prior
 </tr>
 <tr>
 <td>2023-03-19</td>
-<td><code>chrono‑proc‑macro</code></td>
+<td><code>chrono-proc-macro</code></td>
 <td>RUSTSEC-2023-001</td>
 <td>Credential leakage via env vars</td>
 <td>Version freeze and audit recommended</td>
@@ -487,7 +487,7 @@ use std::process::Stdio;
 
 fn main() {
  // Retrieve the payload URL from an environment variable.
- // This avoids hard‑coding a remote source and lets the caller decide whether a download is appropriate.
+ // This avoids hard-coding a remote source and lets the caller decide whether a download is appropriate.
  let payload_url = match env::var("PAYLOAD_URL") {
  Ok(url) if!url.is_empty() =&gt; url,
  _ =&gt; {
@@ -496,7 +496,7 @@ fn main() {
  }
  };
 
- // Optional dry‑run flag: when set to "true", the program will only simulate the actions.
+ // Optional dry-run flag: when set to "true", the program will only simulate the actions.
  let dry_run = env::var("DRY_RUN")
 .map(|v| v.eq_ignore_ascii_case("true"))
 .unwrap_or(false);
@@ -515,9 +515,9 @@ fn main() {
  return;
  }
 
- // If dry‑run is enabled, stop before executing the binary.
+ // If dry-run is enabled, stop before executing the binary.
  if dry_run {
- println!("Dry‑run mode: payload downloaded but not executed.");
+ println!("Dry-run mode: payload downloaded but not executed.");
  return;
  }
 
@@ -952,7 +952,7 @@ fn main() {
         <div>
           <div class="footer-col-h">Topics</div>
           <ul class="footer-links" role="list">
-            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=border%20security">border security</a></li><li><a href="/tech/search.html?q=cybersecurity">cybersecurity</a></li><li><a href="/tech/search.html?q=meta">meta</a></li><li><a href="/tech/search.html?q=data%20privacy">data privacy</a></li>
+            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=cybersecurity">cybersecurity</a></li><li><a href="/tech/search.html?q=border%20security">border security</a></li><li><a href="/tech/search.html?q=meta">meta</a></li><li><a href="/tech/search.html?q=data%20privacy">data privacy</a></li>
           </ul>
         </div>
         <div>

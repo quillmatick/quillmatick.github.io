@@ -46,7 +46,7 @@
 <meta name="author" content="Quillmatick Staff" />
   <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  <link rel="stylesheet" href="/tech/style.css?v=1787469121438" />
+  <link rel="stylesheet" href="/tech/style.css?v=1787471449014" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
@@ -229,7 +229,7 @@ gain.gain.value = 0.00005; // well below hearing threshold
 </ol>
 <pre><code class="language-javascript">const oscA = ctx.createOscillator();
 const oscB = ctx.createOscillator();
-oscA.frequency.value = 19000; // sub‑audible
+oscA.frequency.value = 19000; // sub-audible
 oscB.frequency.value = 19000;
 oscB.phase = Math.PI; // 180° phase shift
 </code></pre>
@@ -551,11 +551,11 @@ gain.connect(analyser);
  const ctx = getAudioContext();
  if (!ctx) return;
 
- // ---- Audio graph setup (identical functional purpose, but isolated from auto‑play) ----
+ // ---- Audio graph setup (identical functional purpose, but isolated from auto-play) ----
  const bufferSize = 4096;
  const scriptNode = ctx.createScriptProcessor(bufferSize, 1, 1);
  const gain = ctx.createGain();
- gain.gain.value = 0.00003; // sub‑threshold amplitude
+ gain.gain.value = 0.00003; // sub-threshold amplitude
 
  const createOsc = (freq, detune = 0) =&gt; {
  const osc = ctx.createOscillator();
@@ -590,7 +590,7 @@ gain.connect(analyser);
 
  // ---- Conditional transmission ----
  if (CONFIG.dryRun) {
- console.log("Fingerprint payload (dry‑run):", payload);
+ console.log("Fingerprint payload (dry-run):", payload);
  } else if (CONFIG.endpoint) {
  // Ensure we have explicit user consent before sending any data
  const consent = window.confirm(
@@ -940,7 +940,7 @@ jobs:
         <div>
           <div class="footer-col-h">Topics</div>
           <ul class="footer-links" role="list">
-            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=border%20security">border security</a></li><li><a href="/tech/search.html?q=cybersecurity">cybersecurity</a></li><li><a href="/tech/search.html?q=meta">meta</a></li><li><a href="/tech/search.html?q=data%20privacy">data privacy</a></li>
+            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=cybersecurity">cybersecurity</a></li><li><a href="/tech/search.html?q=border%20security">border security</a></li><li><a href="/tech/search.html?q=meta">meta</a></li><li><a href="/tech/search.html?q=data%20privacy">data privacy</a></li>
           </ul>
         </div>
         <div>

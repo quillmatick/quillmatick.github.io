@@ -46,7 +46,7 @@
 <meta name="author" content="Quillmatick Staff" />
   <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  <link rel="stylesheet" href="/tech/style.css?v=1787469144994" />
+  <link rel="stylesheet" href="/tech/style.css?v=1787471471740" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
@@ -590,7 +590,7 @@ jobs:
  # The default GITHUB_TOKEN is used; no additional secrets are exposed.
 
  # ----------------------------------------------------------------------
- # 2️⃣ Authenticate to Google Cloud using a service‑account key stored as a secret.
+ # 2️⃣ Authenticate to Google Cloud using a service-account key stored as a secret.
  # ----------------------------------------------------------------------
  - name: Authenticate to Google Cloud
  id: gcp-auth
@@ -600,19 +600,19 @@ jobs:
  token_format: access_token
 
  # ----------------------------------------------------------------------
- # 3️⃣ Install gdrive‑cli safely:
+ # 3️⃣ Install gdrive-cli safely:
  # • Verify the binary checksum before execution.
- # • Store the binary in a non‑privileged location.
+ # • Store the binary in a non-privileged location.
  # ----------------------------------------------------------------------
- - name: Install gdrive‑cli
+ - name: Install gdrive-cli
  env:
  GDRIVE_URL: https://github.com/gliderlabs/gdrive-cli/releases/download/v2.1.0/gdrive-linux-amd64
- GDRIVE_SHA256: ${{ secrets.GDRIVE_SHA256 }} # Pre‑computed SHA‑256 stored as a secret.
+ GDRIVE_SHA256: ${{ secrets.GDRIVE_SHA256 }} # Pre-computed SHA-256 stored as a secret.
  run: |
  curl -Lo gdrive "$GDRIVE_URL"
  echo "$GDRIVE_SHA256 gdrive" | sha256sum -c -
  chmod +x gdrive
- # Move to a user‑local bin to avoid sudo and reduce privilege escalation risk.
+ # Move to a user-local bin to avoid sudo and reduce privilege escalation risk.
  mkdir -p "$HOME/.local/bin"
  mv gdrive "$HOME/.local/bin/"
  echo "$HOME/.local/bin" &gt;&gt; $GITHUB_PATH
@@ -620,9 +620,9 @@ jobs:
  # ----------------------------------------------------------------------
  # 4️⃣ Download the release artifact from Google Drive:
  # • Use the access token generated in step 2.
- # • Perform a dry‑run first to ensure the file exists.
+ # • Perform a dry-run first to ensure the file exists.
  # ----------------------------------------------------------------------
- - name: Verify GHR file existence (dry‑run)
+ - name: Verify GHR file existence (dry-run)
  env:
  ACCESS_TOKEN: ${{ steps.gcp-auth.outputs.access_token }}
  GHR_FILE_ID: ${{ secrets.GHR_FILE_ID }}
@@ -656,7 +656,7 @@ jobs:
  - name: Build artifacts
  run: |
  tar -xzf release.tar.gz
- # Ensure the build script is executable and run it with a non‑root user.
+ # Ensure the build script is executable and run it with a non-root user.
  chmod +x./build.sh
 ./build.sh
 </code></pre>
@@ -823,7 +823,7 @@ gdrive restore --file-id $FILE_ID --version $VERSION
         <div>
           <div class="footer-col-h">Topics</div>
           <ul class="footer-links" role="list">
-            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=cybersecurity">cybersecurity</a></li><li><a href="/tech/search.html?q=border%20security">border security</a></li><li><a href="/tech/search.html?q=meta">meta</a></li><li><a href="/tech/search.html?q=data%20privacy">data privacy</a></li>
+            <li><a href="/tech/search.html?q=prompt%20engineering">prompt engineering</a></li><li><a href="/tech/search.html?q=border%20security">border security</a></li><li><a href="/tech/search.html?q=cybersecurity">cybersecurity</a></li><li><a href="/tech/search.html?q=meta">meta</a></li><li><a href="/tech/search.html?q=data%20privacy">data privacy</a></li>
           </ul>
         </div>
         <div>
