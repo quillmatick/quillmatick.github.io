@@ -5,8 +5,38 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Sat, 22 Aug 2026 09:40:29 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 23 Aug 2026 02:19:50 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Don't Paste the AI: How to Maintain Your Human Voice]]></title>
+    <link>https://quillmatick.github.io/tech/dont-paste-the-ai-how-to-maintain-your-human-voice</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/dont-paste-the-ai-how-to-maintain-your-human-voice</guid>
+    <description><![CDATA[Don't paste the AI content blindly. Learn to blend automation with your unique human voice to build trust and boost engagement. Start refining your style now.]]></description>
+    <pubDate>Sun, 23 Aug 2026 02:19:10 GMT</pubDate>
+    <category>ai content strategy</category>
+    <category>brand voice</category>
+    <category>prompt engineering</category>
+    <category>content editing</category>
+    <category>generative ai</category>
+    <category>copywriting</category>
+    <category>human-in-the-loop</category>
+    <category>ai workflow</category>
+  </item>
+  <item>
+    <title><![CDATA[Google Has Stopped Pushing Git Tags for Android Source Code]]></title>
+    <link>https://quillmatick.github.io/tech/google-has-stopped-pushing-git-tags-for-android-source-code</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/google-has-stopped-pushing-git-tags-for-android-source-code</guid>
+    <description><![CDATA[Google stopped pushing git tags for Android source code. Learn why this change happens and how to manage your builds efficiently to save time. Read more here.]]></description>
+    <pubDate>Sun, 23 Aug 2026 02:18:25 GMT</pubDate>
+    <category>android</category>
+    <category>aosp</category>
+    <category>git</category>
+    <category>software supply chain</category>
+    <category>deterministic builds</category>
+    <category>sbom</category>
+    <category>cicd</category>
+    <category>version control</category>
+  </item>
   <item>
     <title><![CDATA[Go 1.27: The Complete Guide to New Features and Updates]]></title>
     <link>https://quillmatick.github.io/tech/go-127-the-complete-guide-to-new-features-and-updates</link>
