@@ -29,12 +29,15 @@
       } catch (e) {}
     })();
   </script>
-  <title>Search Results | Quillmatick Hub</title>
-  <meta name="description" content="Search results for Quillmatick Hub" />
-  <meta property="og:title" content="Search Results | Quillmatick Hub" />
-  <meta property="og:description" content="Search results for Quillmatick Hub" />
+  <title>About Us | Quillmatick Hub</title>
+  <meta name="description" content="About Quillmatick Hub and how to contact us." />
+  <meta property="og:title" content="About Us | Quillmatick Hub" />
+  <meta property="og:description" content="About Quillmatick Hub and how to contact us." />
   <meta property="og:type" content="website" />
-  <link rel="stylesheet" href="/tech/style.css?v=1787550345650" />
+  <link rel="stylesheet" href="/tech/style.css?v=1787550345471" />
+  <link rel="canonical" href="https://quillmatick.github.io/tech/about.html" />
+  <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
+  
 </head>
 <body>
   
@@ -60,7 +63,7 @@
           Quill<span>matick</span><span class="logo-dot" aria-hidden="true"></span>
         </a>
         <ul class="nav-links" role="list">
-          <li><a href="/tech/" class="">Tech</a></li>
+          <li><a href="/tech/" class="active">Tech</a></li>
           <li><a href="/geopolitics/" class="">Geopolitics</a></li>
           <li><a href="/tech/about.html" class="">About</a></li>
         </ul>
@@ -81,198 +84,39 @@
   <!-- ─── FILTER BAR ─── -->
   <div class="filter-bar" role="navigation" aria-label="Category filter">
     <div class="filter-bar-inner">
-      <a href="/tech" class="filter-pill active" data-category="all">All topics</a><a href="/tech/search.html?q=prompt%20engineering" class="filter-pill" data-category="prompt engineering">prompt engineering</a><a href="/geopolitics/search.html?q=diplomacy" class="filter-pill" data-category="diplomacy">diplomacy</a><a href="/geopolitics/search.html?q=international%20law" class="filter-pill" data-category="international law">international law</a><a href="/tech/search.html?q=cybersecurity" class="filter-pill" data-category="cybersecurity">cybersecurity</a><a href="/tech/search.html?q=border%20security" class="filter-pill" data-category="border security">border security</a><a href="/geopolitics/search.html?q=international%20humanitarian%20law" class="filter-pill" data-category="international humanitarian law">international humanitarian law</a><a href="/geopolitics/search.html?q=geopolitics" class="filter-pill" data-category="geopolitics">geopolitics</a><a href="/geopolitics/search.html?q=supply%20chain%20diversification" class="filter-pill" data-category="supply chain diversification">supply chain diversification</a>
+      <a href="/tech" class="filter-pill active" data-category="all">All topics</a><a href="/tech/search.html?q=prompt%20engineering" class="filter-pill" data-category="prompt engineering">prompt engineering</a><a href="/tech/search.html?q=cybersecurity" class="filter-pill" data-category="cybersecurity">cybersecurity</a><a href="/tech/search.html?q=border%20security" class="filter-pill" data-category="border security">border security</a><a href="/tech/search.html?q=meta" class="filter-pill" data-category="meta">meta</a><a href="/tech/search.html?q=data%20privacy" class="filter-pill" data-category="data privacy">data privacy</a><a href="/tech/search.html?q=cicd" class="filter-pill" data-category="cicd">cicd</a><a href="/tech/search.html?q=git" class="filter-pill" data-category="git">git</a><a href="/tech/search.html?q=version%20control" class="filter-pill" data-category="version control">version control</a>
     </div>
   </div>
-  <main id="main-content" class="container" style="padding-top: 3rem; padding-bottom: 5rem; min-height: 60vh;">
-    <div style="max-width: 800px; margin: 0 auto; text-align: left;">
-      <div style="margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem;">
-        <h1 id="search-title" class="hero-headline" style="font-size: 2rem; margin-bottom: 0.5rem;">Search</h1>
-        <div id="results-count" style="font-family: var(--font-mono); font-size: 13px; color: var(--ink3);">Searching...</div>
+  <main id="main-content" class="container" style="padding-top: 4rem; padding-bottom: 6rem; display: flex; justify-content: center;">
+    <article class="article-page" style="max-width: 720px; width: 100%;">
+      <div style="margin-bottom: 3rem; text-align: center;">
+        <div class="hero-eyebrow" style="justify-content: center; margin-bottom: 1rem;">
+          <span class="badge badge-featured">Information</span>
+        </div>
+        <h1 class="hero-headline" style="font-size: 2.5rem; margin-bottom: 1rem;">About Quillmatick Hub</h1>
+        <p style="color: var(--ink3); font-size: 16px; font-family: var(--font-body); max-width: 500px; margin: 0 auto;">Dedicated to delivering rigorous, automated analysis of critical topics.</p>
       </div>
-      <div id="search-results" class="article-list" role="list"></div>
-      <nav id="pagination" class="pagination" aria-label="Page navigation" style="border-top: none; margin-top: 2rem;"></nav>
-    </div>
-  </main>
 
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    let q = params.get('q') || '';
-    let page = parseInt(params.get('page')) || 1;
-    
-    // Sync search input
-    const headerInput = document.querySelector('.search-form input[name="q"]');
-    if (headerInput) {
-      headerInput.value = q;
-    }
-    
-    let searchIndex = null;
-
-    async function loadIndex() {
-      if (searchIndex) return searchIndex;
-      try {
-        const res = await fetch('./search-index.json');
-        searchIndex = await res.json();
-        return searchIndex;
-      } catch (err) {
-        console.error('Failed to load search index:', err);
-        throw err;
-      }
-    }
-
-    async function doSearch() {
-      if (!q) {
-        document.getElementById('search-title').textContent = 'Search';
-        document.getElementById('results-count').textContent = 'Enter a search term above.';
-        document.getElementById('search-results').innerHTML = '';
-        document.getElementById('pagination').innerHTML = '';
-        return;
-      }
-      document.getElementById('search-title').textContent = 'Results for: ' + q;
-      document.getElementById('results-count').textContent = 'Searching...';
-
-      try {
-        const index = await loadIndex();
-        const query = q.toLowerCase().trim();
-        
-        // Filter results client-side
-        // tags is an ARRAY in search-index.json, not a string. Calling .toLowerCase() on it
-        // threw for the first post examined, the catch below turned that into "Search failed.
-        // Please try again.", and every search on the site had been failing — including every
-        // topic pill in the header, which is just a search link. The index has always been
-        // fine; only this line was wrong.
-        const asText = v => (Array.isArray(v) ? v.join(' ') : (v == null ? '' : String(v))).toLowerCase();
-        const matches = index.filter(post =>
-          asText(post.title).includes(query) ||
-          asText(post.meta_description).includes(query) ||
-          asText(post.tags).includes(query)
-        );
-
-        // Pagination metadata
-        const limit = 10;
-        const total = matches.length;
-        const pages = Math.ceil(total / limit) || 1;
-        
-        // Clamp bounds
-        if (page > pages) page = pages;
-        if (page < 1) page = 1;
-        
-        const start = (page - 1) * limit;
-        const pageData = matches.slice(start, start + limit);
-
-        const data = {
-          data: pageData,
-          meta: {
-            total: total,
-            page: page,
-            pages: pages,
-            limit: limit
-          }
-        };
-
-        renderResults(data);
-        if (window.__qmLogSearch) window.__qmLogSearch(q, total);
-      } catch (e) {
-        // Say what went wrong. The previous blanket message hid a TypeError for months.
-        console.error('Quillmatick search failed:', e);
-        document.getElementById('results-count').textContent =
-          'Search is temporarily unavailable (' + (e && e.message ? e.message : 'unknown error') + ').';
-      }
-    }
-
-    window.__qmDoSearchPageUpdate = function(newQuery) {
-      q = newQuery;
-      page = 1;
-      const newUrl = window.location.pathname + (q ? '?q=' + encodeURIComponent(q) : '');
-      window.history.replaceState({ q: q }, '', newUrl);
-      doSearch();
-    };
-
-    function getCategoryEmoji(cat) {
-      const clean = (cat || '').toLowerCase();
-      if (clean.includes('security') || clean.includes('cyber')) return '🛡️';
-      if (clean.includes('policy') || clean.includes('regulation') || clean.includes('tax')) return '⚖️';
-      if (clean.includes('privacy') || clean.includes('surveillance')) return '👁️';
-      if (clean.includes('career') || clean.includes('job') || clean.includes('future')) return '💼';
-      if (clean.includes('society') || clean.includes('pope')) return '🌍';
-      return '🤖';
-    }
-    
-    function renderResults(res) {
-      const container = document.getElementById('search-results');
-      const count = document.getElementById('results-count');
-      count.textContent = res.meta.total + ' article(s) found';
+      <div style="background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2.5rem; margin-bottom: 2rem; text-align: left;">
+        <h2 style="font-family: var(--font-display); font-size: 20px; color: var(--ink); margin-bottom: 1rem;">Who We Are</h2>
+        <p style="color: var(--ink2); font-size: 15px; line-height: 1.7; margin-bottom: 0;">Welcome to Quillmatick Hub, an automated publishing platform covering two beats: technology — software, security and infrastructure — and geopolitics. Articles are drafted by a language model, then checked by a seven-stage editorial review and a security audit before anything is published.</p>
+      </div>
       
-      if (!res.data.length) {
-        container.innerHTML = '<div style="padding:3rem 0; text-align:center; color:var(--ink3); font-size:15px;">No matches found for "' + escapeHtml(q) + '".</div>';
-        document.getElementById('pagination').innerHTML = '';
-        return;
-      }
+      <div style="background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2.5rem; margin-bottom: 2rem; text-align: left;">
+        <h2 style="font-family: var(--font-display); font-size: 20px; color: var(--ink); margin-bottom: 1rem;">Our Mission</h2>
+        <p style="color: var(--ink2); font-size: 15px; line-height: 1.7; margin-bottom: 0;">Every article states plainly that it is machine-drafted. Nothing publishes unless it passes those checks, and anything that fails stays unpublished rather than going out unreviewed.</p>
+      </div>
 
-      container.innerHTML = res.data.map((post, index) => {
-        const date = new Date(post.published_at * 1000).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-        const readTime = Math.ceil(post.word_count / 250);
-        const numStr = (index + 1 + (page - 1) * 10).toString().padStart(2, '0');
-        const badgeClass = 'false' === 'true' ? 'badge-society' : 'badge-ai';
-        const displayCategory = post.category || 'portal';
-        const displayCatName = displayCategory.charAt(0).toUpperCase() + displayCategory.slice(1);
-        const emoji = getCategoryEmoji(post.title + ' ' + post.meta_description + ' ' + displayCategory);
-        
-        let thumbHtml = '';
-        if (post.featured_image) {
-          // Two nested contexts here: an HTML attribute and a CSS url(). Quote the url so a
-          // bare ')' cannot close it early, and escape so a '"' cannot close the attribute.
-          thumbHtml = '<div class="article-row-thumb" style="opacity: 1; background-image: url(&quot;' + escapeHtml(post.featured_image) + '&quot;); background-size: cover; background-position: center;"></div>';
-        } else {
-          thumbHtml = '<div class="article-row-thumb" aria-hidden="true">' + emoji + '</div>';
-        }
-
-        return `
-          <a class="article-row" href="/${displayCategory}/${post.slug}/" role="listitem">
-            <span class="article-row-num">${numStr}</span>
-            <div class="article-row-body">
-              <div style="margin-bottom: 0.25rem;">
-                <span class="badge ${badgeClass}">${displayCatName}</span>
-              </div>
-              <span class="article-row-title">${escapeHtml(post.title)}</span>
-              <span class="article-row-excerpt">${escapeHtml(post.meta_description)}</span>
-              <div class="article-row-foot">
-                <span class="article-row-date">${date}</span>
-                <span class="article-row-time">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  ${readTime} min
-                </span>
-              </div>
-            </div>
-            ${thumbHtml}
-          </a>
-        `;
-      }).join('');
-
-      // Simple pagination
-      const pag = document.getElementById('pagination');
-      if (res.meta.pages > 1) {
-        let phtml = '';
-        if (page > 1) {
-          phtml += '<a href="?q=' + encodeURIComponent(q) + '&page=' + (page-1) + '" class="page-btn page-arrow" style="width:auto; padding: 0 16px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></a>';
-        }
-        phtml += '<span class="page-btn active" style="pointer-events:none;">' + page + ' of ' + res.meta.pages + '</span>';
-        if (page < res.meta.pages) {
-          phtml += '<a href="?q=' + encodeURIComponent(q) + '&page=' + (page+1) + '" class="page-btn page-arrow" style="width:auto; padding: 0 16px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>';
-        }
-        pag.innerHTML = phtml;
-      } else {
-        pag.innerHTML = '';
-      }
-    }
-
-    function escapeHtml(str) {
-      if (!str) return '';
-      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
-    }
-
-    doSearch();
-  </script>
+      <div style="background: var(--accent-dim); border: 1px solid rgba(124,92,252,0.3); border-radius: var(--radius-lg); padding: 2.5rem; text-align: center;">
+        <div class="newsletter-icon" style="margin: 0 auto 1.5rem;" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h2 style="font-family: var(--font-display); font-size: 20px; color: var(--ink); margin-bottom: 1rem;">Contact & Consulting</h2>
+        <p style="color: var(--ink2); font-size: 15px; line-height: 1.7; margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto;">We help businesses build resilient, compliant, and automated security pipelines. If you're interested in our enterprise consulting services or have any questions about our content, please reach out.</p>
+        <a href="mailto:quillmatick@gmail.com" class="btn-primary" style="display: inline-flex;">Email Us</a>
+      </div>
+    </article>
+  </main>
   
 
   <!-- Back to top. Articles run to several thousand words; on a phone that is a long scroll

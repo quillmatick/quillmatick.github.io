@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>The Pulse of Tech &amp; Geopolitics</description>
   <language>en</language>
-  <lastBuildDate>Sun, 23 Aug 2026 09:57:24 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 24 Aug 2026 05:45:46 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[DeepSeekv4flashvisionexp: The Complete Guide to Setup]]></title>
+    <link>https://quillmatick.github.io/tech/deepseekv4flashvisionexp-the-complete-guide-to-setup</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/deepseekv4flashvisionexp-the-complete-guide-to-setup</guid>
+    <description><![CDATA[Master deepseekv4flashvisionexp with our step-by-step setup guide. Learn to deploy the model quickly to boost your AI workflow.]]></description>
+    <pubDate>Mon, 24 Aug 2026 02:22:55 GMT</pubDate>
+    <category>deepseekv4flashvisionexp</category>
+    <category>ai setup guide</category>
+    <category>tpu</category>
+    <category>nvme ssd</category>
+    <category>cuda</category>
+    <category>machine learning infrastructure</category>
+    <category>flash-aware memory controller</category>
+    <category>model deployment</category>
+  </item>
   <item>
     <title><![CDATA[Don't Paste the AI: How to Maintain Your Human Voice]]></title>
     <link>https://quillmatick.github.io/tech/dont-paste-the-ai-how-to-maintain-your-human-voice</link>
@@ -291,21 +306,6 @@
     <category>audio optimization</category>
     <category>digital signal processing</category>
     <category>software development</category>
-  </item>
-  <item>
-    <title><![CDATA[Ukrainian Strikes Kill Six in Russia: Acting Governor Report]]></title>
-    <link>https://quillmatick.github.io/geopolitics/ukrainian-strikes-kill-six-in-russia-acting-governor-report</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/geopolitics/ukrainian-strikes-kill-six-in-russia-acting-governor-report</guid>
-    <description><![CDATA[Ukrainian strikes kill six in Russia, per the acting governor.]]></description>
-    <pubDate>Tue, 18 Aug 2026 12:25:50 GMT</pubDate>
-    <category>russia-ukraine war</category>
-    <category>civilian casualties</category>
-    <category>border security</category>
-    <category>international humanitarian law</category>
-    <category>drone warfare</category>
-    <category>national defense</category>
-    <category>geopolitics</category>
-    <category>crisis management</category>
   </item>
 </channel>
 </rss>
