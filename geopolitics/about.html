@@ -34,7 +34,7 @@
   <meta property="og:title" content="About Us | Quillmatick Geopolitics" />
   <meta property="og:description" content="About Quillmatick Geopolitics and how to contact us." />
   <meta property="og:type" content="website" />
-  <link rel="stylesheet" href="/geopolitics/style.css?v=1787550357230" />
+  <link rel="stylesheet" href="/geopolitics/style.css?v=1787585906263" />
   <link rel="canonical" href="https://quillmatick.github.io/geopolitics/about.html" />
   <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
@@ -111,7 +111,7 @@
         <div class="newsletter-icon" style="margin: 0 auto 1.5rem;" aria-hidden="true">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         </div>
-        <h2 style="font-family: var(--font-display); font-size: 20px; color: var(--ink); margin-bottom: 1rem;">Contact & Consulting</h2>
+        <h2 id="contact" style="font-family: var(--font-display); font-size: 20px; color: var(--ink); margin-bottom: 1rem;">Contact & Consulting</h2>
         <p style="color: var(--ink2); font-size: 15px; line-height: 1.7; margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto;">We help organizations analyze global developments and geopolitical shifts. If you're interested in our enterprise consulting services or have any questions about our content, please reach out.</p>
         <a href="mailto:quillmatick@gmail.com" class="btn-primary" style="display: inline-flex;">Email Us</a>
       </div>
@@ -197,7 +197,10 @@
             <li><a href="/geopolitics/about.html">About</a></li>
             <li><a href="/geopolitics/legal/privacy/">Privacy policy</a></li>
             <li><a href="/geopolitics/legal/terms/">Terms of service</a></li>
-            <li><a href="#">Contact</a></li>
+            <!-- This was a bare fragment link, which scrolls to the top of the current
+                 page and does nothing else. The about page has a "Contact & Consulting"
+                 section; send people there. -->
+            <li><a href="/geopolitics/about.html#contact">Contact</a></li>
           </ul>
         </div>
         <div>
