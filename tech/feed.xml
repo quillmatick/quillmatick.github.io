@@ -5,8 +5,38 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Mon, 24 Aug 2026 15:38:32 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 25 Aug 2026 02:14:58 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How to Stop Photos Invisibly Watermark Locally Generated Output]]></title>
+    <link>https://quillmatick.github.io/tech/how-to-stop-photos-invisibly-watermark-locally-generated-output</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-stop-photos-invisibly-watermark-locally-generated-output</guid>
+    <description><![CDATA[Stop photos invisibly watermark tools from tagging your AI art. Learn to remove hidden markers from locally generated output to regain total privacy. Read more.]]></description>
+    <pubDate>Tue, 25 Aug 2026 02:14:05 GMT</pubDate>
+    <category>ai image generation</category>
+    <category>invisible watermarking</category>
+    <category>steganography</category>
+    <category>digital forensics</category>
+    <category>image processing</category>
+    <category>open source tools</category>
+    <category>model configuration</category>
+    <category>data provenance</category>
+  </item>
+  <item>
+    <title><![CDATA[Why Anthropics Best Model Struggles to Attract New Users]]></title>
+    <link>https://quillmatick.github.io/tech/why-anthropics-best-model-struggles-to-attract-new-users</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/why-anthropics-best-model-struggles-to-attract-new-users</guid>
+    <description><![CDATA[Why Anthropics best model struggles to attract users. Learn the core barriers to adoption and how to fix them to scale your AI growth. Read the full analysis.]]></description>
+    <pubDate>Tue, 25 Aug 2026 02:13:20 GMT</pubDate>
+    <category>anthropic</category>
+    <category>ai adoption</category>
+    <category>enterprise ai</category>
+    <category>llm deployment</category>
+    <category>ai governance</category>
+    <category>cloud infrastructure</category>
+    <category>ai roi</category>
+    <category>machine learning operations</category>
+  </item>
   <item>
     <title><![CDATA[DeepSeekv4flashvisionexp: The Complete Guide to Setup]]></title>
     <link>https://quillmatick.github.io/tech/deepseekv4flashvisionexp-the-complete-guide-to-setup</link>
