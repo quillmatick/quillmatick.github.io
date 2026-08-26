@@ -5,8 +5,38 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Tue, 25 Aug 2026 02:14:58 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 26 Aug 2026 02:22:36 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[The Complete Guide to New Mac Studio M5 Max and Ultra]]></title>
+    <link>https://quillmatick.github.io/tech/the-complete-guide-to-new-mac-studio-m5-max-and-ultra</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-complete-guide-to-new-mac-studio-m5-max-and-ultra</guid>
+    <description><![CDATA[Get the new Mac Studio with M5 Max and Ultra chips. Learn about specs, performance gains, and power efficiency to upgrade your workflow. Read the full guide.]]></description>
+    <pubDate>Wed, 26 Aug 2026 02:20:51 GMT</pubDate>
+    <category>mac studio m5</category>
+    <category>apple silicon</category>
+    <category>m5 max</category>
+    <category>m5 ultra</category>
+    <category>unified memory</category>
+    <category>metal 3</category>
+    <category>neural engine</category>
+    <category>hardware optimization</category>
+  </item>
+  <item>
+    <title><![CDATA[Apple Introduces M6 and M5 Ultra: The Complete Guide to Power]]></title>
+    <link>https://quillmatick.github.io/tech/apple-introduces-m6-and-m5-ultra-the-complete-guide-to-power</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/apple-introduces-m6-and-m5-ultra-the-complete-guide-to-power</guid>
+    <description><![CDATA[Apple introduces M6 and M5 Ultra chips. Learn about the new architecture and benchmarks to maximize your workflow efficiency. Read the complete power guide now.]]></description>
+    <pubDate>Wed, 26 Aug 2026 02:20:06 GMT</pubDate>
+    <category>apple silicon</category>
+    <category>m6 chip</category>
+    <category>m5 ultra</category>
+    <category>hardware performance</category>
+    <category>unified memory architecture</category>
+    <category>apple wwdc</category>
+    <category>tech benchmarks</category>
+    <category>semiconductor technology</category>
+  </item>
   <item>
     <title><![CDATA[How to Stop Photos Invisibly Watermark Locally Generated Output]]></title>
     <link>https://quillmatick.github.io/tech/how-to-stop-photos-invisibly-watermark-locally-generated-output</link>
@@ -276,21 +306,6 @@
     <category>iot</category>
     <category>computer architecture</category>
     <category>hardware verification</category>
-  </item>
-  <item>
-    <title><![CDATA[The Complete Guide to GLM-5.3 Frontier Coding]]></title>
-    <link>https://quillmatick.github.io/tech/the-complete-guide-to-glm-53-frontier-coding</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-complete-guide-to-glm-53-frontier-coding</guid>
-    <description><![CDATA[Master GLM-5.3 frontier coding to unlock emergent cyber capabilities. Learn advanced techniques to automate complex tasks and boost efficiency. Read the guide.]]></description>
-    <pubDate>Fri, 14 Aug 2026 20:20:56 GMT</pubDate>
-    <category>glm-53</category>
-    <category>frontier coding</category>
-    <category>ai security</category>
-    <category>vulnerability detection</category>
-    <category>llm fine-tuning</category>
-    <category>static analysis</category>
-    <category>prompt engineering</category>
-    <category>cyber-semantic ontology</category>
   </item>
 </channel>
 </rss>
