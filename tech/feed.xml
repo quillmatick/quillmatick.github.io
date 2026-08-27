@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Thu, 27 Aug 2026 07:44:51 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 27 Aug 2026 08:36:32 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[GLM53Flash Guide: How to Optimize Your AI Workflows]]></title>
+    <link>https://quillmatick.github.io/tech/glm53flash-guide-how-to-optimize-your-ai-workflows</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/glm53flash-guide-how-to-optimize-your-ai-workflows</guid>
+    <description><![CDATA[Master GLM53Flash to streamline your AI workflows. Learn expert optimization techniques to boost productivity and reduce latency. Start scaling your output now.]]></description>
+    <pubDate>Thu, 27 Aug 2026 08:34:00 GMT</pubDate>
+    <category>glm53flash</category>
+    <category>ai optimization</category>
+    <category>flash-attention</category>
+    <category>model quantization</category>
+    <category>gpu performance</category>
+    <category>llm inference</category>
+    <category>tensorrt</category>
+    <category>machine learning workflows</category>
+  </item>
   <item>
     <title><![CDATA[The Complete Guide to New Mac Studio M5 Max and Ultra]]></title>
     <link>https://quillmatick.github.io/tech/the-complete-guide-to-new-mac-studio-m5-max-and-ultra</link>
@@ -291,21 +306,6 @@
     <category>json output</category>
     <category>ai safety</category>
     <category>model performance</category>
-  </item>
-  <item>
-    <title><![CDATA[Third World Engineer Responds: RISC-V and Global Design]]></title>
-    <link>https://quillmatick.github.io/tech/third-world-engineer-responds-risc-v-and-global-design</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/third-world-engineer-responds-risc-v-and-global-design</guid>
-    <description><![CDATA[Third World Engineer responds to the RISC-V movement. Learn how open-source hardware democratizes global design to lower costs. Read the full analysis here.]]></description>
-    <pubDate>Tue, 18 Aug 2026 12:25:22 GMT</pubDate>
-    <category>risc-v</category>
-    <category>isa</category>
-    <category>open-source hardware</category>
-    <category>embedded systems</category>
-    <category>soc design</category>
-    <category>iot</category>
-    <category>computer architecture</category>
-    <category>hardware verification</category>
   </item>
 </channel>
 </rss>
