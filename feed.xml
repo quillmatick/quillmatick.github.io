@@ -5,8 +5,68 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>The Pulse of Tech &amp; Geopolitics</description>
   <language>en</language>
-  <lastBuildDate>Mon, 24 Aug 2026 15:38:29 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 27 Aug 2026 07:33:05 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[The Complete Guide to New Mac Studio M5 Max and Ultra]]></title>
+    <link>https://quillmatick.github.io/tech/the-complete-guide-to-new-mac-studio-m5-max-and-ultra</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-complete-guide-to-new-mac-studio-m5-max-and-ultra</guid>
+    <description><![CDATA[Get the new Mac Studio with M5 Max and Ultra chips. Learn about specs, performance gains, and power efficiency to upgrade your workflow. Read the full guide.]]></description>
+    <pubDate>Wed, 26 Aug 2026 02:20:51 GMT</pubDate>
+    <category>mac studio m5</category>
+    <category>apple silicon</category>
+    <category>m5 max</category>
+    <category>m5 ultra</category>
+    <category>unified memory</category>
+    <category>metal 3</category>
+    <category>neural engine</category>
+    <category>hardware optimization</category>
+  </item>
+  <item>
+    <title><![CDATA[Apple Introduces M6 and M5 Ultra: The Complete Guide to Power]]></title>
+    <link>https://quillmatick.github.io/tech/apple-introduces-m6-and-m5-ultra-the-complete-guide-to-power</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/apple-introduces-m6-and-m5-ultra-the-complete-guide-to-power</guid>
+    <description><![CDATA[Apple introduces M6 and M5 Ultra chips. Learn about the new architecture and benchmarks to maximize your workflow efficiency. Read the complete power guide now.]]></description>
+    <pubDate>Wed, 26 Aug 2026 02:20:06 GMT</pubDate>
+    <category>apple silicon</category>
+    <category>m6 chip</category>
+    <category>m5 ultra</category>
+    <category>hardware performance</category>
+    <category>unified memory architecture</category>
+    <category>apple wwdc</category>
+    <category>tech benchmarks</category>
+    <category>semiconductor technology</category>
+  </item>
+  <item>
+    <title><![CDATA[How to Stop Photos Invisibly Watermark Locally Generated Output]]></title>
+    <link>https://quillmatick.github.io/tech/how-to-stop-photos-invisibly-watermark-locally-generated-output</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-stop-photos-invisibly-watermark-locally-generated-output</guid>
+    <description><![CDATA[Stop photos invisibly watermark tools from tagging your AI art. Learn to remove hidden markers from locally generated output to regain total privacy. Read more.]]></description>
+    <pubDate>Tue, 25 Aug 2026 02:14:05 GMT</pubDate>
+    <category>ai image generation</category>
+    <category>invisible watermarking</category>
+    <category>steganography</category>
+    <category>digital forensics</category>
+    <category>image processing</category>
+    <category>open source tools</category>
+    <category>model configuration</category>
+    <category>data provenance</category>
+  </item>
+  <item>
+    <title><![CDATA[Why Anthropics Best Model Struggles to Attract New Users]]></title>
+    <link>https://quillmatick.github.io/tech/why-anthropics-best-model-struggles-to-attract-new-users</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/why-anthropics-best-model-struggles-to-attract-new-users</guid>
+    <description><![CDATA[Why Anthropics best model struggles to attract users. Learn the core barriers to adoption and how to fix them to scale your AI growth. Read the full analysis.]]></description>
+    <pubDate>Tue, 25 Aug 2026 02:13:20 GMT</pubDate>
+    <category>anthropic</category>
+    <category>ai adoption</category>
+    <category>enterprise ai</category>
+    <category>llm deployment</category>
+    <category>ai governance</category>
+    <category>cloud infrastructure</category>
+    <category>ai roi</category>
+    <category>machine learning operations</category>
+  </item>
   <item>
     <title><![CDATA[DeepSeekv4flashvisionexp: The Complete Guide to Setup]]></title>
     <link>https://quillmatick.github.io/tech/deepseekv4flashvisionexp-the-complete-guide-to-setup</link>
@@ -246,66 +306,6 @@
     <category>dimensionality reduction</category>
     <category>data science</category>
     <category>mathematical modeling</category>
-  </item>
-  <item>
-    <title><![CDATA[Cerebras CS-4: The Complete Guide to AI Acceleration]]></title>
-    <link>https://quillmatick.github.io/tech/cerebras-cs-4-the-complete-guide-to-ai-acceleration</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/cerebras-cs-4-the-complete-guide-to-ai-acceleration</guid>
-    <description><![CDATA[Master the Cerebras CS-4 to accelerate AI workloads. Learn how this system slashes training times and boosts efficiency. Explore the full guide for your scale.]]></description>
-    <pubDate>Wed, 19 Aug 2026 15:48:58 GMT</pubDate>
-    <category>cerebras cs-4</category>
-    <category>ai acceleration</category>
-    <category>wafer-scale engine</category>
-    <category>machine learning hardware</category>
-    <category>gpu alternatives</category>
-    <category>ai infrastructure</category>
-    <category>model training</category>
-    <category>high-performance computing</category>
-  </item>
-  <item>
-    <title><![CDATA[Iranian Academic Writes of Detention Hell and US Ties]]></title>
-    <link>https://quillmatick.github.io/geopolitics/iranian-academic-writes-of-detention-hell-and-us-ties</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/geopolitics/iranian-academic-writes-of-detention-hell-and-us-ties</guid>
-    <description><![CDATA[An Iranian academic writes of detention hell and US ties. Learn the truth about political imprisonment to understand global risks. Read the full account.]]></description>
-    <pubDate>Wed, 19 Aug 2026 15:48:44 GMT</pubDate>
-    <category>iran</category>
-    <category>academic freedom</category>
-    <category>political prisoners</category>
-    <category>human rights</category>
-    <category>us sanctions</category>
-    <category>digital security</category>
-    <category>international law</category>
-    <category>scholarly research</category>
-  </item>
-  <item>
-    <title><![CDATA[Meta's Blockbuster Trial: How It Parallels Big Tobacco]]></title>
-    <link>https://quillmatick.github.io/tech/metas-blockbuster-trial-how-it-parallels-big-tobacco</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/metas-blockbuster-trial-how-it-parallels-big-tobacco</guid>
-    <description><![CDATA[Meta's blockbuster trial draws parallels to Big Tobacco. Learn how legal precedents shape tech accountability to protect your digital future. Read the analysis.]]></description>
-    <pubDate>Wed, 19 Aug 2026 15:47:59 GMT</pubDate>
-    <category>meta</category>
-    <category>antitrust law</category>
-    <category>big tobacco</category>
-    <category>tech regulation</category>
-    <category>corporate compliance</category>
-    <category>digital health</category>
-    <category>platform monopoly</category>
-    <category>litigation strategy</category>
-  </item>
-  <item>
-    <title><![CDATA[Why Does Opus Feel Worse to Work With? A Complete Guide]]></title>
-    <link>https://quillmatick.github.io/tech/why-does-opus-feel-worse-to-work-with-a-complete-guide</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/why-does-opus-feel-worse-to-work-with-a-complete-guide</guid>
-    <description><![CDATA[Does Opus feel worse to work with? Learn why this happens and how to fix your workflow to boost productivity.]]></description>
-    <pubDate>Tue, 18 Aug 2026 12:25:59 GMT</pubDate>
-    <category>opus codec</category>
-    <category>audio engineering</category>
-    <category>low latency</category>
-    <category>voip</category>
-    <category>c programming</category>
-    <category>audio optimization</category>
-    <category>digital signal processing</category>
-    <category>software development</category>
   </item>
 </channel>
 </rss>
