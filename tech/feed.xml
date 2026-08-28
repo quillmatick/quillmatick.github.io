@@ -5,8 +5,52 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Fri, 28 Aug 2026 04:53:48 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 28 Aug 2026 06:42:43 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
-
+  <item>
+    <title><![CDATA[The Complete Guide to Tailcat: Like Netcat but over Tailscale]]></title>
+    <link>https://quillmatick.github.io/tech/the-complete-guide-to-tailcat-like-netcat-but-over-tailscale</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-complete-guide-to-tailcat-like-netcat-but-over-tailscale</guid>
+    <description><![CDATA[Use tailcat like netcat over Tailscale's data plane to move data securely. Learn to master this powerful tool for faster networking. Read the full guide now.]]></description>
+    <pubDate>Fri, 28 Aug 2026 06:42:42 GMT</pubDate>
+    <category>tailcat</category>
+    <category>tailscale</category>
+    <category>netcat</category>
+    <category>wireguard</category>
+    <category>networking</category>
+    <category>nat traversal</category>
+    <category>port forwarding</category>
+    <category>cybersecurity</category>
+  </item>
+  <item>
+    <title><![CDATA[How CEO Fired Developers Led to Open Source AI CEOs]]></title>
+    <link>https://quillmatick.github.io/tech/how-ceo-fired-developers-led-to-open-source-ai-ceos</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-ceo-fired-developers-led-to-open-source-ai-ceos</guid>
+    <description><![CDATA[See how ceo fired developers sparked a wave of open source AI. Learn how fired developers make room for innovation to reclaim power. Read the full story here.]]></description>
+    <pubDate>Fri, 28 Aug 2026 06:41:12 GMT</pubDate>
+    <category>open source ai</category>
+    <category>entrepreneurship</category>
+    <category>ai governance</category>
+    <category>software development</category>
+    <category>startup funding</category>
+    <category>open core model</category>
+    <category>tech leadership</category>
+    <category>developer community</category>
+  </item>
+  <item>
+    <title><![CDATA[How to Save 100 Terabytes by Optimizing 1.1.1.1's DNS Cache]]></title>
+    <link>https://quillmatick.github.io/tech/how-to-save-100-terabytes-by-optimizing-1111s-dns-cache</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-save-100-terabytes-by-optimizing-1111s-dns-cache</guid>
+    <description><![CDATA[Save 100 terabytes by optimizing your DNS cache. Learn the exact steps to reclaim massive memory, boost system speed, and lower latency. Start optimizing now.]]></description>
+    <pubDate>Fri, 28 Aug 2026 06:40:27 GMT</pubDate>
+    <category>dns</category>
+    <category>cache optimization</category>
+    <category>cloudflare 1111</category>
+    <category>network infrastructure</category>
+    <category>memory management</category>
+    <category>data compression</category>
+    <category>systems engineering</category>
+    <category>dns resolver</category>
+  </item>
 </channel>
 </rss>
