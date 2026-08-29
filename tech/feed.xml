@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Fri, 28 Aug 2026 09:49:27 GMT</lastBuildDate>
+  <lastBuildDate>Sat, 29 Aug 2026 03:22:17 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Htmx 4.0: The Complete Guide to Modern Web Development]]></title>
+    <link>https://quillmatick.github.io/tech/htmx-40-the-complete-guide-to-modern-web-development</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/htmx-40-the-complete-guide-to-modern-web-development</guid>
+    <description><![CDATA[Master htmx 4.0 with this complete guide. Learn to build dynamic, modern web apps without complex JavaScript to boost performance. Start building faster today.]]></description>
+    <pubDate>Sat, 29 Aug 2026 03:22:04 GMT</pubDate>
+    <category>htmx 40</category>
+    <category>web development</category>
+    <category>frontend frameworks</category>
+    <category>html</category>
+    <category>ajax</category>
+    <category>progressive enhancement</category>
+    <category>dom manipulation</category>
+    <category>server-side rendering</category>
+  </item>
   <item>
     <title><![CDATA[The Complete Guide to Tailcat: Like Netcat but over Tailscale]]></title>
     <link>https://quillmatick.github.io/tech/the-complete-guide-to-tailcat-like-netcat-but-over-tailscale</link>
