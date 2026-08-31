@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Sat, 29 Aug 2026 03:22:17 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 31 Aug 2026 09:06:07 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[OpenAI Jalapeño: Better than Nvidia Blackwell Guide]]></title>
+    <link>https://quillmatick.github.io/tech/openai-jalapeno-better-than-nvidia-blackwell-guide</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/openai-jalapeno-better-than-nvidia-blackwell-guide</guid>
+    <description><![CDATA[Discover is OpenAI Jalapeño better than Nvidia Blackwell? Compare specs and performance to find the fastest AI chip for your workload.]]></description>
+    <pubDate>Mon, 31 Aug 2026 09:05:55 GMT</pubDate>
+    <category>openai jalapeo</category>
+    <category>nvidia blackwell</category>
+    <category>ai hardware</category>
+    <category>llm inference</category>
+    <category>asic</category>
+    <category>hbm4</category>
+    <category>gpu architecture</category>
+    <category>token throughput</category>
+  </item>
   <item>
     <title><![CDATA[Htmx 4.0: The Complete Guide to Modern Web Development]]></title>
     <link>https://quillmatick.github.io/tech/htmx-40-the-complete-guide-to-modern-web-development</link>
