@@ -5,8 +5,68 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Mon, 31 Aug 2026 09:06:07 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 31 Aug 2026 10:13:01 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How a Rumour Bug Enough to Find an Exploit in Modern Systems]]></title>
+    <link>https://quillmatick.github.io/tech/how-a-rumour-bug-enough-to-find-an-exploit-in-modern-systems</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-a-rumour-bug-enough-to-find-an-exploit-in-modern-systems</guid>
+    <description><![CDATA[Is a rumour bug enough to find an exploit in modern systems? Learn how small flaws lead to major breaches to harden your security. Read the full analysis now.]]></description>
+    <pubDate>Mon, 31 Aug 2026 10:12:02 GMT</pubDate>
+    <category>cybersecurity</category>
+    <category>exploit development</category>
+    <category>vulnerability management</category>
+    <category>llm security</category>
+    <category>input validation</category>
+    <category>threat intelligence</category>
+    <category>cicd security</category>
+    <category>software security</category>
+  </item>
+  <item>
+    <title><![CDATA[How EVE Online Moves to Python 3 for Better Performance]]></title>
+    <link>https://quillmatick.github.io/tech/how-eve-online-moves-to-python-3-for-better-performance</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-eve-online-moves-to-python-3-for-better-performance</guid>
+    <description><![CDATA[See how EVE Online moves to Python 3 to optimize server performance. Learn the technical migration steps to reduce lag and boost stability. Read the full guide.]]></description>
+    <pubDate>Mon, 31 Aug 2026 10:10:31 GMT</pubDate>
+    <category>python 3</category>
+    <category>eve online</category>
+    <category>software migration</category>
+    <category>performance optimization</category>
+    <category>python 2 to 3</category>
+    <category>game development</category>
+    <category>backend engineering</category>
+    <category>asynchronous programming</category>
+  </item>
+  <item>
+    <title><![CDATA[The Complete Guide to Loadbearing Vocabulary in Claude]]></title>
+    <link>https://quillmatick.github.io/tech/the-complete-guide-to-loadbearing-vocabulary-in-claude</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-complete-guide-to-loadbearing-vocabulary-in-claude</guid>
+    <description><![CDATA[Master loadbearing vocabulary in Claude to refine your prompts. Learn how to show the loadbearing terms to boost output precision. Upgrade your AI workflow now.]]></description>
+    <pubDate>Mon, 31 Aug 2026 10:09:45 GMT</pubDate>
+    <category>prompt engineering</category>
+    <category>claude ai</category>
+    <category>llm optimization</category>
+    <category>loadbearing tokens</category>
+    <category>attention mechanism</category>
+    <category>token efficiency</category>
+    <category>rag</category>
+    <category>enterprise ai</category>
+  </item>
+  <item>
+    <title><![CDATA[The Turbulent Era Here: How to Thrive in the Age of AI]]></title>
+    <link>https://quillmatick.github.io/tech/the-turbulent-era-here-how-to-thrive-in-the-age-of-ai</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-turbulent-era-here-how-to-thrive-in-the-age-of-ai</guid>
+    <description><![CDATA[Navigate the turbulent era here with proven strategies to master AI. Learn to adapt your skills, stay competitive, and future-proof your career. Read more now.]]></description>
+    <pubDate>Mon, 31 Aug 2026 10:08:16 GMT</pubDate>
+    <category>artificial intelligence</category>
+    <category>ai automation</category>
+    <category>machine learning</category>
+    <category>ai governance</category>
+    <category>edge computing</category>
+    <category>model monitoring</category>
+    <category>digital transformation</category>
+    <category>ai strategy</category>
+  </item>
   <item>
     <title><![CDATA[OpenAI Jalapeño: Better than Nvidia Blackwell Guide]]></title>
     <link>https://quillmatick.github.io/tech/openai-jalapeno-better-than-nvidia-blackwell-guide</link>
