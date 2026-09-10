@@ -6,22 +6,4 @@
     <priority>1.0</priority>
   </url>
   
-  <url>
-    <loc>https://quillmatick.github.io/tech/the-complete-guide-to-tailcat-like-netcat-but-over-tailscale</loc>
-    <lastmod>2026-09-01T12:05:44.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://quillmatick.github.io/tech/how-ceo-fired-developers-led-to-open-source-ai-ceos</loc>
-    <lastmod>2026-09-01T12:05:26.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://quillmatick.github.io/tech/how-to-save-100-terabytes-by-optimizing-1111s-dns-cache</loc>
-    <lastmod>2026-09-01T12:05:37.000Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 </urlset>
