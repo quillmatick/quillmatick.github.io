@@ -5,38 +5,8 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Tue, 01 Sep 2026 12:07:06 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 10 Sep 2026 06:11:06 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
-  <item>
-    <title><![CDATA[How EVE Online Moves to Python 3 for Better Performance]]></title>
-    <link>https://quillmatick.github.io/tech/how-eve-online-moves-to-python-3-for-better-performance</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-eve-online-moves-to-python-3-for-better-performance</guid>
-    <description><![CDATA[See how EVE Online moves to Python 3 to optimize server performance. Learn the technical migration steps to reduce lag and boost stability. Read the full guide.]]></description>
-    <pubDate>Tue, 01 Sep 2026 12:05:14 GMT</pubDate>
-    <category>python 3</category>
-    <category>eve online</category>
-    <category>software migration</category>
-    <category>performance optimization</category>
-    <category>python 2 to 3</category>
-    <category>game development</category>
-    <category>backend engineering</category>
-    <category>asynchronous programming</category>
-  </item>
-  <item>
-    <title><![CDATA[How a Rumour Bug Enough to Find an Exploit in Modern Systems]]></title>
-    <link>https://quillmatick.github.io/tech/how-a-rumour-bug-enough-to-find-an-exploit-in-modern-systems</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-a-rumour-bug-enough-to-find-an-exploit-in-modern-systems</guid>
-    <description><![CDATA[Is a rumour bug enough to find an exploit in modern systems? Learn how small flaws lead to major breaches to harden your security. Read the full analysis now.]]></description>
-    <pubDate>Mon, 31 Aug 2026 10:12:02 GMT</pubDate>
-    <category>cybersecurity</category>
-    <category>exploit development</category>
-    <category>vulnerability management</category>
-    <category>llm security</category>
-    <category>input validation</category>
-    <category>threat intelligence</category>
-    <category>cicd security</category>
-    <category>software security</category>
-  </item>
   <item>
     <title><![CDATA[OpenAI Jalapeño: Better than Nvidia Blackwell Guide]]></title>
     <link>https://quillmatick.github.io/tech/openai-jalapeno-better-than-nvidia-blackwell-guide</link>
