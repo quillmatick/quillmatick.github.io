@@ -5,8 +5,52 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Thu, 10 Sep 2026 06:11:48 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 17 Sep 2026 08:11:52 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
-
+  <item>
+    <title><![CDATA[Shopify Moving From React Native: The Complete Guide]]></title>
+    <link>https://quillmatick.github.io/tech/shopify-moving-from-react-native-the-complete-guide</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/shopify-moving-from-react-native-the-complete-guide</guid>
+    <description><![CDATA[Shopify moving from React Native to native Swift proves the value of performance. Learn why they switched and how to optimize your app. Read the full guide.]]></description>
+    <pubDate>Thu, 17 Sep 2026 08:11:51 GMT</pubDate>
+    <category>shopify</category>
+    <category>react native</category>
+    <category>swift</category>
+    <category>kotlin</category>
+    <category>mobile development</category>
+    <category>app migration</category>
+    <category>llm</category>
+    <category>software engineering</category>
+  </item>
+  <item>
+    <title><![CDATA[The Cyphral Distich 370yearold Cipher: How Fable Solves It]]></title>
+    <link>https://quillmatick.github.io/tech/the-cyphral-distich-370yearold-cipher-how-fable-solves-it</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-cyphral-distich-370yearold-cipher-how-fable-solves-it</guid>
+    <description><![CDATA[Crack the Cyphral Distich 370yearold cipher with Fable. Learn how advanced AI decodes ancient mysteries to reveal hidden truths. Read the full breakdown now.]]></description>
+    <pubDate>Thu, 17 Sep 2026 08:10:21 GMT</pubDate>
+    <category>cryptography</category>
+    <category>book cipher</category>
+    <category>cyphral distich</category>
+    <category>decryption</category>
+    <category>fable ai</category>
+    <category>sir thomas urquhart</category>
+    <category>puzzle solving</category>
+    <category>codebreaking</category>
+  </item>
+  <item>
+    <title><![CDATA[Why are agents lying, cheating and coordinating in AI?]]></title>
+    <link>https://quillmatick.github.io/tech/why-are-agents-lying-cheating-and-coordinating-in-ai</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/why-are-agents-lying-cheating-and-coordinating-in-ai</guid>
+    <description><![CDATA[Are agents lying, cheating and coordinating in AI? Learn why these behaviors emerge and how to secure your systems for better reliability.]]></description>
+    <pubDate>Thu, 17 Sep 2026 08:09:37 GMT</pubDate>
+    <category>ai safety</category>
+    <category>agentic ai</category>
+    <category>ai alignment</category>
+    <category>deceptive alignment</category>
+    <category>reinforcement learning</category>
+    <category>multi-agent systems</category>
+    <category>ai governance</category>
+    <category>model monitoring</category>
+  </item>
 </channel>
 </rss>

@@ -29,47 +29,53 @@
       } catch (e) {}
     })();
   </script>
-  <title>Quillmatick Hub </title>
-  <meta name="description" content="Latest articles on technology, AI, and software development. Page 1" />
-  <meta property="og:title" content="Quillmatick Hub " />
-  <meta property="og:description" content="Latest articles on technology, AI, and software development. Page 1" />
-  <meta property="og:type" content="website" />
-  <link rel="stylesheet" href="/tech/style.css?v=1789632760099" />
-  <link rel="canonical" href="https://quillmatick.github.io" />
+  <title>Shopify Moving From React Native: The Complete Guide</title>
+<meta name="description" content="Shopify moving from React Native to native Swift proves the value of performance. Learn why they switched and how to optimize your app. Read the full guide." />
+<meta name="keywords" content="react native back, native back swift, shopify moving from, moving from react, from react native, back swift and, swift and kotlin, shopify moving" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://quillmatick.github.io/tech/shopify-moving-from-react-native-the-complete-guide" />
+<meta property="og:title" content="Shopify Moving From React Native: The Complete Guide" />
+<meta property="og:description" content="Shopify moving from React Native to native Swift proves the value of performance. Learn why they switched and how to optimize your app. Read the full guide." />
+<meta property="og:url" content="https://quillmatick.github.io/tech/shopify-moving-from-react-native-the-complete-guide" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="/tech/shopify-moving-from-react-native-the-complete-guide/featured.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Shopify Moving From React Native: The Complete Guide" />
+<meta name="twitter:description" content="Shopify moving from React Native to native Swift proves the value of performance. Learn why they switched and how to optimize your app. Read the full guide." />
+<meta name="twitter:image" content="/tech/shopify-moving-from-react-native-the-complete-guide/featured.jpg" />
+<meta name="author" content="Quillmatick Staff" />
+  <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
+  
+  <link rel="stylesheet" href="/tech/style.css?v=1789632710951" />
+  <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
+  <script type="application/ld+json">
+  [object Object]
+  </script>
 </head>
 <body>
-  
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <!-- ─── LIVE TICKER ─── -->
-  <div class="ticker" role="marquee" aria-label="Trending topics">
-    <div class="ticker-inner container">
-      <span class="ticker-label">Live</span>
-      <div class="ticker-track">
-        <div class="ticker-scroll" id="trending-ticker">
-          <a href="/tech/shopify-moving-from-react-native-the-complete-guide/" class="ticker-item"><span class="tag">#shopify</span>Shopify Moving From React Native: The Complete Guide</a><a href="/tech/the-cyphral-distich-370yearold-cipher-how-fable-solves-it/" class="ticker-item"><span class="tag">#cryptography</span>The Cyphral Distich 370yearold Cipher: How Fable Solves It</a><a href="/tech/why-are-agents-lying-cheating-and-coordinating-in-ai/" class="ticker-item"><span class="tag">#aisafety</span>Why are agents lying, cheating and coordinating in AI?</a><a href="/tech/shopify-moving-from-react-native-the-complete-guide/" class="ticker-item"><span class="tag">#shopify</span>Shopify Moving From React Native: The Complete Guide</a><a href="/tech/the-cyphral-distich-370yearold-cipher-how-fable-solves-it/" class="ticker-item"><span class="tag">#cryptography</span>The Cyphral Distich 370yearold Cipher: How Fable Solves It</a><a href="/tech/why-are-agents-lying-cheating-and-coordinating-in-ai/" class="ticker-item"><span class="tag">#aisafety</span>Why are agents lying, cheating and coordinating in AI?</a>
-        </div>
-      </div>
-    </div>
+  <!-- ── Reading progress ── -->
+  <div class="reading-progress" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    <div class="reading-progress-fill" id="progressFill"></div>
   </div>
 
-  <!-- ─── NAVBAR ─── -->
+  <!-- ── Navbar ── -->
   <header>
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <nav class="navbar">
       <div class="navbar-inner">
+        <a href="/tech/" class="nav-back" aria-label="Back to Tech">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          Tech
+        </a>
         <a href="/" class="logo" aria-label="Quillmatick home">
           Quill<span>matick</span><span class="logo-dot" aria-hidden="true"></span>
         </a>
-        <ul class="nav-links" role="list">
-          <li><a href="/tech/" class="">Tech</a></li>
-          <li><a href="/geopolitics/" class="">Geopolitics</a></li>
-          <li><a href="/tech/about.html" class="">About</a></li>
-        </ul>
-        <div class="nav-actions">
-          <form class="search-form" action="/tech/search.html" method="GET" role="search">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-            <input type="text" name="q" placeholder="Search..." autocomplete="off" required aria-label="Search" />
-          </form>
+        <div class="nav-right">
+          <button class="nav-icon-btn" id="bookmarkBtn" aria-label="Bookmark article">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+          </button>
+          <button class="nav-icon-btn" onclick="copyLink()" aria-label="Copy article link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </button>
           <button class="nav-icon-btn" id="themeToggle" aria-label="Toggle theme">
             <svg id="themeIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           </button>
@@ -79,338 +85,422 @@
     </nav>
   </header>
 
-  <!-- ─── FILTER BAR ─── -->
-  <div class="filter-bar" role="navigation" aria-label="Category filter">
-    <div class="filter-bar-inner">
-      <a href="/tech" class="filter-pill active" data-category="all">All topics</a><a href="/tech/search.html?q=ai%20safety" class="filter-pill" data-category="ai safety">ai safety</a><a href="/tech/search.html?q=agentic%20ai" class="filter-pill" data-category="agentic ai">agentic ai</a><a href="/tech/search.html?q=ai%20alignment" class="filter-pill" data-category="ai alignment">ai alignment</a><a href="/tech/search.html?q=deceptive%20alignment" class="filter-pill" data-category="deceptive alignment">deceptive alignment</a><a href="/tech/search.html?q=reinforcement%20learning" class="filter-pill" data-category="reinforcement learning">reinforcement learning</a><a href="/tech/search.html?q=multi-agent%20systems" class="filter-pill" data-category="multi-agent systems">multi-agent systems</a><a href="/tech/search.html?q=ai%20governance" class="filter-pill" data-category="ai governance">ai governance</a><a href="/tech/search.html?q=model%20monitoring" class="filter-pill" data-category="model monitoring">model monitoring</a>
-    </div>
-  </div>
-  <main id="main-content" class="blog-index">
-    
-      <section class="hero" aria-label="Featured article">
-        <div class="hero-inner">
-          
-      <div class="hero-main anim-1">
-        <div>
-          <div class="hero-eyebrow">
-            <span class="badge badge-featured">Featured</span>
-            <span class="badge badge-live">Publishing now</span>
+  <!-- ── Article ── -->
+  <main id="main-content">
+    <article class="article-page" id="articleTop" itemscope itemtype="https://schema.org/Article">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/tech">Tech</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span>shopify</span>
+      </nav>
+
+      <header class="article-header">
+        <div class="article-badges">
+          <span class="badge badge-ai">shopify</span>
+          <span class="badge badge-ai" style="color:var(--red); border-color:rgba(232,84,84,.4); background:var(--red-dim);">Analysis</span>
+        </div>
+
+        <h1 class="article-title" itemprop="headline">
+          Shopify Moving <em>From</em> React Native: The Complete Guide
+        </h1>
+
+        <p class="article-subtitle" itemprop="description">
+          Shopify moving from React Native to native Swift proves the value of performance. Learn why they switched and how to optimize your app. Read the full guide.
+        </p>
+
+        <div class="article-meta-bar">
+          <div class="meta-author">
+            <div class="meta-avatar" aria-hidden="true">QM</div>
+            <div class="meta-author-text">
+              <span class="meta-author-name" itemprop="author">Quillmatick Staff</span>
+              <span class="meta-author-date"><time itemprop="datePublished" datetime="2026-09-17T07:56:22.000Z">September 17, 2026</time></span>
+            </div>
           </div>
-          <h1 class="hero-headline" style="margin: 1.25rem 0 1rem;">
-            How Rosenberg&#039;s <em>Russia&#039;s</em> Elections Analysis Shows Why They Matter
-          </h1>
-          <p class="hero-desc">
-            Explore Rosenberg&#039;s Russia&#039;s elections analysis to see why they matter. Learn how the Kremlin maintains power and gain strategic insights. Read the full study.
-          </p>
-        </div>
-        <div>
-          <div class="hero-meta" style="margin-bottom: 1.25rem;">
-            <span class="meta-text"><strong>Quillmatick Staff</strong></span>
-            <span class="hero-meta-sep" aria-hidden="true"></span>
-            <span class="meta-text">September 17, 2026</span>
-            <span class="hero-meta-sep" aria-hidden="true"></span>
-            <span class="meta-text">8 min read</span>
-          </div>
-          <div class="hero-cta">
-            <a href="/geopolitics/how-rosenbergs-russias-elections-analysis-shows-why-they-matter/" class="btn-primary">
-              Read article
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-            <a href="#articles" class="btn-ghost">Browse all</a>
+          <span class="meta-sep" aria-hidden="true"></span>
+          <span class="meta-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            10 min read
+          </span>
+          <div class="meta-share">
+            <button class="share-btn" onclick="shareTwitter()">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.254 5.622 5.91-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Share
+            </button>
+            <button class="share-btn" onclick="copyLink()">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+              Copy link
+            </button>
           </div>
         </div>
-      </div>
-    
-          
-      <aside class="hero-sidebar anim-2" aria-label="Top stories">
-        <div class="sidebar-header">
-          <span class="sidebar-title">Top stories</span>
-        </div>
-        
-          <a class="sidebar-item" href="/tech/why-are-agents-lying-cheating-and-coordinating-in-ai/">
-            <span class="sidebar-num">01</span>
-            <span class="badge badge-ai">ai safety</span>
-            <span class="sidebar-title-text">Why are agents lying, cheating and coordinating in AI?</span>
-          </a>
-          <a class="sidebar-item" href="/geopolitics/how-brics-meets-india-a-guide-to-the-summits-agenda/">
-            <span class="sidebar-num">02</span>
-            <span class="badge badge-ai">brics summit</span>
-            <span class="sidebar-title-text">How BRICS Meets India: A Guide to the Summit&#039;s Agenda</span>
-          </a>
-          <a class="sidebar-item" href="/geopolitics/how-jetpowered-drones-outpacing-ukraines-air-defences-work/">
-            <span class="sidebar-num">03</span>
-            <span class="badge badge-ai">jet-powered drones</span>
-            <span class="sidebar-title-text">How Jetpowered Drones Outpacing Ukraine&#039;s Air Defences Work</span>
-          </a>
-      </aside>
-    
-        </div>
-      </section>
-      <div class="main-layout">
-        <div class="main-feed">
-          
-      <div class="section-header anim-3">
-        <span class="section-label">Latest stories</span>
-        
-      </div>
-      <div class="featured-grid anim-4">
-        
-          <a class="featured-card" href="/tech/shopify-moving-from-react-native-the-complete-guide/" data-category="shopify">
-            <div class="featured-card-thumb" style="background: linear-gradient(135deg, #1a1a22, #22201a); border-color: var(--border);">
-              <img class="featured-card-thumb-img" src="/tech/shopify-moving-from-react-native-the-complete-guide/featured.jpg" alt="" loading="lazy" decoding="async" />
-              <div class="featured-card-thumb-bar" style="background: var(--amber);"></div>
-            </div>
-            <div class="featured-card-body">
-              <span class="badge badge-ai">shopify</span>
-              <span class="featured-card-title">Shopify Moving From React Native: The Complete Guide</span>
-              <div class="featured-card-meta"><span>Sep 17</span><span>10 min</span></div>
-            </div>
-          </a>
-          <a class="featured-card" href="/geopolitics/how-us-blocks-iran-nuclear-chief-from-vienna-conference/" data-category="ussanctions">
-            <div class="featured-card-thumb" style="background: linear-gradient(135deg, #1a1215, #1a1a12); border-color: var(--border);">
-              <img class="featured-card-thumb-img" src="/geopolitics/how-us-blocks-iran-nuclear-chief-from-vienna-conference/featured.jpg" alt="" loading="lazy" decoding="async" />
-              <div class="featured-card-thumb-bar" style="background: var(--red);"></div>
-            </div>
-            <div class="featured-card-body">
-              <span class="badge badge-ai">us sanctions</span>
-              <span class="featured-card-title">How US Blocks Iran Nuclear Chief from Vienna Conference</span>
-              <div class="featured-card-meta"><span>Sep 17</span><span>7 min</span></div>
-            </div>
-          </a>
-          <a class="featured-card" href="/tech/the-cyphral-distich-370yearold-cipher-how-fable-solves-it/" data-category="cryptography">
-            <div class="featured-card-thumb" style="background: linear-gradient(135deg, #12121a, #161228); border-color: var(--border);">
-              <img class="featured-card-thumb-img" src="/tech/the-cyphral-distich-370yearold-cipher-how-fable-solves-it/featured.jpg" alt="" loading="lazy" decoding="async" />
-              <div class="featured-card-thumb-bar" style="background: var(--accent);"></div>
-            </div>
-            <div class="featured-card-body">
-              <span class="badge badge-ai">cryptography</span>
-              <span class="featured-card-title">The Cyphral Distich 370yearold Cipher: How Fable Solves It</span>
-              <div class="featured-card-meta"><span>Sep 17</span><span>8 min</span></div>
-            </div>
-          </a>
-      </div>
-    
-          
-      <div class="section-header" id="articles">
-        <span class="section-label">All articles</span>
-        <span class="section-label" style="font-size:11px; color: var(--ink4);">Page 1 of 1</span>
-      </div>
+      </header>
+
+      <!-- Featured image if exists -->
       
-      <div class="article-list" role="list">
-        
-          <a class="article-row" href="/geopolitics/how-rosenbergs-russias-elections-analysis-shows-why-they-matter/" role="listitem" data-category="russiaelections">
-            <span class="article-row-num">01</span>
-            <div class="article-row-body">
-              <div style="margin-bottom: 0.25rem;">
-                <span class="badge badge-ai">russia elections</span>
-              </div>
-              <span class="article-row-title">How Rosenberg&#039;s Russia&#039;s Elections Analysis Shows Why They Matter</span>
-              <span class="article-row-excerpt">Explore Rosenberg&#039;s Russia&#039;s elections analysis to see why they matter. Learn how the Kremlin maintains power and gain strategic insights. Read the full study.</span>
-              <div class="article-row-foot">
-                <span class="article-row-date">Sep 17, 2026</span>
-                <span class="article-row-time">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  8 min
-                </span>
-              </div>
-            </div>
-            <div class="article-row-thumb" aria-hidden="true">📝</div>
-          </a>
-          <a class="article-row" href="/tech/shopify-moving-from-react-native-the-complete-guide/" role="listitem" data-category="shopify">
-            <span class="article-row-num">02</span>
-            <div class="article-row-body">
-              <div style="margin-bottom: 0.25rem;">
-                <span class="badge badge-ai">shopify</span>
-              </div>
-              <span class="article-row-title">Shopify Moving From React Native: The Complete Guide</span>
-              <span class="article-row-excerpt">Shopify moving from React Native to native Swift proves the value of performance. Learn why they switched and how to optimize your app. Read the full guide.</span>
-              <div class="article-row-foot">
-                <span class="article-row-date">Sep 17, 2026</span>
-                <span class="article-row-time">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  10 min
-                </span>
-              </div>
-            </div>
-            <div class="article-row-thumb" aria-hidden="true">📝</div>
-          </a>
-          <a class="article-row" href="/geopolitics/how-us-blocks-iran-nuclear-chief-from-vienna-conference/" role="listitem" data-category="ussanctions">
-            <span class="article-row-num">03</span>
-            <div class="article-row-body">
-              <div style="margin-bottom: 0.25rem;">
-                <span class="badge badge-ai">us sanctions</span>
-              </div>
-              <span class="article-row-title">How US Blocks Iran Nuclear Chief from Vienna Conference</span>
-              <span class="article-row-excerpt">US blocks Iran nuclear chief from attending key Vienna talks. Learn the geopolitical motives and the impact on global security. Get the full analysis here.</span>
-              <div class="article-row-foot">
-                <span class="article-row-date">Sep 17, 2026</span>
-                <span class="article-row-time">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  7 min
-                </span>
-              </div>
-            </div>
-            <div class="article-row-thumb" aria-hidden="true">📝</div>
-          </a>
-          <a class="article-row" href="/tech/the-cyphral-distich-370yearold-cipher-how-fable-solves-it/" role="listitem" data-category="cryptography">
-            <span class="article-row-num">04</span>
-            <div class="article-row-body">
-              <div style="margin-bottom: 0.25rem;">
-                <span class="badge badge-ai">cryptography</span>
-              </div>
-              <span class="article-row-title">The Cyphral Distich 370yearold Cipher: How Fable Solves It</span>
-              <span class="article-row-excerpt">Crack the Cyphral Distich 370yearold cipher with Fable. Learn how advanced AI decodes ancient mysteries to reveal hidden truths. Read the full breakdown now.</span>
-              <div class="article-row-foot">
-                <span class="article-row-date">Sep 17, 2026</span>
-                <span class="article-row-time">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  8 min
-                </span>
-              </div>
-            </div>
-            <div class="article-row-thumb" aria-hidden="true">📝</div>
-          </a>
-          <a class="article-row" href="/tech/why-are-agents-lying-cheating-and-coordinating-in-ai/" role="listitem" data-category="aisafety">
-            <span class="article-row-num">05</span>
-            <div class="article-row-body">
-              <div style="margin-bottom: 0.25rem;">
-                <span class="badge badge-ai">ai safety</span>
-              </div>
-              <span class="article-row-title">Why are agents lying, cheating and coordinating in AI?</span>
-              <span class="article-row-excerpt">Are agents lying, cheating and coordinating in AI? Learn why these behaviors emerge and how to secure your systems for better reliability.</span>
-              <div class="article-row-foot">
-                <span class="article-row-date">Sep 17, 2026</span>
-                <span class="article-row-time">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  6 min
-                </span>
-              </div>
-            </div>
-            <div class="article-row-thumb" aria-hidden="true">🤖</div>
-          </a>
-          <a class="article-row" href="/geopolitics/how-brics-meets-india-a-guide-to-the-summits-agenda/" role="listitem" data-category="bricssummit">
-            <span class="article-row-num">06</span>
-            <div class="article-row-body">
-              <div style="margin-bottom: 0.25rem;">
-                <span class="badge badge-ai">brics summit</span>
-              </div>
-              <span class="article-row-title">How BRICS Meets India: A Guide to the Summit&#039;s Agenda</span>
-              <span class="article-row-excerpt">Explore how BRICS meets India in this year&#039;s summit. Learn about the core agenda and geopolitical shifts to stay ahead of global trends. Read the full guide.</span>
-              <div class="article-row-foot">
-                <span class="article-row-date">Sep 17, 2026</span>
-                <span class="article-row-time">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  9 min
-                </span>
-              </div>
-            </div>
-            <div class="article-row-thumb" aria-hidden="true">📝</div>
-          </a>
-          <a class="article-row" href="/geopolitics/how-jetpowered-drones-outpacing-ukraines-air-defences-work/" role="listitem" data-category="jet-powereddrones">
-            <span class="article-row-num">07</span>
-            <div class="article-row-body">
-              <div style="margin-bottom: 0.25rem;">
-                <span class="badge badge-ai">jet-powered drones</span>
-              </div>
-              <span class="article-row-title">How Jetpowered Drones Outpacing Ukraine&#039;s Air Defences Work</span>
-              <span class="article-row-excerpt">Jetpowered drones outpacing Ukraine&#039;s air defenses use high-speed propulsion to evade radar. Learn the tech behind these threats to stay informed. Read more.</span>
-              <div class="article-row-foot">
-                <span class="article-row-date">Sep 17, 2026</span>
-                <span class="article-row-time">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  6 min
-                </span>
-              </div>
-            </div>
-            <div class="article-row-thumb" aria-hidden="true">📝</div>
-          </a>
+      <div style="margin-bottom: 2.5rem; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border);">
+        <img src="/tech/shopify-moving-from-react-native-the-complete-guide/featured.jpg" width="1200" height="630" loading="eager" onerror="this.onerror=null; this.src='https://picsum.photos/seed/shopify-moving-from-react-native-the-complete-guide/1200/630';" alt="Shopify Moving From React Native: The Complete Guide" style="width:100%; height:auto; display:block;" itemprop="image" />
       </div>
-    
-        </div>
-        
-      <aside class="right-sidebar" aria-label="Trending and resources">
-        
-        <div class="section-header">
-          <span class="section-label">Trending this week</span>
-        </div>
-        <div class="trending-list">
+
+      <!-- Article body -->
+      <div class="article-body" id="articleBody" itemprop="articleBody">
+        <blockquote>
+<ul>
+<li>Maintain <strong>dual codebases</strong> but use automated review checkpoints (CI pipelines that run LLM-generated diff analysis) to catch regressions early, ensuring consistency between iOS and Android releases.</li>
+</ul>
+</blockquote>
+<p>Shopify’s mobile strategy just shifted gears. After years of relying on <strong>React Native</strong>, the company is rebuilding its flagship apps using <strong>Swift</strong> and <strong>Kotlin</strong>. This is not a retreat from cross-platform ideals, but a strategic pivot driven by the evolution of AI. Here is the history, the technical reasoning, and the migration methodology powering the change.</p>
+<h2 id="background-and-initial-adoption-of-react-native">Background and Initial Adoption of React Native</h2>
+<blockquote>
+<p><strong>We decided to go all-in on React Native back in 2020, and that bet has been extremely successful.</strong></p>
+</blockquote>
+<p>The wins were immediate.</p>
+<blockquote>
+<p><strong>We saved a ton of time building features just once, enabled developers with no mobile background to contribute to our apps, and freed ourselves from constantly chasing feature parity.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>In January 2025, I wrote that the future of React Native was bright and that Shopify planned to keep investing in it.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>That was true based on what we knew then.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>React Native was working well for us, and it remains an excellent framework.</strong></p>
+</blockquote>
+<p>But the cost of development changed.</p>
+<blockquote>
+<p><strong>But since then, coding models have gotten dramatically better, and for our apps and our team, building the same feature in Swift and Kotlin no longer carries the cost it used to.</strong></p>
+</blockquote>
+<h3 id="original-motivations-for-react-native">Original motivations for React Native</h3>
+<blockquote>
+<p><strong>Stop building the same features twice</strong>
+<strong>Allow developers to work across the stack</strong>
+<strong>Spend less time chasing feature parity and more time shipping value</strong></p>
+</blockquote>
+<h3 id="early-successes-and-trade-offs">Early successes and trade-offs</h3>
+<p>The framework hit its marks.</p>
+<blockquote>
+<p><strong>React Native consistently delivered these benefits.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>We found ourselves spending a significant amount of time and resources on optimizing performance, improving key foundational areas in React Native, and keeping up with framework updates and external dependencies, but these were acceptable tradeoffs.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>The benefits of using React Native far outweighed the investments we had to make in these areas.</strong></p>
+</blockquote>
+<h2 id="why-shopify-is-switching-back-to-native">Why Shopify Is Switching Back to Native</h2>
+<p>Shopify didn't just adopt LLMs; they integrated them early.</p>
+<blockquote>
+<p><strong>Shopify has been using LLMs to build software since 2021 (one year before ChatGPT!).</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Initially, we used them to implement features, investigate and fix bugs, and review code.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>As the models improved, so did the complexity of the work we trusted them to take on.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>By late 2025, they were no longer just helping us write code faster.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>They were capable of making us question whether building software twice still meant doing twice the work.</strong></p>
+</blockquote>
+<p>The team prototyped this theory by rebuilding core app components in Swift and Kotlin. The results were surprising.</p>
+<blockquote>
+<p><strong>We rebuilt several core parts of our biggest apps in Swift and Kotlin using LLMs and were surprised by how well it worked.</strong></p>
+</blockquote>
+<p>AI agents now handle the heavy lifting of translation:</p>
+<blockquote>
+<p><strong>Could implement a feature on Android using the iOS version as a reference, and vice versa</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Helped developers ramp up and contribute effectively outside their primary stack</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Dramatically reduced the cost of maintaining parity between platforms through shared specifications, tests, and review checkpoints</strong></p>
+</blockquote>
+<p>Does this mean the cost of two codebases disappeared? No.</p>
+<blockquote>
+<p><strong>Native still means building and maintaining software on two platforms, that cost has not disappeared.</strong></p>
+</blockquote>
+<p>But the bottleneck shifted. Agents now shoulder the implementation, translation, and review work.</p>
+<blockquote>
+<p><strong>What changed is that agents can now do enough of the implementation, translation, testing, and review work that it’s no longer the deciding factor it was in 2020.</strong></p>
+</blockquote>
+<p>Performance was the final nudge.</p>
+<blockquote>
+<p><strong>React Native apps can be fast.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Ours are.</strong></p>
+</blockquote>
+<p>Yet, removing the framework layer offers a level of precision that no bridge can match.</p>
+<blockquote>
+<p><strong>We are making this change because agents have reduced the advantages of sharing implementation, while the advantages of building for each platform remain.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Native keeps us closer to platform capabilities and first-party tooling, with fewer framework and dependency layers between our code and the platform.</strong></p>
+</blockquote>
+<p>Internal shifts often leave external communities wondering about the tools they rely on.</p>
+<h2 id="status-of-shopifys-react-native-open-source-libraries">Status of Shopify’s React Native Open-Source Libraries</h2>
+<p>Shopify is exiting React Native internally, but it isn't abandoning the ecosystem.</p>
+<h3 id="react-native-skia-continued-sponsorship-and-fork">React Native Skia – continued sponsorship and fork</h3>
+<blockquote>
+<p><strong>Shopify will continue sponsoring this through the end of 2026, and William Candillon will continue working on it beyond that.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>He will fork the repo in the coming months and start publishing the library under a new name.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>The original repo will be archived when this transition is complete.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>We’ll post updates along the way so that everyone has ample time to migrate.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>If your app relies on this library, please consider sponsoring it.</strong></p>
+</blockquote>
+<h3 id="flashlist-ongoing-critical-fixes-and-stewardship-search">FlashList – ongoing critical fixes and stewardship search</h3>
+<p>FlashList is too big to simply archive.</p>
+<blockquote>
+<p><strong>This library gets ~2M downloads/week and has become the default way to render high-performance lists in React Native.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Given how important it is for the ecosystem, Shopify will continue to fix critical issues that break compatibility.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>We’re currently in discussions with several companies about taking on long-term stewardship of FlashList.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>If you’re interested, reach out to me here.</strong></p>
+</blockquote>
+<h3 id="restyle-archiving-timeline-and-community-hand-off">Restyle – archiving timeline and community hand-off</h3>
+<blockquote>
+<p><strong>Restyle has a smaller user base than our other libraries, so we're archiving this repo.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>We'll keep it working through the end of 2026, then stop maintaining it.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Anyone is welcome to fork it and take it forward, and we'll help with the handover if a team wants to pick it up.</strong></p>
+</blockquote>
+<p>With the libraries settled, the focus turns to the actual migration. How do you move a massive production app without breaking it?</p>
+<h2 id="migration-strategy-greenfield-vs-brownfield">Migration Strategy – Greenfield vs Brownfield</h2>
+<blockquote>
+<p><strong>We debated between gradually migrating to native (brownfield) versus rebuilding them from scratch (greenfield).</strong></p>
+</blockquote>
+<p>In the past, brownfield was the only viable option.</p>
+<blockquote>
+<p><strong>In the past when we migrated to React Native, we picked the brownfield approach for some of our biggest apps, as it’d take years to rewrite them and we’d have to stop shipping new features while the rewrite was in progress.</strong></p>
+</blockquote>
+<p>This time, the math changed. Greenfield won.</p>
+<blockquote>
+<p><strong>However, this time greenfield emerged as a clear winner for the following reasons:</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>LLMs are good at building features in Swift and Kotlin using the React Native version as reference</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>It gives us a clean slate to rebuild in the best way possible without any of the previous constraints</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Our prototypes showed that we could rebuild these apps substantially faster than was possible before coding agents</strong></p>
+</blockquote>
+<h3 id="decision-criteria-for-greenfield-approach">Decision criteria for greenfield approach</h3>
+<h3 id="early-greenfield-migration-the-shop-app-case-study">Early greenfield migration: The Shop app case study</h3>
+<p>The Shop app served as the pilot.</p>
+<blockquote>
+<p><strong>The Shop app, which is regularly at the top of the list in the shopping category in the app stores, is the first to be migrated.</strong></p>
+</blockquote>
+<p>The speed was staggering.</p>
+<blockquote>
+<p><strong>Assisted by AI, the team was able to go from a proof of concept to a fully rebuilt native app published in the app stores in just 12 weeks.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>We’ve written about this migration in depth here.</strong></p>
+</blockquote>
+<h3 id="ongoing-greenfield-migration-shopify-app-and-future-plans">Ongoing greenfield migration: Shopify app and future plans</h3>
+<p>The biggest challenge is next.</p>
+<blockquote>
+<p><strong>The migration of the Shopify app (our biggest with 300+ screens, home &amp; lockscreen widgets, Apple Watch app, complications, Siri Shortcuts, etc.), is also underway and will ship later this year.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>The rest of our apps will be migrated soon.</strong></p>
+</blockquote>
+<p>But raw AI generation is messy. To ensure quality, Shopify built a governing system.</p>
+<h2 id="the-helix-system-for-controlled-migration">The Helix System for Controlled Migration</h2>
+<p>AI can hallucinate. To prevent this, Shopify created Helix—a checkpoint-driven workflow.</p>
+<blockquote>
+<p><strong>To solve this problem, we built a system called Helix that takes a more gradual approach.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>It doesn't expect the first output to be correct, and builds a loop where an imperfect attempt simply cannot move forward until it becomes a good result.</strong></p>
+</blockquote>
+<p>The workflow is surgical:</p>
+<blockquote>
+<p><strong>The developer points Helix at a screen.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Helix reads the React Native code and proposes a sequence of checkpoints (small, ordered slices of the work) that can be reviewed in minutes.</strong></p>
+</blockquote>
+<p>Each slice must pass a gauntlet:</p>
+<blockquote>
+<p><strong>Then, checkpoint by checkpoint, it builds: each one must prove its behavior with tests, match the running app in a visual review, survive two adversarial code reviewers, and get a human's nod before it's committed and the next one starts.</strong></p>
+</blockquote>
+<p>The system learns.</p>
+<blockquote>
+<p><strong>Feedback from every review is remembered, so the loop gets more autonomous as the migration progresses.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>This approach has been working extremely well and is allowing us to rebuild our apps in a fraction of the time.</strong></p>
+</blockquote>
+<p>Even with Helix, a major bottleneck remained: the simulator.</p>
+<h2 id="improving-feedback-loops-for-agent-driven-development">Improving Feedback Loops for Agent-Driven Development</h2>
+<p>Agents are fast; simulators are slow.</p>
+<blockquote>
+<p><strong>Agentic control of simulators has been a bottleneck.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>We found ourselves constantly babysitting them as they couldn’t reliably build, test, and iterate.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>We built tooling to allow agents to reproduce bugs, fix them, and verify the fix autonomously but it was slow and brittle.</strong></p>
+</blockquote>
+<p>React Native's hot-reload helped, but it didn't solve the core issue.</p>
+<blockquote>
+<p><strong>React Native’s hot module reload helps the situation but it doesn’t solve it, due to simulator control being slow.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>This is primarily due to reliance on the accessibility tree, or screenshots to get the state of the app, take actions, and verify results.</strong></p>
+</blockquote>
+<p>The disparity is jarring. An agent changes code in seconds but waits minutes to see the result.</p>
+<blockquote>
+<p><strong>Agents can make code changes in seconds, but it takes them several minutes to test the output.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>This makes iterating extremely slow and manual.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>It doesn’t matter how good the model is if it can’t test its work quickly, which is especially difficult on mobile.</strong></p>
+</blockquote>
+<p>The solution? Architecture that treats agents as first-class citizens.</p>
+<blockquote>
+<p><strong>We’re fixing this by designing our app architecture to work for both humans and agents.</strong></p>
+</blockquote>
+<p>The rule is simple: decouple business logic from the UI.</p>
+<blockquote>
+<p><strong>The core principle here is that business logic should be completely decoupled from the UI and be able to run headlessly on desktop.</strong></p>
+</blockquote>
+<p>Now, agents use a CLI to iterate in milliseconds.</p>
+<blockquote>
+<p><strong>We then make it available to agents via a CLI that allows them to iterate on it in milliseconds instead of minutes without involving simulators.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>The CLI allows agents to inspect the state of the app, navigate between different sections, and perform actions all without needing to touch the UI.</strong></p>
+</blockquote>
+<p>When a visual check is mandatory, the CLI drives the simulator remotely.</p>
+<blockquote>
+<p><strong>When simulator interaction is needed, the CLI can connect to them via a remote mode and drive the UI via commands without having to inspect the layout or the accessibility tree.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>This enables blazing-fast performance and E2E tests.</strong></p>
+</blockquote>
+<h2 id="looking-ahead">Looking Ahead</h2>
+<p>The goal is a total transition to native, powered by AI.</p>
+<blockquote>
+<p><strong>We are going to migrate all our mobile apps to Swift and Kotlin using AI throughout the process.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Shop has already shipped as a fully native app, the Shopify app is underway, and the rest will follow soon.</strong></p>
+</blockquote>
+<p>Speed does not justify sloppiness.</p>
+<blockquote>
+<p><strong>We’re moving quickly, but not by lowering the bar.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Every rebuild must meet or exceed the performance, stability, accessibility, and product quality people expect today.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>This isn’t just the same apps rewritten in different languages.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>We’re rebuilding them so both humans and agents can understand, test, and change them quickly.</strong></p>
+</blockquote>
+<p>The migration is a means to an end, not the destination.</p>
+<blockquote>
+<p><strong>The migration isn’t the finish line.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Success means our teams can deliver better experiences for merchants and buyers faster than before.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>We’ll measure that through product velocity, app quality, and how much work agents can complete autonomously.</strong></p>
+</blockquote>
+<p>Shopify will continue to share the technical blueprints of this transition.</p>
+<blockquote>
+<p><strong>We’ll share what we learn along the way, including deeper dives into Helix, our agent-addressable architecture, and how we’re building mobile apps with agents.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>We were open about what we learned from React Native, and we intend to be just as open about this transition.</strong></p>
+</blockquote>
+
+<ul>
+<li></li>
+</ul>
+
+      </div>
+
+      <div class="article-tags">
+        <span class="article-tags-label">Topics</span>
+        <a href="/tech/search.html?q=shopify" class="tag-chip">#shopify</a><a href="/tech/search.html?q=react%20native" class="tag-chip">#react native</a><a href="/tech/search.html?q=swift" class="tag-chip">#swift</a><a href="/tech/search.html?q=kotlin" class="tag-chip">#kotlin</a><a href="/tech/search.html?q=mobile%20development" class="tag-chip">#mobile development</a><a href="/tech/search.html?q=app%20migration" class="tag-chip">#app migration</a><a href="/tech/search.html?q=llm" class="tag-chip">#llm</a><a href="/tech/search.html?q=software%20engineering" class="tag-chip">#software engineering</a>
+      </div>
+
+      <!-- Newsletter strip -->
+      <div class="newsletter-strip" id="newsletter">
+        <h3>Enjoyed this piece?</h3>
+        <p>Get new Quillmatick articles by email — tech and geopolitics, sent as they are published. Free, unsubscribe anytime.</p>
+        <form class="newsletter-strip-form" onsubmit="handleSubscribeStrip(event)">
+          <input type="email" placeholder="Your email address" required aria-label="Email address" />
+          <div class="qm-hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
+          <button type="submit">Subscribe →</button>
+        </form>
+      </div>
+
+      <!-- Related articles -->
+      <aside class="related-section" aria-label="Related articles">
+        <div class="related-header">Related articles</div>
+        <div class="related-grid">
           
-            <a class="trending-item" href="/tech/shopify-moving-from-react-native-the-complete-guide/">
-              <span class="trending-n">01</span>
-              <div class="trending-body">
-                <span class="trending-title">Shopify Moving From React Native: The Complete Guide</span>
-                <span class="trending-meta">shopify · Sep 17 · 10 min</span>
-              </div>
-            </a>
-            <a class="trending-item" href="/geopolitics/how-us-blocks-iran-nuclear-chief-from-vienna-conference/">
-              <span class="trending-n">02</span>
-              <div class="trending-body">
-                <span class="trending-title">How US Blocks Iran Nuclear Chief from Vienna Conference</span>
-                <span class="trending-meta">us sanctions · Sep 17 · 7 min</span>
-              </div>
-            </a>
-            <a class="trending-item" href="/tech/the-cyphral-distich-370yearold-cipher-how-fable-solves-it/">
-              <span class="trending-n">03</span>
-              <div class="trending-body">
-                <span class="trending-title">The Cyphral Distich 370yearold Cipher: How Fable Solves It</span>
-                <span class="trending-meta">cryptography · Sep 17 · 8 min</span>
-              </div>
-            </a>
-            <a class="trending-item" href="/tech/why-are-agents-lying-cheating-and-coordinating-in-ai/">
-              <span class="trending-n">04</span>
-              <div class="trending-body">
-                <span class="trending-title">Why are agents lying, cheating and coordinating in AI?</span>
-                <span class="trending-meta">ai safety · Sep 17 · 6 min</span>
-              </div>
-            </a>
-            <a class="trending-item" href="/geopolitics/how-brics-meets-india-a-guide-to-the-summits-agenda/">
-              <span class="trending-n">05</span>
-              <div class="trending-body">
-                <span class="trending-title">How BRICS Meets India: A Guide to the Summit&#039;s Agenda</span>
-                <span class="trending-meta">brics summit · Sep 17 · 9 min</span>
-              </div>
-            </a>
-        </div>
-
-        <div class="tags-cloud">
-          <div class="section-label">Topics</div>
-          <div class="tags-wrap">
-            <a class="tag-chip" href="/geopolitics/search.html?q=russia%20elections">#russia elections</a><a class="tag-chip" href="/geopolitics/search.html?q=managed%20democracy">#managed democracy</a><a class="tag-chip" href="/geopolitics/search.html?q=kremlin">#kremlin</a><a class="tag-chip" href="/geopolitics/search.html?q=2024%20duma%20election">#2024 duma election</a><a class="tag-chip" href="/geopolitics/search.html?q=russian%20politics">#russian politics</a><a class="tag-chip" href="/geopolitics/search.html?q=political%20analysis">#political analysis</a><a class="tag-chip" href="/geopolitics/search.html?q=propaganda">#propaganda</a><a class="tag-chip" href="/geopolitics/search.html?q=domestic%20legitimacy">#domestic legitimacy</a><a class="tag-chip" href="/tech/search.html?q=shopify">#shopify</a><a class="tag-chip" href="/tech/search.html?q=react%20native">#react native</a>
-          </div>
-        </div>
-
-        <div class="newsletter-widget" id="newsletter">
-          <div class="newsletter-icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          </div>
-          <h3 class="newsletter-h">Quillmatick weekly</h3>
-          <p class="newsletter-p">The tech and geopolitics stories that matter, emailed as they are published. No noise, no spam.</p>
-          <form class="newsletter-form" onsubmit="window.__qmSubscribe && window.__qmSubscribe(event, this)">
-            <input class="newsletter-input" type="email" placeholder="Your email address" required aria-label="Email address" />
-            <div class="qm-hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
-            <button type="submit" class="newsletter-btn">Subscribe free →</button>
-          </form>
-          <div class="newsletter-social-proof">
-            <div class="social-proof-stat">
-              <span class="social-proof-num">Email</span>
-              <span class="social-proof-label">new articles</span>
-            </div>
-            <div class="social-proof-stat">
-              <span class="social-proof-num">1-click</span>
-              <span class="social-proof-label">unsubscribe</span>
-            </div>
-            <div class="social-proof-stat">
-              <span class="social-proof-num">Free</span>
-              <span class="social-proof-label">always</span>
-            </div>
-          </div>
+    <a class="related-card" href="/tech/why-are-agents-lying-cheating-and-coordinating-in-ai/">
+      <span class="badge badge-ai">ai safety</span>
+      <span class="related-card-title">Why are agents lying, cheating and coordinating in AI?</span>
+      <span class="related-card-meta">Sep 17 · 6 min</span>
+    </a>
+    <a class="related-card" href="/tech/the-cyphral-distich-370yearold-cipher-how-fable-solves-it/">
+      <span class="badge badge-ai">cryptography</span>
+      <span class="related-card-title">The Cyphral Distich 370yearold Cipher: How Fable Solves It</span>
+      <span class="related-card-meta">Sep 17 · 8 min</span>
+    </a>
         </div>
       </aside>
-    
-      </div>
-    
-    
+
+    </article>
   </main>
+
+  <!-- Floating section dots (desktop TOC indicator) -->
+  
+  <nav class="toc-toggle" aria-label="Article sections" id="tocDots">
+    <div class="toc-dot active" data-target="articleTop" title="Top"></div>
+    <div class="toc-dot" data-target="background-and-initial-adoption-of-react-native" title="Background and Initial Ad..."></div>
+<div class="toc-dot" data-target="why-shopify-is-switching-back-to-native" title="Why Shopify Is Switching ..."></div>
+<div class="toc-dot" data-target="status-of-shopifys-react-native-open-source-libraries" title="Status of Shopify’s React..."></div>
+<div class="toc-dot" data-target="migration-strategy-greenfield-vs-brownfield" title="Migration Strategy – Gree..."></div>
+<div class="toc-dot" data-target="the-helix-system-for-controlled-migration" title="The Helix System for Cont..."></div>
+<div class="toc-dot" data-target="improving-feedback-loops-for-agent-driven-development" title="Improving Feedback Loops ..."></div>
+<div class="toc-dot" data-target="looking-ahead" title="Looking Ahead"></div>
+  </nav>
+
   
 
   <!-- Back to top. Articles run to several thousand words; on a phone that is a long scroll
@@ -1120,42 +1210,105 @@
     })();
   </script>
 
-  
+
   <script>
-    /* --- Category filter (only on Index page 1) --- */
+    /* ── Reading progress bar ── */
+    const fill = document.getElementById('progressFill');
+    const progressBar = document.querySelector('.reading-progress');
+    window.addEventListener('scroll', () => {
+      const el = document.getElementById('articleBody');
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const total = el.offsetHeight - window.innerHeight;
+      const scrolled = -rect.top;
+      const pct = Math.min(100, Math.max(0, (scrolled / total) * 100));
+      if (fill) fill.style.width = pct + '%';
+      if (progressBar) progressBar.setAttribute('aria-valuenow', Math.round(pct));
+    }, { passive: true });
+
+    /* ── TOC dots ── */
+    document.querySelectorAll('.toc-dot').forEach(dot => {
+      dot.addEventListener('click', () => {
+        const id = dot.dataset.target;
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    /* Highlight active dot based on scroll */
+    const sections = ['articleTop', 'background-and-initial-adoption-of-react-native', 'why-shopify-is-switching-back-to-native', 'status-of-shopifys-react-native-open-source-libraries', 'migration-strategy-greenfield-vs-brownfield', 'the-helix-system-for-controlled-migration', 'improving-feedback-loops-for-agent-driven-development', 'looking-ahead'];
+    window.addEventListener('scroll', () => {
+      let active = 0;
+      sections.forEach((id, i) => {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top < window.innerHeight * 0.4) active = i;
+      });
+      document.querySelectorAll('.toc-dot').forEach((d, i) => d.classList.toggle('active', i === active));
+    }, { passive: true });
+
+    /* ── Bookmark button ── */
     (function() {
-      const filterPills = document.querySelectorAll('.filter-pill');
-      const articleRows = document.querySelectorAll('.article-row[data-category]');
-      const featuredCards = document.querySelectorAll('.featured-card[data-category]');
+      const btn = document.getElementById('bookmarkBtn');
+      if (btn) {
+        const slug = window.location.pathname.split('/').filter(Boolean).pop();
+        let bookmarked = false;
+        try {
+          const bookmarks = JSON.parse(localStorage.getItem('qm-bookmarks') || '[]');
+          bookmarked = bookmarks.includes(slug);
+          if (bookmarked) {
+            btn.style.borderColor = 'var(--accent)';
+            btn.style.color = 'var(--accent)';
+            btn.style.background = 'var(--accent-dim)';
+            btn.querySelector('svg').setAttribute('fill', 'var(--accent)');
+          }
+        } catch(e) {}
 
-      if (filterPills.length > 0 && (articleRows.length > 0 || featuredCards.length > 0)) {
-        filterPills.forEach(pill => {
-          pill.addEventListener('click', (e) => {
-            // Check if we are on the homepage. If not, click will follow standard link href navigation
-            if (window.location.pathname.endsWith('/tech/') || window.location.pathname.endsWith('/tech') || 
-                window.location.pathname.endsWith('/geopolitics/') || window.location.pathname.endsWith('/geopolitics') ||
-                window.location.pathname.endsWith('index.html')) {
-              
-              e.preventDefault();
-              filterPills.forEach(p => p.classList.remove('active'));
-              pill.classList.add('active');
-
-              const cat = pill.getAttribute('data-category');
-              const allItems = [...articleRows, ...featuredCards];
-
-              allItems.forEach(item => {
-                if (cat === 'all' || item.getAttribute('data-category') === cat) {
-                  item.style.display = '';
-                  item.style.opacity = '1';
-                } else {
-                  item.style.opacity = '0.3';
-                }
-              });
+        btn.addEventListener('click', function() {
+          bookmarked = !bookmarked;
+          this.style.borderColor = bookmarked ? 'var(--accent)' : '';
+          this.style.color = bookmarked ? 'var(--accent)' : '';
+          this.style.background = bookmarked ? 'var(--accent-dim)' : '';
+          this.querySelector('svg').setAttribute('fill', bookmarked ? 'var(--accent)' : 'none');
+          
+          try {
+            let bookmarks = JSON.parse(localStorage.getItem('qm-bookmarks') || '[]');
+            if (bookmarked) {
+              if (!bookmarks.includes(slug)) bookmarks.push(slug);
+            } else {
+              bookmarks = bookmarks.filter(b => b !== slug);
             }
-          });
+            localStorage.setItem('qm-bookmarks', JSON.stringify(bookmarks));
+          } catch(e) {}
         });
       }
     })();
+
+    /* ── Share functions ── */
+    function shareTwitter() {
+      const url = encodeURIComponent(window.location.href);
+      const text = encodeURIComponent(document.title);
+      window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank', 'noopener');
+    }
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        const btns = document.querySelectorAll('.share-btn');
+        btns.forEach(b => { if (b.textContent.includes('Copy')) { b.textContent = '✓ Copied!'; setTimeout(() => b.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg> Copy link`, 2000); }});
+      });
+    }
+
+    /* ── Newsletter strip ── */
+    function handleSubscribeStrip(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button');
+      if (window.__qmSubscribe) {
+        window.__qmSubscribe(e, e.target);
+      } else {
+        // The shared handler is what actually records the address. Showing the success
+        // state without it told the visitor they had subscribed when nothing was stored.
+        btn.textContent = 'Unavailable — please retry';
+        btn.style.background = 'var(--red)';
+      }
+    }
   </script>
 </body>
 </html>
