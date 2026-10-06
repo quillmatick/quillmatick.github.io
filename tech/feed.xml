@@ -5,8 +5,68 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Fri, 18 Sep 2026 07:39:03 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 06 Oct 2026 02:02:47 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How to Run Qwen Flash Next 125B on Consumer Hardware]]></title>
+    <link>https://quillmatick.github.io/tech/how-to-run-qwen-flash-next-125b-on-consumer-hardware</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-run-qwen-flash-next-125b-on-consumer-hardware</guid>
+    <description><![CDATA[Run Qwen Flash Next 125B on consumer hardware with our guide. Learn the exact setup to get enterprise-grade LLM power at home. Start optimizing your rig now.]]></description>
+    <pubDate>Tue, 06 Oct 2026 02:02:23 GMT</pubDate>
+    <category>qwen flash next</category>
+    <category>llm</category>
+    <category>consumer hardware</category>
+    <category>local ai</category>
+    <category>gpu benchmarks</category>
+    <category>strata</category>
+    <category>model quantization</category>
+    <category>self-hosting</category>
+  </item>
+  <item>
+    <title><![CDATA[LeCun Has Zero Concerns: The Guide to AI Safety Risks]]></title>
+    <link>https://quillmatick.github.io/tech/lecun-has-zero-concerns-the-guide-to-ai-safety-risks</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/lecun-has-zero-concerns-the-guide-to-ai-safety-risks</guid>
+    <description><![CDATA[LeCun has zero concerns about AI safety. Learn why recent rogue incidents aren't risks to humanity and gain a balanced perspective. Read the full guide now.]]></description>
+    <pubDate>Tue, 06 Oct 2026 02:02:18 GMT</pubDate>
+    <category>ai safety</category>
+    <category>yann lecun</category>
+    <category>ai governance</category>
+    <category>machine learning</category>
+    <category>sandbox security</category>
+    <category>ai risk management</category>
+    <category>deep learning</category>
+    <category>ai ethics</category>
+  </item>
+  <item>
+    <title><![CDATA[EDR Blind Spot: 3 Ways Browser Attacks Evade Telemetry]]></title>
+    <link>https://quillmatick.github.io/tech/edr-blind-spot-3-ways-browser-attacks-evade-telemetry</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/edr-blind-spot-3-ways-browser-attacks-evade-telemetry</guid>
+    <description><![CDATA[Fix your EDR blind spot today. Learn 3 ways browser attacks evade telemetry to strengthen your security posture and stop hidden threats. Read the full guide.]]></description>
+    <pubDate>Tue, 06 Oct 2026 02:02:13 GMT</pubDate>
+    <category>edr</category>
+    <category>browser security</category>
+    <category>aitm attacks</category>
+    <category>session hijacking</category>
+    <category>telemetry</category>
+    <category>endpoint detection and response</category>
+    <category>fido2</category>
+    <category>saas security</category>
+  </item>
+  <item>
+    <title><![CDATA[The Complete Guide to iOS, iPadOS and macOS 27 Updates]]></title>
+    <link>https://quillmatick.github.io/tech/the-complete-guide-to-ios-ipados-and-macos-27-updates</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-complete-guide-to-ios-ipados-and-macos-27-updates</guid>
+    <description><![CDATA[Master iOS, iPadOS and macOS 27 updates with our expert guide. Learn every new feature to boost your productivity and sync devices. Read the full breakdown now.]]></description>
+    <pubDate>Tue, 06 Oct 2026 02:02:07 GMT</pubDate>
+    <category>ios 27</category>
+    <category>ipados 27</category>
+    <category>macos 27</category>
+    <category>apple intelligence</category>
+    <category>siri ai</category>
+    <category>parental controls</category>
+    <category>safari</category>
+    <category>ai photo editing</category>
+  </item>
   <item>
     <title><![CDATA[Hacking OpenAI: The Complete Guide to Security Testing]]></title>
     <link>https://quillmatick.github.io/tech/hacking-openai-the-complete-guide-to-security-testing</link>
