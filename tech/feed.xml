@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Tue, 06 Oct 2026 02:02:47 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 07 Oct 2026 09:00:29 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[The Complete Guide to Mistral Large 4 Performance]]></title>
+    <link>https://quillmatick.github.io/tech/the-complete-guide-to-mistral-large-4-performance</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-complete-guide-to-mistral-large-4-performance</guid>
+    <description><![CDATA[Master Mistral Large performance with our complete guide. Learn to optimize speed and accuracy to scale your AI workflows efficiently. Read the full analysis.]]></description>
+    <pubDate>Wed, 07 Oct 2026 09:00:02 GMT</pubDate>
+    <category>mistral large 4</category>
+    <category>llm</category>
+    <category>artificial intelligence</category>
+    <category>cybersecurity</category>
+    <category>multilingual ai</category>
+    <category>open-weight models</category>
+    <category>machine learning</category>
+    <category>nvidia grace blackwell</category>
+  </item>
   <item>
     <title><![CDATA[How to Run Qwen Flash Next 125B on Consumer Hardware]]></title>
     <link>https://quillmatick.github.io/tech/how-to-run-qwen-flash-next-125b-on-consumer-hardware</link>
