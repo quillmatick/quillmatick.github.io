@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Sun, 11 Oct 2026 00:30:23 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 13 Oct 2026 09:45:01 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Inside AvisLoader Windows: The Complete Guide to the Loader]]></title>
+    <link>https://quillmatick.github.io/tech/inside-avisloader-windows-the-complete-guide-to-the-loader</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/inside-avisloader-windows-the-complete-guide-to-the-loader</guid>
+    <description><![CDATA[Explore inside AvisLoader Windows to understand how this malware loader operates. Learn to detect threats and secure your system. Read the full guide now.]]></description>
+    <pubDate>Tue, 13 Oct 2026 09:44:14 GMT</pubDate>
+    <category>avisloader</category>
+    <category>malware analysis</category>
+    <category>windows security</category>
+    <category>threat intelligence</category>
+    <category>c2 infrastructure</category>
+    <category>endpoint detection</category>
+    <category>clickfix</category>
+    <category>varonis threat labs</category>
+  </item>
   <item>
     <title><![CDATA[How to Keep Agents Within Their Permissions Safely]]></title>
     <link>https://quillmatick.github.io/tech/how-to-keep-agents-within-their-permissions-safely</link>
