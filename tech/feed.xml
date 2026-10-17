@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Thu, 15 Oct 2026 00:12:55 GMT</lastBuildDate>
+  <lastBuildDate>Sat, 17 Oct 2026 23:25:53 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Using Personal ChatGPT at Work: A Guide for IT Admins]]></title>
+    <link>https://quillmatick.github.io/tech/using-personal-chatgpt-at-work-a-guide-for-it-admins</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/using-personal-chatgpt-at-work-a-guide-for-it-admins</guid>
+    <description><![CDATA[Stop employees using personal ChatGPT at work. Learn how to secure your data, manage risks, and implement safe AI policies to protect your firm. Read the guide.]]></description>
+    <pubDate>Sat, 17 Oct 2026 23:24:48 GMT</pubDate>
+    <category>it administration</category>
+    <category>chatgpt</category>
+    <category>data loss prevention</category>
+    <category>cybersecurity</category>
+    <category>ai governance</category>
+    <category>shadow it</category>
+    <category>enterprise security</category>
+    <category>compliance</category>
+  </item>
   <item>
     <title><![CDATA[How Monitoring Failures Are Fueling AI Hacking Reports]]></title>
     <link>https://quillmatick.github.io/tech/how-monitoring-failures-are-fueling-ai-hacking-reports</link>
