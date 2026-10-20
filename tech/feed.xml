@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Sat, 17 Oct 2026 23:25:53 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 20 Oct 2026 00:41:31 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[The Complete Guide to Timestral Mistral's Time-Series]]></title>
+    <link>https://quillmatick.github.io/tech/the-complete-guide-to-timestral-mistrals-time-series</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-complete-guide-to-timestral-mistrals-time-series</guid>
+    <description><![CDATA[Master Timestral Mistral's time-series models to build accurate forecasts. Learn to deploy foundation models for better data insights. Start optimizing now.]]></description>
+    <pubDate>Tue, 20 Oct 2026 00:40:30 GMT</pubDate>
+    <category>timestral</category>
+    <category>time-series forecasting</category>
+    <category>machine learning</category>
+    <category>mistral</category>
+    <category>predictive analytics</category>
+    <category>edge computing</category>
+    <category>multivariate forecasting</category>
+    <category>ai deployment</category>
+  </item>
   <item>
     <title><![CDATA[Using Personal ChatGPT at Work: A Guide for IT Admins]]></title>
     <link>https://quillmatick.github.io/tech/using-personal-chatgpt-at-work-a-guide-for-it-admins</link>
