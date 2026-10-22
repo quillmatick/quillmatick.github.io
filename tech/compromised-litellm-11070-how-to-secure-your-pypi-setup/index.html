@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://ibzoanlrduqihydokjck.supabase.co https://www.google-analytics.com https://region1.google-analytics.com" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5W1REQNB57"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5W1REQNB57');
+  </script>
+  <meta name="impact-site-verification" value="47413e58-28f4-4b8a-b485-6d184eb0050b">
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <script>
+    (function() {
+      try {
+        const saved = localStorage.getItem('qm-theme');
+        const theme = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+  <title>Compromised LiteLLM 1.107.0: How to Secure Your PyPI Setup</title>
+<meta name="description" content="Fix the compromised LiteLLM 1.107.0 PyPI install now. Learn how to detect the breach and secure your environment to prevent data leaks." />
+<meta name="keywords" content="compromised litellm 11070, litellm 11070 pypi, 11070 pypi installs, pypi installs credential, installs credential stealer, credential stealer and, stealer and backdoor, compromised litellm" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://quillmatick.github.io/tech/compromised-litellm-11070-how-to-secure-your-pypi-setup" />
+<meta property="og:title" content="Compromised LiteLLM 1.107.0: How to Secure Your PyPI Setup" />
+<meta property="og:description" content="Fix the compromised LiteLLM 1.107.0 PyPI install now. Learn how to detect the breach and secure your environment to prevent data leaks." />
+<meta property="og:url" content="https://quillmatick.github.io/tech/compromised-litellm-11070-how-to-secure-your-pypi-setup" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="/tech/compromised-litellm-11070-how-to-secure-your-pypi-setup/featured.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Compromised LiteLLM 1.107.0: How to Secure Your PyPI Setup" />
+<meta name="twitter:description" content="Fix the compromised LiteLLM 1.107.0 PyPI install now. Learn how to detect the breach and secure your environment to prevent data leaks." />
+<meta name="twitter:image" content="/tech/compromised-litellm-11070-how-to-secure-your-pypi-setup/featured.jpg" />
+<meta name="author" content="Quillmatick Staff" />
+  <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
+  
+  <link rel="stylesheet" href="/tech/style.css?v=1792628144995" />
+  <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
+  <script type="application/ld+json">
+  [object Object]
+  </script>
+</head>
+<body>
+  <!-- ── Reading progress ── -->
+  <div class="reading-progress" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    <div class="reading-progress-fill" id="progressFill"></div>
+  </div>
+
+  <!-- ── Navbar ── -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-inner">
+        <a href="/tech/" class="nav-back" aria-label="Back to Tech">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          Tech
+        </a>
+        <a href="/" class="logo" aria-label="Quillmatick home">
+          Quill<span>matick</span><span class="logo-dot" aria-hidden="true"></span>
+        </a>
+        <div class="nav-right">
+          <button class="nav-icon-btn" id="bookmarkBtn" aria-label="Bookmark article">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+          </button>
+          <button class="nav-icon-btn" onclick="copyLink()" aria-label="Copy article link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </button>
+          <button class="nav-icon-btn" id="themeToggle" aria-label="Toggle theme">
+            <svg id="themeIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <a href="#newsletter" class="nav-subscribe">Subscribe free</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ── Article ── -->
+  <main id="main-content">
+    <article class="article-page" id="articleTop" itemscope itemtype="https://schema.org/Article">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/tech">Tech</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span>litellm</span>
+      </nav>
+
+      <header class="article-header">
+        <div class="article-badges">
+          <span class="badge badge-ai">litellm</span>
+          <span class="badge badge-ai" style="color:var(--red); border-color:rgba(232,84,84,.4); background:var(--red-dim);">Analysis</span>
+        </div>
+
+        <h1 class="article-title" itemprop="headline">
+          Compromised LiteLLM <em>1.107.0:</em> How to Secure Your PyPI Setup
+        </h1>
+
+        <p class="article-subtitle" itemprop="description">
+          Fix the compromised LiteLLM 1.107.0 PyPI install now. Learn how to detect the breach and secure your environment to prevent data leaks.
+        </p>
+
+        <div class="article-meta-bar">
+          <div class="meta-author">
+            <div class="meta-avatar" aria-hidden="true">QM</div>
+            <div class="meta-author-text">
+              <span class="meta-author-name" itemprop="author">Quillmatick Staff</span>
+              <span class="meta-author-date"><time itemprop="datePublished" datetime="2026-10-22T00:09:10.000Z">October 22, 2026</time></span>
+            </div>
+          </div>
+          <span class="meta-sep" aria-hidden="true"></span>
+          <span class="meta-item">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            7 min read
+          </span>
+          <div class="meta-share">
+            <button class="share-btn" onclick="shareTwitter()">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.254 5.622 5.91-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Share
+            </button>
+            <button class="share-btn" onclick="copyLink()">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+              Copy link
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Featured image if exists -->
+      
+      <div style="margin-bottom: 2.5rem; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border);">
+        <img src="/tech/compromised-litellm-11070-how-to-secure-your-pypi-setup/featured.jpg" width="1200" height="630" loading="eager" onerror="this.onerror=null; this.src='https://picsum.photos/seed/compromised-litellm-11070-how-to-secure-your-pypi-setup/1200/630';" alt="Compromised LiteLLM 1.107.0: How to Secure Your PyPI Setup" style="width:100%; height:auto; display:block;" itemprop="image" />
+      </div>
+
+      <!-- Article body -->
+      <div class="article-body" id="articleBody" itemprop="articleBody">
+        <h2 id="immediate-mitigation">Immediate Mitigation</h2>
+<ul>
+<li><strong>Enable provenance verification</strong> with <code>--require-hashes</code> or <code>pip install --verify-hashes</code> to reject tampered wheels.</li>
+<li><strong>Audit site-packages</strong> for unexpected <code>.pth</code> files; delete any <code>cook.pth</code>, <code>cook.py</code>, or <code>sitecustomize.py</code> before they execute.</li>
+<li><strong>Restrict and rotate PyPI tokens</strong>; grant publishing-only scope and monitor CI pipelines for unauthorized use.</li>
+<li><strong>Deploy runtime monitoring</strong> that alerts on outbound requests to unknown endpoints (e.g., <code>http://www.litellm.dev/healthcheck</code>) and on creation of temporary files such as <code>/tmp/.pc_once_*</code>.</li>
+</ul>
+<h2 id="overview-of-the-malicious-11070-release">Overview of the Malicious 1.107.0 Release</h2>
+<p>**
+All seven wheels (Linux, macOS, Windows) installed three malicious files into <code>site-packages</code>.
+Consequently, the payload runs whenever any Python process starts, even if the script never imports <strong>litellm</strong>.
+The upstream GitHub repository does <strong>not</strong> contain these files, and PyPI has removed the release.</p>
+<h2 id="implant-insertion-method">Implant Insertion Method</h2>
+<p>The malicious code originates from a single line added to <code>pyproject.toml</code> in the source distribution (sdist):</p>
+<pre><code class="language-toml">data = "cook" # &lt;-- injected
+</code></pre>
+<p>**
+During installation, <code>pip</code> places this folder into <code>site-packages</code>.</p>
+<p>The sdist omits the <code>cook/</code> folder, so the extra line is the only visible change.</p>
+<p>The wheel’s <code>RECORD</code> file lists the three added artifacts:</p>
+<h2 id="wheel-provenance">Wheel Provenance</h2>
+<p>The malicious wheels mimic the legitimate build pipeline.</p>
+<p>Each implant file has a correct <code>RECORD</code> entry, indicating no post-build modification.</p>
+<p>Therefore, the pattern aligns with a Windows checkout that performed line-ending conversion before packaging.</p>
+<p>No public GitHub Actions run built or published the release.
+SafeDep checked all 539 runs between 09:30 and 12:30 UTC.
+At 11:50 UTC, about 10 minutes after the PyPI upload, litellm-dispatcher[bot] published the GitHub release v1.107.0.
+The same delay occurred for 1.106.2.
+PyPI has no provenance attestations for 1.107.0, 1.106.2, or rc2.</p>
+<p>SafeDep assesses, with moderate to high confidence, that BerriAI’s private release pipeline built these wheels from an attacker-modified git source.
+The attacker could have used a compromised maintainer or bot credential, a private branch or mirror, or the reference the pipeline builds from.
+A stolen PyPI token used from the attacker’s own machines fits the evidence less well.
+Only BerriAI’s pipeline logs can confirm the cause.</p>
+<h2 id="credential-stealer-payload-cookpy">Credential stealer payload (cook.py)</h2>
+<p>At startup, Python runs each line that starts with <code>import</code> in a <code>.pth</code> file in site-packages.
+cook.pth contains <code>import cook</code>, so the stealer runs in every Python process on the host: the application, pip, IDE language servers, and CI jobs.</p>
+<p>cook.py wraps about 61 KB of Python in one layer of <code>exec(zlib.decompress(base64.b64decode('...'))).</code>
+The decoded code starts with this configuration:</p>
+<pre><code class="language-python">import os
+
+# Configuration loaded from environment variables for security
+PC_URL = os.getenv("PC_URL", "http://www.litellm.dev/healthcheck")
+PC_TOKEN = os.getenv("PC_TOKEN") # Expected in X-Token header; no default to avoid accidental exposure
+PC_PUBKEY = os.getenv("PC_PUBKEY") # Public key should be supplied securely, e.g., via a secret manager
+
+# Use a safer location for the once-run flag; defaults to a user-writable temp directory
+PC_ONCE_PATH = os.getenv(
+ "PC_ONCE_PATH",
+ os.path.join(os.getenv("TMPDIR", "/tmp"), ".pc_once")
+)
+
+# Enable async execution only when explicitly requested
+PC_ASYNC = os.getenv("PC_ASYNC", "false").lower() == "true"
+
+# Modules can be overridden via environment; defaults to a vetted whitelist
+DEFAULT_MODULES = [
+ "sysinfo", "netinfo", "browser_pw", "browser_hist", "ssh_keys",
+ "shell_hist", "cloud_creds", "dev_secrets", "container_creds",
+ "cicd_secrets", "ai_devtools", "env_vars", "db_litellm",
+ "cloud_metadata", "gpg_keys", "tls_privkey"
+]
+PC_MODULES = os.getenv("PC_MODULES")
+if PC_MODULES:
+ PC_MODULES = [m.strip() for m in PC_MODULES.split(",")]
+else:
+ PC_MODULES = DEFAULT_MODULES
+
+# Optional dry-run flag to prevent actual data transmission during testing
+PC_DRY_RUN = os.getenv("PC_DRY_RUN", "false").lower() == "true"
+</code></pre>
+<h3 id="data-collected-by-the-stealer">Data collected by the stealer</h3>
+<p><code>ModuleTargets</code> include:</p>
+<ul>
+<li><code>sysinfo, netinfo</code> – Host name, user, operating system, IP addresses, network settings</li>
+<li><code>browser_pw</code> – Chromium saved passwords, decrypted with the profile master key (DPAPI on Windows). Firefox <code>logins.json</code> and <code>key4.db</code></li>
+<li><code>ssh_keys</code> – <code>~/.ssh/*</code></li>
+<li><code>shell_hist</code> – bash and zsh history, PowerShell <code>PSReadLine</code>, cmd history</li>
+<li><code>cloud_creds</code> – <code>~/.aws/credentials</code> and <code>config</code>, Azure profile and tokens, gcloud credentials, <code>~/.kube/config</code>, <code>~/.docker/config.json</code>, <code>gh hosts.yml</code>, <code>rclone.conf</code>, <code>~/.netrc</code></li>
+<li><code>container_creds</code> – Kubernetes service account token</li>
+<li><code>cicd_secrets</code> – GitLab runner <code>config.toml</code>, Jenkins <code>initialAdminPassword</code> and <code>master.key</code>, <code>.vault-token</code>, Terraform credentials <code>tfrc.json</code>, Packer settings</li>
+<li><code>ai_devtools</code> – Claude Code, Claude Desktop, Cursor, Windsurf, Copilot, VS Code <code>mcp.json</code>, Gemini CLI, Codex <code>auth.json</code>, Continue, Aider, Goose, opencode, Qwen, Crush, Kiro, Zed, Hugging Face token</li>
+<li><code>env_vars</code> – Its own environment and the environment of other processes through <code>/proc//envir</code></li>
+<li><code>db_litellm</code> – Reads <code>DATABASE_URL</code> and dumps the <code>LiteLLM_CredentialsTable</code> and <code>LiteLLM_ProxyModelTable</code> tables, which hold the LLM provider API keys of a LiteLLM proxy</li>
+<li><code>gpg_keys, tls_privkey</code> – GPG keys, TLS private keys</li>
+</ul>
+<h3 id="exfiltration-mechanism">Exfiltration mechanism</h3>
+<p>It encrypts the JSON results with a random AES-256-CBC key, and encrypts that key with RSA-OAEP and the embedded public key.</p>
+<p>After a successful upload, it writes <code>/tmp/.pc_once_72129118c59f5636c0bb</code> so it collects only once per host.
+It also sets <code>PRIVCOLLECT_ACTIVE=1</code> to avoid a second run in the same process tree.</p>
+<h2 id="backdoor-payload-sitecustomizepy">Backdoor payload (sitecustomize.py)</h2>
+<p>Python imports <code>sitecustomize</code> at startup, so this file also runs in every Python process.</p>
+<pre><code class="language-python">import os
+
+# Load configuration from environment variables with safe defaults
+GITHUB_RAW_URL = os.getenv(
+ "GITHUB_RAW_URL",
+ "https://raw.githubusercontent.com/letters9813/pythonclient-test/main/domain.txt"
+)
+CODE_PATH = os.getenv("CODE_PATH", "/codepy")
+LOOP_INTERVAL = int(os.getenv("LOOP_INTERVAL", "3600"))
+LOCK_FILE = os.getenv("LOCK_FILE", "/tmp/remote_code_loader.lock")
+</code></pre>
+<p>It takes an exclusive lock on <code>/tmp/remote_code_loader.lock</code>, so only one daemon runs per host.
+It calls <code>fork()</code> and <code>setsid()</code>, sends standard input and output to <code>/dev/null</code>, and changes directory to <code>/</code> to detach from the parent process.</p>
+<p>Every hour, it:</p>
+<ul>
+<li>reads <code>domain.txt</code> from the attacker’s GitHub repository and takes the first line that looks like a domain,</li>
+<li>runs its embedded copy of the stealer, which has no once-per-host marker,</li>
+<li>downloads <code>http:///codepy</code> and runs it with <code>exec()</code>.</li>
+</ul>
+<p>The attacker can point the daemon at a new server by editing <code>domain.txt</code>.
+Each infected host runs whatever that server returns as <code>codepy</code>.</p>
+<p>At 13:40 UTC, the GitHub account <code>letters9813</code> and its repository returned 404, about two hours after the release.
+The backdoor now finds no server address and does nothing.
+Hosts that ran the daemon before the deletion could have received and run second-stage code.
+SafeDep could not recover the server address.</p>
+<h2 id="evidence-and-investigation-findings">Evidence and investigation findings</h2>
+<p>The tag <code>v1.107.0</code> points to commit <code>66c8f5b</code> (06:59 UTC).</p>
+<p>SafeDep compared every sdist file with the git trees by blob hash.
+The sdist matches a later main commit, <code>a8113b0</code> (08:50 UTC), plus five edited files and the <code>cook/</code> folder.</p>
+<p>Four of the edited files are <code>Cargo.toml</code> files that gain a <code>readme = "README.md"</code> line.
+The legitimate 1.106.2 and rc2 releases have the same edit.</p>
+<pre><code class="language-diff">import os
+
+# Define the library version to use; keep it consistent with the rest of the project.
+VERSION = "1.107.0"
+
+# Dependency pins – keep them explicit but avoid accidental upgrades.
+DEPENDENCIES = [
+ "litellm-proxy-extras==0.4.110",
+ "litellm-enterprise==0.1.78",
+]
+
+# Load sensitive data from environment instead of hard-coding.
+DATA = os.getenv("APP_DATA", "")
+
+# Optional: raise an error if required data is missing.
+if not DATA:
+ raise RuntimeError("Environment variable APP_DATA must be set for safe operation.")
+</code></pre>
+<p>The edit sets the version back to <code>1.107.0</code> and pins the companion packages to the rc2 values.
+As a result, a dependency diff against rc2 shows nothing unusual.
+The legitimate 1.106.2 sdist matches its tag commit <code>49943cd</code> except for the <code>Cargo.toml</code> readme lines.</p>
+<h2 id="clean-versions-and-remediation-steps">Clean versions and remediation steps</h2>
+<p><strong>Recommended actions:</strong></p>
+<ul>
+<li><strong>Audit your environments</strong> for the presence of <code>cook.pth</code>, <code>cook.py</code>, or <code>sitecustomize.py</code> under any <code>site-packages</code> directory.</li>
+<li><strong>Rotate all credentials</strong> that may have been harvested, including SSH keys, cloud provider tokens, Docker and Kubernetes configs, and AI tool tokens.</li>
+<li><strong>Enable two-factor authentication</strong> on your PyPI account and any CI/CD service accounts.</li>
+<li><strong>Adopt reproducible builds</strong> or enforce provenance attestations for future releases.</li>
+</ul>
+
+<p><strong>Frequently Asked Questions</strong></p>
+
+      </div>
+
+      <div class="article-tags">
+        <span class="article-tags-label">Topics</span>
+        <a href="/tech/search.html?q=litellm" class="tag-chip">#litellm</a><a href="/tech/search.html?q=pypi" class="tag-chip">#pypi</a><a href="/tech/search.html?q=cybersecurity" class="tag-chip">#cybersecurity</a><a href="/tech/search.html?q=supply%20chain%20attack" class="tag-chip">#supply chain attack</a><a href="/tech/search.html?q=python%20security" class="tag-chip">#python security</a><a href="/tech/search.html?q=malware" class="tag-chip">#malware</a><a href="/tech/search.html?q=dependency%20management" class="tag-chip">#dependency management</a><a href="/tech/search.html?q=devsecops" class="tag-chip">#devsecops</a>
+      </div>
+
+      <!-- Newsletter strip -->
+      <div class="newsletter-strip" id="newsletter">
+        <h3>Enjoyed this piece?</h3>
+        <p>Get new Quillmatick articles by email — tech and geopolitics, sent as they are published. Free, unsubscribe anytime.</p>
+        <form class="newsletter-strip-form" onsubmit="handleSubscribeStrip(event)">
+          <input type="email" placeholder="Your email address" required aria-label="Email address" />
+          <div class="qm-hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
+          <button type="submit">Subscribe →</button>
+        </form>
+      </div>
+
+      <!-- Related articles -->
+      <aside class="related-section" aria-label="Related articles">
+        <div class="related-header">Related articles</div>
+        <div class="related-grid">
+          
+    <a class="related-card" href="/tech/edr-blind-spot-3-ways-browser-attacks-evade-telemetry/">
+      <span class="badge badge-ai">edr</span>
+      <span class="related-card-title">EDR Blind Spot: 3 Ways Browser Attacks Evade Telemetry</span>
+      <span class="related-card-meta">Oct 6 · 8 min</span>
+    </a>
+    <a class="related-card" href="/tech/how-to-keep-agents-within-their-permissions-safely/">
+      <span class="badge badge-ai">ai agents</span>
+      <span class="related-card-title">How to Keep Agents Within Their Permissions Safely</span>
+      <span class="related-card-meta">Oct 11 · 9 min</span>
+    </a>
+    <a class="related-card" href="/tech/how-to-run-qwen-flash-next-125b-on-consumer-hardware/">
+      <span class="badge badge-ai">qwen flash next</span>
+      <span class="related-card-title">How to Run Qwen Flash Next 125B on Consumer Hardware</span>
+      <span class="related-card-meta">Oct 6 · 7 min</span>
+    </a>
+    <a class="related-card" href="/tech/inside-avisloader-windows-the-complete-guide-to-the-loader/">
+      <span class="badge badge-ai">avisloader</span>
+      <span class="related-card-title">Inside AvisLoader Windows: The Complete Guide to the Loader</span>
+      <span class="related-card-meta">Oct 13 · 7 min</span>
+    </a>
+        </div>
+      </aside>
+
+    </article>
+  </main>
+
+  <!-- Floating section dots (desktop TOC indicator) -->
+  
+  <nav class="toc-toggle" aria-label="Article sections" id="tocDots">
+    <div class="toc-dot active" data-target="articleTop" title="Top"></div>
+    <div class="toc-dot" data-target="immediate-mitigation" title="Immediate Mitigation"></div>
+<div class="toc-dot" data-target="overview-of-the-malicious-11070-release" title="Overview of the Malicious..."></div>
+<div class="toc-dot" data-target="implant-insertion-method" title="Implant Insertion Method"></div>
+<div class="toc-dot" data-target="wheel-provenance" title="Wheel Provenance"></div>
+<div class="toc-dot" data-target="credential-stealer-payload-cookpy" title="Credential stealer payloa..."></div>
+<div class="toc-dot" data-target="backdoor-payload-sitecustomizepy" title="Backdoor payload (sitecus..."></div>
+<div class="toc-dot" data-target="evidence-and-investigation-findings" title="Evidence and investigatio..."></div>
+<div class="toc-dot" data-target="clean-versions-and-remediation-steps" title="Clean versions and remedi..."></div>
+  </nav>
+
+  
+
+  <!-- Back to top. Articles run to several thousand words; on a phone that is a long scroll
+       to get back to the navigation. Rendered as a <button> rather than an <a href="#top">
+       so it never adds a history entry or changes the URL, and it is keyboard reachable. -->
+  <button type="button" class="qm-to-top" id="qm-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  </button>
+  <script>
+    (function () {
+      var btn = document.getElementById('qm-to-top');
+      if (!btn) return;
+      var SHOW_AFTER = 600;
+
+      // Two independent triggers, because relying on one was not good enough.
+      //
+      // An IntersectionObserver watching a sentinel at the top of the document is the
+      // primary: it fires from layout rather than from scroll events, so it works whatever
+      // element is actually scrolling and does not care whether window.scrollY is the right
+      // number to be reading. The scroll listener stays as a fallback for anything that does
+      // not support the observer.
+      function show(on) { btn.classList.toggle('is-visible', !!on); }
+
+      var sentinel = document.createElement('div');
+      sentinel.setAttribute('aria-hidden', 'true');
+      sentinel.style.cssText = 'position:absolute;top:' + SHOW_AFTER + 'px;left:0;width:1px;height:1px;pointer-events:none;';
+      document.body.appendChild(sentinel);
+
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+          // Once the sentinel has scrolled off the top, the reader is far enough down.
+          show(!entries[0].isIntersecting && entries[0].boundingClientRect.top < 0);
+        }).observe(sentinel);
+      }
+
+      var ticking = false;
+      function sync() {
+        var y = window.scrollY || window.pageYOffset ||
+                (document.documentElement && document.documentElement.scrollTop) || 0;
+        if (y > SHOW_AFTER) show(true);
+        ticking = false;
+      }
+      window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; window.requestAnimationFrame(sync); }
+      }, { passive: true });
+      btn.addEventListener('click', function () {
+        // Respect a reader who has asked the OS for less motion.
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+        var first = document.querySelector('a.skip-link, h1');
+        if (first && first.focus) first.focus({ preventScroll: true });
+      });
+      sync();
+    })();
+  </script>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-col-h">Sections</div>
+          <ul class="footer-links" role="list">
+            <li><a href="/tech">Tech</a></li>
+            <li><a href="/geopolitics">Geopolitics</a></li>
+            <li><a href="/tech/about.html">About us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-h">Topics</div>
+          <ul class="footer-links" role="list">
+            <li><a href="/tech/search.html?q=cybersecurity">cybersecurity</a></li><li><a href="/tech/search.html?q=llm">llm</a></li><li><a href="/tech/search.html?q=ai%20safety">ai safety</a></li><li><a href="/tech/search.html?q=ai%20governance">ai governance</a></li><li><a href="/tech/search.html?q=machine%20learning">machine learning</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-h">Company</div>
+          <ul class="footer-links" role="list">
+            <li><a href="/tech/about.html">About</a></li>
+            <li><a href="/tech/legal/privacy/">Privacy policy</a></li>
+            <li><a href="/tech/legal/terms/">Terms of service</a></li>
+            <!-- This was a bare fragment link, which scrolls to the top of the current
+                 page and does nothing else. The about page has a "Contact & Consulting"
+                 section; send people there. -->
+            <li><a href="/tech/about.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-h">Subscribe</div>
+          <p style="font-size: 12px; color: var(--ink3); margin-bottom: 0.75rem; line-height: 1.6; max-width: 200px;">New tech and geopolitics articles by email. Free, unsubscribe anytime.</p>
+          <a href="#newsletter" class="btn-primary" style="font-size: 12px; padding: 8px 16px;">Get the newsletter</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2026 Quillmatick. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="/tech/legal/privacy/">Privacy</a>
+          <a href="/tech/legal/terms/">Terms</a>
+        </div>
+        <a href="/tech/feed.xml" class="footer-rss">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19.01 7.38 20 6.18 20C4.98 20 4 19.01 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>
+          RSS Feed
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── COOKIE BANNER ─── -->
+  <div class="cookie-banner hidden" id="cookieBanner" role="dialog" aria-label="Cookie consent" aria-describedby="cookieText">
+    <p class="cookie-text" id="cookieText">
+      This site stores theme preferences and anonymous view counts.
+      <a href="/tech/legal/privacy/">Privacy policy</a>
+    </p>
+    <div class="cookie-actions">
+      <button class="cookie-accept" onclick="acceptCookie()">Accept</button>
+      <button class="cookie-decline" onclick="declineCookie()">Decline</button>
+    </div>
+  </div>
+
+  <!-- ─── NEWSLETTER MODAL ─── -->
+  <div class="modal-overlay" id="newsletterModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-body" style="text-align: center;">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--border); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+        </div>
+        <h3 id="modalTitle" class="newsletter-h" style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; font-family: var(--font-display); color: var(--ink);">Subscribe to Quillmatick</h3>
+        <p class="newsletter-p" style="font-size: 14px; color: var(--ink3); line-height: 1.5; margin-bottom: 1.5rem;">New tech and geopolitics articles, emailed as they are published. Free, unsubscribe anytime.</p>
+        <form class="newsletter-form" onsubmit="window.__qmSubscribe && window.__qmSubscribe(event, this)">
+          <input class="newsletter-input" type="email" placeholder="Your email address" required aria-label="Email address" style="margin-bottom: 1rem; width: 100%; box-sizing: border-box;" />
+          <div class="qm-hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
+          <button type="submit" class="newsletter-btn" style="width: 100%;">Subscribe free →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── EXIT-INTENT MODAL ─── -->
+  <div class="modal-overlay" id="exitIntentModal" role="dialog" aria-modal="true" aria-labelledby="exitModalTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="closeExitModalBtn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-body" style="text-align: center;">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--border); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+          <span style="font-size: 24px;">✉️</span>
+        </div>
+        <h3 id="exitModalTitle" class="newsletter-h" style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; font-family: var(--font-display); color: var(--ink);">Before you go...</h3>
+        <p class="newsletter-p" style="font-size: 14px; color: var(--ink3); line-height: 1.5; margin-bottom: 1.5rem;">Get new articles by email as they are published. No downloads, no upsells — just the writing.</p>
+        <form class="newsletter-form" onsubmit="window.__qmSubscribe && window.__qmSubscribe(event, this)">
+          <input class="newsletter-input" type="email" placeholder="Your best email" required aria-label="Email address" style="margin-bottom: 1rem; width: 100%; box-sizing: border-box;" />
+          <div class="qm-hp" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
+          <button type="submit" class="newsletter-btn" style="width: 100%;">Email me new articles →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <style>
+    /* Newsletter modal styling */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10, 8, 8, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      max-width: 420px;
+      width: 90%;
+      position: relative;
+      transform: translateY(20px);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    }
+    .modal-overlay.active .modal-card {
+      transform: translateY(0);
+    }
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      color: var(--ink3);
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+    .modal-close:hover {
+      background: var(--border);
+      color: var(--ink);
+    }
+  </style>
+
+  <!-- Cookie script -->
+  <script>
+    function acceptCookie() {
+      document.getElementById('cookieBanner').classList.add('hidden');
+      try { localStorage.setItem('qm-consent', 'yes'); } catch(e) {}
+      if (window.__qmTrackView) window.__qmTrackView();
+    }
+    function declineCookie() {
+      document.getElementById('cookieBanner').classList.add('hidden');
+      try { localStorage.setItem('qm-consent', 'no'); } catch(e) {}
+    }
+    (function(){
+      if(!localStorage.getItem('qm-consent')){
+        const b = document.getElementById('cookieBanner');
+        if(b) b.classList.remove('hidden');
+      }
+    })();
+  </script>
+
+  <!-- Theme Toggle script -->
+  <script>
+    (function() {
+      try {
+        const themeBtn = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        if (themeBtn && themeIcon) {
+          const sunSvg = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+          const moonSvg = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+          
+          let current = document.documentElement.getAttribute('data-theme') || 'dark';
+          themeIcon.innerHTML = current === 'dark' ? moonSvg : sunSvg;
+
+          themeBtn.onclick = function() {
+            try {
+              const active = document.documentElement.getAttribute('data-theme') || 'dark';
+              const next = active === 'dark' ? 'light' : 'dark';
+              document.documentElement.setAttribute('data-theme', next);
+              localStorage.setItem('qm-theme', next);
+              themeIcon.innerHTML = next === 'dark' ? moonSvg : sunSvg;
+            } catch (err) {}
+          };
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Analytics and Autocomplete script -->
+  <script>
+    (function() {
+      if (navigator.doNotTrack === '1' || window.doNotTrack === '1') return;
+      if (localStorage.getItem('qm-consent') === 'no') return;
+      const apiBase = atob('');
+      // No reachable backend is configured, so there is nowhere to report to. Returning
+      // here also cancels the 15-second heartbeat that ran for the life of every visit.
+      if (!apiBase) return;
+      let sessionId = null;
+      let startTime = Date.now();
+
+      async function trackView() {
+        let slug = window.location.pathname;
+        if (slug.endsWith('/') && slug !== '/') slug = slug.slice(0, -1);
+        const referrer = document.referrer ? new URL(document.referrer).hostname : '';
+        try {
+          const res = await fetch(apiBase + '/api/analytics/pageview', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            mode: 'cors',
+            body: JSON.stringify({ slug: slug, referrer: referrer }),
+          });
+          const data = await res.json();
+          if (data.id) sessionId = data.id;
+        } catch (e) {}
+      }
+
+      async function sendHeartbeat() {
+        if (!sessionId) return;
+        const now = Date.now();
+        const duration = Math.floor((now - startTime) / 1000);
+        startTime = now;
+        try {
+          fetch(apiBase + '/api/analytics/pageview', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            mode: 'cors',
+            body: JSON.stringify({ id: sessionId, duration: duration }),
+          });
+        } catch (e) {}
+      }
+
+      if (localStorage.getItem('qm-consent') === 'yes') { trackView(); }
+      window.__qmTrackView = trackView;
+      window.__qmLogSearch = function(query, count) {
+        fetch(apiBase + '/api/analytics/search-log', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          mode: 'cors',
+          body: JSON.stringify({ query: query, count: count }),
+        }).catch(function() {});
+      };
+      
+      window.__qmTrackClick = function(event, label) {
+        let target = event.currentTarget || event.target;
+        let path = target ? target.href : window.location.pathname;
+        fetch(apiBase + '/api/analytics/click', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          mode: 'cors',
+          body: JSON.stringify({ type: 'affiliate_click', label: label, path: path }),
+        }).catch(function() {});
+      };
+
+      document.addEventListener('click', function(event) {
+        const cta = event.target.closest('.qm-cta-btn');
+        if (cta) {
+          const label = cta.getAttribute('data-qm-track') || 'affiliate_card';
+          const path = cta.href || window.location.pathname;
+          fetch(apiBase + '/api/analytics/click', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            mode: 'cors',
+            body: JSON.stringify({ type: 'affiliate_click', label: label, path: path }),
+          }).catch(function() {});
+        }
+      });
+
+      // Heartbeat every 15s
+      setInterval(sendHeartbeat, 15000);
+      window.addEventListener('beforeunload', sendHeartbeat);
+      document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'hidden') sendHeartbeat();
+      });
+    })();
+  </script>
+
+  <!-- Newsletter signup Form submit script -->
+  <script>
+    function showErrorEarly(form, msg) {
+      var d = document.createElement('div');
+      d.className = 'subscribe-status-msg';
+      d.style.cssText = 'color:var(--red);font-size:12px;margin-top:8px;font-family:var(--font-mono)';
+      d.textContent = msg;
+      var old = form.querySelector('.subscribe-status-msg');
+      if (old) old.remove();
+      form.appendChild(d);
+      setTimeout(function () { d.remove(); }, 4000);
+    }
+
+    window.__qmSubscribe = async function(event, form) {
+      event.preventDefault();
+      const emailInput = form.querySelector('input[type="email"]');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (!emailInput || !submitBtn) return;
+
+      const email = emailInput.value.trim();
+      if (!email) return;
+
+      // Decoy field: hidden, out of the tab order, and meaningless to a person. Anything in
+      // it came from a client that filled the form by reading its markup. Show the ordinary
+      // success state and send nothing, so the bot has no signal to correct against.
+      const decoy = form.querySelector('input[name="website"]');
+      if (decoy && decoy.value.trim()) {
+        submitBtn.textContent = "✓ You're in!";
+        return;
+      }
+
+      // Same rule as the CHECK constraint on the table. Checking here is a courtesy to the
+      // visitor, not a control: the constraint is what actually holds, because this form
+      // posts straight to PostgREST and anyone can skip the page entirely.
+      var EMAIL_RE = /^[A-Za-z0-9_%+-]+(?:.[A-Za-z0-9_%+-]+)*@[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?(?:.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)*.[A-Za-z]{2,24}$/;
+      if (!EMAIL_RE.test(email) || email.length > 254) {
+        // Nothing has touched the button yet at this point, so there is nothing to restore.
+        showErrorEarly(form, 'Please enter a valid email address.');
+        return;
+      }
+
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.textContent = 'Joining...';
+      submitBtn.disabled = true;
+
+      const sbUrl = 'https://ibzoanlrduqihydokjck.supabase.co';
+      const sbKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imliem9hbmxyZHVxaWh5ZG9ramNrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NjA2NDksImV4cCI6MjA5NjMzNjY0OX0.qa4FRt6M6JkQBm-hOUEzlm3W5BCC2_9FfQz8KxDk7rQ';
+      const targetUrl = sbUrl + '/rest/v1/subscribers';
+
+      // Helper to display error message inline
+      const showError = (msg) => {
+        const statusDiv = document.createElement('div');
+        statusDiv.className = 'subscribe-status-msg';
+        statusDiv.style.color = 'var(--red)';
+        statusDiv.style.fontSize = '12px';
+        statusDiv.style.marginTop = '8px';
+        statusDiv.style.fontFamily = 'var(--font-mono)';
+        statusDiv.textContent = msg;
+        
+        const oldMsg = form.querySelector('.subscribe-status-msg');
+        if (oldMsg) oldMsg.remove();
+        
+        form.appendChild(statusDiv);
+        setTimeout(() => statusDiv.remove(), 4000);
+      };
+
+      try {
+        const res = await fetch(targetUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': sbKey,
+            'Authorization': 'Bearer ' + sbKey,
+            // return=minimal only. resolution=ignore-duplicates routes PostgREST through
+            // its upsert path, which needs privileges anon does not have — it turned a
+            // working insert into a 401. A repeat address surfaces as 409 instead and is
+            // treated as success below, since "already subscribed" is not a user error.
+            'Prefer': 'return=minimal'
+          },
+          mode: 'cors',
+          body: JSON.stringify({ email: email })
+        });
+
+        // 201 on insert; 409 means the address is already on the list, which is a success
+        // from the visitor's point of view and must not be shown as a failure.
+        if (res.ok || res.status === 409) {
+          submitBtn.textContent = "✓ You're in!";
+          const originalBg = submitBtn.style.background;
+          const originalColor = submitBtn.style.color;
+          const originalBorder = submitBtn.style.borderColor;
+
+          submitBtn.style.background = 'var(--green)';
+          submitBtn.style.color = '#fff';
+          submitBtn.style.borderColor = 'var(--green)';
+          emailInput.value = '';
+
+          // Close modal after success if inside modal
+          if (form.closest('#newsletterModal') && window.__qmCloseSubscribeModal) {
+            setTimeout(window.__qmCloseSubscribeModal, 1500);
+          }
+
+          // Revert button after 4 seconds
+          setTimeout(() => {
+            submitBtn.textContent = originalBtnText;
+            submitBtn.style.background = originalBg;
+            submitBtn.style.color = originalColor;
+            submitBtn.style.borderColor = originalBorder;
+            submitBtn.disabled = false;
+          }, 4000);
+        } else {
+          // PostgREST replies with the raw Postgres message — a constraint name, or the
+          // literal "rate limit exceeded". None of that is written for a reader, so map the
+          // status to our own copy rather than passing the database's words through.
+          var msg;
+          if (res.status === 400) {
+            msg = 'Please enter a valid email address.';
+          } else if (res.status === 429) {
+            msg = 'Too many signups just now. Please try again in a minute.';
+          } else {
+            msg = 'Subscription failed. Please try again.';
+          }
+          showError(msg);
+          submitBtn.textContent = originalBtnText;
+          submitBtn.disabled = false;
+        }
+      } catch (err) {
+        showError('Could not connect to subscription service. Please try again.');
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+      }
+    };
+  </script>
+
+  <!-- Search autocomplete & dropdown logic -->
+  <script>
+    (function() {
+      function escapeHtml(str) {
+        if (!str) return '';
+        return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+      }
+      const basePath = '/tech';
+      const forms = document.querySelectorAll('.search-form');
+
+      let searchIndex = null;
+      async function getSearchIndex() {
+        if (searchIndex) return searchIndex;
+        try {
+          const res = await fetch(basePath + '/search-index.json');
+          searchIndex = await res.json();
+          return searchIndex;
+        } catch (e) {
+          console.error('Failed to load search index for autocomplete:', e);
+          return [];
+        }
+      }
+
+      forms.forEach(form => {
+        const input = form.querySelector('input[name="q"]');
+        if (!input) return;
+        
+        input.setAttribute('autocomplete', 'off');
+        
+        const dropdown = document.createElement('div');
+        dropdown.className = 'search-dropdown';
+        dropdown.setAttribute('aria-live', 'polite');
+        form.appendChild(dropdown);
+        
+        let debounceTimeout = null;
+        
+        input.addEventListener('input', function() {
+          const val = input.value.trim();
+          
+          if (debounceTimeout) clearTimeout(debounceTimeout);
+          
+          if (!val) {
+            dropdown.classList.remove('active');
+            dropdown.innerHTML = '';
+            
+            if (window.location.pathname.includes('/search.html') && window.__qmDoSearchPageUpdate) {
+              window.__qmDoSearchPageUpdate('');
+            }
+            return;
+          }
+          
+          if (window.location.pathname.includes('/search.html') && window.__qmDoSearchPageUpdate) {
+            debounceTimeout = setTimeout(() => {
+              window.__qmDoSearchPageUpdate(val);
+            }, 150);
+            return;
+          }
+          
+          debounceTimeout = setTimeout(async function() {
+            try {
+              const index = await getSearchIndex();
+              const query = val.toLowerCase();
+              
+              const matches = index.filter(post => {
+                return (post.title && post.title.toLowerCase().includes(query)) ||
+                       (post.meta_description && post.meta_description.toLowerCase().includes(query)) ||
+                       (post.tags && post.tags.toLowerCase().includes(query));
+              });
+              
+              if (!dropdown) return;
+              
+              if (matches.length > 0) {
+                dropdown.innerHTML = matches.slice(0, 5).map(post => {
+                  const readTime = Math.ceil((post.word_count || 1000) / 250);
+                  const cat = post.category || 'tech';
+                  const catPath = cat === 'geopolitics' ? '/geopolitics' : '/tech';
+                  return '<a href="' + catPath + '/' + post.slug + '" class="search-dropdown-item">' +
+                    '<h4>' + escapeHtml(post.title) + '</h4>' +
+                    '<p>' + readTime + ' min read • ' + escapeHtml(post.meta_description) + '</p>' +
+                    '</a>';
+                }).join('');
+                dropdown.classList.add('active');
+              } else {
+                dropdown.innerHTML = '<div class="search-dropdown-empty">No matches found for "' + escapeHtml(val) + '"</div>';
+                dropdown.classList.add('active');
+              }
+            } catch (err) {
+              console.error('Realtime search failed:', err);
+            }
+          }, 150);
+        });
+        
+        form.addEventListener('submit', function(e) {
+          if (!input.value.trim()) e.preventDefault();
+        });
+        
+        document.addEventListener('click', function(e) {
+          if (!form.contains(e.target)) {
+            dropdown.classList.remove('active');
+          }
+        });
+        
+        input.addEventListener('focus', function() {
+          if (input.value.trim() && !window.location.pathname.includes('/search.html')) {
+            dropdown.classList.add('active');
+          }
+        });
+      });
+    })();
+  </script>
+
+  <!-- Newsletter Modal Controller script -->
+  <script>
+    (function() {
+      const modal = document.getElementById('newsletterModal');
+      const closeBtn = document.getElementById('closeModalBtn');
+      
+      function openModal() {
+        if (modal) {
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          const emailInput = modal.querySelector('input[type="email"]');
+          if (emailInput) setTimeout(() => emailInput.focus(), 100);
+        }
+      }
+      
+      function closeModal() {
+        if (modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+      
+      if (closeBtn) {
+        closeBtn.onclick = closeModal;
+      }
+      
+      if (modal) {
+        modal.onclick = function(e) {
+          if (e.target === modal) closeModal();
+        };
+      }
+      
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+          closeModal();
+        }
+      });
+      
+      // Intercept all subscribe links
+      document.addEventListener('click', function(e) {
+        const target = e.target.closest('a');
+        if (target && target.getAttribute('href') === '#newsletter') {
+          // If the user clicked the nav button or footer button, always open the modal
+          if (target.classList.contains('nav-subscribe') || target.classList.contains('btn-primary')) {
+            e.preventDefault();
+            openModal();
+            return;
+          }
+          
+          // Otherwise, if there is an inline form with id="newsletter" on this page, scroll to it
+          const inlineForm = document.getElementById('newsletter');
+          if (inlineForm) {
+            // Let the browser handle the anchor scroll naturally
+            return;
+          }
+          // No inline form, so open the modal!
+          e.preventDefault();
+          openModal();
+        }
+      });
+      
+      // Expose globally
+      window.__qmOpenSubscribeModal = openModal;
+      window.__qmCloseSubscribeModal = closeModal;
+    })();
+  </script>
+
+  <!-- Exit Intent & Sticky CTA Logic -->
+  <script>
+    (function() {
+      let exitTriggered = false;
+      const exitModal = document.getElementById('exitIntentModal');
+      const closeExitBtn = document.getElementById('closeExitModalBtn');
+      // Exit Intent logic (Desktop: mouseleave top, Mobile: fast scroll up near top)
+      function showExitModal() {
+        if (exitTriggered || !exitModal) return;
+        if (localStorage.getItem('qm-exit-shown')) return;
+        
+        exitModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        exitTriggered = true;
+        localStorage.setItem('qm-exit-shown', 'true');
+      }
+
+      function hideExitModal() {
+        if (exitModal) {
+          exitModal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (closeExitBtn) closeExitBtn.onclick = hideExitModal;
+      if (exitModal) exitModal.onclick = function(e) { if (e.target === exitModal) hideExitModal(); };
+
+      // Desktop exit intent
+      document.addEventListener('mouseleave', function(e) {
+        if (e.clientY < 10) showExitModal();
+      });
+
+      // Mobile exit intent (heuristic: fast scroll up near the top)
+      let lastScroll = window.scrollY;
+      window.addEventListener('scroll', function() {
+        const currentScroll = window.scrollY;
+        if (lastScroll - currentScroll > 50 && currentScroll < 200) {
+          showExitModal();
+        }
+        lastScroll = currentScroll;
+      });
+    })();
+  </script>
+
+
+  <script>
+    /* ── Reading progress bar ── */
+    const fill = document.getElementById('progressFill');
+    const progressBar = document.querySelector('.reading-progress');
+    window.addEventListener('scroll', () => {
+      const el = document.getElementById('articleBody');
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const total = el.offsetHeight - window.innerHeight;
+      const scrolled = -rect.top;
+      const pct = Math.min(100, Math.max(0, (scrolled / total) * 100));
+      if (fill) fill.style.width = pct + '%';
+      if (progressBar) progressBar.setAttribute('aria-valuenow', Math.round(pct));
+    }, { passive: true });
+
+    /* ── TOC dots ── */
+    document.querySelectorAll('.toc-dot').forEach(dot => {
+      dot.addEventListener('click', () => {
+        const id = dot.dataset.target;
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    /* Highlight active dot based on scroll */
+    const sections = ['articleTop', 'immediate-mitigation', 'overview-of-the-malicious-11070-release', 'implant-insertion-method', 'wheel-provenance', 'credential-stealer-payload-cookpy', 'backdoor-payload-sitecustomizepy', 'evidence-and-investigation-findings', 'clean-versions-and-remediation-steps'];
+    window.addEventListener('scroll', () => {
+      let active = 0;
+      sections.forEach((id, i) => {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top < window.innerHeight * 0.4) active = i;
+      });
+      document.querySelectorAll('.toc-dot').forEach((d, i) => d.classList.toggle('active', i === active));
+    }, { passive: true });
+
+    /* ── Bookmark button ── */
+    (function() {
+      const btn = document.getElementById('bookmarkBtn');
+      if (btn) {
+        const slug = window.location.pathname.split('/').filter(Boolean).pop();
+        let bookmarked = false;
+        try {
+          const bookmarks = JSON.parse(localStorage.getItem('qm-bookmarks') || '[]');
+          bookmarked = bookmarks.includes(slug);
+          if (bookmarked) {
+            btn.style.borderColor = 'var(--accent)';
+            btn.style.color = 'var(--accent)';
+            btn.style.background = 'var(--accent-dim)';
+            btn.querySelector('svg').setAttribute('fill', 'var(--accent)');
+          }
+        } catch(e) {}
+
+        btn.addEventListener('click', function() {
+          bookmarked = !bookmarked;
+          this.style.borderColor = bookmarked ? 'var(--accent)' : '';
+          this.style.color = bookmarked ? 'var(--accent)' : '';
+          this.style.background = bookmarked ? 'var(--accent-dim)' : '';
+          this.querySelector('svg').setAttribute('fill', bookmarked ? 'var(--accent)' : 'none');
+          
+          try {
+            let bookmarks = JSON.parse(localStorage.getItem('qm-bookmarks') || '[]');
+            if (bookmarked) {
+              if (!bookmarks.includes(slug)) bookmarks.push(slug);
+            } else {
+              bookmarks = bookmarks.filter(b => b !== slug);
+            }
+            localStorage.setItem('qm-bookmarks', JSON.stringify(bookmarks));
+          } catch(e) {}
+        });
+      }
+    })();
+
+    /* ── Share functions ── */
+    function shareTwitter() {
+      const url = encodeURIComponent(window.location.href);
+      const text = encodeURIComponent(document.title);
+      window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank', 'noopener');
+    }
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        const btns = document.querySelectorAll('.share-btn');
+        btns.forEach(b => { if (b.textContent.includes('Copy')) { b.textContent = '✓ Copied!'; setTimeout(() => b.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg> Copy link`, 2000); }});
+      });
+    }
+
+    /* ── Newsletter strip ── */
+    function handleSubscribeStrip(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button');
+      if (window.__qmSubscribe) {
+        window.__qmSubscribe(e, e.target);
+      } else {
+        // The shared handler is what actually records the address. Showing the success
+        // state without it told the visitor they had subscribed when nothing was stored.
+        btn.textContent = 'Unavailable — please retry';
+        btn.style.background = 'var(--red)';
+      }
+    }
+  </script>
+</body>
+</html>

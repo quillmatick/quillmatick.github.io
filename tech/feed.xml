@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Tue, 20 Oct 2026 00:41:31 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 22 Oct 2026 00:16:35 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Compromised LiteLLM 1.107.0: How to Secure Your PyPI Setup]]></title>
+    <link>https://quillmatick.github.io/tech/compromised-litellm-11070-how-to-secure-your-pypi-setup</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/compromised-litellm-11070-how-to-secure-your-pypi-setup</guid>
+    <description><![CDATA[Fix the compromised LiteLLM 1.107.0 PyPI install now. Learn how to detect the breach and secure your environment to prevent data leaks.]]></description>
+    <pubDate>Thu, 22 Oct 2026 00:15:45 GMT</pubDate>
+    <category>litellm</category>
+    <category>pypi</category>
+    <category>cybersecurity</category>
+    <category>supply chain attack</category>
+    <category>python security</category>
+    <category>malware</category>
+    <category>dependency management</category>
+    <category>devsecops</category>
+  </item>
   <item>
     <title><![CDATA[The Complete Guide to Timestral Mistral's Time-Series]]></title>
     <link>https://quillmatick.github.io/tech/the-complete-guide-to-timestral-mistrals-time-series</link>
