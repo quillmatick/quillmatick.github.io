@@ -46,7 +46,7 @@
 <meta name="author" content="Quillmatick Staff" />
   <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  <link rel="stylesheet" href="/tech/style.css?v=1794155016779" />
+  <link rel="stylesheet" href="/tech/style.css?v=1794155973846" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
@@ -153,16 +153,14 @@
 <li><strong>Deploy runtime monitoring</strong> that alerts on outbound requests to unknown endpoints (e.g., <code>http://www.litellm.dev/healthcheck</code>) and on creation of temporary files such as <code>/tmp/.pc_once_*</code>.</li>
 </ul>
 <h2 id="overview-of-the-malicious-11070-release">Overview of the Malicious 1.107.0 Release</h2>
-<p>**
-All seven wheels (Linux, macOS, Windows) installed three malicious files into <code>site-packages</code>.
+<p>All seven wheels (Linux, macOS, Windows) installed three malicious files into <code>site-packages</code>.
 Consequently, the payload runs whenever any Python process starts, even if the script never imports <strong>litellm</strong>.
 The upstream GitHub repository does <strong>not</strong> contain these files, and PyPI has removed the release.</p>
 <h2 id="implant-insertion-method">Implant Insertion Method</h2>
 <p>The malicious code originates from a single line added to <code>pyproject.toml</code> in the source distribution (sdist):</p>
 <pre><code class="language-toml">data = "cook" # &lt;-- injected
 </code></pre>
-<p>**
-During installation, <code>pip</code> places this folder into <code>site-packages</code>.</p>
+<p>During installation, <code>pip</code> places this folder into <code>site-packages</code>.</p>
 <p>The sdist omits the <code>cook/</code> folder, so the extra line is the only visible change.</p>
 <p>The wheel’s <code>RECORD</code> file lists the three added artifacts:</p>
 <h2 id="wheel-provenance">Wheel Provenance</h2>

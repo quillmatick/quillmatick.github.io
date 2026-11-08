@@ -46,7 +46,7 @@
 <meta name="author" content="Quillmatick Staff" />
   <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  <link rel="stylesheet" href="/tech/style.css?v=1794155047579" />
+  <link rel="stylesheet" href="/tech/style.css?v=1794155998521" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
@@ -158,10 +158,12 @@
 <p> Therefore, victims receive a legitimate-looking login page while the attacker harvests tokens in real time.</p>
 <h3 id="attack-flow">Attack Flow</h3>
 <ol>
-<li>Phishing email directs the user to a look-alike login page.</li>
-<li></li>
-<li>The proxy injects malicious scripts that request additional OAuth scopes.</li>
-<li>Stolen tokens are stored for later abuse, often without triggering EDR alerts.</li>
+<li><p>Phishing email directs the user to a look-alike login page.</p>
+</li>
+<li><p>The proxy injects malicious scripts that request additional OAuth scopes.</p>
+</li>
+<li><p>Stolen tokens are stored for later abuse, often without triggering EDR alerts.</p>
+</li>
 </ol>
 <h2 id="compromised-browser-extensions">Compromised Browser Extensions</h2>
 <h3 id="why-extensions-matter">Why Extensions Matter</h3>
@@ -207,7 +209,7 @@
 </tbody></table>
 <p>By correlating signals across these layers, security teams can uncover attacks that would otherwise remain hidden.</p>
 
-<p>** Implementing strong authentication, strict extension controls, and identity-focused telemetry creates a resilient, multi-layered defense.</p>
+<p> Implementing strong authentication, strict extension controls, and identity-focused telemetry creates a resilient, multi-layered defense.</p>
 <p>In 2026, a threat actor that Microsoft tracks as Storm-2755 targeted Canadian employees through search engine poisoning and malicious ads. Victims searching for terms such as “Office 365” were redirected to a Microsoft 365 login page controlled by the attacker. The AiTM infrastructure then proxied the authentication flow in real time and captured credentials as well as session cookies and OAuth access tokens issued after successful authentication. Storm-2755 then replayed the stolen session. Microsoft observed the same session ID switch from the victim’s browser to an Axios user agent. It showed that the authentication token was being reused from an attacker-controlled infrastructure. The attackers accessed Microsoft services, searched for payroll and HR information, created inbox rules to hide messages about banking changes, and in some cases accessed Workday. The victim opens a phishing page that is between the user and the real identity provider. The page collects the username and password, relays the legitimate MFA challenge, and passes the user’s response to the real service. The attacker can then capture the authenticated session material.</p>
 <h3 id="why-endpoint-telemetry-misses-the-attack">Why Endpoint Telemetry Misses the Attack</h3>
 <p>From ordinary endpoint process telemetry, the authentication flow may appear legitimate. The endpoint may not reveal that an AiTM proxy has intercepted the session (although other endpoint, identity, network, or XDR signals can expose the attack). The best way to prevent many AiTM attacks is to use phishing-resistant FIDO2 WebAuthn authentication: the authentication response is cryptographically tied to the legitimate origin. Additionally, browser controls can help block known phishing destinations, restrict access to unapproved web applications, and stop the attack earlier. NordLayer Browser gives IT centralized control over areas of an attack that EDR may not see clearly: web access, browser extensions, file transfers, and clipboard actions. Web threat protection can block phishing and malicious destinations. Extension policies can allow or block specific Chrome extensions. Browser traffic can also be routed through a dedicated IP, which organizations can allowlist for SaaS access or use as a network condition in identity policies where the identity provider supports it.</p>
