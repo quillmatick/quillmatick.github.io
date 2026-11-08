@@ -5,187 +5,307 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>The Pulse of Tech &amp; Geopolitics</description>
   <language>en</language>
-  <lastBuildDate>Mon, 31 Aug 2026 10:45:32 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 08 Nov 2026 16:24:33 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
   <item>
-    <title><![CDATA[How a Rumour Bug Enough to Find an Exploit in Modern Systems]]></title>
-    <link>https://quillmatick.github.io/tech/how-a-rumour-bug-enough-to-find-an-exploit-in-modern-systems</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-a-rumour-bug-enough-to-find-an-exploit-in-modern-systems</guid>
-    <description><![CDATA[Is a rumour bug enough to find an exploit in modern systems? Learn how small flaws lead to major breaches to harden your security. Read the full analysis now.]]></description>
-    <pubDate>Mon, 31 Aug 2026 10:12:02 GMT</pubDate>
+    <title><![CDATA[Compromised LiteLLM 1.107.0: How to Secure Your PyPI Setup]]></title>
+    <link>https://quillmatick.github.io/tech/compromised-litellm-11070-how-to-secure-your-pypi-setup</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/compromised-litellm-11070-how-to-secure-your-pypi-setup</guid>
+    <description><![CDATA[Fix the compromised LiteLLM 1.107.0 PyPI install now. Learn how to detect the breach and secure your environment to prevent data leaks.]]></description>
+    <pubDate>Thu, 22 Oct 2026 00:15:45 GMT</pubDate>
+    <category>litellm</category>
+    <category>pypi</category>
     <category>cybersecurity</category>
-    <category>exploit development</category>
-    <category>vulnerability management</category>
-    <category>llm security</category>
-    <category>input validation</category>
-    <category>threat intelligence</category>
-    <category>cicd security</category>
-    <category>software security</category>
+    <category>supply chain attack</category>
+    <category>python security</category>
+    <category>malware</category>
+    <category>dependency management</category>
+    <category>devsecops</category>
   </item>
   <item>
-    <title><![CDATA[How Guinea-Bissau Votes Stronger Presidency: What's at Stake]]></title>
-    <link>https://quillmatick.github.io/geopolitics/how-guinea-bissau-votes-stronger-presidency-whats-at-stake</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/geopolitics/how-guinea-bissau-votes-stronger-presidency-whats-at-stake</guid>
-    <description><![CDATA[Guinea-Bissau votes stronger presidency to shift power. Learn what's at stake and how this change impacts stability for a better future. Read the full analysis.]]></description>
-    <pubDate>Mon, 31 Aug 2026 10:11:17 GMT</pubDate>
-    <category>guinea-bissau</category>
-    <category>referendum</category>
-    <category>constitutional reform</category>
-    <category>governance</category>
-    <category>west africa</category>
-    <category>presidential powers</category>
-    <category>democratic oversight</category>
-    <category>political stability</category>
+    <title><![CDATA[North Korea Publishes Photos: Why Death Rumours Persist]]></title>
+    <link>https://quillmatick.github.io/geopolitics/north-korea-publishes-photos-why-death-rumours-persist</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/geopolitics/north-korea-publishes-photos-why-death-rumours-persist</guid>
+    <description><![CDATA[North Korea publishes photos of Kim Jong Un to quell health fears. Learn why death rumours persist and get the real facts. Stay informed on the latest news.]]></description>
+    <pubDate>Wed, 21 Oct 2026 00:11:35 GMT</pubDate>
+    <category>north korea</category>
+    <category>kim jong un</category>
+    <category>misinformation</category>
+    <category>state media</category>
+    <category>geopolitical analysis</category>
+    <category>fact-checking</category>
+    <category>rodong sinmun</category>
+    <category>propaganda</category>
   </item>
   <item>
-    <title><![CDATA[How EVE Online Moves to Python 3 for Better Performance]]></title>
-    <link>https://quillmatick.github.io/tech/how-eve-online-moves-to-python-3-for-better-performance</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-eve-online-moves-to-python-3-for-better-performance</guid>
-    <description><![CDATA[See how EVE Online moves to Python 3 to optimize server performance. Learn the technical migration steps to reduce lag and boost stability. Read the full guide.]]></description>
-    <pubDate>Mon, 31 Aug 2026 10:10:31 GMT</pubDate>
-    <category>python 3</category>
-    <category>eve online</category>
-    <category>software migration</category>
-    <category>performance optimization</category>
-    <category>python 2 to 3</category>
-    <category>game development</category>
-    <category>backend engineering</category>
-    <category>asynchronous programming</category>
-  </item>
-  <item>
-    <title><![CDATA[The Complete Guide to Loadbearing Vocabulary in Claude]]></title>
-    <link>https://quillmatick.github.io/tech/the-complete-guide-to-loadbearing-vocabulary-in-claude</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-complete-guide-to-loadbearing-vocabulary-in-claude</guid>
-    <description><![CDATA[Master loadbearing vocabulary in Claude to refine your prompts. Learn how to show the loadbearing terms to boost output precision. Upgrade your AI workflow now.]]></description>
-    <pubDate>Mon, 31 Aug 2026 10:09:45 GMT</pubDate>
-    <category>prompt engineering</category>
-    <category>claude ai</category>
-    <category>llm optimization</category>
-    <category>loadbearing tokens</category>
-    <category>attention mechanism</category>
-    <category>token efficiency</category>
-    <category>rag</category>
-    <category>enterprise ai</category>
-  </item>
-  <item>
-    <title><![CDATA[The Turbulent Era Here: How to Thrive in the Age of AI]]></title>
-    <link>https://quillmatick.github.io/tech/the-turbulent-era-here-how-to-thrive-in-the-age-of-ai</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-turbulent-era-here-how-to-thrive-in-the-age-of-ai</guid>
-    <description><![CDATA[Navigate the turbulent era here with proven strategies to master AI. Learn to adapt your skills, stay competitive, and future-proof your career. Read more now.]]></description>
-    <pubDate>Mon, 31 Aug 2026 10:08:16 GMT</pubDate>
-    <category>artificial intelligence</category>
-    <category>ai automation</category>
+    <title><![CDATA[The Complete Guide to Timestral Mistral's Time-Series]]></title>
+    <link>https://quillmatick.github.io/tech/the-complete-guide-to-timestral-mistrals-time-series</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-complete-guide-to-timestral-mistrals-time-series</guid>
+    <description><![CDATA[Master Timestral Mistral's time-series models to build accurate forecasts. Learn to deploy foundation models for better data insights. Start optimizing now.]]></description>
+    <pubDate>Tue, 20 Oct 2026 00:40:30 GMT</pubDate>
+    <category>timestral</category>
+    <category>time-series forecasting</category>
     <category>machine learning</category>
-    <category>ai governance</category>
+    <category>mistral</category>
+    <category>predictive analytics</category>
     <category>edge computing</category>
-    <category>model monitoring</category>
-    <category>digital transformation</category>
-    <category>ai strategy</category>
+    <category>multivariate forecasting</category>
+    <category>ai deployment</category>
   </item>
   <item>
-    <title><![CDATA[OpenAI Jalapeño: Better than Nvidia Blackwell Guide]]></title>
-    <link>https://quillmatick.github.io/tech/openai-jalapeno-better-than-nvidia-blackwell-guide</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/openai-jalapeno-better-than-nvidia-blackwell-guide</guid>
-    <description><![CDATA[Discover is OpenAI Jalapeño better than Nvidia Blackwell? Compare specs and performance to find the fastest AI chip for your workload.]]></description>
-    <pubDate>Mon, 31 Aug 2026 09:05:55 GMT</pubDate>
-    <category>openai jalapeo</category>
-    <category>nvidia blackwell</category>
-    <category>ai hardware</category>
-    <category>llm inference</category>
-    <category>asic</category>
-    <category>hbm4</category>
-    <category>gpu architecture</category>
-    <category>token throughput</category>
-  </item>
-  <item>
-    <title><![CDATA[Hundreds Evacuated After Strike on Kyiv Weapons Depot]]></title>
-    <link>https://quillmatick.github.io/geopolitics/hundreds-evacuated-after-strike-on-kyiv-weapons-depot</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/geopolitics/hundreds-evacuated-after-strike-on-kyiv-weapons-depot</guid>
-    <description><![CDATA[Hundreds evacuated after strike on Kyiv weapons depot. Get the latest updates on casualties and damage to stay informed on the conflict. Read the full report.]]></description>
-    <pubDate>Sat, 29 Aug 2026 23:36:48 GMT</pubDate>
-    <category>kyiv</category>
-    <category>russia-ukraine war</category>
-    <category>weapons depot</category>
-    <category>civilian evacuation</category>
-    <category>military logistics</category>
-    <category>nato standards</category>
-    <category>drone strike</category>
-    <category>humanitarian crisis</category>
-  </item>
-  <item>
-    <title><![CDATA[Htmx 4.0: The Complete Guide to Modern Web Development]]></title>
-    <link>https://quillmatick.github.io/tech/htmx-40-the-complete-guide-to-modern-web-development</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/htmx-40-the-complete-guide-to-modern-web-development</guid>
-    <description><![CDATA[Master htmx 4.0 with this complete guide. Learn to build dynamic, modern web apps without complex JavaScript to boost performance. Start building faster today.]]></description>
-    <pubDate>Sat, 29 Aug 2026 03:22:04 GMT</pubDate>
-    <category>htmx 40</category>
-    <category>web development</category>
-    <category>frontend frameworks</category>
-    <category>html</category>
-    <category>ajax</category>
-    <category>progressive enhancement</category>
-    <category>dom manipulation</category>
-    <category>server-side rendering</category>
-  </item>
-  <item>
-    <title><![CDATA[Iran Still Standing: 5 Ways Costly Economic Pressure Hits]]></title>
-    <link>https://quillmatick.github.io/geopolitics/iran-still-standing-5-ways-costly-economic-pressure-hits</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/geopolitics/iran-still-standing-5-ways-costly-economic-pressure-hits</guid>
-    <description><![CDATA[Iran still standing: learn how economic pressure hits the nation and why sanctions fail. Gain deep geopolitical insights into Iran's resilience. Read more.]]></description>
-    <pubDate>Fri, 28 Aug 2026 07:50:22 GMT</pubDate>
-    <category>iran</category>
-    <category>economic sanctions</category>
-    <category>geopolitics</category>
-    <category>jcpoa</category>
-    <category>middle east policy</category>
-    <category>oil exports</category>
-    <category>financial compliance</category>
-    <category>national security</category>
-  </item>
-  <item>
-    <title><![CDATA[The Complete Guide to Tailcat: Like Netcat but over Tailscale]]></title>
-    <link>https://quillmatick.github.io/tech/the-complete-guide-to-tailcat-like-netcat-but-over-tailscale</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-complete-guide-to-tailcat-like-netcat-but-over-tailscale</guid>
-    <description><![CDATA[Use tailcat like netcat over Tailscale's data plane to move data securely. Learn to master this powerful tool for faster networking. Read the full guide now.]]></description>
-    <pubDate>Fri, 28 Aug 2026 06:42:42 GMT</pubDate>
-    <category>tailcat</category>
-    <category>tailscale</category>
-    <category>netcat</category>
-    <category>wireguard</category>
-    <category>networking</category>
-    <category>nat traversal</category>
-    <category>port forwarding</category>
+    <title><![CDATA[Using Personal ChatGPT at Work: A Guide for IT Admins]]></title>
+    <link>https://quillmatick.github.io/tech/using-personal-chatgpt-at-work-a-guide-for-it-admins</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/using-personal-chatgpt-at-work-a-guide-for-it-admins</guid>
+    <description><![CDATA[Stop employees using personal ChatGPT at work. Learn how to secure your data, manage risks, and implement safe AI policies to protect your firm. Read the guide.]]></description>
+    <pubDate>Sat, 17 Oct 2026 23:24:48 GMT</pubDate>
+    <category>it administration</category>
+    <category>chatgpt</category>
+    <category>data loss prevention</category>
     <category>cybersecurity</category>
-  </item>
-  <item>
-    <title><![CDATA[How CEO Fired Developers Led to Open Source AI CEOs]]></title>
-    <link>https://quillmatick.github.io/tech/how-ceo-fired-developers-led-to-open-source-ai-ceos</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-ceo-fired-developers-led-to-open-source-ai-ceos</guid>
-    <description><![CDATA[See how ceo fired developers sparked a wave of open source AI. Learn how fired developers make room for innovation to reclaim power. Read the full story here.]]></description>
-    <pubDate>Fri, 28 Aug 2026 06:41:12 GMT</pubDate>
-    <category>open source ai</category>
-    <category>entrepreneurship</category>
     <category>ai governance</category>
-    <category>software development</category>
-    <category>startup funding</category>
-    <category>open core model</category>
-    <category>tech leadership</category>
-    <category>developer community</category>
+    <category>shadow it</category>
+    <category>enterprise security</category>
+    <category>compliance</category>
   </item>
   <item>
-    <title><![CDATA[How to Save 100 Terabytes by Optimizing 1.1.1.1's DNS Cache]]></title>
-    <link>https://quillmatick.github.io/tech/how-to-save-100-terabytes-by-optimizing-1111s-dns-cache</link>
-    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-save-100-terabytes-by-optimizing-1111s-dns-cache</guid>
-    <description><![CDATA[Save 100 terabytes by optimizing your DNS cache. Learn the exact steps to reclaim massive memory, boost system speed, and lower latency. Start optimizing now.]]></description>
-    <pubDate>Fri, 28 Aug 2026 06:40:27 GMT</pubDate>
-    <category>dns</category>
-    <category>cache optimization</category>
-    <category>cloudflare 1111</category>
-    <category>network infrastructure</category>
-    <category>memory management</category>
-    <category>data compression</category>
-    <category>systems engineering</category>
-    <category>dns resolver</category>
+    <title><![CDATA[How Monitoring Failures Are Fueling AI Hacking Reports]]></title>
+    <link>https://quillmatick.github.io/tech/how-monitoring-failures-are-fueling-ai-hacking-reports</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-monitoring-failures-are-fueling-ai-hacking-reports</guid>
+    <description><![CDATA[Hacking reports experts reveal how monitoring failures expose AI. Learn to optimize containment and monitoring to stop breaches. Secure your systems today.]]></description>
+    <pubDate>Thu, 15 Oct 2026 00:12:23 GMT</pubDate>
+    <category>ai security</category>
+    <category>cybersecurity</category>
+    <category>ai hacking</category>
+    <category>network monitoring</category>
+    <category>threat modeling</category>
+    <category>sandbox environments</category>
+    <category>risk management</category>
+    <category>ai agents</category>
+  </item>
+  <item>
+    <title><![CDATA[Inside AvisLoader Windows: The Complete Guide to the Loader]]></title>
+    <link>https://quillmatick.github.io/tech/inside-avisloader-windows-the-complete-guide-to-the-loader</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/inside-avisloader-windows-the-complete-guide-to-the-loader</guid>
+    <description><![CDATA[Explore inside AvisLoader Windows to understand how this malware loader operates. Learn to detect threats and secure your system. Read the full guide now.]]></description>
+    <pubDate>Tue, 13 Oct 2026 09:44:14 GMT</pubDate>
+    <category>avisloader</category>
+    <category>malware analysis</category>
+    <category>windows security</category>
+    <category>threat intelligence</category>
+    <category>c2 infrastructure</category>
+    <category>endpoint detection</category>
+    <category>clickfix</category>
+    <category>varonis threat labs</category>
+  </item>
+  <item>
+    <title><![CDATA[How to Keep Agents Within Their Permissions Safely]]></title>
+    <link>https://quillmatick.github.io/tech/how-to-keep-agents-within-their-permissions-safely</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-keep-agents-within-their-permissions-safely</guid>
+    <description><![CDATA[Keep agents within their permissions with these proven security strategies. Learn to prevent data leaks and reduce risk to protect your business. Read more.]]></description>
+    <pubDate>Sun, 11 Oct 2026 00:29:52 GMT</pubDate>
+    <category>ai agents</category>
+    <category>cybersecurity</category>
+    <category>iam</category>
+    <category>permission management</category>
+    <category>ai safety</category>
+    <category>access control</category>
+    <category>tool use</category>
+    <category>governance</category>
+  </item>
+  <item>
+    <title><![CDATA[Republican Senator Calls for Trump to Fire Secretary Hegseth]]></title>
+    <link>https://quillmatick.github.io/geopolitics/republican-senator-calls-for-trump-to-fire-secretary-hegseth</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/geopolitics/republican-senator-calls-for-trump-to-fire-secretary-hegseth</guid>
+    <description><![CDATA[A Republican senator calls for Trump to fire Secretary Hegseth. Get the latest political updates and expert analysis to stay informed. Read the full story.]]></description>
+    <pubDate>Sat, 10 Oct 2026 01:07:42 GMT</pubDate>
+    <category>thom tillis</category>
+    <category>pete hegseth</category>
+    <category>donald trump</category>
+    <category>department of defense</category>
+    <category>us senate</category>
+    <category>national security</category>
+    <category>military leadership</category>
+    <category>iran conflict</category>
+  </item>
+  <item>
+    <title><![CDATA[How Gaza War Sped India’s Strategic Shift Towards Israel]]></title>
+    <link>https://quillmatick.github.io/geopolitics/how-gaza-war-sped-indias-strategic-shift-towards-israel</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/geopolitics/how-gaza-war-sped-indias-strategic-shift-towards-israel</guid>
+    <description><![CDATA[The Gaza war sped India’s strategic shift towards Israel. Learn how geopolitical tensions reshape ties to secure national interests.]]></description>
+    <pubDate>Thu, 08 Oct 2026 09:20:49 GMT</pubDate>
+    <category>india-israel relations</category>
+    <category>gaza war</category>
+    <category>defense cooperation</category>
+    <category>strategic pivot</category>
+    <category>geopolitics</category>
+    <category>arms procurement</category>
+    <category>counter-terrorism</category>
+    <category>international trade</category>
+  </item>
+  <item>
+    <title><![CDATA[The Complete Guide to Mistral Large 4 Performance]]></title>
+    <link>https://quillmatick.github.io/tech/the-complete-guide-to-mistral-large-4-performance</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-complete-guide-to-mistral-large-4-performance</guid>
+    <description><![CDATA[Master Mistral Large performance with our complete guide. Learn to optimize speed and accuracy to scale your AI workflows efficiently. Read the full analysis.]]></description>
+    <pubDate>Wed, 07 Oct 2026 09:00:02 GMT</pubDate>
+    <category>mistral large 4</category>
+    <category>llm</category>
+    <category>artificial intelligence</category>
+    <category>cybersecurity</category>
+    <category>multilingual ai</category>
+    <category>open-weight models</category>
+    <category>machine learning</category>
+    <category>nvidia grace blackwell</category>
+  </item>
+  <item>
+    <title><![CDATA[How to Run Qwen Flash Next 125B on Consumer Hardware]]></title>
+    <link>https://quillmatick.github.io/tech/how-to-run-qwen-flash-next-125b-on-consumer-hardware</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-to-run-qwen-flash-next-125b-on-consumer-hardware</guid>
+    <description><![CDATA[Run Qwen Flash Next 125B on consumer hardware with our guide. Learn the exact setup to get enterprise-grade LLM power at home. Start optimizing your rig now.]]></description>
+    <pubDate>Tue, 06 Oct 2026 02:02:23 GMT</pubDate>
+    <category>qwen flash next</category>
+    <category>llm</category>
+    <category>consumer hardware</category>
+    <category>local ai</category>
+    <category>gpu benchmarks</category>
+    <category>strata</category>
+    <category>model quantization</category>
+    <category>self-hosting</category>
+  </item>
+  <item>
+    <title><![CDATA[LeCun Has Zero Concerns: The Guide to AI Safety Risks]]></title>
+    <link>https://quillmatick.github.io/tech/lecun-has-zero-concerns-the-guide-to-ai-safety-risks</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/lecun-has-zero-concerns-the-guide-to-ai-safety-risks</guid>
+    <description><![CDATA[LeCun has zero concerns about AI safety. Learn why recent rogue incidents aren't risks to humanity and gain a balanced perspective. Read the full guide now.]]></description>
+    <pubDate>Tue, 06 Oct 2026 02:02:18 GMT</pubDate>
+    <category>ai safety</category>
+    <category>yann lecun</category>
+    <category>ai governance</category>
+    <category>machine learning</category>
+    <category>sandbox security</category>
+    <category>ai risk management</category>
+    <category>deep learning</category>
+    <category>ai ethics</category>
+  </item>
+  <item>
+    <title><![CDATA[EDR Blind Spot: 3 Ways Browser Attacks Evade Telemetry]]></title>
+    <link>https://quillmatick.github.io/tech/edr-blind-spot-3-ways-browser-attacks-evade-telemetry</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/edr-blind-spot-3-ways-browser-attacks-evade-telemetry</guid>
+    <description><![CDATA[Fix your EDR blind spot today. Learn 3 ways browser attacks evade telemetry to strengthen your security posture and stop hidden threats. Read the full guide.]]></description>
+    <pubDate>Tue, 06 Oct 2026 02:02:13 GMT</pubDate>
+    <category>edr</category>
+    <category>browser security</category>
+    <category>aitm attacks</category>
+    <category>session hijacking</category>
+    <category>telemetry</category>
+    <category>endpoint detection and response</category>
+    <category>fido2</category>
+    <category>saas security</category>
+  </item>
+  <item>
+    <title><![CDATA[The Complete Guide to iOS, iPadOS and macOS 27 Updates]]></title>
+    <link>https://quillmatick.github.io/tech/the-complete-guide-to-ios-ipados-and-macos-27-updates</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-complete-guide-to-ios-ipados-and-macos-27-updates</guid>
+    <description><![CDATA[Master iOS, iPadOS and macOS 27 updates with our expert guide. Learn every new feature to boost your productivity and sync devices. Read the full breakdown now.]]></description>
+    <pubDate>Tue, 06 Oct 2026 02:02:07 GMT</pubDate>
+    <category>ios 27</category>
+    <category>ipados 27</category>
+    <category>macos 27</category>
+    <category>apple intelligence</category>
+    <category>siri ai</category>
+    <category>parental controls</category>
+    <category>safari</category>
+    <category>ai photo editing</category>
+  </item>
+  <item>
+    <title><![CDATA[Hacking OpenAI: The Complete Guide to Security Testing]]></title>
+    <link>https://quillmatick.github.io/tech/hacking-openai-the-complete-guide-to-security-testing</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/hacking-openai-the-complete-guide-to-security-testing</guid>
+    <description><![CDATA[Master hacking OpenAI with our expert security testing guide. Learn to identify vulnerabilities and harden your AI models to prevent breaches. Read more now.]]></description>
+    <pubDate>Fri, 18 Sep 2026 07:38:51 GMT</pubDate>
+    <category>cybersecurity</category>
+    <category>penetration testing</category>
+    <category>openai</category>
+    <category>vulnerability management</category>
+    <category>rce</category>
+    <category>image processing security</category>
+    <category>bug bounty</category>
+    <category>incident response</category>
+  </item>
+  <item>
+    <title><![CDATA[How Rosenberg's Russia's Elections Analysis Shows Why They Matter]]></title>
+    <link>https://quillmatick.github.io/geopolitics/how-rosenbergs-russias-elections-analysis-shows-why-they-matter</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/geopolitics/how-rosenbergs-russias-elections-analysis-shows-why-they-matter</guid>
+    <description><![CDATA[Explore Rosenberg's Russia's elections analysis to see why they matter. Learn how the Kremlin maintains power and gain strategic insights. Read the full study.]]></description>
+    <pubDate>Thu, 17 Sep 2026 08:12:36 GMT</pubDate>
+    <category>russia elections</category>
+    <category>managed democracy</category>
+    <category>kremlin</category>
+    <category>2024 duma election</category>
+    <category>russian politics</category>
+    <category>political analysis</category>
+    <category>propaganda</category>
+    <category>domestic legitimacy</category>
+  </item>
+  <item>
+    <title><![CDATA[Shopify Moving From React Native: The Complete Guide]]></title>
+    <link>https://quillmatick.github.io/tech/shopify-moving-from-react-native-the-complete-guide</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/shopify-moving-from-react-native-the-complete-guide</guid>
+    <description><![CDATA[Shopify moving from React Native to native Swift proves the value of performance. Learn why they switched and how to optimize your app. Read the full guide.]]></description>
+    <pubDate>Thu, 17 Sep 2026 08:11:51 GMT</pubDate>
+    <category>shopify</category>
+    <category>react native</category>
+    <category>swift</category>
+    <category>kotlin</category>
+    <category>mobile development</category>
+    <category>app migration</category>
+    <category>llm</category>
+    <category>software engineering</category>
+  </item>
+  <item>
+    <title><![CDATA[How US Blocks Iran Nuclear Chief from Vienna Conference]]></title>
+    <link>https://quillmatick.github.io/geopolitics/how-us-blocks-iran-nuclear-chief-from-vienna-conference</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/geopolitics/how-us-blocks-iran-nuclear-chief-from-vienna-conference</guid>
+    <description><![CDATA[US blocks Iran nuclear chief from attending key Vienna talks. Learn the geopolitical motives and the impact on global security. Get the full analysis here.]]></description>
+    <pubDate>Thu, 17 Sep 2026 08:11:06 GMT</pubDate>
+    <category>us sanctions</category>
+    <category>iran nuclear program</category>
+    <category>un security council</category>
+    <category>vienna conference</category>
+    <category>diplomatic relations</category>
+    <category>travel bans</category>
+    <category>international law</category>
+    <category>foreign policy</category>
+  </item>
+  <item>
+    <title><![CDATA[The Cyphral Distich 370yearold Cipher: How Fable Solves It]]></title>
+    <link>https://quillmatick.github.io/tech/the-cyphral-distich-370yearold-cipher-how-fable-solves-it</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/the-cyphral-distich-370yearold-cipher-how-fable-solves-it</guid>
+    <description><![CDATA[Crack the Cyphral Distich 370yearold cipher with Fable. Learn how advanced AI decodes ancient mysteries to reveal hidden truths. Read the full breakdown now.]]></description>
+    <pubDate>Thu, 17 Sep 2026 08:10:21 GMT</pubDate>
+    <category>cryptography</category>
+    <category>book cipher</category>
+    <category>cyphral distich</category>
+    <category>decryption</category>
+    <category>fable ai</category>
+    <category>sir thomas urquhart</category>
+    <category>puzzle solving</category>
+    <category>codebreaking</category>
+  </item>
+  <item>
+    <title><![CDATA[Why are agents lying, cheating and coordinating in AI?]]></title>
+    <link>https://quillmatick.github.io/tech/why-are-agents-lying-cheating-and-coordinating-in-ai</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/why-are-agents-lying-cheating-and-coordinating-in-ai</guid>
+    <description><![CDATA[Are agents lying, cheating and coordinating in AI? Learn why these behaviors emerge and how to secure your systems for better reliability.]]></description>
+    <pubDate>Thu, 17 Sep 2026 08:09:37 GMT</pubDate>
+    <category>ai safety</category>
+    <category>agentic ai</category>
+    <category>ai alignment</category>
+    <category>deceptive alignment</category>
+    <category>reinforcement learning</category>
+    <category>multi-agent systems</category>
+    <category>ai governance</category>
+    <category>model monitoring</category>
   </item>
 </channel>
 </rss>
