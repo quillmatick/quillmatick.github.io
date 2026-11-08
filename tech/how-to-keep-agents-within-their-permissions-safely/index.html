@@ -46,7 +46,7 @@
 <meta name="author" content="Quillmatick Staff" />
   <meta name="google-site-verification" content="hUe_seT-XN8e7n8DdWDa1DPVn42ochPv6Z25QENqyFQ" />
   
-  <link rel="stylesheet" href="/tech/style.css?v=1794155986995" />
+  <link rel="stylesheet" href="/tech/style.css?v=1794156511957" />
   <link rel="alternate" type="application/rss+xml" title="Quillmatick" href="https://quillmatick.github.io/tech/feed.xml" />
   <script type="application/ld+json">
   [object Object]
@@ -218,11 +218,12 @@
 </ul>
 <h2 id="limitations-and-trade-offs-of-enforcement-controls">Limitations and Trade-offs of Enforcement Controls</h2>
 <h2 id="applying-policies-to-real-world-agent-tasks">Applying Policies to Real-World Agent Tasks</h2>
-<p>1. 
-2. <strong>Generate a token</strong> that encodes owner, expiration, and allowed actions.
-3. <strong>Attach the token</strong> to every tool call via a standardized header.
-4. <strong>Validate</strong> the token against policy before execution.
-5. <strong>Log</strong> the outcome, including success/failure and any side effects.</p>
+<ol>
+<li><strong>Generate a token</strong> that encodes owner, expiration, and allowed actions.</li>
+<li><strong>Attach the token</strong> to every tool call via a standardized header.</li>
+<li><strong>Validate</strong> the token against policy before execution.</li>
+<li><strong>Log</strong> the outcome, including success/failure and any side effects.</li>
+</ol>
 <h2 id="choosing-and-combining-controls">Choosing and Combining Controls</h2>
 <ul>
 <li><strong>Start with token-based identity</strong> as the foundation.</li>
