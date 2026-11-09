@@ -5,8 +5,23 @@
   <link>https://quillmatick.github.io/tech</link>
   <description>AI-Powered Content Automation</description>
   <language>en</language>
-  <lastBuildDate>Sun, 08 Nov 2026 16:49:55 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 09 Nov 2026 01:12:58 GMT</lastBuildDate>
   <atom:link href="https://quillmatick.github.io/tech/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[How Claude Code's Dont Ask Again Exposes Secret Passwords]]></title>
+    <link>https://quillmatick.github.io/tech/how-claude-codes-dont-ask-again-exposes-secret-passwords</link>
+    <guid isPermaLink="true">https://quillmatick.github.io/tech/how-claude-codes-dont-ask-again-exposes-secret-passwords</guid>
+    <description><![CDATA[Claude Code's "dont ask again" feature leaks secret passwords. Learn how this vulnerability works to secure your environment and prevent data breaches.]]></description>
+    <pubDate>Mon, 09 Nov 2026 01:12:18 GMT</pubDate>
+    <category>claude code</category>
+    <category>cybersecurity</category>
+    <category>secret leakage</category>
+    <category>devsecops</category>
+    <category>git security</category>
+    <category>data privacy</category>
+    <category>software development</category>
+    <category>credential management</category>
+  </item>
   <item>
     <title><![CDATA[Compromised LiteLLM 1.107.0: How to Secure Your PyPI Setup]]></title>
     <link>https://quillmatick.github.io/tech/compromised-litellm-11070-how-to-secure-your-pypi-setup</link>
